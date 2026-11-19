@@ -98,6 +98,27 @@ def test_rebuild_keeps_posting_data(tmp_path):
         c.close()
 
 
+def test_migrate_refuses_open_transaction(tmp_path):
+    c = db.connect(tmp_path / "old.db")
+    try:
+        db.migrate(c, _only(tmp_path, "0001_init.sql"))
+        c.execute("INSERT INTO source (id, code, name, type) VALUES (1, 'O', 'OpenAI', 'manual')")
+        c.execute("INSERT INTO job_posting (id, source_id, title, role_family) VALUES (7, 1, 'Eng', 'agent-infra')")
+        c.execute("INSERT INTO skill (id, slug, name_zh) VALUES (1, 'a', 'A')")
+        c.execute("INSERT INTO posting_skill VALUES (7, 1, NULL, 'required', NULL, 'v1')")
+        assert c.in_transaction
+        with pytest.raises(RuntimeError, match="open transaction"):
+            db.migrate(c)
+        assert c.in_transaction
+        assert c.execute("SELECT COUNT(*) FROM posting_skill").fetchone()[0] == 1
+        c.rollback()
+        assert c.execute("SELECT COUNT(*) FROM source").fetchone()[0] == 0
+        assert [r[0] for r in c.execute("SELECT version FROM schema_migrations")] == [1]
+        assert c.execute("PRAGMA foreign_keys").fetchone()[0] == 1
+    finally:
+        c.close()
+
+
 def test_migration_fk_violation_rolls_back(conn, tmp_path):
     mdir = tmp_path / "fkmig"
     mdir.mkdir()

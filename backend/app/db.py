@@ -40,6 +40,10 @@ def _migrations(directory: Path) -> list[tuple[int, Path]]:
 
 
 def migrate(conn: sqlite3.Connection, directory: Path = MIGRATIONS_DIR) -> list[str]:
+    # PRAGMA foreign_keys is a no-op inside an open transaction (table rebuilds would then
+    # cascade-delete child rows), and the commits below would also commit the caller's work.
+    if conn.in_transaction:
+        raise RuntimeError("migrate() needs a connection without an open transaction; commit or roll back first")
     conn.execute(
         "CREATE TABLE IF NOT EXISTS schema_migrations ("
         " version INTEGER PRIMARY KEY,"
