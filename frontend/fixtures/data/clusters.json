@@ -1,5 +1,0 @@
-[
-  {"slug": "found", "name": "工程基础", "color": "#5B6B7A"},
-  {"slug": "core", "name": "Agent 核心机制", "color": "#3D5A99"},
-  {"slug": "sec", "name": "沙箱与安全", "color": "#B23A48"}
-]

@@ -1,0 +1,25 @@
+{
+ "phases": [
+  {
+   "title": "Agent 核心",
+   "skills": [
+    "llm",
+    "loop"
+   ]
+  },
+  {
+   "title": "沙箱与安全",
+   "skills": [
+    "os",
+    "iso",
+    "sandbox"
+   ]
+  },
+  {
+   "title": "工程基础",
+   "skills": [
+    "dist"
+   ]
+  }
+ ]
+}

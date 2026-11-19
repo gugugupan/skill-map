@@ -1,0 +1,18 @@
+{
+ "phases": [
+  {
+   "title": "系统基础",
+   "skills": [
+    "os",
+    "dist"
+   ]
+  },
+  {
+   "title": "数据存储",
+   "skills": [
+    "sql-db",
+    "cache"
+   ]
+  }
+ ]
+}

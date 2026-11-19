@@ -1,0 +1,14 @@
+[
+ {
+  "code": "STRIPE",
+  "name": "Stripe"
+ },
+ {
+  "code": "MERCARI",
+  "name": "Mercari"
+ },
+ {
+  "code": "A",
+  "name": "阿里"
+ }
+]

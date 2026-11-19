@@ -24,10 +24,11 @@ interface Built {
   color: (d: GNode) => string
 }
 
-const ROOT_LABEL = 'Agent Infra 工程师'
 const HUB_PREFIX = 'h_'
-
-const radius = (d: GNode) => (d.type === 'root' ? 22 : d.type === 'hub' ? 13 : 5 + d.heat * 1.25)
+const HUB_RADIUS = 13
+// The hottest skill in a role stays just under a hub so hubs remain the visual anchors.
+const LEAF_MIN = 5
+const LEAF_SPAN = 7.5
 const endpoint = (end: GLink['source']) => end as GNode
 
 interface Props {
@@ -55,8 +56,11 @@ export function Graph({ data, filter, selected, progress, onSelect }: Props) {
     const clusterColor = new Map(data.clusters.map((c) => [c.slug, c.color]))
     const skills = data.skills.filter((s) => clusterIndex.has(s.cluster))
     const skillIds = new Set(skills.map((s) => s.slug))
+    const maxHeat = Math.max(1, ...skills.map((s) => s.heat))
+    const radius = (d: GNode) =>
+      d.type === 'root' ? 22 : d.type === 'hub' ? HUB_RADIUS : LEAF_MIN + (LEAF_SPAN * Math.max(0, d.heat)) / maxHeat
 
-    const nodes: GNode[] = [{ id: 'root', type: 'root', cluster: '', label: ROOT_LABEL, heat: 0, companies: [] }]
+    const nodes: GNode[] = [{ id: 'root', type: 'root', cluster: '', label: data.role.root_label, heat: 0, companies: [] }]
     const links: GLink[] = []
     for (const c of data.clusters) {
       nodes.push({ id: HUB_PREFIX + c.slug, type: 'hub', cluster: c.slug, label: c.name, heat: 0, companies: [] })

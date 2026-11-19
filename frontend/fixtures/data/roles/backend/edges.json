@@ -1,0 +1,12 @@
+[
+ {
+  "from": "sql-db",
+  "to": "cache",
+  "type": "prereq"
+ },
+ {
+  "from": "dist",
+  "to": "cache",
+  "type": "prereq"
+ }
+]

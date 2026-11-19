@@ -1,0 +1,65 @@
+[
+ {
+  "slug": "os",
+  "cluster": "found",
+  "companies": [
+   "A",
+   "B",
+   "AN"
+  ],
+  "heat": 3
+ },
+ {
+  "slug": "dist",
+  "cluster": "found",
+  "companies": [
+   "O",
+   "AN",
+   "A",
+   "B"
+  ],
+  "heat": 4
+ },
+ {
+  "slug": "llm",
+  "cluster": "core",
+  "companies": [
+   "O",
+   "AN",
+   "A",
+   "B"
+  ],
+  "heat": 4
+ },
+ {
+  "slug": "loop",
+  "cluster": "core",
+  "companies": [
+   "O",
+   "AN",
+   "B"
+  ],
+  "heat": 3
+ },
+ {
+  "slug": "iso",
+  "cluster": "sec",
+  "companies": [
+   "O",
+   "AN",
+   "A"
+  ],
+  "heat": 3
+ },
+ {
+  "slug": "sandbox",
+  "cluster": "sec",
+  "companies": [
+   "O",
+   "AN",
+   "A",
+   "B"
+  ],
+  "heat": 4
+ }
+]

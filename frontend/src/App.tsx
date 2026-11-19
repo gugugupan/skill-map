@@ -1,35 +1,116 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { DetailPanel } from './components/DetailPanel'
 import { Graph } from './components/Graph'
 import { HomePanel } from './components/HomePanel'
-import { loadData } from './data'
+import { RoleSwitcher } from './components/RoleSwitcher'
+import { loadIndex, loadRole } from './data'
 import { useProgress } from './progress'
-import type { SkillMapData } from './types'
+import type { Role, SiteIndex, SkillMapData } from './types'
 
-function subtitle({ meta }: SkillMapData) {
-  const d = new Date(meta.generated_at)
+const readRoleParam = () => new URLSearchParams(window.location.search).get('role')
+
+function urlWithRole(slug: string) {
+  const url = new URL(window.location.href)
+  url.searchParams.set('role', slug)
+  return url
+}
+
+function subtitle(index: SiteIndex, role: Role) {
+  const d = new Date(index.meta.generated_at)
   const when = Number.isNaN(d.getTime()) ? '' : `（${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日更新）`
-  return `来自 ${meta.counts.companies} 家公司、${meta.counts.postings} 份 Agent Infra 相关 JD 的能力地图${when}`
+  return `来自 ${role.counts.companies} 家公司、${role.counts.postings} 份 ${role.name}相关 JD 的能力地图${when}`
 }
 
 export default function App() {
-  const [data, setData] = useState<SkillMapData | null>(null)
+  const [index, setIndex] = useState<SiteIndex | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [filter, setFilter] = useState<string | null>(null)
-  const [selected, setSelected] = useState<string | null>(null)
-  const [progress, setStatus] = useProgress()
-  const panelRef = useRef<HTMLElement>(null)
+  const [roleParam, setRoleParam] = useState(readRoleParam)
+  const [roleData, setRoleData] = useState<Record<string, SkillMapData>>({})
+  const [roleError, setRoleError] = useState<Record<string, string>>({})
 
   useEffect(() => {
     let cancelled = false
-    loadData().then(
-      (d) => !cancelled && setData(d),
+    loadIndex().then(
+      (d) => !cancelled && setIndex(d),
       (e: unknown) => !cancelled && setError(String(e)),
     )
     return () => {
       cancelled = true
     }
   }, [])
+
+  useEffect(() => {
+    const onPop = () => setRoleParam(readRoleParam())
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
+
+  const role = index ? (index.roles.find((r) => r.slug === roleParam) ?? index.roles[0]) : undefined
+
+  useEffect(() => {
+    if (!role || roleParam === role.slug) return
+    window.history.replaceState(window.history.state, '', urlWithRole(role.slug))
+  }, [role, roleParam])
+
+  useEffect(() => {
+    if (role) document.title = `${role.name} 知识图谱`
+  }, [role])
+
+  const cached = role ? roleData[role.slug] : undefined
+  useEffect(() => {
+    if (!index || !role || cached) return
+    // Responses are stored per slug, so a slow response for an earlier role can never replace the current one.
+    const ac = new AbortController()
+    loadRole(index, role, ac.signal).then(
+      (d) => setRoleData((prev) => ({ ...prev, [role.slug]: d })),
+      (e: unknown) => {
+        if (!ac.signal.aborted) setRoleError((prev) => ({ ...prev, [role.slug]: String(e) }))
+      },
+    )
+    return () => ac.abort()
+  }, [index, role, cached])
+
+  const selectRole = useCallback((slug: string) => {
+    window.history.pushState(null, '', urlWithRole(slug))
+    setRoleParam(slug)
+  }, [])
+
+  if (!index || !role) {
+    const msg = error ? `数据加载失败：${error}` : index ? '暂无岗位数据' : '加载中…'
+    return <div className="loading">{msg}</div>
+  }
+
+  return (
+    <RoleView
+      data={cached}
+      loadError={roleError[role.slug]}
+      switcher={<RoleSwitcher roles={index.roles} current={role} onChange={selectRole} />}
+      sub={subtitle(index, role)}
+      roleSlug={role.slug}
+    />
+  )
+}
+
+interface RoleViewProps {
+  data: SkillMapData | undefined
+  loadError: string | undefined
+  switcher: ReactNode
+  sub: string
+  roleSlug: string
+}
+
+// Not keyed by role: the switcher must keep its DOM node (and focus) across a switch.
+function RoleView({ data, loadError, switcher, sub, roleSlug }: RoleViewProps) {
+  const [filter, setFilter] = useState<string | null>(null)
+  const [selected, setSelected] = useState<string | null>(null)
+  const [shownRole, setShownRole] = useState(roleSlug)
+  if (shownRole !== roleSlug) {
+    setShownRole(roleSlug)
+    setFilter(null)
+    setSelected(null)
+  }
+  const [progress, setStatus] = useProgress()
+  const panelRef = useRef<HTMLElement>(null)
 
   const bySlug = useMemo(() => new Map((data?.skills ?? []).map((s) => [s.slug, s])), [data])
 
@@ -38,7 +119,17 @@ export default function App() {
   }, [selected])
 
   if (!data) {
-    return <div className="loading">{error ? `数据加载失败：${error}` : '加载中…'}</div>
+    return (
+      <div className="app">
+        <header>
+          <div>
+            {switcher}
+            <div className="sub">{sub}</div>
+          </div>
+        </header>
+        <div className="loading">{loadError ? `数据加载失败：${loadError}` : '加载中…'}</div>
+      </div>
+    )
   }
 
   const skill = selected ? bySlug.get(selected) : undefined
@@ -50,8 +141,8 @@ export default function App() {
     <div className="app">
       <header>
         <div>
-          <h1>Agent Infra 知识图谱</h1>
-          <div className="sub">{subtitle(data)}</div>
+          {switcher}
+          <div className="sub">{sub}</div>
         </div>
         <div className="prog">
           <div className="bar">
