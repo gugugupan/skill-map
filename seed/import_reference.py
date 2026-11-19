@@ -25,17 +25,25 @@ CONSTANTS = ("JD", "SOURCES", "CLUSTERS", "N", "PRE", "PATH")
 _TOP_LEVEL_DECL = re.compile(r"^(?:const|let|var|function)\s+([A-Za-z_$][\w$]*)", re.M)
 
 # First match wins; order matters (e.g. "Codex CLI 源码（GitHub）" must hit repo, not doc).
+# Needles are matched case-insensitively against the title and, when known, the url.
 _RESOURCE_TYPE_RULES = (
-    ("paper", ("论文",)),
-    ("course", ("课程",)),
-    ("repo", ("源码", "代码", "GitHub")),
-    ("doc", ("文档", "规范", "手册", "RFC", "《")),
+    ("paper", ("论文", "基准", "bench", "survey", "arxiv.org", "research.google/pubs", "usenix.org", ".pdf")),
+    ("course", ("课程", "courses.", "/course")),
+    ("blog", ("medium.com",)),
+    # Books and specs hosted on GitHub are still docs.
+    ("doc", ("《", "specification")),
+    ("repo", ("源码", "代码", "github.com/")),
+    ("blog", ("博客", "blog", "/journal/", "/posts/", "/writing/")),
+    ("doc", ("文档", "规范", "手册", "指南", "教程", "rfc", "《", "guide", "reference", "spec", "handbook",
+             "book", "docs", "tutorial", "framework", "checklist", "owasp", "wcag", "developer.mozilla.org",
+             "web.dev/learn", "kubernetes.io")),
 )
 
 
-def resource_type(title: str) -> str:
+def resource_type(title: str, url: str | None = None) -> str:
+    text = f"{title} {url or ''}".lower()
     for rtype, needles in _RESOURCE_TYPE_RULES:
-        if any(n in title for n in needles):
+        if any(n.lower() in text for n in needles):
             return rtype
     return "blog"
 

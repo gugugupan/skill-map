@@ -82,6 +82,7 @@ const zh = {
   sources: 'JD 来源',
   coverage: (n: number) => `（覆盖 ${n} 个节点）`,
   listSep: '、',
+  listGap: '\u200b',
 }
 
 export type Strings = typeof zh
@@ -122,7 +123,8 @@ const en: Strings = {
   suggestedOrder: 'Suggested order',
   sources: 'JD sources',
   coverage: (n) => ` (covers ${plural(n, 'node', 'nodes')})`,
-  listSep: ', ',
+  listSep: ',',
+  listGap: ' ',
 }
 
 export const STRINGS: Record<Lang, Strings> = { zh, en }

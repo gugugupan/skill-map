@@ -1346,7 +1346,7 @@
         "Service catalog (Backstage)",
         "Developer experience as an SLI"
       ],
-      "practice": "Build a 'New Service' wizard with Backstage software templates that generates the repo, CI, deployment config and alerts in one go."
+      "practice": "Build a \"New Service\" wizard with Backstage software templates that generates the repo, CI, deployment config and alerts in one go."
     },
     "incident": {
       "name": "Incident Response",

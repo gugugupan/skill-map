@@ -218,3 +218,17 @@ def test_skill_companies_error_aborts_import(tmp_path):
 ])
 def test_resource_type(title, expected):
     assert seed.resource_type(title) == expected
+
+
+@pytest.mark.parametrize("title, url, expected", [
+    ("Dapper", "https://research.google/pubs/dapper/", "paper"),
+    ("SWE-bench", None, "paper"),
+    ("pgvector", "https://github.com/pgvector/pgvector", "repo"),
+    ("《You Don't Know JS》", "https://github.com/getify/You-Dont-Know-JS", "doc"),
+    ("OCI Runtime Specification", "https://github.com/opencontainers/runtime-spec", "doc"),
+    ("Kubernetes StatefulSets", "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/", "doc"),
+    ("Maxime Beauchemin《Functional Data Engineering》", "https://maximebeauchemin.medium.com/x", "blog"),
+    ("Google Engineering Practices: Code Review", "https://google.github.io/eng-practices/review/", "blog"),
+])
+def test_resource_type_uses_url(title, url, expected):
+    assert seed.resource_type(title, url) == expected

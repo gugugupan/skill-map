@@ -348,6 +348,9 @@ aside li {
   background: var(--ink);
   color: var(--bg);
 }
+.slink-item {
+  white-space: nowrap;
+}
 .slink {
   font: inherit;
   background: none;
@@ -437,6 +440,24 @@ a.ext {
   }
   .filters {
     margin-left: 0;
+  }
+  /* The legend sits under the graph instead of over it; the graph keeps the remaining height. */
+  #graph {
+    display: flex;
+    flex-direction: column;
+  }
+  #graph svg {
+    flex: 1;
+    min-height: 0;
+  }
+  .legend {
+    position: static;
+    max-width: none;
+    padding: 8px 14px 10px;
+    border-top: 1px solid var(--line);
+  }
+  .hint {
+    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -291,12 +291,13 @@ def _write(conn, files: list[tuple[str, dict]]) -> list[str]:
                 if row is None:
                     rid = conn.execute(
                         "INSERT INTO resource (title, url, type, added_by) VALUES (?, ?, ?, 'seed')",
-                        (r["title"], url, resource_type(r["title"])),
+                        (r["title"], url, resource_type(r["title"], url)),
                     ).lastrowid
                 else:
                     rid = row["id"]
                     if row["url"] is None and url:
-                        conn.execute("UPDATE resource SET url = ? WHERE id = ?", (url, rid))
+                        conn.execute("UPDATE resource SET url = ?, type = ? WHERE id = ?",
+                                     (url, resource_type(r["title"], url), rid))
                     elif row["url"] != url:
                         warnings.append(f"resource {r['title']!r}: keeping url {row['url']!r},"
                                         f" ignoring {url!r} from skill {s['slug']!r}")

@@ -64,8 +64,7 @@ export function Graph({ data, filter, selected, progress, onSelect }: Props) {
 
   useEffect(() => {
     const svgEl = svgRef.current
-    const container = svgEl?.parentElement
-    if (!svgEl || !container) return
+    if (!svgEl) return
 
     const clusterIndex = new Map(data.clusters.map((c, i) => [c.slug, i]))
     const clusterColor = new Map(data.clusters.map((c) => [c.slug, c.color]))
@@ -201,14 +200,14 @@ export function Graph({ data, filter, selected, progress, onSelect }: Props) {
       })
 
     const fit = () => {
-      const w = container.clientWidth
-      const h = container.clientHeight
+      const w = svgEl.clientWidth
+      const h = svgEl.clientHeight
       const s = Math.min(w / 1000, h / 860, 1.1)
       svg.call(zoom.transform, d3.zoomIdentity.translate(w / 2, h / 2).scale(s))
     }
     fit()
     const ro = new ResizeObserver(fit)
-    ro.observe(container)
+    ro.observe(svgEl)
 
     builtRef.current = { nodeSel, linkSel, color }
     return () => {

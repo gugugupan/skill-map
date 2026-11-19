@@ -187,6 +187,17 @@ def test_concepts_unique(zh_files, tr):
     assert problems(zh_files, tr) == ["skills.cache.concepts: duplicate concept(s) ['Redis']"]
 
 
+def test_untranslated_values(zh_files, tr):
+    tr["skills"]["cache"]["practice"] = "加一层缓存"
+    tr["skills"]["cache"]["concepts"][0] = "Redis（集群）"
+    tr["clusters"]["backend-data"] = "数据存储"
+    assert problems(zh_files, tr) == [
+        "clusters.backend-data: contains CJK characters: '数据存储'",
+        "skills.cache.practice: contains CJK characters: '加一层缓存'",
+        "skills.cache.concepts: contains CJK characters: ['Redis（集群）']",
+    ]
+
+
 def test_phases_length(zh_files, tr):
     tr["phases"]["backend"].append("Extra")
     del tr["phases"]["frontend"]

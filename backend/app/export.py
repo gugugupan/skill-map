@@ -165,6 +165,8 @@ def _is_text(value: object) -> bool:
 def _check_text(problems: list[str], where: str, value: object) -> None:
     if not _is_text(value):
         problems.append(f"{where}: must be a non-empty string")
+    elif CJK.search(value):
+        problems.append(f"{where}: contains CJK characters: {value!r}")
 
 
 def _check_list(problems: list[str], where: str, value: object, length: int, item: str) -> None:
@@ -172,6 +174,8 @@ def _check_list(problems: list[str], where: str, value: object, length: int, ite
         problems.append(f"{where}: must be a list of non-empty strings")
     elif len(value) != length:
         problems.append(f"{where}: has {len(value)} item(s), expected {length}")
+    elif any(CJK.search(v) for v in value):
+        problems.append(f"{where}: contains CJK characters: {[v for v in value if CJK.search(v)]}")
     elif len(set(value)) != len(value):
         dupes = sorted({v for v in value if value.count(v) > 1})
         problems.append(f"{where}: duplicate {item}(s) {dupes}")
