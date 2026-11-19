@@ -1,0 +1,34 @@
+{
+  "role": {"slug": "frontend", "name_zh": "前端工程师"},
+  "clusters": [
+    {"slug": "frontend-web", "name": "Web 基础", "color": "#2A8C82"},
+    {"slug": "frontend-eng", "name": "工程化", "color": "#C08A1E"}
+  ],
+  "companies": [
+    {"code": "MERCARI", "name": "Mercari"},
+    {"code": "STRIPE", "name": "Stripe"}
+  ],
+  "postings": [
+    {"company": "MERCARI", "title": "Frontend Engineer", "url": "https://example.com/mercari/frontend"},
+    {"company": "STRIPE", "title": "Software Engineer", "url": "https://example.com/stripe/frontend"}
+  ],
+  "skills": [
+    {"slug": "web-basics", "name": "Web 与浏览器基础", "cluster": "frontend-web",
+     "description": "HTTP、DOM 与渲染流程。", "concepts": ["HTTP 缓存", "DOM", "事件循环", "关键渲染路径"],
+     "practice": "用 DevTools 分析一个页面的首屏。",
+     "resources": [{"title": "MDN Web Docs", "url": "https://developer.mozilla.org/"}],
+     "companies": ["MERCARI", "STRIPE"]},
+    {"slug": "ts", "name": "TypeScript", "cluster": "frontend-eng",
+     "description": "类型系统与工程配置。", "concepts": ["泛型", "类型收窄", "tsconfig", "声明文件"],
+     "practice": "把一个 JS 模块迁移到严格模式 TS。",
+     "resources": [{"title": "TypeScript 官方文档", "url": "https://www.typescriptlang.org/docs/"}],
+     "companies": ["MERCARI"]},
+    {"slug": "net", "cluster": "frontend-web", "companies": ["STRIPE"]},
+    {"slug": "cache", "cluster": "frontend-web", "companies": ["MERCARI", "STRIPE"]}
+  ],
+  "prereqs": [["net", "web-basics"], ["web-basics", "ts"]],
+  "path": [
+    {"title": "基础", "skills": ["net", "web-basics"]},
+    {"title": "工程化", "skills": ["ts", "cache"]}
+  ]
+}

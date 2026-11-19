@@ -65,10 +65,10 @@ def _id(conn, sql: str, params: tuple) -> int:
 def _import(conn, data: dict) -> None:
     for sort, (slug, c) in enumerate(data["CLUSTERS"].items()):
         conn.execute(
-            "INSERT INTO cluster (slug, name_zh, color, sort) VALUES (?, ?, ?, ?)"
+            "INSERT INTO cluster (slug, name_zh, color, sort, role_family) VALUES (?, ?, ?, ?, ?)"
             " ON CONFLICT (slug) DO UPDATE SET name_zh = excluded.name_zh,"
-            " color = excluded.color, sort = excluded.sort",
-            (slug, c["name"], c["color"], sort),
+            " color = excluded.color, sort = excluded.sort, role_family = excluded.role_family",
+            (slug, c["name"], c["color"], sort, ROLE_FAMILY),
         )
 
     jd = data["JD"]
@@ -82,29 +82,41 @@ def _import(conn, data: dict) -> None:
         )
         source_ids[code] = _id(conn, "SELECT id FROM source WHERE code = ?", (code,))
 
+    conn.execute("DELETE FROM role_company WHERE role_family = ?", (ROLE_FAMILY,))
+    for sort, code in enumerate(jd):
+        conn.execute(
+            "INSERT INTO role_company (role_family, source_id, sort) VALUES (?, ?, ?)",
+            (ROLE_FAMILY, source_ids[code], sort),
+        )
+
     for src in data["SOURCES"]:
         code = src["k"]
         for title, url in src["jobs"]:
             conn.execute(
                 "INSERT INTO job_posting (source_id, company, title, url, role_family, raw_text)"
                 " VALUES (?, ?, ?, ?, ?, NULL)"
-                " ON CONFLICT (source_id, title) DO UPDATE SET company = excluded.company,"
-                " url = excluded.url, role_family = excluded.role_family",
+                " ON CONFLICT (source_id, title, role_family) DO UPDATE SET company = excluded.company,"
+                " url = excluded.url",
                 (source_ids[code], jd[code], title, url or None, ROLE_FAMILY),
             )
 
     skill_ids = {}
+    conn.execute("DELETE FROM role_skill WHERE role_family = ?", (ROLE_FAMILY,))
     for sort, n in enumerate(data["N"]):
         conn.execute(
-            "INSERT INTO skill (slug, name_zh, cluster, description, concepts, practice,"
-            " reference_companies, sort, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'active')"
+            "INSERT INTO skill (slug, name_zh, description, concepts, practice, status)"
+            " VALUES (?, ?, ?, ?, ?, 'active')"
             " ON CONFLICT (slug) DO UPDATE SET name_zh = excluded.name_zh,"
-            " cluster = excluded.cluster, description = excluded.description,"
-            " concepts = excluded.concepts, practice = excluded.practice,"
-            " reference_companies = excluded.reference_companies, sort = excluded.sort",
-            (n["id"], n["n"], n["c"], n["d"], _dumps(n["k"]), n["p"], _dumps(n["jd"].split()), sort),
+            " description = excluded.description,"
+            " concepts = excluded.concepts, practice = excluded.practice",
+            (n["id"], n["n"], n["d"], _dumps(n["k"]), n["p"]),
         )
         skill_ids[n["id"]] = _id(conn, "SELECT id FROM skill WHERE slug = ?", (n["id"],))
+        conn.execute(
+            "INSERT INTO role_skill (role_family, skill_id, cluster_slug, reference_companies, sort)"
+            " VALUES (?, ?, ?, ?, ?)",
+            (ROLE_FAMILY, skill_ids[n["id"]], n["c"], _dumps(n["jd"].split()), sort),
+        )
 
     for n in data["N"]:
         for rank, title in enumerate(n["r"]):

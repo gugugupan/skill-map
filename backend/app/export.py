@@ -16,22 +16,17 @@ from app import db
 DEFAULT_OUT = db.BACKEND_DIR.parent / "frontend" / "public" / "data"
 
 
-def _clusters(conn: sqlite3.Connection) -> list[dict]:
-    rows = conn.execute("SELECT slug, name_zh, color FROM cluster ORDER BY sort, slug")
-    return [{"slug": r["slug"], "name": r["name_zh"], "color": r["color"]} for r in rows]
+LEGACY_FILES = ("clusters.json", "companies.json", "sources.json", "edges.json")
+LEGACY_DIRS = ("roles", "roadmaps")
 
 
-def _companies(conn: sqlite3.Connection) -> list[dict]:
-    rows = conn.execute("SELECT code, name FROM source ORDER BY id")
-    return [{"code": r["code"], "name": r["name"]} for r in rows]
-
-
-def _sources(conn: sqlite3.Connection) -> list[dict]:
-    jobs: dict[int, list[dict]] = {}
-    for r in conn.execute("SELECT source_id, title, url FROM job_posting ORDER BY id"):
-        jobs.setdefault(r["source_id"], []).append({"title": r["title"], "url": r["url"]})
-    rows = conn.execute("SELECT id, code, name FROM source ORDER BY id")
-    return [{"code": r["code"], "name": r["name"], "jobs": jobs.get(r["id"], [])} for r in rows]
+def _roles(conn: sqlite3.Connection) -> list[sqlite3.Row]:
+    return conn.execute(
+        "SELECT r.slug, r.name_zh, r.root_label FROM role r"
+        " WHERE EXISTS (SELECT 1 FROM role_skill rs JOIN skill s ON s.id = rs.skill_id"
+        "               WHERE rs.role_family = r.slug AND s.status = 'active')"
+        " ORDER BY r.sort"
+    ).fetchall()
 
 
 def _edges(conn: sqlite3.Connection) -> list[dict]:
@@ -60,77 +55,107 @@ def _skills(conn: sqlite3.Connection, edges: list[dict]) -> list[dict]:
             prereqs.setdefault(e["to"], []).append(e["from"])
             unlocks.setdefault(e["from"], []).append(e["to"])
 
-    out = []
-    for r in conn.execute("SELECT * FROM skill WHERE status = 'active' ORDER BY sort, id"):
-        # M0: no extracted postings yet, so heat comes from the hand-curated reference companies.
-        companies = json.loads(r["reference_companies"])
-        out.append({
-            "slug": r["slug"],
-            "name": r["name_zh"],
-            "cluster": r["cluster"],
-            "description": r["description"],
-            "concepts": json.loads(r["concepts"]),
-            "practice": r["practice"],
-            "resources": resources.get(r["id"], []),
-            "companies": companies,
-            "heat": len(companies),
-            "prereqs": prereqs.get(r["slug"], []),
-            "unlocks": unlocks.get(r["slug"], []),
-        })
-    return out
+    # Global order: first appearance in the role switcher order, then anything role-less.
+    rows = conn.execute(
+        "SELECT s.* FROM skill s"
+        " LEFT JOIN (SELECT rs.skill_id, MIN(r.sort * 100000 + rs.sort) AS pos FROM role_skill rs"
+        "            JOIN role r ON r.slug = rs.role_family GROUP BY rs.skill_id) p ON p.skill_id = s.id"
+        " WHERE s.status = 'active' ORDER BY p.pos IS NULL, p.pos, s.id"
+    )
+    return [{
+        "slug": r["slug"],
+        "name": r["name_zh"],
+        "description": r["description"],
+        "concepts": json.loads(r["concepts"]),
+        "practice": r["practice"],
+        "resources": resources.get(r["id"], []),
+        "prereqs": prereqs.get(r["slug"], []),
+        "unlocks": unlocks.get(r["slug"], []),
+    } for r in rows]
 
 
-def _roadmaps(conn: sqlite3.Connection) -> dict[str, dict]:
-    latest = conn.execute(
-        "SELECT role_family, MAX(id) AS id FROM roadmap GROUP BY role_family ORDER BY role_family"
-    ).fetchall()
-    out = {}
-    for rm in latest:
-        phases: list[dict] = []
-        current = None
-        for r in conn.execute(
-            "SELECT rs.phase, rs.phase_title, s.slug FROM roadmap_step rs"
-            " JOIN skill s ON s.id = rs.skill_id"
-            " WHERE rs.roadmap_id = ? ORDER BY rs.phase, rs.step_order",
-            (rm["id"],),
-        ):
-            if r["phase"] != current:
-                current = r["phase"]
-                phases.append({"title": r["phase_title"], "skills": []})
-            phases[-1]["skills"].append(r["slug"])
-        out[rm["role_family"]] = {"phases": phases}
-    return out
+def _role_files(conn: sqlite3.Connection, role: str, edges: list[dict]) -> dict[str, object]:
+    clusters = [{"slug": r["slug"], "name": r["name_zh"], "color": r["color"]} for r in conn.execute(
+        "SELECT slug, name_zh, color FROM cluster WHERE role_family = ? ORDER BY sort, slug", (role,))]
+
+    companies = conn.execute(
+        "SELECT s.id, s.code, s.name FROM role_company rc JOIN source s ON s.id = rc.source_id"
+        " WHERE rc.role_family = ? ORDER BY rc.sort", (role,)).fetchall()
+    jobs: dict[int, list[dict]] = {}
+    for r in conn.execute(
+        "SELECT source_id, title, url FROM job_posting WHERE role_family = ? ORDER BY id", (role,)
+    ):
+        jobs.setdefault(r["source_id"], []).append({"title": r["title"], "url": r["url"]})
+
+    skills = []
+    for r in conn.execute(
+        "SELECT s.slug, rs.cluster_slug, rs.reference_companies FROM role_skill rs"
+        " JOIN skill s ON s.id = rs.skill_id AND s.status = 'active'"
+        " WHERE rs.role_family = ? ORDER BY rs.sort, s.id", (role,)
+    ):
+        # No extracted postings yet, so heat comes from the hand-curated companies.
+        cos = json.loads(r["reference_companies"])
+        skills.append({"slug": r["slug"], "cluster": r["cluster_slug"], "companies": cos, "heat": len(cos)})
+    members = {s["slug"] for s in skills}
+
+    latest = conn.execute("SELECT MAX(id) FROM roadmap WHERE role_family = ?", (role,)).fetchone()[0]
+    phases: list[dict] = []
+    current = None
+    for r in conn.execute(
+        "SELECT rs.phase, rs.phase_title, s.slug FROM roadmap_step rs"
+        " JOIN skill s ON s.id = rs.skill_id"
+        " WHERE rs.roadmap_id = ? ORDER BY rs.phase, rs.step_order",
+        (latest,),
+    ):
+        if r["phase"] != current:
+            current = r["phase"]
+            phases.append({"title": r["phase_title"], "skills": []})
+        phases[-1]["skills"].append(r["slug"])
+
+    return {
+        "clusters.json": clusters,
+        "companies.json": [{"code": c["code"], "name": c["name"]} for c in companies],
+        "sources.json": [{"code": c["code"], "name": c["name"], "jobs": jobs.get(c["id"], [])}
+                         for c in companies],
+        "skills.json": skills,
+        "edges.json": [e for e in edges if e["from"] in members and e["to"] in members],
+        "roadmap.json": {"phases": phases},
+    }
 
 
 def build(conn: sqlite3.Connection) -> dict[str, object]:
     edges = _edges(conn)
-    skills = _skills(conn, edges)
     files: dict[str, object] = {
-        "meta.json": {
-            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-            "counts": {
-                "companies": conn.execute("SELECT COUNT(*) FROM source").fetchone()[0],
-                "postings": conn.execute("SELECT COUNT(*) FROM job_posting").fetchone()[0],
-                "skills": len(skills),
-                "edges": len(edges),
-            },
-        },
-        "clusters.json": _clusters(conn),
-        "companies.json": _companies(conn),
-        "sources.json": _sources(conn),
-        "skills.json": skills,
-        "edges.json": edges,
+        "meta.json": {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds")},
+        "skills.json": _skills(conn, edges),
     }
-    for role_family, roadmap in _roadmaps(conn).items():
-        files[f"roadmaps/{role_family}.json"] = roadmap
+    roles = []
+    for role in _roles(conn):
+        per_role = _role_files(conn, role["slug"], edges)
+        roles.append({
+            "slug": role["slug"],
+            "name": role["name_zh"],
+            "root_label": role["root_label"],
+            "counts": {
+                "companies": len(per_role["companies.json"]),
+                "postings": sum(len(s["jobs"]) for s in per_role["sources.json"]),
+                "skills": len(per_role["skills.json"]),
+                "edges": len(per_role["edges.json"]),
+            },
+        })
+        for name, payload in per_role.items():
+            files[f"roles/{role['slug']}/{name}"] = payload
+    files["roles.json"] = roles
     return files
 
 
 def export(conn: sqlite3.Connection, out_dir: Path) -> list[Path]:
     files = build(conn)
     out_dir = Path(out_dir)
-    # Clear stale roadmaps so a removed role_family does not linger on the site.
-    shutil.rmtree(out_dir / "roadmaps", ignore_errors=True)
+    for d in LEGACY_DIRS:
+        shutil.rmtree(out_dir / d, ignore_errors=True)
+    for f in LEGACY_FILES:
+        (out_dir / f).unlink(missing_ok=True)
     written = []
     for name, payload in files.items():
         path = out_dir / name

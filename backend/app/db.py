@@ -52,19 +52,30 @@ def migrate(conn: sqlite3.Connection, directory: Path = MIGRATIONS_DIR) -> list[
     for version, f in _migrations(directory):
         if version in applied:
             continue
-        # executescript() auto-commits, so the transaction must live inside the script.
+        # executescript() auto-commits, so the transaction must be opened inside the script.
+        # Foreign keys are off so table rebuilds (DROP + RENAME) do not cascade; the
+        # pragma is a no-op inside a transaction, hence before BEGIN, and the check
+        # below stands in for enforcement.
         script = (
             "BEGIN;\n"
             + f.read_text(encoding="utf-8")
             + f"\n;INSERT INTO schema_migrations (version, name) VALUES ({version}, '{f.name}');\n"
-            + "COMMIT;\n"
         )
+        fk_on = conn.execute("PRAGMA foreign_keys").fetchone()[0]
+        conn.execute("PRAGMA foreign_keys = OFF")
         try:
             conn.executescript(script)
+            violations = conn.execute("PRAGMA foreign_key_check").fetchall()
+            if violations:
+                raise sqlite3.IntegrityError(
+                    f"{f.name}: foreign key violations: {[tuple(v) for v in violations]}")
+            conn.commit()
         except Exception:
             if conn.in_transaction:
                 conn.execute("ROLLBACK")
             raise
+        finally:
+            conn.execute(f"PRAGMA foreign_keys = {'ON' if fk_on else 'OFF'}")
         done.append(f.name)
     return done
 

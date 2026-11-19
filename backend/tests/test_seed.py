@@ -1,16 +1,11 @@
-import importlib.util
 import json
-from pathlib import Path
 
 import pytest
 
 from app import db
+from conftest import SEED_DIR, load_seed_module
 
-SEED_DIR = Path(__file__).resolve().parents[2] / "seed"
-
-_spec = importlib.util.spec_from_file_location("import_reference", SEED_DIR / "import_reference.py")
-seed = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(seed)
+seed = load_seed_module("import_reference")
 
 EXPECTED = {
     "cluster": 8,
@@ -19,6 +14,8 @@ EXPECTED = {
     "skill": 50,
     "roadmap": 1,
     "roadmap_step": 32,
+    "role_skill": 50,
+    "role_company": 10,
 }
 
 
@@ -63,10 +60,16 @@ def test_field_mapping(db_file):
     conn = db.connect(db_file)
     try:
         s = conn.execute("SELECT * FROM skill WHERE slug = 'os'").fetchone()
-        assert s["cluster"] == "found" and s["status"] == "active" and s["sort"] == 0
-        assert json.loads(s["reference_companies"]) == ["A", "B", "X", "AN"]
-        assert len(json.loads(s["concepts"])) == 4
-        assert [r[0] for r in conn.execute("SELECT slug FROM cluster ORDER BY sort")][:2] == ["found", "core"]
+        assert s["status"] == "active" and len(json.loads(s["concepts"])) == 4
+        rs = conn.execute("SELECT * FROM role_skill WHERE skill_id = ?", (s["id"],)).fetchall()
+        assert [(r["role_family"], r["cluster_slug"], r["sort"]) for r in rs] == [("agent-infra", "found", 0)]
+        assert json.loads(rs[0]["reference_companies"]) == ["A", "B", "X", "AN"]
+        assert [tuple(r) for r in conn.execute(
+            "SELECT slug, role_family FROM cluster ORDER BY sort")][:2] == [
+            ("found", "agent-infra"), ("core", "agent-infra")]
+        assert [r[0] for r in conn.execute(
+            "SELECT s.code FROM role_company rc JOIN source s ON s.id = rc.source_id"
+            " WHERE rc.role_family = 'agent-infra' ORDER BY rc.sort")][:2] == ["O", "AN"]
         src = conn.execute("SELECT * FROM source WHERE code = 'AN'").fetchone()
         assert (src["name"], src["company"], src["type"], src["url"]) == ("Anthropic", "Anthropic", "manual", None)
         screenshot = conn.execute(

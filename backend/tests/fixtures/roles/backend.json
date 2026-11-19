@@ -1,0 +1,36 @@
+{
+  "role": {"slug": "backend", "name_zh": "后端工程师"},
+  "clusters": [
+    {"slug": "backend-data", "name": "数据存储", "color": "#2A8C82"},
+    {"slug": "backend-dist", "name": "分布式", "color": "#3D5A99"}
+  ],
+  "companies": [
+    {"code": "STRIPE", "name": "Stripe"},
+    {"code": "AN", "name": "Anthropic"}
+  ],
+  "postings": [
+    {"company": "STRIPE", "title": "Software Engineer", "url": "https://example.com/stripe/backend"},
+    {"company": "AN", "title": "Backend Engineer, API", "url": "https://example.com/an/backend"}
+  ],
+  "skills": [
+    {"slug": "sql-db", "name": "关系数据库与 SQL", "cluster": "backend-data",
+     "description": "事务、索引与查询优化。", "concepts": ["事务隔离", "B+ 树索引", "执行计划", "MVCC"],
+     "practice": "给慢查询加索引并对比执行计划。",
+     "resources": [{"title": "PostgreSQL 官方文档", "url": "https://www.postgresql.org/docs/"}],
+     "companies": ["STRIPE", "AN"]},
+    {"slug": "cache", "name": "缓存", "cluster": "backend-data",
+     "description": "缓存策略与一致性。", "concepts": ["Redis", "缓存穿透", "失效策略", "一致性"],
+     "practice": "给接口加一层读缓存。",
+     "resources": [
+       {"title": "Redis 官方文档", "url": "https://redis.io/docs/"},
+       {"title": "Kleppmann《Designing Data-Intensive Applications》", "url": "https://dataintensive.net/"}
+     ],
+     "companies": ["STRIPE"]},
+    {"slug": "dist", "cluster": "backend-dist", "companies": ["STRIPE", "AN"]}
+  ],
+  "prereqs": [["sql-db", "cache"], ["dist", "cache"]],
+  "path": [
+    {"title": "基础", "skills": ["sql-db", "dist"]},
+    {"title": "进阶", "skills": ["cache"]}
+  ]
+}
