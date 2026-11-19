@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import { useT } from '../i18n'
 import type { Skill } from '../types'
 
 interface Props {
@@ -9,10 +10,11 @@ interface Props {
 }
 
 export function SkillLinks({ slugs, bySlug, onSelect, isDone }: Props) {
+  const t = useT()
   const known = slugs.filter((s) => bySlug.has(s))
   return known.map((slug, i) => (
     <Fragment key={slug}>
-      {i > 0 && '、'}
+      {i > 0 && t.listSep}
       <button type="button" className={'slink' + (isDone?.(slug) ? ' done' : '')} onClick={() => onSelect(slug)}>
         {bySlug.get(slug)!.name}
       </button>

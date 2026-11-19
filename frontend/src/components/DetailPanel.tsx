@@ -1,4 +1,5 @@
-import { STATUS_LABELS, type Status } from '../progress'
+import { useT } from '../i18n'
+import type { Status } from '../progress'
 import type { Cluster, Company, Skill } from '../types'
 import { SkillLinks } from './SkillLinks'
 
@@ -13,12 +14,13 @@ interface Props {
 }
 
 export function DetailPanel({ skill, cluster, companies, bySlug, status, onStatus, onSelect }: Props) {
+  const t = useT()
   const prereqs = skill.prereqs.filter((s) => bySlug.has(s))
   const unlocks = skill.unlocks.filter((s) => bySlug.has(s))
   return (
     <>
       <button type="button" className="back" onClick={() => onSelect(null)}>
-        返回学习路线
+        {t.back}
       </button>
       {cluster && (
         <div className="cl" style={{ color: cluster.color, marginTop: 14 }}>
@@ -34,25 +36,25 @@ export function DetailPanel({ skill, cluster, companies, bySlug, status, onStatu
           </span>
         ))}
       </div>
-      <div className="status" role="group" aria-label="学习状态">
-        {STATUS_LABELS.map((label, i) => (
-          <button type="button" key={label} aria-pressed={i === status} onClick={() => onStatus(i as Status)}>
+      <div className="status" role="group" aria-label={t.statusGroup}>
+        {t.statusLabels.map((label, i) => (
+          <button type="button" key={i} aria-pressed={i === status} onClick={() => onStatus(i as Status)}>
             {label}
           </button>
         ))}
       </div>
-      <h3>核心概念</h3>
+      <h3>{t.concepts}</h3>
       <ul>
-        {skill.concepts.map((c) => (
-          <li key={c}>{c}</li>
+        {skill.concepts.map((c, i) => (
+          <li key={i}>{c}</li>
         ))}
       </ul>
-      <h3>动手练习</h3>
+      <h3>{t.practice}</h3>
       <p>{skill.practice}</p>
-      <h3>学习资料</h3>
+      <h3>{t.resources}</h3>
       <ul>
-        {skill.resources.map((r) => (
-          <li key={r.title}>
+        {skill.resources.map((r, i) => (
+          <li key={i}>
             {r.url ? (
               <a className="ext" href={r.url} target="_blank" rel="noopener">
                 {r.title}
@@ -65,7 +67,7 @@ export function DetailPanel({ skill, cluster, companies, bySlug, status, onStatu
       </ul>
       {prereqs.length > 0 && (
         <>
-          <h3>先修</h3>
+          <h3>{t.prereqs}</h3>
           <p className="links">
             <SkillLinks slugs={prereqs} bySlug={bySlug} onSelect={onSelect} />
           </p>
@@ -73,7 +75,7 @@ export function DetailPanel({ skill, cluster, companies, bySlug, status, onStatu
       )}
       {unlocks.length > 0 && (
         <>
-          <h3>学完可以进入</h3>
+          <h3>{t.unlocks}</h3>
           <p className="links">
             <SkillLinks slugs={unlocks} bySlug={bySlug} onSelect={onSelect} />
           </p>

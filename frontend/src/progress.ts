@@ -3,8 +3,6 @@ import { useCallback, useState } from 'react'
 export type Status = 0 | 1 | 2
 export type Progress = Record<string, Status>
 
-export const STATUS_LABELS = ['未开始', '学习中', '已掌握'] as const
-
 // Same key as seed/reference.html so progress saved there carries over.
 const STORAGE_KEY = 'agent-infra-progress'
 

@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
 import { useEffect, useRef } from 'react'
+import { STRINGS, useLang } from '../i18n'
 import type { Progress } from '../progress'
 import type { SkillMapData } from '../types'
 
@@ -30,6 +31,18 @@ const HUB_RADIUS = 13
 const LEAF_MIN = 5
 const LEAF_SPAN = 7.5
 const endpoint = (end: GLink['source']) => end as GNode
+// English skill names run up to ~28 characters; leaves wrap them onto two lines to keep neighbours apart.
+const WRAP_CHARS = 16
+const LABEL_CHAR_PX = 6.2
+
+function wrapLabel(label: string): string[] {
+  if (label.length <= WRAP_CHARS) return [label]
+  const words = label.split(' ')
+  let first = words[0]
+  let i = 1
+  while (i < words.length && (first + ' ' + words[i]).length <= WRAP_CHARS) first += ' ' + words[i++]
+  return i < words.length ? [first, words.slice(i).join(' ')] : [label]
+}
 
 interface Props {
   data: SkillMapData
@@ -40,6 +53,8 @@ interface Props {
 }
 
 export function Graph({ data, filter, selected, progress, onSelect }: Props) {
+  const lang = useLang()
+  const t = STRINGS[lang]
   const svgRef = useRef<SVGSVGElement>(null)
   const builtRef = useRef<Built | null>(null)
   const onSelectRef = useRef(onSelect)
@@ -142,11 +157,26 @@ export function Graph({ data, filter, selected, progress, onSelect }: Props) {
 
     nodeSel.append('circle').attr('class', 'ring').attr('r', (d) => radius(d) + 3.5).attr('fill', 'none').attr('stroke-width', 2)
     nodeSel.append('circle').attr('class', 'dot').attr('r', radius).attr('stroke', 'var(--bg)').attr('stroke-width', 1.5)
+    // English labels are wrapped and still much wider than the CJK ones the default spacing was tuned for.
+    const wide = lang === 'en'
+    const leafDistance = wide ? 90 : 60
+    const lines = (d: GNode) => (wide && d.type === 'leaf' ? wrapLabel(d.label) : [d.label])
+    // Half the label width for leaves; hubs get less so long cluster names do not push whole clusters apart.
+    const collide = (d: GNode) => {
+      if (!wide || d.type === 'root') return radius(d) + 20
+      const chars = Math.max(...lines(d).map((l) => l.length))
+      return Math.max(radius(d) + 20, chars * LABEL_CHAR_PX * (d.type === 'leaf' ? 0.5 : 0.3))
+    }
     nodeSel
       .append('text')
       .attr('dy', (d) => radius(d) + 14)
       .attr('text-anchor', 'middle')
-      .text((d) => d.label)
+      .selectAll('tspan')
+      .data((d) => lines(d).map((text, i) => ({ text, i })))
+      .join('tspan')
+      .attr('x', 0)
+      .attr('dy', (l) => (l.i === 0 ? null : '1.15em'))
+      .text((l) => l.text)
 
     sim
       .force(
@@ -154,13 +184,13 @@ export function Graph({ data, filter, selected, progress, onSelect }: Props) {
         d3
           .forceLink<GNode, GLink>(links)
           .id((d) => d.id)
-          .distance((l) => (l.kind === 'pre' ? 120 : endpoint(l.source).id === 'root' ? 200 : 60))
+          .distance((l) => (l.kind === 'pre' ? 120 : endpoint(l.source).id === 'root' ? 200 : leafDistance))
           .strength((l) => (l.kind === 'pre' ? 0.05 : 0.6)),
       )
       .force('charge', d3.forceManyBody<GNode>().strength((d) => (d.type === 'root' ? -600 : d.type === 'hub' ? -300 : -140)))
       .force('x', d3.forceX<GNode>((d) => (d.type === 'root' ? 0 : anchor(d.cluster)[0])).strength((d) => (d.type === 'root' ? 0.5 : 0.12)))
       .force('y', d3.forceY<GNode>((d) => (d.type === 'root' ? 0 : anchor(d.cluster)[1])).strength((d) => (d.type === 'root' ? 0.5 : 0.12)))
-      .force('collide', d3.forceCollide<GNode>((d) => radius(d) + 20))
+      .force('collide', d3.forceCollide<GNode>(collide).iterations(wide ? 3 : 1))
       .on('tick', () => {
         linkSel
           .attr('x1', (d) => endpoint(d.source).x ?? 0)
@@ -188,7 +218,7 @@ export function Graph({ data, filter, selected, progress, onSelect }: Props) {
       svg.selectAll('*').remove()
       builtRef.current = null
     }
-  }, [data])
+  }, [data, lang])
 
   useEffect(() => {
     const built = builtRef.current
@@ -215,5 +245,5 @@ export function Graph({ data, filter, selected, progress, onSelect }: Props) {
       .classed('dim', (l) => hidden(endpoint(l.source)) || hidden(endpoint(l.target)))
   }, [data, filter, selected])
 
-  return <svg ref={svgRef} aria-label="知识图谱" />
+  return <svg ref={svgRef} aria-label={t.graphLabel} />
 }

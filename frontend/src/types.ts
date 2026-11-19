@@ -1,3 +1,5 @@
+import type { Lang } from './i18n'
+
 export interface Meta {
   generated_at: string
 }
@@ -63,6 +65,7 @@ export interface Roadmap {
 }
 
 export interface SiteIndex {
+  lang: Lang
   meta: Meta
   roles: Role[]
   skills: SkillContent[]

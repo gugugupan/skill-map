@@ -1,9 +1,11 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { DetailPanel } from './components/DetailPanel'
 import { Graph } from './components/Graph'
 import { HomePanel } from './components/HomePanel'
+import { LangToggle } from './components/LangToggle'
 import { RoleSwitcher } from './components/RoleSwitcher'
 import { loadIndex, loadRole } from './data'
+import { initialLang, LangContext, saveLang, STRINGS, useT, type Lang, type Strings } from './i18n'
 import { useProgress } from './progress'
 import type { Role, SiteIndex, SkillMapData } from './types'
 
@@ -15,29 +17,40 @@ function urlWithRole(slug: string) {
   return url
 }
 
-function subtitle(index: SiteIndex, role: Role) {
+function subtitle(t: Strings, index: SiteIndex, role: Role) {
   const d = new Date(index.meta.generated_at)
-  const when = Number.isNaN(d.getTime()) ? '' : `（${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日更新）`
-  return `来自 ${role.counts.companies} 家公司、${role.counts.postings} 份 ${role.name}相关 JD 的能力地图${when}`
+  return t.subtitle(role.counts.companies, role.counts.postings, role.name, Number.isNaN(d.getTime()) ? null : d)
+}
+
+const without = (prev: Record<string, string>, key: string) => {
+  const next = { ...prev }
+  delete next[key]
+  return next
 }
 
 export default function App() {
-  const [index, setIndex] = useState<SiteIndex | null>(null)
-  const [error, setError] = useState<string | null>(null)
+  const [lang, setLang] = useState(initialLang)
+  const t = STRINGS[lang]
+  // Everything fetched is cached per language, so a switch never renders text from the other language.
+  const [indexes, setIndexes] = useState<Partial<Record<Lang, SiteIndex>>>({})
+  const [indexError, setIndexError] = useState<Partial<Record<Lang, string>>>({})
   const [roleParam, setRoleParam] = useState(readRoleParam)
   const [roleData, setRoleData] = useState<Record<string, SkillMapData>>({})
   const [roleError, setRoleError] = useState<Record<string, string>>({})
 
+  const index = indexes[lang]
+  const indexFailed = indexError[lang]
   useEffect(() => {
-    let cancelled = false
-    loadIndex().then(
-      (d) => !cancelled && setIndex(d),
-      (e: unknown) => !cancelled && setError(String(e)),
+    if (index || indexFailed) return
+    const ac = new AbortController()
+    loadIndex(lang, ac.signal).then(
+      (d) => setIndexes((prev) => ({ ...prev, [lang]: d })),
+      (e: unknown) => {
+        if (!ac.signal.aborted) setIndexError((prev) => ({ ...prev, [lang]: String(e) }))
+      },
     )
-    return () => {
-      cancelled = true
-    }
-  }, [])
+    return () => ac.abort()
+  }, [lang, index, indexFailed])
 
   useEffect(() => {
     const onPop = () => setRoleParam(readRoleParam())
@@ -52,71 +65,88 @@ export default function App() {
     window.history.replaceState(window.history.state, '', urlWithRole(role.slug))
   }, [role, roleParam])
 
-  useEffect(() => {
-    if (role) document.title = `${role.name} 知识图谱`
-  }, [role])
+  useLayoutEffect(() => {
+    document.documentElement.lang = t.htmlLang
+    document.title = role ? t.mapTitle(role.name) : t.siteTitle
+  }, [t, role])
 
-  const cached = role ? roleData[role.slug] : undefined
-  const failed = role ? roleError[role.slug] : undefined
+  const roleKey = role ? `${lang}:${role.slug}` : ''
+  const cached = role ? roleData[roleKey] : undefined
+  const failed = role ? roleError[roleKey] : undefined
   useEffect(() => {
     // A failed role stays failed until the user retries, which clears its error and re-runs this effect.
     if (!index || !role || cached || failed) return
-    // Responses are stored per slug, so a slow response for an earlier role can never replace the current one.
+    // Responses are stored per language and slug, so a slow response for an earlier choice can never replace the current one.
+    const key = `${index.lang}:${role.slug}`
     const ac = new AbortController()
     loadRole(index, role, ac.signal).then(
-      (d) => setRoleData((prev) => ({ ...prev, [role.slug]: d })),
+      (d) => setRoleData((prev) => ({ ...prev, [key]: d })),
       (e: unknown) => {
-        if (!ac.signal.aborted) setRoleError((prev) => ({ ...prev, [role.slug]: String(e) }))
+        if (!ac.signal.aborted) setRoleError((prev) => ({ ...prev, [key]: String(e) }))
       },
     )
     return () => ac.abort()
   }, [index, role, cached, failed])
 
-  const retryRole = useCallback((slug: string) => {
-    setRoleError((prev) => {
-      const next = { ...prev }
-      delete next[slug]
-      return next
-    })
-  }, [])
+  const retry = useCallback(() => {
+    if (!indexFailed) setRoleError((prev) => without(prev, roleKey))
+    else setIndexError((prev) => without(prev, lang))
+  }, [indexFailed, roleKey, lang])
 
   const selectRole = useCallback((slug: string) => {
     window.history.pushState(null, '', urlWithRole(slug))
     setRoleParam(slug)
   }, [])
 
-  if (!index || !role) {
-    const msg = error ? `数据加载失败：${error}` : index ? '暂无岗位数据' : '加载中…'
-    return <div className="loading">{msg}</div>
-  }
+  const selectLang = useCallback((next: Lang) => {
+    saveLang(next)
+    setLang(next)
+  }, [])
 
+  const loadError = indexFailed ?? failed
   return (
-    <RoleView
-      data={cached}
-      loadError={failed}
-      onRetry={() => retryRole(role.slug)}
-      switcher={<RoleSwitcher roles={index.roles} current={role} onChange={selectRole} />}
-      sub={subtitle(index, role)}
-      roleSlug={role.slug}
-    />
+    <LangContext.Provider value={lang}>
+      <RoleView
+        data={cached}
+        status={loadError ? t.loadFailed(loadError) : index && !role ? t.noRoles : t.loading}
+        canRetry={loadError !== undefined}
+        onRetry={retry}
+        switcher={
+          <div className="title-row">
+            {index && role ? (
+              <RoleSwitcher roles={index.roles} current={role} onChange={selectRole} />
+            ) : (
+              <h1>{t.siteTitle}</h1>
+            )}
+            <LangToggle lang={lang} onChange={selectLang} />
+          </div>
+        }
+        sub={index && role ? subtitle(t, index, role) : ''}
+        roleSlug={role?.slug}
+      />
+    </LangContext.Provider>
   )
 }
 
 interface RoleViewProps {
   data: SkillMapData | undefined
-  loadError: string | undefined
+  status: string
+  canRetry: boolean
   onRetry: () => void
   switcher: ReactNode
   sub: string
-  roleSlug: string
+  roleSlug: string | undefined
 }
 
-// Not keyed by role: the switcher must keep its DOM node (and focus) across a switch.
-function RoleView({ data, loadError, onRetry, switcher, sub, roleSlug }: RoleViewProps) {
+// Always mounted and not keyed by role: the switcher and language toggle keep their DOM nodes (and focus) across
+// a switch, and the selected skill and company filter (slug / code based) survive a language switch.
+function RoleView({ data, status, canRetry, onRetry, switcher, sub, roleSlug }: RoleViewProps) {
+  const t = useT()
   const [filter, setFilter] = useState<string | null>(null)
   const [selected, setSelected] = useState<string | null>(null)
   const [shownRole, setShownRole] = useState(roleSlug)
-  if (shownRole !== roleSlug) {
+  // roleSlug is undefined while a language's index loads; that is not a role change.
+  if (roleSlug !== undefined && shownRole !== roleSlug) {
     setShownRole(roleSlug)
     setFilter(null)
     setSelected(null)
@@ -140,15 +170,11 @@ function RoleView({ data, loadError, onRetry, switcher, sub, roleSlug }: RoleVie
           </div>
         </header>
         <div className="loading">
-          {loadError ? (
-            <>
-              数据加载失败：{loadError}
-              <button type="button" className="chip retry" onClick={onRetry}>
-                重试
-              </button>
-            </>
-          ) : (
-            '加载中…'
+          {status}
+          {canRetry && (
+            <button type="button" className="chip retry" onClick={onRetry}>
+              {t.retry}
+            </button>
           )}
         </div>
       </div>
@@ -171,12 +197,10 @@ function RoleView({ data, loadError, onRetry, switcher, sub, roleSlug }: RoleVie
           <div className="bar">
             <i style={{ width: `${total ? (done / total) * 100 : 0}%` }} />
           </div>
-          <span>
-            已掌握 {done} / {total}，学习中 {doing}
-          </span>
+          <span>{t.progress(done, total, doing)}</span>
         </div>
-        <div className="filters" role="group" aria-label="按公司筛选">
-          {[{ code: null, name: '全部' }, ...data.companies].map((c) => (
+        <div className="filters" role="group" aria-label={t.filterGroup}>
+          {[{ code: null, name: t.allCompanies }, ...data.companies].map((c) => (
             <button type="button" key={c.code ?? ''} className="chip" aria-pressed={filter === c.code} onClick={() => setFilter(c.code)}>
               {c.name}
             </button>
@@ -194,7 +218,7 @@ function RoleView({ data, loadError, onRetry, switcher, sub, roleSlug }: RoleVie
               </span>
             ))}
           </div>
-          <div className="hint">拖动平移，滚轮缩放，点击节点查看</div>
+          <div className="hint">{t.hint}</div>
         </div>
         <aside ref={panelRef} aria-live="polite">
           {skill ? (

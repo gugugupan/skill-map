@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react'
+import { useT } from '../i18n'
 import type { Role } from '../types'
 
 interface Props {
@@ -8,6 +9,7 @@ interface Props {
 }
 
 export function RoleSwitcher({ roles, current, onChange }: Props) {
+  const t = useT()
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(0)
   const rootRef = useRef<HTMLDivElement>(null)
@@ -90,11 +92,11 @@ export function RoleSwitcher({ roles, current, onChange }: Props) {
           aria-haspopup="listbox"
           aria-expanded={open}
           aria-controls={open ? listId : undefined}
-          aria-label={`${current.name} 知识图谱，切换岗位`}
+          aria-label={t.switcherLabel(current.name)}
           onClick={() => (open ? close(false) : show())}
           onKeyDown={onButtonKey}
         >
-          {current.name} 知识图谱
+          {t.mapTitle(current.name)}
           <svg className="caret" viewBox="0 0 12 12" aria-hidden="true">
             <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
           </svg>
@@ -106,7 +108,7 @@ export function RoleSwitcher({ roles, current, onChange }: Props) {
           id={listId}
           className="switcher-list"
           role="listbox"
-          aria-label="选择岗位"
+          aria-label={t.chooseRole}
           tabIndex={-1}
           aria-activedescendant={`${listId}-${active}`}
           onKeyDown={onListKey}
@@ -123,7 +125,7 @@ export function RoleSwitcher({ roles, current, onChange }: Props) {
             >
               <span className="name">{r.name}</span>
               <span className="meta">
-                {r.counts.skills} 个能力点 · {r.counts.postings} 份 JD
+                {t.roleMeta(r.counts.skills, r.counts.postings)}
               </span>
             </li>
           ))}
