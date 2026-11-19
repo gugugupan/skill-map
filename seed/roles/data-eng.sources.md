@@ -134,7 +134,7 @@
 ## 归纳取舍
 
 - **复用**：`dist`（概念是共识、幂等、exactly-once、DDIA，对数据工程成立）和 `agentic`（深度使用 coding agent，对 JD 里的 "AI 辅助开发" 成立）。`lang` 的内容是 Go/Rust 和 asyncio，不复用，改用预定 `python` 和新点 `jvm`。`os` 的内容是 namespace/cgroups/沙箱，不复用，另起 `linux-shell`。`k8s`、`sre`、`cost`、`rag`、`llm` 的描述都写的是 Agent 语境，没有复用；`cost` 讲的是 LLM 调用成本，数据侧另起 `data-cost`。
-- **预定通用 slug 写了完整内容**（契约要求第一个用到的岗位写全）：python、sql-db、data-modeling、git-collab、mq、nosql、ci-cd、testing、observability、incident、iac、docker、cloud、api-design。merge 节点可以从各岗位里挑最好的一份。
+- **预定通用 slug 写了完整内容**（契约要求第一个用到的岗位写全）：python、sql-db、data-modeling、git-collab、mq、nosql、ci-cd、testing、observability、incident、iac、docker、cloud、api-design。合并时从各岗位里挑最好的一份。
 - `data-modeling`（通用的概念/逻辑/范式建模）和 `dim-modeling`（Kimball 维度建模）拆开，因为美团明确把「范式建模、维度建模」并列。
 - `observability`（服务监控）和 `data-observability`（新鲜度、体量、分布、数据 SLA）拆开，数据 JD 讲的多是后者。
 - 合并的点：增量处理和幂等放进 `etl-elt`；CDC 放进 `data-integration`；Parquet/ORC 列式格式放进 `lakehouse`；Presto/Trino 放进 `olap`；数据安全、脱敏和合规放进 `data-governance`。

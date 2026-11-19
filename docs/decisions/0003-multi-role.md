@@ -4,7 +4,7 @@
 
 ## 背景
 
-M0 只有 Agent Infra 一个岗位：类别、公司热度、排列顺序都直接挂在 `skill` 上，导出也是一套顶层文件。要加入 AI 应用、后端、SRE / 平台、前端、数据工程五个岗位，同时让通用能力点（`dist`、`k8s`、`cache` 等）在各岗位共用一份内容、学习进度跨岗位保留。下面的契约是各节点（research、后端、前端、merge）共同遵守的约定，原样收录。
+M0 只有 Agent Infra 一个岗位：类别、公司热度、排列顺序都直接挂在 `skill` 上，导出也是一套顶层文件。要加入 AI 应用、后端、SRE / 平台、前端、数据工程五个岗位，同时让通用能力点（`dist`、`k8s`、`cache` 等）在各岗位共用一份内容、学习进度跨岗位保留。下面的契约是数据调研、后端、前端和合并各环节共同遵守的约定。
 
 ### 数据库实现（migration 0002）
 
@@ -21,7 +21,7 @@ M0 只有 Agent Infra 一个岗位：类别、公司热度、排列顺序都直�
 ## 契约原文
 
 
-仓库：/Users/gupan/workspaces/skill-map。现状：只有 agent-infra 一个岗位，数据来自 seed/reference.html（seed/import_reference.py 导入），backend/app/export.py 导出到 frontend/public/data/，前端 React + D3 力导向图。
+实施前的现状：只有 agent-infra 一个岗位，数据来自 seed/reference.html（seed/import_reference.py 导入），backend/app/export.py 导出到 frontend/public/data/，前端 React + D3 力导向图。
 
 ## 岗位（role_family）
 
@@ -44,10 +44,10 @@ M0 只有 Agent Infra 一个岗位：类别、公司热度、排列顺序都直�
 - **公司全局**：code 全局唯一。已有代码沿用（O=OpenAI, AN=Anthropic, CU=Cursor, CG=Cognition, A=阿里, B=百度, X=小红书, K=月之暗面, T=腾讯, JP=日本企业）。新公司 code = 英文短名大写、无空格（如 STRIPE、MERCARI、BYTEDANCE、GOOGLE）。
 - **学习进度按能力点 slug 全局记**（localStorage key 仍是 `agent-infra-progress`），切换岗位后共享能力点的进度保留。
 
-## 规则（Fable 审查后补充，必须遵守）
+## 规则（必须遵守）
 
-1. **现有 50 个 slug 永不改名，永远优先。** 列表和内容快照在 scratchpad `m1/vocab/skills.json`（只读它，不要读 frontend/public/data/，那里会被其他代理改写）。复用前读它的描述：内容对本岗位也成立才复用，否则另起 slug（例如前端的「状态管理」不能用 `state`，它是 Agent 会话状态模型；改用 `fe-state`）。
-2. **跨岗位通用能力点用下面的预定 slug**（任何岗位需要这个概念都用它；第一个用到的岗位写完整内容，merge 节点会统一挑最好的一份）：
+1. **现有 50 个 slug 永不改名，永远优先。** 复用前先读已有能力点的描述：内容对本岗位也成立才复用，否则另起 slug（例如前端的「状态管理」不能用 `state`，它是 Agent 会话状态模型；改用 `fe-state`）。
+2. **跨岗位通用能力点用下面的预定 slug**（任何岗位需要这个概念都用它；最终只保留一份岗位中立的完整内容，其他岗位只引用）：
    `sql-db` 关系数据库与 SQL · `nosql` NoSQL 与 KV 存储 · `cache` 缓存 · `mq` 消息队列与事件流 · `api-design` API 设计（REST/gRPC/GraphQL） · `auth` 认证与授权（OAuth/OIDC/会话） · `testing` 自动化测试 · `ci-cd` CI/CD · `git-collab` Git 与代码协作 · `docker` 容器与镜像 · `cloud` 公有云基础（AWS/GCP） · `iac` 基础设施即代码 · `observability` 监控、日志与告警 · `perf` 性能分析与优化 · `security-basics` 应用安全基础（OWASP） · `sys-design` 系统设计 · `data-modeling` 数据建模 · `web-basics` Web 与浏览器基础 · `ts` TypeScript · `python` Python 工程 · `incident` 故障响应与复盘 · `prompt-eng` Prompt 工程 · `embedding-search` Embedding 与向量检索。
    已有的通用 slug 继续用：`os` `net` `dist` `k8s` `lang` `llm` `rag` `evals` `trace`（Agent 语境，复用前读描述）。
 3. **粒度**：一个能力点 = 1–3 周能学完的主题。具体工具、库名放进 concepts，不单独成点（Redis 放进 `cache` 的 concepts）。
@@ -57,7 +57,7 @@ M0 只有 Agent Infra 一个岗位：类别、公司热度、排列顺序都直�
 7. **资源**：`resource.title` 全局唯一，同标题先到先得（后来的 url 不覆盖，导入时打印警告；先到的 url 为空时用后来的补上）。种子里不写 type，导入时沿用 `resource_type(title)` 推断。
 8. **role 表 6 行**（slug、name_zh、root_label、sort）由 migration 按上方岗位表写死；种子里出现未知 role slug 直接报错。
 
-## A. 种子格式：seed/roles/<role>.json（research 节点先写到 scratchpad `m1/research/<role>.json`，merge 节点再放进仓库）
+## A. 种子格式：seed/roles/<role>.json
 
 ```json
 {
