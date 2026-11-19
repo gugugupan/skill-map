@@ -8,7 +8,7 @@ import type { SkillMapData } from './types'
 
 function subtitle({ meta }: SkillMapData) {
   const d = new Date(meta.generated_at)
-  const when = Number.isNaN(d.getTime()) ? '' : `（${d.getFullYear()} 年 ${d.getMonth() + 1} 月整理）`
+  const when = Number.isNaN(d.getTime()) ? '' : `（${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日更新）`
   return `来自 ${meta.counts.companies} 家公司、${meta.counts.postings} 份 Agent Infra 相关 JD 的能力地图${when}`
 }
 

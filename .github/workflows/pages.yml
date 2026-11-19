@@ -34,6 +34,10 @@ jobs:
         working-directory: backend
         run: uv sync
 
+      - name: Test backend
+        working-directory: backend
+        run: uv run pytest -q
+
       # The DB is rebuilt from seed on every run; nothing is persisted between runs.
       - name: Build site data
         run: bash scripts/build_data.sh

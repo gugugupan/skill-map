@@ -17,7 +17,7 @@
 | `skill` | `aliases` 用 JSON TEXT 存数组 | SQLite 没有数组类型 |
 | `job_posting` | `section_responsibilities` / `section_requirements` / `section_bonus`（TEXT） | 预处理后按「职责 / 要求 / 加分项」切段，抽取时据此判断 strength |
 | `job_posting` | `first_seen_at` | 与每次抓取都会更新的 `fetched_at` 区分，用于趋势统计 |
-| `job_posting` | `url`、`raw_text`、`content_hash` 可空 | M0 的 25 份 JD 只有标题和链接，正文待 M1 抓取；手动粘贴的 JD 可能没有链接 |
+| `job_posting` | `url`、`raw_text`、`content_hash` 可空 | M0 的 23 份 JD 只有标题和链接，正文待 M1 抓取；手动粘贴的 JD 可能没有链接 |
 | `job_posting` | `url` 不加 UNIQUE；加 `UNIQUE(source_id, title)` | 同一链接可能对应多个岗位（如列表页），以「来源 + 标题」作为导入幂等键 |
 | `source` | `code`（TEXT UNIQUE） | 参考实现用公司代码（如 `O`、`AN`）引用来源，导入时按它关联 |
 | `source` | `url` 可空 | 手动来源没有统一链接 |

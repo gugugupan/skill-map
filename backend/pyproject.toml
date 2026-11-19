@@ -1,7 +1,7 @@
 [project]
 name = "skillmap"
 version = "0.1.0"
-description = "Add your description here"
+description = "Data pipeline for the JD-driven skill map site"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
