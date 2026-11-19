@@ -225,3 +225,24 @@ def test_unique_posting_key_is_per_role(imported):
                          " VALUES (?, 'Software Engineer', 'backend')", (sid,))
     finally:
         conn.close()
+
+
+
+def test_reimport_drops_postings_no_longer_seeded(imported, reference_db, tmp_path):
+    fresh, _ = imported
+    old = tmp_path / "old.db"
+    old.write_bytes(reference_db.read_bytes())
+    data = fixtures()
+    data["backend"]["postings"].append({"company": "STRIPE", "title": "Old Title", "url": "https://example.com/old"})
+    roles.import_roles(old, write_roles(tmp_path / "r", data))
+    conn = db.connect(old)
+    try:
+        stale = conn.execute("SELECT id FROM job_posting WHERE title = 'Old Title'").fetchone()[0]
+        conn.execute("INSERT INTO posting_skill VALUES (?, 1, NULL, 'required', NULL, 'v1')", (stale,))
+        conn.commit()
+    finally:
+        conn.close()
+    roles.import_roles(old, FIXTURE_ROLES)
+    postings = "SELECT source_id, company, title, url, role_family FROM job_posting ORDER BY 1, 3, 5"
+    assert q(old, postings) == q(fresh, postings)
+    assert q(old, "SELECT COUNT(*) FROM posting_skill") == [(0,)]

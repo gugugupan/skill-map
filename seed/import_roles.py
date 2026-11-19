@@ -16,7 +16,7 @@ for p in (BACKEND_DIR, SEED_DIR):
         sys.path.insert(0, str(p))
 
 from app import db  # noqa: E402
-from import_reference import ROLE_FAMILY as REFERENCE_ROLE, resource_type  # noqa: E402
+from import_reference import ROLE_FAMILY as REFERENCE_ROLE, prune_postings, resource_type  # noqa: E402
 
 DEFAULT_ROLES_DIR = SEED_DIR / "roles"
 ROADMAP_ORIGIN = "seed"
@@ -263,6 +263,7 @@ def _write(conn, files: list[tuple[str, dict]]) -> list[str]:
                 " url = excluded.url",
                 (source_ids[p["company"]], names[p["company"]], p["title"], p["url"], role),
             )
+        prune_postings(conn, role, {(source_ids[p["company"]], p["title"]) for p in data.get("postings", [])})
 
         for sort, s in enumerate(data.get("skills", [])):
             conn.execute(

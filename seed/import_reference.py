@@ -109,6 +109,17 @@ def _id(conn, sql: str, params: tuple) -> int:
     return conn.execute(sql, params).fetchone()[0]
 
 
+def prune_postings(conn, role_family: str, keep: set[tuple[int, str]]) -> int:
+    """Delete the role's postings whose (source_id, title) is not in keep, with their posting_skill rows."""
+    stale = [r[0] for r in conn.execute(
+        "SELECT id, source_id, title FROM job_posting WHERE role_family = ?", (role_family,))
+        if (r[1], r[2]) not in keep]
+    for pid in stale:
+        conn.execute("DELETE FROM posting_skill WHERE posting_id = ?", (pid,))
+        conn.execute("DELETE FROM job_posting WHERE id = ?", (pid,))
+    return len(stale)
+
+
 def _import(conn, data: dict) -> None:
     for sort, (slug, c) in enumerate(data["CLUSTERS"].items()):
         conn.execute(
@@ -136,9 +147,11 @@ def _import(conn, data: dict) -> None:
             (ROLE_FAMILY, source_ids[code], sort),
         )
 
+    seeded = set()
     for src in data["SOURCES"]:
         code = src["k"]
         for title, url in src["jobs"]:
+            seeded.add((source_ids[code], title))
             conn.execute(
                 "INSERT INTO job_posting (source_id, company, title, url, role_family, raw_text)"
                 " VALUES (?, ?, ?, ?, ?, NULL)"
@@ -146,6 +159,7 @@ def _import(conn, data: dict) -> None:
                 " url = excluded.url",
                 (source_ids[code], jd[code], title, url or None, ROLE_FAMILY),
             )
+    prune_postings(conn, ROLE_FAMILY, seeded)
 
     skill_ids = {}
     conn.execute("DELETE FROM role_skill WHERE role_family = ?", (ROLE_FAMILY,))

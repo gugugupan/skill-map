@@ -102,6 +102,30 @@ def test_overrides_replace_screenshot_jobs(db_file):
         conn.close()
 
 
+def _postings(path):
+    conn = db.connect(path)
+    try:
+        return sorted(tuple(r) for r in conn.execute(
+            "SELECT s.code, j.title, j.url, j.role_family FROM job_posting j JOIN source s ON s.id = j.source_id"))
+    finally:
+        conn.close()
+
+
+def test_reimport_drops_postings_no_longer_seeded(db_file, tmp_path):
+    old = tmp_path / "old.db"
+    seed.import_reference(old, SEED_DIR / "reference.html", None)
+    conn = db.connect(old)
+    try:
+        stale = conn.execute("SELECT id FROM job_posting WHERE title LIKE '%截图%'").fetchone()[0]
+        conn.execute("INSERT INTO posting_skill VALUES (?, 1, NULL, 'required', NULL, 'v1')", (stale,))
+        conn.commit()
+    finally:
+        conn.close()
+    seed.import_reference(old, SEED_DIR / "reference.html")
+    assert counts(old) == counts(db_file)
+    assert _postings(old) == _postings(db_file)
+
+
 def test_override_without_match_raises(tmp_path):
     bad = tmp_path / "overrides.json"
     bad.write_text(json.dumps({"jobs": [{
