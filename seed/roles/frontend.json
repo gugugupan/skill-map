@@ -1,0 +1,1577 @@
+{
+  "role": {
+    "slug": "frontend",
+    "name_zh": "前端工程师"
+  },
+  "clusters": [
+    {
+      "slug": "frontend-found",
+      "name": "Web 基础",
+      "color": "#5B6B7A"
+    },
+    {
+      "slug": "frontend-framework",
+      "name": "框架与应用架构",
+      "color": "#3D5A99"
+    },
+    {
+      "slug": "frontend-ui",
+      "name": "界面与体验",
+      "color": "#B23A48"
+    },
+    {
+      "slug": "frontend-quality",
+      "name": "性能、质量与线上",
+      "color": "#C08A1E"
+    },
+    {
+      "slug": "frontend-eng",
+      "name": "前端工程化",
+      "color": "#2A8C82"
+    },
+    {
+      "slug": "frontend-fullstack",
+      "name": "跨端与全栈",
+      "color": "#7A4F8A"
+    },
+    {
+      "slug": "frontend-ai",
+      "name": "AI 协作与 AI 界面",
+      "color": "#6E8A2A"
+    }
+  ],
+  "companies": [
+    {
+      "code": "STRIPE",
+      "name": "Stripe"
+    },
+    {
+      "code": "VERCEL",
+      "name": "Vercel"
+    },
+    {
+      "code": "RAMP",
+      "name": "Ramp"
+    },
+    {
+      "code": "O",
+      "name": "OpenAI"
+    },
+    {
+      "code": "NOTION",
+      "name": "Notion"
+    },
+    {
+      "code": "A",
+      "name": "阿里"
+    },
+    {
+      "code": "T",
+      "name": "腾讯"
+    },
+    {
+      "code": "B",
+      "name": "百度"
+    },
+    {
+      "code": "PAYPAY",
+      "name": "PayPay"
+    },
+    {
+      "code": "MIRAI",
+      "name": "みらい翻訳"
+    },
+    {
+      "code": "MIIVE",
+      "name": "miive"
+    }
+  ],
+  "postings": [
+    {
+      "company": "STRIPE",
+      "title": "Frontend Engineer, UI Platform",
+      "url": "https://stripe.com/jobs/search?gh_jid=8226890"
+    },
+    {
+      "company": "VERCEL",
+      "title": "Software Engineer, Website",
+      "url": "https://job-boards.greenhouse.io/vercel/jobs/5732855004"
+    },
+    {
+      "company": "RAMP",
+      "title": "Software Engineer, Frontend",
+      "url": "https://jobs.ashbyhq.com/ramp/6511d68f-b65d-4499-962f-7e2f75eabe3f"
+    },
+    {
+      "company": "RAMP",
+      "title": "Software Engineer, Frontend, Growth",
+      "url": "https://jobs.ashbyhq.com/ramp/7cd46077-05fe-4cd7-816f-5528638342f1"
+    },
+    {
+      "company": "O",
+      "title": "Frontend Software Engineer, Codex App",
+      "url": "https://jobs.ashbyhq.com/openai/5f6685ad-2fba-4e60-8982-fa142b33e194"
+    },
+    {
+      "company": "O",
+      "title": "Frontend Software Engineer, ChatGPT Space",
+      "url": "https://jobs.ashbyhq.com/openai/1f99d5d3-4512-4247-aaba-3133a3dabf5a"
+    },
+    {
+      "company": "NOTION",
+      "title": "Software Engineer, Web Infrastructure",
+      "url": "https://jobs.ashbyhq.com/notion/06c2599d-4dd5-4f97-843f-7194b546f042"
+    },
+    {
+      "company": "A",
+      "title": "智元科技-前端开发工程师-广州",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100052760004"
+    },
+    {
+      "company": "A",
+      "title": "ATH事业群-AI 前端开发工程师-杭州",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100045840004"
+    },
+    {
+      "company": "A",
+      "title": "娱驰BG-资深大前端/ 跨端开发专家",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100036840002"
+    },
+    {
+      "company": "A",
+      "title": "千问事业部-AI视频剪辑前端开发专家-智能创作",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100010060039"
+    },
+    {
+      "company": "A",
+      "title": "高德-前端开发工程师-共享专项",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=5000014035"
+    },
+    {
+      "company": "A",
+      "title": "诚云科技-前端开发工程师-融媒体",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100055580006"
+    },
+    {
+      "company": "T",
+      "title": "《无畏契约》-前端开发工程师-（AI & 创新互动方向）",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2088182151676870656"
+    },
+    {
+      "company": "T",
+      "title": "智能体-桌面端开发负责人-WorkBuddy",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2102397717010624512"
+    },
+    {
+      "company": "B",
+      "title": "前端工程师（J105469）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/673e2d85-1b34-466e-bf8c-fd0181870170"
+    },
+    {
+      "company": "B",
+      "title": "资深前端工程师（J94718）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/4fa40efc-dc39-4ca0-8d3f-f4dba0079579"
+    },
+    {
+      "company": "B",
+      "title": "web前端工程师（J97442）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/f0d81ef5-1de4-4374-a38a-bead73fd835d"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "Frontend Engineer",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/4089251004"
+    },
+    {
+      "company": "MIRAI",
+      "title": "フロントエンドエンジニア",
+      "url": "https://herp.careers/v1/miraitrans/Rxy7PJYg5-Ya"
+    },
+    {
+      "company": "MIIVE",
+      "title": "フロントエンドエンジニア｜HR×FinTechのユーザー体験を磨くエンジニア募集",
+      "url": "https://herp.careers/v1/miive/019fd122-2e0c-7439-937d-756c19265912"
+    }
+  ],
+  "skills": [
+    {
+      "slug": "web-basics",
+      "name": "Web 与浏览器基础",
+      "description": "HTTP、URL、同源策略、DOM 与事件模型，所有浏览器端工作的底座。",
+      "concepts": [
+        "HTTP/1.1、HTTP/2 与 HTTPS",
+        "同源策略与 CORS",
+        "DOM、事件冒泡与捕获",
+        "Cookie、Storage 与会话",
+        "Fetch、流式读取与 SSE / WebSocket"
+      ],
+      "practice": "不用框架写一个页面：fetch 跨域接口，处理 CORS 预检，再用 DevTools Network 面板逐个解释请求头。",
+      "resources": [
+        {
+          "title": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/"
+        },
+        {
+          "title": "《HTTP 权威指南》"
+        }
+      ],
+      "cluster": "frontend-found",
+      "companies": [
+        "STRIPE",
+        "VERCEL",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "html-css",
+      "name": "HTML 与 CSS",
+      "description": "语义化 HTML 和扎实的 CSS 是所有界面的底座。腾讯要求精通 HTML5/CSS3，阿里诚云要求 CSS 基础扎实并能处理兼容性。",
+      "concepts": [
+        "语义化标签与表单",
+        "盒模型、层叠与优先级",
+        "Flexbox 与 Grid 布局",
+        "CSS 变量、层叠层与容器查询"
+      ],
+      "practice": "只用 HTML/CSS 还原一个复杂后台页面（侧栏、表格、弹窗），不写一行 JS，并在三种浏览器里对齐。",
+      "resources": [
+        {
+          "title": "MDN CSS 教程",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        },
+        {
+          "title": "《CSS 权威指南》"
+        }
+      ],
+      "cluster": "frontend-found",
+      "companies": [
+        "RAMP",
+        "PAYPAY",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "js-core",
+      "name": "JavaScript 核心",
+      "description": "闭包、原型、异步与事件循环。Ramp 把 deep understanding of JavaScript 放在第一条，国内 JD 几乎都要求熟练 ES6+。",
+      "concepts": [
+        "作用域、闭包与 this",
+        "原型链与 class",
+        "事件循环、Promise 与 async/await",
+        "ES Module 与模块化"
+      ],
+      "practice": "手写 Promise.all、防抖节流和一个最小的事件发射器，并用测试覆盖边界情况。",
+      "resources": [
+        {
+          "title": "javascript.info 现代 JavaScript 教程",
+          "url": "https://javascript.info/"
+        },
+        {
+          "title": "《You Don't Know JS》",
+          "url": "https://github.com/getify/You-Dont-Know-JS"
+        }
+      ],
+      "cluster": "frontend-found",
+      "companies": [
+        "RAMP",
+        "VERCEL",
+        "NOTION",
+        "PAYPAY",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "ts",
+      "name": "TypeScript",
+      "description": "前端和 Node 服务的默认语言。大型项目要能做类型设计，而不只是加注解。",
+      "concepts": [
+        "结构化类型与类型收窄",
+        "泛型与条件类型",
+        "声明文件与模块解析",
+        "strict 模式与渐进迁移",
+        "运行时校验（Zod）"
+      ],
+      "practice": "把一个 JS 小项目迁移到 strict TypeScript，为它的 API 层写出完整的请求/响应类型。",
+      "resources": [
+        {
+          "title": "TypeScript Handbook",
+          "url": "https://www.typescriptlang.org/docs/handbook/intro.html"
+        },
+        {
+          "title": "Type Challenges",
+          "url": "https://github.com/type-challenges/type-challenges"
+        }
+      ],
+      "cluster": "frontend-found",
+      "companies": [
+        "VERCEL",
+        "O",
+        "NOTION",
+        "RAMP",
+        "PAYPAY",
+        "MIRAI",
+        "MIIVE",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "browser-render",
+      "name": "浏览器渲染原理",
+      "description": "从 HTML 到像素的流水线。百度要求熟悉浏览器渲染原理，阿里千问要求熟悉浏览器渲染，Notion 关心代码如何影响渲染。",
+      "concepts": [
+        "解析、样式计算、布局、绘制、合成",
+        "重排与重绘",
+        "主线程、合成线程与 GPU 加速",
+        "多进程架构与渲染进程"
+      ],
+      "practice": "用 Performance 面板录制一次滚动卡顿，找到强制同步布局的代码并改掉。",
+      "resources": [
+        {
+          "title": "Inside look at modern web browser",
+          "url": "https://developer.chrome.com/blog/inside-browser-part1"
+        },
+        {
+          "title": "web.dev 渲染性能",
+          "url": "https://web.dev/articles/rendering-performance"
+        }
+      ],
+      "cluster": "frontend-found",
+      "companies": [
+        "NOTION",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "dsa",
+      "cluster": "frontend-found",
+      "companies": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "slug": "git-collab",
+      "name": "Git 与代码协作",
+      "description": "分支、提交、Pull Request 与 Code Review。应用代码、基础设施代码和 SQL 模型都按同一套流程协作。",
+      "concepts": [
+        "分支模型与 rebase/merge",
+        "提交粒度与提交信息",
+        "Pull Request 与 Code Review",
+        "冲突解决与 bisect"
+      ],
+      "practice": "在开源项目上提一个 PR，走完 review 和修改，再用 git bisect 定位一个回归。",
+      "resources": [
+        {
+          "title": "Pro Git",
+          "url": "https://git-scm.com/book/en/v2"
+        },
+        {
+          "title": "Google Engineering Practices: Code Review",
+          "url": "https://google.github.io/eng-practices/review/"
+        }
+      ],
+      "cluster": "frontend-found",
+      "companies": [
+        "STRIPE",
+        "VERCEL",
+        "PAYPAY",
+        "MIRAI",
+        "B"
+      ]
+    },
+    {
+      "slug": "react",
+      "name": "React",
+      "description": "最常见的前端框架，10 家公司都提到。百度要求理解虚拟 DOM、Diff 和 Fiber 原理。",
+      "concepts": [
+        "组件、props 与 Hooks",
+        "虚拟 DOM、Diff 与 Fiber",
+        "并发渲染与 Suspense",
+        "Server Components"
+      ],
+      "practice": "不看源码先手写一个 mini React（createElement、render、useState），再对照 React 源码的 Fiber 调度。",
+      "resources": [
+        {
+          "title": "React 官方文档",
+          "url": "https://react.dev/"
+        },
+        {
+          "title": "Build your own React",
+          "url": "https://pomb.us/build-your-own-react/"
+        }
+      ],
+      "cluster": "frontend-framework",
+      "companies": [
+        "RAMP",
+        "VERCEL",
+        "O",
+        "NOTION",
+        "PAYPAY",
+        "MIRAI",
+        "MIIVE",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "vue",
+      "name": "Vue",
+      "description": "国内和日本仍大量使用。PayPay 优先 VueJS，百度网盘要求深入 Vue 生态并有 Vue 2 升级 Vue 3 经验。",
+      "concepts": [
+        "响应式系统（Proxy 与依赖收集）",
+        "组合式 API",
+        "模板编译与渲染函数",
+        "Vue 2 到 Vue 3 迁移"
+      ],
+      "practice": "实现一个最小的 reactive/effect，再把一个 Vue 2 Options API 组件迁移成组合式 API。",
+      "resources": [
+        {
+          "title": "Vue.js 官方文档",
+          "url": "https://vuejs.org/"
+        },
+        {
+          "title": "《Vue.js 设计与实现》"
+        }
+      ],
+      "cluster": "frontend-framework",
+      "companies": [
+        "PAYPAY",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "fe-state",
+      "name": "前端状态管理",
+      "description": "界面状态、服务端状态和 URL 状态的划分与同步。OpenAI 要求负责 state management 架构，百度要求精通 Redux/Mobx/Zustand 之一。",
+      "concepts": [
+        "本地状态、全局状态与服务端状态",
+        "Redux / Zustand / MobX 的取舍",
+        "不可变数据与选择器",
+        "路由与 URL 状态"
+      ],
+      "practice": "把一个用 prop drilling 的中后台页面重构为 Zustand + URL 状态，比较重渲染次数。",
+      "resources": [
+        {
+          "title": "Redux 官方文档",
+          "url": "https://redux.js.org/"
+        },
+        {
+          "title": "Zustand 文档",
+          "url": "https://zustand.docs.pmnd.rs/"
+        }
+      ],
+      "cluster": "frontend-framework",
+      "companies": [
+        "O",
+        "MIIVE",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "data-fetch",
+      "name": "数据获取与请求治理",
+      "description": "请求的加载、错误、重试、去重和缓存。Vercel 要求处理 validation、retries、duplicate requests，OpenAI 要求为加载、错误和并发修改设计 UX。",
+      "concepts": [
+        "加载、错误与空状态",
+        "请求去重、取消与竞态",
+        "重试与乐观更新",
+        "TanStack Query / SWR 缓存失效"
+      ],
+      "practice": "用 TanStack Query 实现一个带乐观更新和失败回滚的列表编辑，并处理快速切换时的请求竞态。",
+      "resources": [
+        {
+          "title": "TanStack Query 文档",
+          "url": "https://tanstack.com/query/latest"
+        },
+        {
+          "title": "MDN Fetch API",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+        }
+      ],
+      "cluster": "frontend-framework",
+      "companies": [
+        "VERCEL",
+        "O",
+        "T"
+      ]
+    },
+    {
+      "slug": "ssr-next",
+      "name": "SSR 与 Next.js",
+      "description": "服务端渲染、静态生成和流式渲染。Vercel、Ramp、miive 用 Next.js，阿里 ATH 要求参与 BFF 层与服务端渲染开发。",
+      "concepts": [
+        "CSR、SSR、SSG、ISR 的取舍",
+        "水合（hydration）与流式渲染",
+        "App Router 与 Server Components",
+        "边缘渲染与缓存"
+      ],
+      "practice": "用 Next.js App Router 做一个带 ISR 的博客，对比 CSR 版本的首屏和 LCP。",
+      "resources": [
+        {
+          "title": "Next.js 文档",
+          "url": "https://nextjs.org/docs"
+        },
+        {
+          "title": "patterns.dev",
+          "url": "https://www.patterns.dev/"
+        }
+      ],
+      "cluster": "frontend-framework",
+      "companies": [
+        "VERCEL",
+        "RAMP",
+        "MIIVE",
+        "A"
+      ]
+    },
+    {
+      "slug": "fe-arch",
+      "name": "前端应用架构",
+      "description": "把复杂产品拆成清晰的分层与模块边界。腾讯 WorkBuddy 要求前端领域建模与分层，OpenAI 要求负责 component systems、navigation 等架构决策。",
+      "concepts": [
+        "SPA 结构与路由设计",
+        "分层、模块边界与依赖方向",
+        "领域建模与组件拆分",
+        "技术选型与演进策略"
+      ],
+      "practice": "为一个中型 SPA 画出模块依赖图，加一条 lint 规则禁止跨层引用，再重构出一个独立领域模块。",
+      "resources": [
+        {
+          "title": "patterns.dev",
+          "url": "https://www.patterns.dev/"
+        },
+        {
+          "title": "Martin Fowler: Modularizing React Applications",
+          "url": "https://martinfowler.com/articles/modularizing-react-apps.html"
+        }
+      ],
+      "cluster": "frontend-framework",
+      "companies": [
+        "O",
+        "MIIVE",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "micro-fe",
+      "name": "微前端",
+      "description": "多团队、多技术栈共存的大型应用拆分方案。PayPay 技术栈里有 single-spa，百度和阿里都把微前端经验列为加分。",
+      "concepts": [
+        "应用拆分与路由分发",
+        "JS 沙箱与样式隔离",
+        "Module Federation",
+        "共享依赖与版本冲突"
+      ],
+      "practice": "用 single-spa 或 qiankun 把一个 Vue 子应用和一个 React 子应用挂到同一个主应用里。",
+      "resources": [
+        {
+          "title": "single-spa 文档",
+          "url": "https://single-spa.js.org/"
+        },
+        {
+          "title": "Micro Frontends (martinfowler.com)",
+          "url": "https://martinfowler.com/articles/micro-frontends.html"
+        }
+      ],
+      "cluster": "frontend-framework",
+      "companies": [
+        "PAYPAY",
+        "A",
+        "B"
+      ]
+    },
+    {
+      "slug": "collab-editor",
+      "name": "富文本与实时协作",
+      "description": "文档、编辑器和多人实时协作界面。OpenAI ChatGPT Space 把 rich-text editors、real-time interfaces 列为加分。",
+      "concepts": [
+        "contenteditable 与编辑器模型",
+        "ProseMirror / Lexical 架构",
+        "OT 与 CRDT",
+        "WebSocket 与在线状态"
+      ],
+      "practice": "用 Yjs + ProseMirror 做一个两人可同时编辑的文档，并处理断线重连。",
+      "resources": [
+        {
+          "title": "ProseMirror Guide",
+          "url": "https://prosemirror.net/docs/guide/"
+        },
+        {
+          "title": "Yjs 文档",
+          "url": "https://docs.yjs.dev/"
+        }
+      ],
+      "cluster": "frontend-framework",
+      "companies": [
+        "O"
+      ]
+    },
+    {
+      "slug": "responsive",
+      "name": "响应式与多端适配",
+      "description": "同一套界面在 PC、移动端和小程序上都可用。Stripe、Ramp 要求 responsive design，腾讯要求跨设备一致和移动端适配。",
+      "concepts": [
+        "媒体查询与容器查询",
+        "移动端视口与 rem/vw",
+        "触摸事件与手势",
+        "浏览器兼容与渐进增强"
+      ],
+      "practice": "把一个桌面表格页改造成移动端卡片布局，在真机上测试横竖屏和安全区。",
+      "resources": [
+        {
+          "title": "web.dev Learn Responsive Design",
+          "url": "https://web.dev/learn/design/"
+        }
+      ],
+      "cluster": "frontend-ui",
+      "companies": [
+        "STRIPE",
+        "RAMP",
+        "A",
+        "T"
+      ]
+    },
+    {
+      "slug": "a11y",
+      "name": "无障碍（Accessibility）",
+      "description": "让键盘、屏幕阅读器用户都能用。Stripe、Vercel、OpenAI、Notion 都把 accessible 写进职责。",
+      "concepts": [
+        "WCAG 2.2 准则",
+        "语义与 ARIA",
+        "焦点管理与键盘导航",
+        "颜色对比与动效偏好"
+      ],
+      "practice": "只用键盘和 VoiceOver 走完一个下拉菜单和弹窗组件，修掉所有问题后用 axe 复查。",
+      "resources": [
+        {
+          "title": "WCAG 2.2",
+          "url": "https://www.w3.org/TR/WCAG22/"
+        },
+        {
+          "title": "WAI-ARIA Authoring Practices",
+          "url": "https://www.w3.org/WAI/ARIA/apg/"
+        }
+      ],
+      "cluster": "frontend-ui",
+      "companies": [
+        "STRIPE",
+        "VERCEL",
+        "O",
+        "NOTION"
+      ]
+    },
+    {
+      "slug": "design-system",
+      "name": "设计系统与组件库",
+      "description": "可复用组件、设计 token 与主题。Stripe 的 Sail、Ramp 的 Ryu 都是设计系统团队，国内 JD 普遍要求沉淀组件库。",
+      "concepts": [
+        "设计 token 与主题",
+        "组件 API 设计",
+        "Headless 组件与组合",
+        "Storybook 文档与视觉回归"
+      ],
+      "practice": "从零做 Button、Input、Dialog 三个组件：token 驱动主题、支持暗色、可访问，并用 Storybook 发布文档。",
+      "resources": [
+        {
+          "title": "Storybook 文档",
+          "url": "https://storybook.js.org/docs"
+        },
+        {
+          "title": "Radix Primitives",
+          "url": "https://www.radix-ui.com/primitives"
+        }
+      ],
+      "cluster": "frontend-ui",
+      "companies": [
+        "STRIPE",
+        "RAMP",
+        "MIIVE",
+        "PAYPAY",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "motion",
+      "name": "动效与交互细节",
+      "description": "布局、动效、排版这些“手感”细节。OpenAI 要求打磨 motion 与 interaction details，Ramp 加分项写了 GSAP、Motion。",
+      "concepts": [
+        "CSS transition 与 animation",
+        "FLIP 与布局动画",
+        "Motion / GSAP",
+        "prefers-reduced-motion"
+      ],
+      "practice": "给一个列表加入增删重排动画（FLIP），保证 60fps 并尊重减少动效设置。",
+      "resources": [
+        {
+          "title": "Motion 文档",
+          "url": "https://motion.dev/"
+        },
+        {
+          "title": "GSAP 文档",
+          "url": "https://gsap.com/docs/"
+        }
+      ],
+      "cluster": "frontend-ui",
+      "companies": [
+        "O",
+        "RAMP"
+      ]
+    },
+    {
+      "slug": "i18n",
+      "name": "国际化",
+      "description": "多语言、多地区的文案、格式与布局。Stripe 要求改进设计系统的 internationalization，PayPay 技术栈包含 i18n。",
+      "concepts": [
+        "文案抽取与 ICU 消息格式",
+        "日期、数字、货币格式化（Intl）",
+        "RTL 布局",
+        "语言包按需加载"
+      ],
+      "practice": "给一个应用接入 FormatJS，支持中日英三语和货币格式，并按需加载语言包。",
+      "resources": [
+        {
+          "title": "FormatJS 文档",
+          "url": "https://formatjs.github.io/"
+        },
+        {
+          "title": "MDN Intl",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
+        }
+      ],
+      "cluster": "frontend-ui",
+      "companies": [
+        "STRIPE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "design-collab",
+      "name": "设计协作与设计到代码",
+      "description": "和设计师一起把原型变成产品。OpenAI 要求 turn prototypes into production-quality，Ramp 要求 design-to-code，みらい翻訳 要求以 UI/UX 设计为起点开发。",
+      "concepts": [
+        "读 Figma：间距、栅格与变量",
+        "设计走查与还原度",
+        "原型迭代与取舍",
+        "设计规范落地"
+      ],
+      "practice": "拿一个 Figma 社区设计稿，像素级还原一页，再列出你和设计师需要对齐的 5 个决策点。",
+      "resources": [
+        {
+          "title": "Figma Dev Mode 文档",
+          "url": "https://help.figma.com/hc/en-us/articles/15023124644247"
+        },
+        {
+          "title": "《Refactoring UI》"
+        }
+      ],
+      "cluster": "frontend-ui",
+      "companies": [
+        "O",
+        "RAMP",
+        "MIRAI",
+        "STRIPE"
+      ]
+    },
+    {
+      "slug": "web-graphics",
+      "name": "Canvas、WebGL 与 WebAssembly",
+      "description": "图形、音视频和高性能计算。阿里千问剪辑要求 WebAssembly、画布渲染与 OpenGL，Ramp 加分项写了 3D 库。",
+      "concepts": [
+        "Canvas 2D 与离屏渲染",
+        "WebGL / Three.js",
+        "WebCodecs 与音视频",
+        "WebAssembly 工程"
+      ],
+      "practice": "用 Canvas 做一个支持缩放拖拽的画布编辑器，把一个滤镜算法编译成 WebAssembly 对比速度。",
+      "resources": [
+        {
+          "title": "WebGL Fundamentals",
+          "url": "https://webglfundamentals.org/"
+        },
+        {
+          "title": "MDN WebAssembly",
+          "url": "https://developer.mozilla.org/en-US/docs/WebAssembly"
+        }
+      ],
+      "cluster": "frontend-ui",
+      "companies": [
+        "A",
+        "T",
+        "RAMP"
+      ]
+    },
+    {
+      "slug": "perf",
+      "cluster": "frontend-quality",
+      "companies": [
+        "NOTION",
+        "VERCEL",
+        "RAMP",
+        "PAYPAY",
+        "MIIVE",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "web-vitals",
+      "name": "加载性能与 Core Web Vitals",
+      "description": "LCP、INP、CLS 和资源加载。高德要求熟悉 Core Web Vitals 并会用 Lighthouse，Notion 要优化 page-load。",
+      "concepts": [
+        "LCP、INP、CLS",
+        "关键渲染路径与资源优先级",
+        "代码分割与懒加载",
+        "预加载、压缩与图片优化"
+      ],
+      "practice": "用 Lighthouse 和 web-vitals 库测一个站点，把 LCP 降到 2.5s 以内并在 CI 加上 Lighthouse 预算。",
+      "resources": [
+        {
+          "title": "web.dev Web Vitals",
+          "url": "https://web.dev/articles/vitals"
+        },
+        {
+          "title": "Lighthouse 文档",
+          "url": "https://developer.chrome.com/docs/lighthouse/overview"
+        }
+      ],
+      "cluster": "frontend-quality",
+      "companies": [
+        "A",
+        "NOTION",
+        "VERCEL",
+        "T"
+      ]
+    },
+    {
+      "slug": "render-perf",
+      "name": "运行时渲染性能与内存",
+      "description": "交互流畅、不卡顿、不泄漏。腾讯 WorkBuddy 要求优化渲染帧率、内存占用并排查内存泄漏，OpenAI 要求 rendering performance。",
+      "concepts": [
+        "长任务与主线程调度",
+        "React 重渲染与 memo",
+        "虚拟列表",
+        "内存泄漏与堆快照"
+      ],
+      "practice": "做一个 10 万行的虚拟列表，用 React Profiler 和堆快照找出并修掉一次重渲染风暴和一处泄漏。",
+      "resources": [
+        {
+          "title": "Chrome DevTools: Memory",
+          "url": "https://developer.chrome.com/docs/devtools/memory-problems"
+        },
+        {
+          "title": "React Profiler 文档",
+          "url": "https://react.dev/reference/react/Profiler"
+        }
+      ],
+      "cluster": "frontend-quality",
+      "companies": [
+        "T",
+        "O",
+        "NOTION",
+        "A"
+      ]
+    },
+    {
+      "slug": "observability",
+      "cluster": "frontend-quality",
+      "companies": [
+        "VERCEL",
+        "PAYPAY",
+        "MIRAI",
+        "STRIPE",
+        "A",
+        "T"
+      ]
+    },
+    {
+      "slug": "tracking",
+      "cluster": "frontend-quality",
+      "companies": [
+        "VERCEL",
+        "PAYPAY",
+        "B"
+      ]
+    },
+    {
+      "slug": "ab-test",
+      "cluster": "frontend-quality",
+      "companies": [
+        "RAMP"
+      ]
+    },
+    {
+      "slug": "devtools-debug",
+      "name": "浏览器调试与线上排障",
+      "description": "用 DevTools 和证据定位问题。Notion 要求用浏览器工具调查瓶颈，高德要求熟练使用 Chrome DevTools，PayPay 要求 triage、debug 线上问题。",
+      "concepts": [
+        "DevTools 断点与网络面板",
+        "Performance 与 Memory 面板",
+        "Source Map 与线上复现",
+        "二分定位与最小复现"
+      ],
+      "practice": "从 Sentry 拿一个真实报错，用 source map 还原、本地复现并写出修复和回归测试。",
+      "resources": [
+        {
+          "title": "Chrome DevTools 文档",
+          "url": "https://developer.chrome.com/docs/devtools"
+        }
+      ],
+      "cluster": "frontend-quality",
+      "companies": [
+        "NOTION",
+        "A",
+        "VERCEL",
+        "STRIPE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "testing",
+      "cluster": "frontend-quality",
+      "companies": [
+        "STRIPE",
+        "VERCEL",
+        "O",
+        "MIRAI",
+        "MIIVE",
+        "PAYPAY",
+        "A"
+      ]
+    },
+    {
+      "slug": "build-tools",
+      "name": "构建工具与打包",
+      "description": "Webpack、Vite、Babel 等构建链。阿里要求精通 Webpack/Vite/Babel，Ramp 用 Vite，Notion 提到 bundlers 和 code splitting。",
+      "concepts": [
+        "模块打包与依赖图",
+        "Webpack loader/plugin",
+        "Vite 与 esbuild/Rollup",
+        "Tree shaking 与代码分割"
+      ],
+      "practice": "写一个 Webpack 插件和一个 Vite 插件，再分析一个项目的 bundle 并把体积降 30%。",
+      "resources": [
+        {
+          "title": "Vite 文档",
+          "url": "https://vite.dev/guide/"
+        },
+        {
+          "title": "webpack 文档",
+          "url": "https://webpack.js.org/concepts/"
+        }
+      ],
+      "cluster": "frontend-eng",
+      "companies": [
+        "A",
+        "B",
+        "T",
+        "RAMP",
+        "PAYPAY",
+        "NOTION",
+        "STRIPE"
+      ]
+    },
+    {
+      "slug": "pkg-monorepo",
+      "name": "包管理与 Monorepo",
+      "description": "依赖、版本与多包仓库。Stripe 加分项写了 package managers 和 large monorepos，阿里千问提到 pnpm。",
+      "concepts": [
+        "npm / yarn / pnpm 与锁文件",
+        "语义化版本与依赖冲突",
+        "Monorepo 与 workspace",
+        "Turborepo / Nx 任务编排"
+      ],
+      "practice": "用 pnpm workspace + Turborepo 搭一个含组件库、工具库和应用的 monorepo，配置增量构建。",
+      "resources": [
+        {
+          "title": "pnpm 文档",
+          "url": "https://pnpm.io/"
+        },
+        {
+          "title": "Turborepo 文档",
+          "url": "https://turborepo.com/docs"
+        }
+      ],
+      "cluster": "frontend-eng",
+      "companies": [
+        "STRIPE",
+        "PAYPAY",
+        "A"
+      ]
+    },
+    {
+      "slug": "lint-quality",
+      "name": "代码规范与静态检查",
+      "description": "lint、格式化和大规模代码改造。Stripe 提到 codemods 和 lint rules，百度要求精通 ESLint 等开发链工具。",
+      "concepts": [
+        "ESLint 规则与自定义规则",
+        "Prettier 与格式统一",
+        "AST 与 codemod",
+        "类型检查与提交前检查"
+      ],
+      "practice": "写一条自定义 ESLint 规则，再用 jscodeshift 写一个 codemod 批量迁移一个废弃 API。",
+      "resources": [
+        {
+          "title": "ESLint 文档",
+          "url": "https://eslint.org/docs/latest/"
+        },
+        {
+          "title": "jscodeshift",
+          "url": "https://github.com/facebook/jscodeshift"
+        }
+      ],
+      "cluster": "frontend-eng",
+      "companies": [
+        "STRIPE",
+        "B",
+        "T"
+      ]
+    },
+    {
+      "slug": "ci-cd",
+      "cluster": "frontend-eng",
+      "companies": [
+        "T",
+        "B",
+        "A",
+        "PAYPAY",
+        "MIRAI"
+      ]
+    },
+    {
+      "slug": "node-bff",
+      "name": "Node.js 与 BFF",
+      "description": "前端工程师的服务端能力。阿里要求 Node.js 和 express/koa 实践，PayPay 用 NestJS、Express，Vercel 要求写服务端代码。",
+      "concepts": [
+        "Node.js 事件循环与流",
+        "Express / Koa / NestJS",
+        "BFF 聚合与裁剪",
+        "服务端错误处理与日志"
+      ],
+      "practice": "用 NestJS 写一个 BFF，聚合两个后端接口，加上超时、重试和结构化日志。",
+      "resources": [
+        {
+          "title": "Node.js 文档",
+          "url": "https://nodejs.org/docs/latest/api/"
+        },
+        {
+          "title": "NestJS 文档",
+          "url": "https://docs.nestjs.com/"
+        }
+      ],
+      "cluster": "frontend-fullstack",
+      "companies": [
+        "A",
+        "T",
+        "B",
+        "PAYPAY",
+        "VERCEL"
+      ]
+    },
+    {
+      "slug": "api-design",
+      "cluster": "frontend-fullstack",
+      "companies": [
+        "VERCEL",
+        "MIIVE",
+        "PAYPAY",
+        "A"
+      ]
+    },
+    {
+      "slug": "security-basics",
+      "cluster": "frontend-fullstack",
+      "companies": [
+        "A",
+        "PAYPAY",
+        "VERCEL",
+        "MIRAI"
+      ]
+    },
+    {
+      "slug": "http-cache",
+      "name": "浏览器与 CDN 缓存",
+      "description": "HTTP 缓存、CDN 和 Service Worker。Vercel 要求理解 server rendering and caching，Notion 提到 service workers 和 asset caching，PayPay 加分项写了 CDN。",
+      "concepts": [
+        "Cache-Control 与协商缓存",
+        "CDN 与边缘缓存",
+        "内容哈希与缓存失效",
+        "Service Worker 与离线"
+      ],
+      "practice": "给一个 SPA 设计缓存策略：HTML 不缓存、静态资源长缓存，再加 Service Worker 实现离线访问。",
+      "resources": [
+        {
+          "title": "MDN HTTP 缓存",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching"
+        },
+        {
+          "title": "web.dev Service Workers",
+          "url": "https://web.dev/learn/pwa/service-workers"
+        }
+      ],
+      "cluster": "frontend-fullstack",
+      "companies": [
+        "VERCEL",
+        "NOTION",
+        "PAYPAY",
+        "T"
+      ]
+    },
+    {
+      "slug": "cross-platform",
+      "name": "跨端：H5、小程序与 React Native",
+      "description": "一套技术覆盖多端。腾讯和百度要求小程序/Hybrid 开发，阿里娱驰要求 React Native 或 Flutter，miive 用 React Native (Expo)。",
+      "concepts": [
+        "Hybrid 与 JSBridge",
+        "小程序双线程架构",
+        "React Native 架构",
+        "Flutter 与跨端取舍"
+      ],
+      "practice": "用 React Native (Expo) 做一个和 Web 共享业务逻辑的小应用，并写一个 JSBridge 调用原生能力。",
+      "resources": [
+        {
+          "title": "React Native 文档",
+          "url": "https://reactnative.dev/docs/getting-started"
+        },
+        {
+          "title": "微信小程序开发文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/"
+        }
+      ],
+      "cluster": "frontend-fullstack",
+      "companies": [
+        "T",
+        "B",
+        "A",
+        "PAYPAY",
+        "MIIVE"
+      ]
+    },
+    {
+      "slug": "electron",
+      "name": "Electron 桌面应用",
+      "description": "用 Web 技术做桌面端。OpenAI Codex App 要求 Electron 级桌面体验，腾讯要求熟悉主进程与渲染进程通信。",
+      "concepts": [
+        "主进程与渲染进程",
+        "IPC 与 contextBridge",
+        "打包、签名与自动更新",
+        "跨平台差异与原生能力"
+      ],
+      "practice": "做一个 Electron 小工具：安全地暴露文件读写 IPC，打包成 macOS 和 Windows 安装包并支持自动更新。",
+      "resources": [
+        {
+          "title": "Electron 文档",
+          "url": "https://www.electronjs.org/docs/latest/"
+        }
+      ],
+      "cluster": "frontend-fullstack",
+      "companies": [
+        "O",
+        "T"
+      ]
+    },
+    {
+      "slug": "seo",
+      "name": "SEO 与站点内容",
+      "description": "让搜索引擎正确抓取和展示页面。Vercel 加分项写了 technical SEO 和 CMS，Ramp 增长岗要求 SEO 原则和 CMS（Sanity）。",
+      "concepts": [
+        "抓取、渲染与索引",
+        "元信息、结构化数据与站点地图",
+        "SSR/SSG 对 SEO 的影响",
+        "Headless CMS"
+      ],
+      "practice": "给一个 Next.js 站点加 sitemap、结构化数据和 OG 图，用 Search Console 检查索引情况。",
+      "resources": [
+        {
+          "title": "Google 搜索中心文档",
+          "url": "https://developers.google.com/search/docs"
+        }
+      ],
+      "cluster": "frontend-fullstack",
+      "companies": [
+        "VERCEL",
+        "RAMP"
+      ]
+    },
+    {
+      "slug": "agentic",
+      "cluster": "frontend-ai",
+      "companies": [
+        "STRIPE",
+        "VERCEL",
+        "NOTION",
+        "MIRAI",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "streaming-ui",
+      "cluster": "frontend-ai",
+      "companies": [
+        "O",
+        "T",
+        "A",
+        "B"
+      ]
+    },
+    {
+      "slug": "ai-ux",
+      "cluster": "frontend-ai",
+      "companies": [
+        "O",
+        "T"
+      ]
+    },
+    {
+      "slug": "prompt-eng",
+      "cluster": "frontend-ai",
+      "companies": [
+        "T",
+        "A"
+      ]
+    }
+  ],
+  "prereqs": [
+    [
+      "a11y",
+      "design-system"
+    ],
+    [
+      "api-design",
+      "security-basics"
+    ],
+    [
+      "browser-render",
+      "render-perf"
+    ],
+    [
+      "browser-render",
+      "web-graphics"
+    ],
+    [
+      "browser-render",
+      "web-vitals"
+    ],
+    [
+      "build-tools",
+      "lint-quality"
+    ],
+    [
+      "build-tools",
+      "micro-fe"
+    ],
+    [
+      "build-tools",
+      "pkg-monorepo"
+    ],
+    [
+      "build-tools",
+      "web-vitals"
+    ],
+    [
+      "data-fetch",
+      "collab-editor"
+    ],
+    [
+      "data-fetch",
+      "fe-arch"
+    ],
+    [
+      "data-fetch",
+      "streaming-ui"
+    ],
+    [
+      "design-collab",
+      "design-system"
+    ],
+    [
+      "devtools-debug",
+      "render-perf"
+    ],
+    [
+      "devtools-debug",
+      "web-vitals"
+    ],
+    [
+      "dsa",
+      "collab-editor"
+    ],
+    [
+      "fe-arch",
+      "micro-fe"
+    ],
+    [
+      "fe-state",
+      "collab-editor"
+    ],
+    [
+      "fe-state",
+      "fe-arch"
+    ],
+    [
+      "fe-state",
+      "streaming-ui"
+    ],
+    [
+      "git-collab",
+      "ci-cd"
+    ],
+    [
+      "html-css",
+      "a11y"
+    ],
+    [
+      "html-css",
+      "browser-render"
+    ],
+    [
+      "html-css",
+      "motion"
+    ],
+    [
+      "html-css",
+      "responsive"
+    ],
+    [
+      "http-cache",
+      "web-vitals"
+    ],
+    [
+      "js-core",
+      "browser-render"
+    ],
+    [
+      "js-core",
+      "build-tools"
+    ],
+    [
+      "js-core",
+      "devtools-debug"
+    ],
+    [
+      "js-core",
+      "electron"
+    ],
+    [
+      "js-core",
+      "i18n"
+    ],
+    [
+      "js-core",
+      "node-bff"
+    ],
+    [
+      "js-core",
+      "react"
+    ],
+    [
+      "js-core",
+      "testing"
+    ],
+    [
+      "js-core",
+      "ts"
+    ],
+    [
+      "js-core",
+      "vue"
+    ],
+    [
+      "lint-quality",
+      "ci-cd"
+    ],
+    [
+      "node-bff",
+      "electron"
+    ],
+    [
+      "node-bff",
+      "ssr-next"
+    ],
+    [
+      "observability",
+      "ab-test"
+    ],
+    [
+      "observability",
+      "perf"
+    ],
+    [
+      "perf",
+      "render-perf"
+    ],
+    [
+      "perf",
+      "web-vitals"
+    ],
+    [
+      "prompt-eng",
+      "agentic"
+    ],
+    [
+      "prompt-eng",
+      "ai-ux"
+    ],
+    [
+      "react",
+      "cross-platform"
+    ],
+    [
+      "react",
+      "data-fetch"
+    ],
+    [
+      "react",
+      "design-system"
+    ],
+    [
+      "react",
+      "fe-state"
+    ],
+    [
+      "react",
+      "ssr-next"
+    ],
+    [
+      "react",
+      "testing"
+    ],
+    [
+      "render-perf",
+      "web-graphics"
+    ],
+    [
+      "ssr-next",
+      "seo"
+    ],
+    [
+      "testing",
+      "ci-cd"
+    ],
+    [
+      "tracking",
+      "ab-test"
+    ],
+    [
+      "ts",
+      "streaming-ui"
+    ],
+    [
+      "vue",
+      "fe-state"
+    ],
+    [
+      "web-basics",
+      "api-design"
+    ],
+    [
+      "web-basics",
+      "browser-render"
+    ],
+    [
+      "web-basics",
+      "data-fetch"
+    ],
+    [
+      "web-basics",
+      "devtools-debug"
+    ],
+    [
+      "web-basics",
+      "http-cache"
+    ],
+    [
+      "web-basics",
+      "security-basics"
+    ],
+    [
+      "web-basics",
+      "streaming-ui"
+    ],
+    [
+      "web-vitals",
+      "seo"
+    ]
+  ],
+  "path": [
+    {
+      "title": "Web 基础",
+      "skills": [
+        "web-basics",
+        "html-css",
+        "js-core",
+        "ts",
+        "git-collab",
+        "devtools-debug"
+      ]
+    },
+    {
+      "title": "框架与数据",
+      "skills": [
+        "react",
+        "vue",
+        "fe-state",
+        "data-fetch",
+        "testing",
+        "design-collab"
+      ]
+    },
+    {
+      "title": "工程化与服务端",
+      "skills": [
+        "build-tools",
+        "lint-quality",
+        "ci-cd",
+        "pkg-monorepo",
+        "node-bff",
+        "api-design"
+      ]
+    },
+    {
+      "title": "体验、性能与线上质量",
+      "skills": [
+        "responsive",
+        "a11y",
+        "design-system",
+        "browser-render",
+        "http-cache",
+        "observability",
+        "perf",
+        "web-vitals",
+        "security-basics"
+      ]
+    },
+    {
+      "title": "架构与进阶方向",
+      "skills": [
+        "ssr-next",
+        "fe-arch",
+        "render-perf",
+        "cross-platform",
+        "agentic",
+        "streaming-ui",
+        "ai-ux"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1472 @@
+{
+  "role": {
+    "slug": "backend",
+    "name_zh": "后端工程师"
+  },
+  "clusters": [
+    {
+      "slug": "backend-found",
+      "name": "编程与计算机基础",
+      "color": "#5B6B7A"
+    },
+    {
+      "slug": "backend-service",
+      "name": "服务与 API",
+      "color": "#3D5A99"
+    },
+    {
+      "slug": "backend-data",
+      "name": "数据存储",
+      "color": "#2A8C82"
+    },
+    {
+      "slug": "backend-arch",
+      "name": "分布式与架构",
+      "color": "#7A4F8A"
+    },
+    {
+      "slug": "backend-ops",
+      "name": "交付与运维",
+      "color": "#C08A1E"
+    },
+    {
+      "slug": "backend-eng",
+      "name": "工程实践与业务领域",
+      "color": "#B23A48"
+    }
+  ],
+  "companies": [
+    {
+      "code": "STRIPE",
+      "name": "Stripe"
+    },
+    {
+      "code": "COINBASE",
+      "name": "Coinbase"
+    },
+    {
+      "code": "ROBINHOOD",
+      "name": "Robinhood"
+    },
+    {
+      "code": "REDDIT",
+      "name": "Reddit"
+    },
+    {
+      "code": "DATADOG",
+      "name": "Datadog"
+    },
+    {
+      "code": "T",
+      "name": "腾讯"
+    },
+    {
+      "code": "MEITUAN",
+      "name": "美团"
+    },
+    {
+      "code": "NETEASE",
+      "name": "网易"
+    },
+    {
+      "code": "PAYPAY",
+      "name": "PayPay"
+    },
+    {
+      "code": "MONEYFORWARD",
+      "name": "Money Forward"
+    }
+  ],
+  "postings": [
+    {
+      "company": "STRIPE",
+      "title": "Backend Engineer, Core Technology",
+      "url": "https://stripe.com/jobs/search?gh_jid=6042172"
+    },
+    {
+      "company": "STRIPE",
+      "title": "Backend/API Engineer, Money as a Service",
+      "url": "https://stripe.com/jobs/search?gh_jid=6176758"
+    },
+    {
+      "company": "COINBASE",
+      "title": "Senior Software Engineer, Backend (Consumer - Risk)",
+      "url": "https://www.coinbase.com/careers/positions/8351163?gh_jid=8351163"
+    },
+    {
+      "company": "COINBASE",
+      "title": "Senior Software Engineer, Backend - Overseer (Platform)",
+      "url": "https://www.coinbase.com/careers/positions/8238630?gh_jid=8238630"
+    },
+    {
+      "company": "ROBINHOOD",
+      "title": "Senior Software Engineer, Backend",
+      "url": "https://boards.greenhouse.io/robinhood/jobs/7264931?t=gh_src=&gh_jid=7264931"
+    },
+    {
+      "company": "ROBINHOOD",
+      "title": "Senior Backend Engineer, Growth",
+      "url": "https://boards.greenhouse.io/robinhood/jobs/8346036?t=gh_src=&gh_jid=8346036"
+    },
+    {
+      "company": "REDDIT",
+      "title": "Senior Backend Engineer, IAM",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8044767"
+    },
+    {
+      "company": "REDDIT",
+      "title": "Senior Backend Engineer, Compliance Engineering",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8128860"
+    },
+    {
+      "company": "DATADOG",
+      "title": "Senior Software Engineer - Distributed Systems",
+      "url": "https://careers.datadoghq.com/detail/3851927/?gh_jid=3851927"
+    },
+    {
+      "company": "DATADOG",
+      "title": "Senior Software Engineer",
+      "url": "https://careers.datadoghq.com/detail/3851935/?gh_jid=3851935"
+    },
+    {
+      "company": "T",
+      "title": "微信支付-后台开发工程师",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2112097242642034688"
+    },
+    {
+      "company": "T",
+      "title": "微信-后台开发工程师-电商方向",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2078639812935593984"
+    },
+    {
+      "company": "T",
+      "title": "微信-接入服务后台开发工程师",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2095697889002176512"
+    },
+    {
+      "company": "T",
+      "title": "企业微信-后台高级开发工程师-（成都）",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2093322000989859840"
+    },
+    {
+      "company": "MEITUAN",
+      "title": "后端开发工程师（履约运力方向）",
+      "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4915020619&highlightType=social"
+    },
+    {
+      "company": "MEITUAN",
+      "title": "接入网关-高级后端开发工程师",
+      "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4656453224&highlightType=social"
+    },
+    {
+      "company": "MEITUAN",
+      "title": "点评技术—高级后端开发工程师（公信力方向）",
+      "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4935087880&highlightType=social"
+    },
+    {
+      "company": "NETEASE",
+      "title": "资深服务端开发（社区业务）",
+      "url": "https://hr.163.com/job-detail.html?id=60238&lang=zh"
+    },
+    {
+      "company": "NETEASE",
+      "title": "Codewave-服务端开发工程师",
+      "url": "https://hr.163.com/job-detail.html?id=79001&lang=zh"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "Backend Engineer",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/5683668004"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "Backend Engineer / バックエンドエンジニア (Core Banking & Product Features)",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/5839068004"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "Backend Engineer / バックエンドエンジニア (Core Banking System)",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/5587090004"
+    },
+    {
+      "company": "MONEYFORWARD",
+      "title": "Backend Developer (Go), Money Forward X, Tokyo",
+      "url": "https://hrmos.co/pages/moneyforward/jobs/2174353643180318756"
+    },
+    {
+      "company": "MONEYFORWARD",
+      "title": "【バックエンドエンジニア】DX・社内共通基盤開発_東京",
+      "url": "https://hrmos.co/pages/moneyforward/jobs/2239665130347503624"
+    }
+  ],
+  "skills": [
+    {
+      "slug": "lang",
+      "cluster": "backend-found",
+      "companies": [
+        "STRIPE",
+        "COINBASE",
+        "REDDIT",
+        "DATADOG",
+        "PAYPAY",
+        "MONEYFORWARD"
+      ]
+    },
+    {
+      "slug": "os",
+      "cluster": "backend-found",
+      "companies": [
+        "T",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "net",
+      "cluster": "backend-found",
+      "companies": [
+        "T",
+        "MEITUAN",
+        "REDDIT",
+        "NETEASE"
+      ]
+    },
+    {
+      "slug": "dsa",
+      "name": "数据结构与算法",
+      "description": "哈希、树、堆、图和复杂度分析。索引、缓存淘汰、限流、调度背后都是经典结构，也是国内外面试的固定环节。",
+      "concepts": [
+        "哈希表、跳表与 B+ 树",
+        "堆、优先队列与 LRU",
+        "树与图的遍历、拓扑排序",
+        "排序、二分与双指针",
+        "复杂度分析与均摊"
+      ],
+      "practice": "手写一个带 TTL 的 LRU 缓存和一个基于跳表的有序集合，写基准测试对比标准库实现。",
+      "resources": [
+        {
+          "title": "《算法》第 4 版"
+        },
+        {
+          "title": "LeetCode",
+          "url": "https://leetcode.com/"
+        }
+      ],
+      "cluster": "backend-found",
+      "companies": [
+        "T",
+        "MEITUAN",
+        "PAYPAY",
+        "STRIPE"
+      ]
+    },
+    {
+      "slug": "cpp",
+      "name": "C++ 服务端开发",
+      "description": "腾讯微信系后台岗位几乎都要求精通 C++，美团接入网关和 Datadog 也列出 C/C++。高性能后台和中间件仍大量用 C++ 写。",
+      "concepts": [
+        "RAII 与智能指针",
+        "移动语义与对象生命周期",
+        "STL 容器的性能特征",
+        "内存布局、分配器与 ASan"
+      ],
+      "practice": "用现代 C++ 写一个线程安全的内存 KV，用 ASan 和 perf 找出泄漏与热点。",
+      "resources": [
+        {
+          "title": "cppreference.com",
+          "url": "https://en.cppreference.com/"
+        },
+        {
+          "title": "Scott Meyers《Effective Modern C++》"
+        }
+      ],
+      "cluster": "backend-found",
+      "companies": [
+        "T",
+        "MEITUAN",
+        "DATADOG"
+      ]
+    },
+    {
+      "slug": "jvm",
+      "name": "Java 与 JVM",
+      "description": "Java / Kotlin 服务和 Spark、Flink、Hive 等大数据引擎都跑在 JVM 上。理解内存模型、GC 和诊断工具是调优和排障的前提。",
+      "concepts": [
+        "JVM 内存区域与类加载",
+        "GC 算法（G1、ZGC）与调优",
+        "JIT 与字节码",
+        "Kotlin / Scala 等 JVM 语言",
+        "Arthas、JFR 等诊断工具"
+      ],
+      "practice": "给一个 Spring Boot 服务制造内存泄漏和 Full GC，用 JFR 和 MAT 定位并修复。",
+      "resources": [
+        {
+          "title": "周志明《深入理解 Java 虚拟机》"
+        },
+        {
+          "title": "The Java Virtual Machine Specification",
+          "url": "https://docs.oracle.com/javase/specs/"
+        },
+        {
+          "title": "Joshua Bloch《Effective Java》"
+        }
+      ],
+      "cluster": "backend-found",
+      "companies": [
+        "MEITUAN",
+        "NETEASE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "concurrency",
+      "name": "并发编程",
+      "description": "PayPay 要求深入理解并发，Robinhood 要求设计高并发系统，美团要求理解多线程。线程、锁和内存模型是服务端正确性与性能的基础。",
+      "concepts": [
+        "线程、协程与线程池",
+        "锁、CAS 与无锁结构",
+        "内存模型与可见性",
+        "死锁、竞态与排查"
+      ],
+      "practice": "实现一个有界阻塞队列和固定大小线程池，用竞态检测器（Go -race 或 jcstress）验证。",
+      "resources": [
+        {
+          "title": "Brian Goetz《Java Concurrency in Practice》"
+        },
+        {
+          "title": "The Go Memory Model",
+          "url": "https://go.dev/ref/mem"
+        }
+      ],
+      "cluster": "backend-found",
+      "companies": [
+        "PAYPAY",
+        "ROBINHOOD",
+        "MEITUAN",
+        "T"
+      ]
+    },
+    {
+      "slug": "oop-design",
+      "name": "面向对象与设计模式",
+      "description": "美团、网易要求熟悉设计模式，PayPay 要求面向对象基础。复杂业务代码的可维护性靠清晰的抽象和职责划分。",
+      "concepts": [
+        "SOLID 原则",
+        "常用创建、结构、行为模式",
+        "依赖注入与控制反转",
+        "重构与代码坏味道"
+      ],
+      "practice": "挑一段 if-else 堆积的业务代码，用策略模式和依赖注入重构，并补齐单元测试。",
+      "resources": [
+        {
+          "title": "Refactoring.Guru 设计模式",
+          "url": "https://refactoring.guru/design-patterns"
+        },
+        {
+          "title": "Martin Fowler《重构》"
+        }
+      ],
+      "cluster": "backend-found",
+      "companies": [
+        "MEITUAN",
+        "NETEASE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "net-programming",
+      "name": "网络编程与 I/O 模型",
+      "description": "腾讯要求 Linux 网络编程能力，网易要求深入理解 Netty/Reactor 与 SSE 长连接。高并发服务和网关的吞吐上限由 I/O 模型决定。",
+      "concepts": [
+        "阻塞、非阻塞与 I/O 多路复用（epoll）",
+        "Reactor 模式与事件循环",
+        "长连接、心跳与推送",
+        "TCP 粘包、背压与连接管理"
+      ],
+      "practice": "用 epoll 或 Netty 写一个支持万级长连接的 echo/推送服务，压测并观察 CPU 与连接数曲线。",
+      "resources": [
+        {
+          "title": "W. Richard Stevens《UNIX 网络编程 卷 1》"
+        },
+        {
+          "title": "The C10K problem",
+          "url": "http://www.kegel.com/c10k.html"
+        },
+        {
+          "title": "Netty User Guide",
+          "url": "https://netty.io/wiki/user-guide-for-4.x.html"
+        }
+      ],
+      "cluster": "backend-found",
+      "companies": [
+        "T",
+        "NETEASE",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "api-design",
+      "name": "API 设计（REST/gRPC/GraphQL）",
+      "description": "服务之间、前后端之间的契约：资源建模、协议选型（REST / gRPC / GraphQL）、版本兼容和错误模型。接口一旦发布就很难改。",
+      "concepts": [
+        "资源建模与 HTTP 语义",
+        "gRPC / Protobuf 与 IDL",
+        "GraphQL schema 设计",
+        "版本管理与向后兼容",
+        "分页、幂等键与错误模型"
+      ],
+      "practice": "为一个订单服务同时设计 REST 和 gRPC 接口，写出版本演进和幂等键的规则。",
+      "resources": [
+        {
+          "title": "Google API Design Guide",
+          "url": "https://cloud.google.com/apis/design"
+        },
+        {
+          "title": "gRPC 官方文档",
+          "url": "https://grpc.io/docs/"
+        },
+        {
+          "title": "GraphQL 官方文档",
+          "url": "https://graphql.org/learn/"
+        }
+      ],
+      "cluster": "backend-service",
+      "companies": [
+        "STRIPE",
+        "COINBASE",
+        "ROBINHOOD",
+        "REDDIT",
+        "PAYPAY",
+        "MONEYFORWARD"
+      ]
+    },
+    {
+      "slug": "web-framework",
+      "name": "服务端框架",
+      "description": "美团要求熟练 Spring、MyBatis，网易和 PayPay 要求 Spring Boot。框架决定了请求生命周期、依赖管理和数据访问方式。",
+      "concepts": [
+        "请求生命周期与中间件",
+        "依赖注入容器",
+        "ORM 与数据访问层",
+        "配置、Profile 与启动优化"
+      ],
+      "practice": "用 Spring Boot（或 Go 的 Gin）从零搭一个带鉴权中间件、ORM 和集成测试的 CRUD 服务。",
+      "resources": [
+        {
+          "title": "Spring Boot 官方文档",
+          "url": "https://docs.spring.io/spring-boot/"
+        }
+      ],
+      "cluster": "backend-service",
+      "companies": [
+        "MEITUAN",
+        "NETEASE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "auth",
+      "name": "认证与授权（OAuth/OIDC/会话）",
+      "description": "认证回答「你是谁」，授权回答「你能做什么」：会话与令牌、OAuth2 / OIDC 登录和 RBAC / ReBAC 权限模型。",
+      "concepts": [
+        "OAuth 2.0 与 OIDC 流程",
+        "会话、JWT 与令牌吊销",
+        "RBAC、ABAC 与 ReBAC",
+        "API Key 与服务间认证"
+      ],
+      "practice": "为一个多服务应用接入 OIDC 登录，再用 ReBAC 模型（如 OpenFGA）实现文档级权限。",
+      "resources": [
+        {
+          "title": "RFC 6749 OAuth 2.0",
+          "url": "https://datatracker.ietf.org/doc/html/rfc6749"
+        },
+        {
+          "title": "OpenID Connect Core 1.0",
+          "url": "https://openid.net/specs/openid-connect-core-1_0.html"
+        },
+        {
+          "title": "Zanzibar: Google's Consistent, Global Authorization System",
+          "url": "https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/"
+        }
+      ],
+      "cluster": "backend-service",
+      "companies": [
+        "REDDIT",
+        "MONEYFORWARD",
+        "NETEASE"
+      ]
+    },
+    {
+      "slug": "microservices",
+      "name": "微服务与服务治理",
+      "description": "Coinbase、PayPay、Money Forward、网易都要求微服务经验，美团写作 SOA。拆分边界、服务发现、RPC 与治理是日常工作。",
+      "concepts": [
+        "服务拆分与边界",
+        "服务注册发现与 RPC 框架",
+        "配置中心与服务网格",
+        "契约测试与依赖治理"
+      ],
+      "practice": "把一个单体拆成三个服务，接入注册中心和链路追踪，记录拆分前后延迟与故障面的变化。",
+      "resources": [
+        {
+          "title": "Sam Newman《Building Microservices》"
+        },
+        {
+          "title": "microservices.io 模式目录",
+          "url": "https://microservices.io/patterns/"
+        }
+      ],
+      "cluster": "backend-service",
+      "companies": [
+        "COINBASE",
+        "PAYPAY",
+        "MONEYFORWARD",
+        "NETEASE",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "api-gateway",
+      "name": "网关与流量治理",
+      "description": "腾讯微信接入平台做 7 层网关，美团招七层流量网关与长连网关，网易负责流量网关的路由、灰度、限流熔断。网关是所有流量的入口。",
+      "concepts": [
+        "7 层路由与负载均衡",
+        "鉴权、限流与熔断插件",
+        "控制面与数据面",
+        "流量镜像、回放与灰度"
+      ],
+      "practice": "用 Envoy 或 Nginx 搭一个网关，配置按 Header 灰度、令牌桶限流和熔断，压测验证。",
+      "resources": [
+        {
+          "title": "Envoy 官方文档",
+          "url": "https://www.envoyproxy.io/docs/envoy/latest/"
+        },
+        {
+          "title": "NGINX 官方文档",
+          "url": "https://nginx.org/en/docs/"
+        }
+      ],
+      "cluster": "backend-service",
+      "companies": [
+        "T",
+        "MEITUAN",
+        "NETEASE"
+      ]
+    },
+    {
+      "slug": "sql-db",
+      "name": "关系数据库与 SQL",
+      "description": "MySQL 和 PostgreSQL 几乎出现在所有岗位的 JD 里：既要写对复杂 SQL，也要懂索引、事务和执行计划。",
+      "concepts": [
+        "连接、CTE 与窗口函数",
+        "索引结构与执行计划",
+        "事务隔离级别与 MVCC",
+        "锁、死锁与慢查询优化",
+        "复制与 schema 迁移"
+      ],
+      "practice": "在百万行表上复现一个慢查询，读 EXPLAIN 设计复合索引，再在两种隔离级别下复现幻读。",
+      "resources": [
+        {
+          "title": "PostgreSQL 官方文档",
+          "url": "https://www.postgresql.org/docs/"
+        },
+        {
+          "title": "Use The Index, Luke",
+          "url": "https://use-the-index-luke.com/"
+        },
+        {
+          "title": "CMU 15-445 数据库系统",
+          "url": "https://15445.courses.cs.cmu.edu/"
+        }
+      ],
+      "cluster": "backend-data",
+      "companies": [
+        "COINBASE",
+        "REDDIT",
+        "MEITUAN",
+        "T",
+        "PAYPAY",
+        "MONEYFORWARD",
+        "NETEASE"
+      ]
+    },
+    {
+      "slug": "nosql",
+      "name": "NoSQL 与 KV 存储",
+      "description": "KV、宽列和文档存储按访问模式而不是范式设计数据，换来水平扩展和高可用，代价是一致性和查询灵活性。",
+      "concepts": [
+        "KV、宽列与文档模型",
+        "分区键与热点",
+        "LSM-Tree 与压缩",
+        "可调一致性（quorum）"
+      ],
+      "practice": "把一张访问日志表分别建模到 DynamoDB 和 Cassandra，比较分区键选择对热点的影响。",
+      "resources": [
+        {
+          "title": "Dynamo: Amazon's Highly Available Key-value Store",
+          "url": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf"
+        },
+        {
+          "title": "Apache Cassandra 文档",
+          "url": "https://cassandra.apache.org/doc/latest/"
+        }
+      ],
+      "cluster": "backend-data",
+      "companies": [
+        "PAYPAY",
+        "MEITUAN",
+        "DATADOG",
+        "T",
+        "COINBASE"
+      ]
+    },
+    {
+      "slug": "cache",
+      "name": "缓存",
+      "description": "用缓存降延迟、扛读流量、省下游开销，同时处理一致性、穿透、击穿和雪崩。Redis 是最常见的实现。",
+      "concepts": [
+        "Redis 数据结构、持久化与集群",
+        "Cache-Aside 与写策略",
+        "穿透、击穿、雪崩",
+        "缓存一致性与失效",
+        "多级缓存"
+      ],
+      "practice": "给一个读多写少的接口加 Redis 缓存，模拟热点 key 失效，用互斥锁或逻辑过期防击穿。",
+      "resources": [
+        {
+          "title": "Redis 官方文档",
+          "url": "https://redis.io/docs/latest/"
+        },
+        {
+          "title": "Scaling Memcache at Facebook",
+          "url": "https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala"
+        }
+      ],
+      "cluster": "backend-data",
+      "companies": [
+        "PAYPAY",
+        "MEITUAN",
+        "T",
+        "NETEASE",
+        "REDDIT",
+        "DATADOG"
+      ]
+    },
+    {
+      "slug": "data-modeling",
+      "cluster": "backend-data",
+      "companies": [
+        "ROBINHOOD",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "db-scaling",
+      "name": "数据库扩展与分布式数据库",
+      "description": "单库撑不住之后的路线：复制、分库分表、分布式 SQL。PayPay 技术栈有 TiDB，网易要求熟悉分布式数据库，Coinbase 要求分布式数据存储经验，腾讯在做 HTAP 查询。",
+      "concepts": [
+        "主从复制与读写分离",
+        "分库分表与全局 ID",
+        "分布式 SQL（TiDB、Spanner）",
+        "OLTP 与 HTAP/OLAP 的边界"
+      ],
+      "practice": "用 Vitess 或 ShardingSphere 把一张订单表按用户分片，处理跨分片查询和全局唯一 ID。",
+      "resources": [
+        {
+          "title": "Vitess 文档",
+          "url": "https://vitess.io/docs/"
+        },
+        {
+          "title": "TiDB 文档",
+          "url": "https://docs.pingcap.com/tidb/stable/"
+        }
+      ],
+      "cluster": "backend-data",
+      "companies": [
+        "T",
+        "NETEASE",
+        "PAYPAY",
+        "COINBASE"
+      ]
+    },
+    {
+      "slug": "search-engine",
+      "name": "全文检索",
+      "description": "腾讯微信电商岗位要求 Elasticsearch、倒排索引、分词与相关性排序；Datadog 用 Elasticsearch；PayPay 技术栈有 ELK。",
+      "concepts": [
+        "倒排索引与分词",
+        "BM25 与相关性排序",
+        "分片、副本与刷新",
+        "数据库到索引的同步"
+      ],
+      "practice": "把商品表通过 CDC 同步到 Elasticsearch，实现带过滤和高亮的搜索接口，调优相关性。",
+      "resources": [
+        {
+          "title": "Elasticsearch Reference",
+          "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+        },
+        {
+          "title": "Introduction to Information Retrieval",
+          "url": "https://nlp.stanford.edu/IR-book/"
+        }
+      ],
+      "cluster": "backend-data",
+      "companies": [
+        "T",
+        "DATADOG",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "dist",
+      "cluster": "backend-arch",
+      "companies": [
+        "STRIPE",
+        "COINBASE",
+        "ROBINHOOD",
+        "REDDIT",
+        "DATADOG",
+        "T",
+        "MEITUAN",
+        "NETEASE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "mq",
+      "name": "消息队列与事件流",
+      "description": "用消息队列做异步解耦、削峰和事件驱动；Kafka 这类日志型系统也是实时数据链路的入口。核心是分区、消费组和投递语义。",
+      "concepts": [
+        "分区、副本与消费组",
+        "投递语义与幂等消费",
+        "顺序性、重试与死信队列",
+        "偏移量管理与回放",
+        "事件驱动与 Outbox"
+      ],
+      "practice": "搭一个 Kafka 下单事件流，消费者故意重启和重复消费，用幂等表保证结果正确。",
+      "resources": [
+        {
+          "title": "Apache Kafka 文档",
+          "url": "https://kafka.apache.org/documentation/"
+        },
+        {
+          "title": "Jay Kreps《The Log》",
+          "url": "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying"
+        },
+        {
+          "title": "RabbitMQ Tutorials",
+          "url": "https://www.rabbitmq.com/tutorials"
+        }
+      ],
+      "cluster": "backend-arch",
+      "companies": [
+        "COINBASE",
+        "DATADOG",
+        "MEITUAN",
+        "T",
+        "NETEASE",
+        "PAYPAY",
+        "MONEYFORWARD"
+      ]
+    },
+    {
+      "slug": "sys-design",
+      "name": "系统设计",
+      "description": "在可用性、一致性、延迟和成本之间做取舍，设计能扩展的服务架构。也是多数岗位面试的必考环节。",
+      "concepts": [
+        "容量估算与瓶颈分析",
+        "读写路径与数据流",
+        "水平扩展与分区",
+        "故障域与爆炸半径",
+        "权衡：一致性、延迟、成本"
+      ],
+      "practice": "按面试格式完整设计一个短链服务和一个 Feed 流，写出容量估算和三个关键权衡。",
+      "resources": [
+        {
+          "title": "Kleppmann《Designing Data-Intensive Applications》",
+          "url": "https://dataintensive.net/"
+        },
+        {
+          "title": "The System Design Primer",
+          "url": "https://github.com/donnemartin/system-design-primer"
+        }
+      ],
+      "cluster": "backend-arch",
+      "companies": [
+        "ROBINHOOD",
+        "PAYPAY",
+        "DATADOG",
+        "MEITUAN",
+        "COINBASE"
+      ]
+    },
+    {
+      "slug": "resilience",
+      "cluster": "backend-arch",
+      "companies": [
+        "T",
+        "MEITUAN",
+        "NETEASE",
+        "PAYPAY",
+        "DATADOG"
+      ]
+    },
+    {
+      "slug": "dist-txn",
+      "name": "分布式事务与一致性",
+      "description": "跨服务、跨库的写入怎样做到不丢不重：幂等、补偿和最终一致。支付、订单、库存类系统的核心问题。",
+      "concepts": [
+        "幂等键与去重",
+        "Saga 与补偿",
+        "Outbox 与 CDC",
+        "两阶段提交及其代价"
+      ],
+      "practice": "实现一个跨账户转账的 Saga，在每一步注入失败，证明最终余额守恒。",
+      "resources": [
+        {
+          "title": "microservices.io: Saga",
+          "url": "https://microservices.io/patterns/data/saga.html"
+        },
+        {
+          "title": "Stripe: Designing robust and predictable APIs with idempotency",
+          "url": "https://stripe.com/blog/idempotency"
+        }
+      ],
+      "cluster": "backend-arch",
+      "companies": [
+        "COINBASE",
+        "ROBINHOOD",
+        "STRIPE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "stream-processing",
+      "cluster": "backend-arch",
+      "companies": [
+        "COINBASE",
+        "NETEASE",
+        "DATADOG"
+      ]
+    },
+    {
+      "slug": "ddd",
+      "name": "领域建模",
+      "description": "美团要求把复杂业务抽象成清晰的领域模型，Money Forward 要求把业务领域抽象并建模。复杂业务系统的可扩展性来自模型而不是代码量。",
+      "concepts": [
+        "限界上下文与上下文映射",
+        "聚合、实体与值对象",
+        "领域事件",
+        "防腐层"
+      ],
+      "practice": "给外卖履约（骑手、站点、运单）画出限界上下文图，并用聚合实现一个派单用例。",
+      "resources": [
+        {
+          "title": "Eric Evans《Domain-Driven Design》"
+        },
+        {
+          "title": "Martin Fowler: DomainDrivenDesign",
+          "url": "https://martinfowler.com/bliki/DomainDrivenDesign.html"
+        }
+      ],
+      "cluster": "backend-arch",
+      "companies": [
+        "MEITUAN",
+        "MONEYFORWARD"
+      ]
+    },
+    {
+      "slug": "tenant",
+      "cluster": "backend-arch",
+      "companies": [
+        "DATADOG",
+        "NETEASE"
+      ]
+    },
+    {
+      "slug": "docker",
+      "cluster": "backend-ops",
+      "companies": [
+        "REDDIT",
+        "MONEYFORWARD",
+        "STRIPE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "k8s",
+      "cluster": "backend-ops",
+      "companies": [
+        "REDDIT",
+        "STRIPE",
+        "PAYPAY",
+        "MONEYFORWARD",
+        "NETEASE"
+      ]
+    },
+    {
+      "slug": "cloud",
+      "cluster": "backend-ops",
+      "companies": [
+        "REDDIT",
+        "PAYPAY",
+        "MONEYFORWARD",
+        "STRIPE"
+      ]
+    },
+    {
+      "slug": "iac",
+      "cluster": "backend-ops",
+      "companies": [
+        "MONEYFORWARD"
+      ]
+    },
+    {
+      "slug": "ci-cd",
+      "cluster": "backend-ops",
+      "companies": [
+        "REDDIT",
+        "MONEYFORWARD",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "safe-release",
+      "cluster": "backend-ops",
+      "companies": [
+        "DATADOG",
+        "NETEASE",
+        "REDDIT",
+        "ROBINHOOD"
+      ]
+    },
+    {
+      "slug": "observability",
+      "cluster": "backend-ops",
+      "companies": [
+        "ROBINHOOD",
+        "PAYPAY",
+        "MEITUAN",
+        "NETEASE",
+        "COINBASE",
+        "MONEYFORWARD"
+      ]
+    },
+    {
+      "slug": "incident",
+      "cluster": "backend-ops",
+      "companies": [
+        "COINBASE",
+        "STRIPE",
+        "DATADOG",
+        "MEITUAN",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "perf",
+      "cluster": "backend-ops",
+      "companies": [
+        "STRIPE",
+        "DATADOG",
+        "T",
+        "MEITUAN",
+        "NETEASE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "testing",
+      "name": "自动化测试",
+      "description": "单元、集成和端到端测试的分层策略，让改动可以放心合并。",
+      "concepts": [
+        "测试金字塔",
+        "单元测试与 Mock 边界",
+        "集成测试与 Testcontainers",
+        "端到端测试（Playwright）",
+        "TDD 与回归测试"
+      ],
+      "practice": "给一个下单服务补齐单元、集成（Testcontainers 起真实 DB）和契约测试，接入 CI。",
+      "resources": [
+        {
+          "title": "The Practical Test Pyramid",
+          "url": "https://martinfowler.com/articles/practical-test-pyramid.html"
+        },
+        {
+          "title": "Testcontainers",
+          "url": "https://testcontainers.com/"
+        },
+        {
+          "title": "Playwright 文档",
+          "url": "https://playwright.dev/"
+        }
+      ],
+      "cluster": "backend-eng",
+      "companies": [
+        "MONEYFORWARD",
+        "ROBINHOOD",
+        "MEITUAN",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "git-collab",
+      "cluster": "backend-eng",
+      "companies": [
+        "MONEYFORWARD",
+        "COINBASE",
+        "ROBINHOOD"
+      ]
+    },
+    {
+      "slug": "security-basics",
+      "name": "应用安全基础（OWASP）",
+      "description": "常见 Web 漏洞的成因与防御：注入、XSS、CSRF、越权、密钥泄露和依赖供应链。安全要在写代码时就考虑。",
+      "concepts": [
+        "OWASP Top 10",
+        "注入与输入校验",
+        "XSS、CSRF 与 CSP",
+        "密钥管理与加密",
+        "依赖与供应链安全"
+      ],
+      "practice": "用 OWASP ZAP 扫自己的服务，修复发现的注入和越权问题，并在 CI 加依赖扫描。",
+      "resources": [
+        {
+          "title": "OWASP Top 10",
+          "url": "https://owasp.org/www-project-top-ten/"
+        },
+        {
+          "title": "OWASP ASVS",
+          "url": "https://owasp.org/www-project-application-security-verification-standard/"
+        },
+        {
+          "title": "MDN Web 安全",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Security"
+        }
+      ],
+      "cluster": "backend-eng",
+      "companies": [
+        "PAYPAY",
+        "REDDIT",
+        "T"
+      ]
+    },
+    {
+      "slug": "tech-lead",
+      "name": "技术方案与技术领导力",
+      "description": "Coinbase 要求写复杂系统的技术设计文档并带人，Robinhood 要求主导大型项目，Reddit 要求做过技术负责人，美团要求方案设计与评审。资深后端的分水岭。",
+      "concepts": [
+        "设计文档与评审",
+        "把模糊需求拆成计划",
+        "跨团队对齐与推进",
+        "指导与代码评审带人"
+      ],
+      "practice": "为一个真实需求写一份设计文档（背景、目标、方案对比、风险、上线计划），拿去评审。",
+      "resources": [
+        {
+          "title": "Design Docs at Google",
+          "url": "https://www.industrialempathy.com/posts/design-docs-at-google/"
+        },
+        {
+          "title": "Tanya Reilly《The Staff Engineer's Path》"
+        }
+      ],
+      "cluster": "backend-eng",
+      "companies": [
+        "COINBASE",
+        "ROBINHOOD",
+        "REDDIT",
+        "STRIPE",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "agentic",
+      "cluster": "backend-eng",
+      "companies": [
+        "DATADOG",
+        "PAYPAY",
+        "MEITUAN",
+        "NETEASE",
+        "MONEYFORWARD",
+        "COINBASE"
+      ]
+    },
+    {
+      "slug": "llm",
+      "cluster": "backend-eng",
+      "companies": [
+        "NETEASE",
+        "DATADOG"
+      ]
+    },
+    {
+      "slug": "ledger",
+      "name": "账务与资金正确性",
+      "description": "Stripe 处理数十亿次资金流动请求，Coinbase 实时检测资金流不变量取代季度对账，PayPay 在重做核心银行系统，腾讯做微信支付。金融后端的特有能力。",
+      "concepts": [
+        "复式记账与不可变账本",
+        "对账与差错处理",
+        "金额精度与币种",
+        "资金流不变量"
+      ],
+      "practice": "实现一个复式记账服务，支持转账、冲正和日终对账，用随机测试验证借贷永远平衡。",
+      "resources": [
+        {
+          "title": "Modern Treasury: Accounting for Developers",
+          "url": "https://www.moderntreasury.com/journal/accounting-for-developers-part-i"
+        }
+      ],
+      "cluster": "backend-eng",
+      "companies": [
+        "STRIPE",
+        "COINBASE",
+        "PAYPAY",
+        "T"
+      ]
+    },
+    {
+      "slug": "risk-systems",
+      "name": "风控与合规系统",
+      "description": "腾讯微信支付做金融级风控平台，Coinbase 做实时风控决策，Money Forward 做 AML/eKYC 基盘，Reddit 做合规工程，美团做公信力风险识别与处置。",
+      "concepts": [
+        "规则引擎与实时决策",
+        "特征与名单服务",
+        "审核、申诉与人工复核流",
+        "合规要求（AML、KYC、隐私）落地"
+      ],
+      "practice": "做一个交易风控服务：规则引擎 + 滑动窗口特征 + 人工复核队列，P99 控制在 50ms 内。",
+      "resources": [
+        {
+          "title": "Stripe Radar 文档",
+          "url": "https://docs.stripe.com/radar"
+        },
+        {
+          "title": "FATF Recommendations",
+          "url": "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html"
+        }
+      ],
+      "cluster": "backend-eng",
+      "companies": [
+        "T",
+        "COINBASE",
+        "MONEYFORWARD",
+        "REDDIT",
+        "MEITUAN"
+      ]
+    }
+  ],
+  "prereqs": [
+    [
+      "api-design",
+      "auth"
+    ],
+    [
+      "api-design",
+      "microservices"
+    ],
+    [
+      "api-design",
+      "security-basics"
+    ],
+    [
+      "api-design",
+      "sys-design"
+    ],
+    [
+      "api-design",
+      "web-framework"
+    ],
+    [
+      "auth",
+      "api-gateway"
+    ],
+    [
+      "auth",
+      "security-basics"
+    ],
+    [
+      "cache",
+      "sys-design"
+    ],
+    [
+      "ci-cd",
+      "safe-release"
+    ],
+    [
+      "cloud",
+      "iac"
+    ],
+    [
+      "concurrency",
+      "net-programming"
+    ],
+    [
+      "concurrency",
+      "perf"
+    ],
+    [
+      "cpp",
+      "net-programming"
+    ],
+    [
+      "data-modeling",
+      "ddd"
+    ],
+    [
+      "data-modeling",
+      "ledger"
+    ],
+    [
+      "db-scaling",
+      "sys-design"
+    ],
+    [
+      "dist",
+      "db-scaling"
+    ],
+    [
+      "dist",
+      "dist-txn"
+    ],
+    [
+      "dist",
+      "mq"
+    ],
+    [
+      "dist",
+      "resilience"
+    ],
+    [
+      "dist",
+      "sys-design"
+    ],
+    [
+      "dist-txn",
+      "ledger"
+    ],
+    [
+      "docker",
+      "ci-cd"
+    ],
+    [
+      "docker",
+      "cloud"
+    ],
+    [
+      "docker",
+      "k8s"
+    ],
+    [
+      "dsa",
+      "concurrency"
+    ],
+    [
+      "dsa",
+      "search-engine"
+    ],
+    [
+      "git-collab",
+      "ci-cd"
+    ],
+    [
+      "jvm",
+      "stream-processing"
+    ],
+    [
+      "jvm",
+      "web-framework"
+    ],
+    [
+      "lang",
+      "concurrency"
+    ],
+    [
+      "lang",
+      "web-framework"
+    ],
+    [
+      "microservices",
+      "api-gateway"
+    ],
+    [
+      "microservices",
+      "resilience"
+    ],
+    [
+      "mq",
+      "dist-txn"
+    ],
+    [
+      "mq",
+      "stream-processing"
+    ],
+    [
+      "mq",
+      "sys-design"
+    ],
+    [
+      "net",
+      "api-design"
+    ],
+    [
+      "net",
+      "net-programming"
+    ],
+    [
+      "net-programming",
+      "api-gateway"
+    ],
+    [
+      "nosql",
+      "search-engine"
+    ],
+    [
+      "observability",
+      "incident"
+    ],
+    [
+      "observability",
+      "perf"
+    ],
+    [
+      "observability",
+      "safe-release"
+    ],
+    [
+      "oop-design",
+      "ddd"
+    ],
+    [
+      "oop-design",
+      "web-framework"
+    ],
+    [
+      "os",
+      "concurrency"
+    ],
+    [
+      "os",
+      "docker"
+    ],
+    [
+      "os",
+      "net-programming"
+    ],
+    [
+      "resilience",
+      "sys-design"
+    ],
+    [
+      "security-basics",
+      "risk-systems"
+    ],
+    [
+      "sql-db",
+      "cache"
+    ],
+    [
+      "sql-db",
+      "data-modeling"
+    ],
+    [
+      "sql-db",
+      "db-scaling"
+    ],
+    [
+      "sql-db",
+      "dist-txn"
+    ],
+    [
+      "sql-db",
+      "nosql"
+    ],
+    [
+      "sql-db",
+      "sys-design"
+    ],
+    [
+      "stream-processing",
+      "risk-systems"
+    ],
+    [
+      "sys-design",
+      "tech-lead"
+    ],
+    [
+      "sys-design",
+      "tenant"
+    ],
+    [
+      "testing",
+      "ci-cd"
+    ],
+    [
+      "web-framework",
+      "microservices"
+    ]
+  ],
+  "path": [
+    {
+      "title": "编程与计算机基础",
+      "skills": [
+        "lang",
+        "dsa",
+        "os",
+        "net",
+        "oop-design"
+      ]
+    },
+    {
+      "title": "写出第一个服务",
+      "skills": [
+        "sql-db",
+        "api-design",
+        "web-framework",
+        "git-collab",
+        "testing"
+      ]
+    },
+    {
+      "title": "存储与分布式基础",
+      "skills": [
+        "cache",
+        "nosql",
+        "data-modeling",
+        "concurrency",
+        "dist"
+      ]
+    },
+    {
+      "title": "消息与架构",
+      "skills": [
+        "mq",
+        "microservices",
+        "resilience",
+        "dist-txn",
+        "sys-design"
+      ]
+    },
+    {
+      "title": "上线与运维",
+      "skills": [
+        "docker",
+        "k8s",
+        "ci-cd",
+        "observability",
+        "perf",
+        "incident"
+      ]
+    },
+    {
+      "title": "进阶与业务领域",
+      "skills": [
+        "auth",
+        "security-basics",
+        "api-gateway",
+        "ledger",
+        "tech-lead",
+        "agentic"
+      ]
+    }
+  ]
+}

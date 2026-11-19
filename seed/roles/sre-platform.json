@@ -1,0 +1,1725 @@
+{
+  "role": {
+    "slug": "sre-platform",
+    "name_zh": "SRE / 平台工程师"
+  },
+  "clusters": [
+    {
+      "slug": "sre-platform-found",
+      "name": "系统基础",
+      "color": "#5B6B7A"
+    },
+    {
+      "slug": "sre-platform-obs",
+      "name": "可观测性",
+      "color": "#C08A1E"
+    },
+    {
+      "slug": "sre-platform-reliability",
+      "name": "可靠性工程",
+      "color": "#B23A48"
+    },
+    {
+      "slug": "sre-platform-cloud",
+      "name": "云与基础设施",
+      "color": "#3D5A99"
+    },
+    {
+      "slug": "sre-platform-k8s",
+      "name": "容器编排平台",
+      "color": "#2A8C82"
+    },
+    {
+      "slug": "sre-platform-delivery",
+      "name": "交付与开发者平台",
+      "color": "#7A4F8A"
+    },
+    {
+      "slug": "sre-platform-data",
+      "name": "有状态服务",
+      "color": "#6E8A2A"
+    }
+  ],
+  "companies": [
+    {
+      "code": "GITLAB",
+      "name": "GitLab"
+    },
+    {
+      "code": "REDDIT",
+      "name": "Reddit"
+    },
+    {
+      "code": "COINBASE",
+      "name": "Coinbase"
+    },
+    {
+      "code": "AIRBNB",
+      "name": "Airbnb"
+    },
+    {
+      "code": "CLOUDFLARE",
+      "name": "Cloudflare"
+    },
+    {
+      "code": "A",
+      "name": "阿里"
+    },
+    {
+      "code": "T",
+      "name": "腾讯"
+    },
+    {
+      "code": "B",
+      "name": "百度"
+    },
+    {
+      "code": "MEITUAN",
+      "name": "美团"
+    },
+    {
+      "code": "MERCARI",
+      "name": "Mercari"
+    },
+    {
+      "code": "PAYPAY",
+      "name": "PayPay"
+    },
+    {
+      "code": "LINEYAHOO",
+      "name": "LINE ヤフー"
+    }
+  ],
+  "postings": [
+    {
+      "company": "GITLAB",
+      "title": "Site Reliability Engineer, Infrastructure Platforms — AMER (Intermediate to Senior Staff)",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8623389002"
+    },
+    {
+      "company": "GITLAB",
+      "title": "Senior Staff SRE, Architecture Engineering: Hosted Runners",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8932489002"
+    },
+    {
+      "company": "REDDIT",
+      "title": "Senior SRE, Site Experience",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8369767"
+    },
+    {
+      "company": "COINBASE",
+      "title": "Senior Software Engineer, Compute Platform",
+      "url": "https://www.coinbase.com/careers/positions/7701645?gh_jid=7701645"
+    },
+    {
+      "company": "AIRBNB",
+      "title": "Staff Software Engineer, Cloud Infrastructure",
+      "url": "https://careers.airbnb.com/positions/8257909?gh_jid=8257909"
+    },
+    {
+      "company": "CLOUDFLARE",
+      "title": "Systems Reliability Engineer - Core",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/8324908?gh_jid=8324908"
+    },
+    {
+      "company": "A",
+      "title": "阿里云智能-站点可靠性工程（SRE）-杭州",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100055600002"
+    },
+    {
+      "company": "A",
+      "title": "业务技术-高级开发工程师-SRE",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100045600001"
+    },
+    {
+      "company": "T",
+      "title": "云原生高级SRE工程师（深圳/北京）",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2113089267273216000"
+    },
+    {
+      "company": "B",
+      "title": "SRE工程师（J103236）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/552ea65a-df8b-4482-9cb7-9b5679752450"
+    },
+    {
+      "company": "B",
+      "title": "云计算运维研发Devops工程师（J94372）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/603db4ae-3f52-48c2-9fe2-2b9bf6c53261"
+    },
+    {
+      "company": "MEITUAN",
+      "title": "Keeta技术-资深架构师（稳定性与AI平台方向）",
+      "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4223713449&highlightType=social"
+    },
+    {
+      "company": "MEITUAN",
+      "title": "交易系统平台部-基础平台技术中心-Java软件开发工程师(稳定性保障方向 L6-L7)",
+      "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4828037725&highlightType=social"
+    },
+    {
+      "company": "MERCARI",
+      "title": "Software Engineer (Site Reliability) - Mercari",
+      "url": "https://apply.workable.com/mercari/j/76C6D83800/"
+    },
+    {
+      "company": "MERCARI",
+      "title": "Senior Platform Infrastructure Engineer - Mercari",
+      "url": "https://apply.workable.com/mercari/j/D938A9A8ED/"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "Cloud Platform Engineer",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/5471535004"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "Cloud Platform Engineer (K8S&NW Specialist)",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/5583571004"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "Cloud Infrastructure Engineer / クラウドインフラエンジニア",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/6130390004"
+    },
+    {
+      "company": "LINEYAHOO",
+      "title": "Site Reliability Engineer / ソーシャルコマース（LINEギフト・ショッピングタブ）",
+      "url": "https://www.lycorp.co.jp/ja/recruit/career/job-categories/ly00366/"
+    }
+  ],
+  "skills": [
+    {
+      "slug": "os",
+      "cluster": "sre-platform-found",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "net",
+      "cluster": "sre-platform-found",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "lang",
+      "cluster": "sre-platform-found",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "dist",
+      "cluster": "sre-platform-found",
+      "companies": [
+        "REDDIT",
+        "COINBASE",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B",
+        "MEITUAN",
+        "MERCARI"
+      ]
+    },
+    {
+      "slug": "sys-troubleshoot",
+      "name": "生产排障方法论",
+      "description": "在应用、内核、网络、依赖之间逐层缩小范围，用测量而非猜测定位根因。几乎每份 SRE JD 都把它列为硬要求。",
+      "concepts": [
+        "USE / RED 方法",
+        "假设-验证的排障循环",
+        "strace、tcpdump、perf 等现场工具",
+        "从止血到根因修复的闭环"
+      ],
+      "practice": "在一台压测中的 Linux 机器上人为制造 CPU、内存、磁盘、网络四类瓶颈，各写一页排障记录：看了什么指标、用了什么命令、如何确认根因。",
+      "resources": [
+        {
+          "title": "Brendan Gregg: The USE Method",
+          "url": "https://www.brendangregg.com/usemethod.html"
+        },
+        {
+          "title": "Brendan Gregg: Linux Performance",
+          "url": "https://www.brendangregg.com/linuxperf.html"
+        }
+      ],
+      "cluster": "sre-platform-found",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "perf",
+      "name": "性能分析与优化",
+      "description": "先测量、再定位、再优化、最后防回归：从 CPU、内存、I/O 到网络和运行时，找出瓶颈并量化优化收益。",
+      "concepts": [
+        "性能指标、基线与预算",
+        "火焰图与采样剖析",
+        "延迟分布与尾延迟（P99）",
+        "运行时调优（GC、线程池、连接池）",
+        "回归防护"
+      ],
+      "practice": "给一个 HTTP 服务做压测，用 perf / pprof 生成火焰图，找到并优化最热的一处，对比优化前后的 P99。",
+      "resources": [
+        {
+          "title": "Brendan Gregg《Systems Performance》",
+          "url": "https://www.brendangregg.com/systems-performance-2nd-edition-book.html"
+        },
+        {
+          "title": "Brendan Gregg: Flame Graphs",
+          "url": "https://www.brendangregg.com/flamegraphs.html"
+        }
+      ],
+      "cluster": "sre-platform-found",
+      "companies": [
+        "REDDIT",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "sys-design",
+      "cluster": "sre-platform-found",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "observability",
+      "name": "监控、日志与告警",
+      "description": "指标、日志、链路三类信号的整体设计，目标是先于用户发现问题，并能快速回答「哪里坏了、为什么」。",
+      "concepts": [
+        "指标、日志、链路三类信号",
+        "四个黄金信号与 RED / USE 方法",
+        "黑盒与白盒监控",
+        "症状告警与告警降噪",
+        "OpenTelemetry 埋点"
+      ],
+      "practice": "给一个服务接入 OpenTelemetry，在 Grafana 上做出 RED 面板，并写三条只在需要人介入时才响的告警。",
+      "resources": [
+        {
+          "title": "Google SRE Book: Monitoring Distributed Systems",
+          "url": "https://sre.google/sre-book/monitoring-distributed-systems/"
+        },
+        {
+          "title": "OpenTelemetry 文档",
+          "url": "https://opentelemetry.io/docs/"
+        }
+      ],
+      "cluster": "sre-platform-obs",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "metrics-monitoring",
+      "name": "指标与时序监控",
+      "description": "以 Prometheus 为代表的指标体系：采集、存储、查询、可视化，以及高基数和长期存储的工程问题。",
+      "concepts": [
+        "Prometheus 数据模型与 PromQL",
+        "Exporter 与服务发现",
+        "高基数与长期存储（Thanos / Mimir）",
+        "Grafana 仪表盘设计"
+      ],
+      "practice": "在本地 K8s 部署 Prometheus + Grafana，给一个服务加 RED 指标，并写出 3 条基于 PromQL 的告警规则。",
+      "resources": [
+        {
+          "title": "Prometheus 官方文档",
+          "url": "https://prometheus.io/docs/introduction/overview/"
+        },
+        {
+          "title": "《Prometheus: Up & Running》"
+        }
+      ],
+      "cluster": "sre-platform-obs",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "A",
+        "T",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "log-pipeline",
+      "name": "日志管道",
+      "description": "大规模日志的采集、解析、存储与检索，以及成本控制。排障和审计都依赖它。",
+      "concepts": [
+        "结构化日志",
+        "采集代理（Fluent Bit、Vector）",
+        "存储与检索（Elasticsearch、Loki）",
+        "采样、保留期与成本"
+      ],
+      "practice": "用 Fluent Bit 把 K8s 容器日志送进 Loki，在 Grafana 中按 trace_id 查询一次请求的全部日志。",
+      "resources": [
+        {
+          "title": "Grafana Loki 文档",
+          "url": "https://grafana.com/docs/loki/latest/"
+        },
+        {
+          "title": "Fluent Bit 文档",
+          "url": "https://docs.fluentbit.io/"
+        }
+      ],
+      "cluster": "sre-platform-obs",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "A",
+        "T",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "otel-tracing",
+      "name": "分布式追踪与 OpenTelemetry",
+      "description": "在微服务之间传播上下文，还原一次请求的完整调用链，定位慢在哪、错在哪。",
+      "concepts": [
+        "trace、span 与上下文传播",
+        "OpenTelemetry SDK 与 Collector",
+        "采样策略（头部、尾部）",
+        "日志、指标与 trace 关联"
+      ],
+      "practice": "给两个互相调用的服务接入 OpenTelemetry，经 Collector 送到 Jaeger 或 Tempo，制造一次慢调用并用 trace 定位。",
+      "resources": [
+        {
+          "title": "OpenTelemetry 文档",
+          "url": "https://opentelemetry.io/docs/"
+        },
+        {
+          "title": "Dapper: a Large-Scale Distributed Systems Tracing Infrastructure",
+          "url": "https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/"
+        }
+      ],
+      "cluster": "sre-platform-obs",
+      "companies": [
+        "REDDIT",
+        "A",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "aiops",
+      "name": "AI 辅助运维",
+      "description": "用 LLM 和 Agent 做告警摘要、日志分析、根因推断和自动修复，并为其设置评估、权限和人工确认。多家 2026 年的 SRE JD 新增了这一项。",
+      "concepts": [
+        "告警降噪与摘要",
+        "基于知识库与 Runbook 的诊断 Agent",
+        "自动修复的权限与人工确认",
+        "准确率与安全性评估"
+      ],
+      "practice": "做一个诊断助手：输入一条告警，自动拉取相关指标和日志，输出可能原因和建议的 Runbook 步骤；用 10 个历史故障评估命中率。",
+      "resources": [
+        {
+          "title": "k8sgpt",
+          "url": "https://k8sgpt.ai/"
+        },
+        {
+          "title": "A Survey of AIOps Methods for Failure Management（Notaro 等，ACM TIST 2021）"
+        }
+      ],
+      "cluster": "sre-platform-obs",
+      "companies": [
+        "GITLAB",
+        "COINBASE",
+        "T",
+        "B",
+        "MEITUAN",
+        "MERCARI",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "slo",
+      "name": "SLO 与错误预算",
+      "description": "用用户视角的 SLI 定义可靠性目标，用错误预算平衡发布速度与稳定性。SRE 的核心方法论。",
+      "concepts": [
+        "SLI 的选择（可用性、延迟、正确性）",
+        "关键用户旅程（CUJ）",
+        "错误预算与发布策略",
+        "基于燃烧率的告警"
+      ],
+      "practice": "为一个服务定义 2 个 SLI 和对应 SLO，用 Prometheus 实现多窗口燃烧率告警，并写一份错误预算策略。",
+      "resources": [
+        {
+          "title": "Google SRE Workbook: Implementing SLOs",
+          "url": "https://sre.google/workbook/implementing-slos/"
+        },
+        {
+          "title": "Google《Site Reliability Engineering》",
+          "url": "https://sre.google/sre-book/table-of-contents/"
+        }
+      ],
+      "cluster": "sre-platform-reliability",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "T",
+        "MERCARI",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "oncall",
+      "name": "On-call、告警与 Runbook",
+      "description": "可持续的值班：告警只在需要人介入时响，每条告警都有 Runbook，值班负担可度量、可下降。",
+      "concepts": [
+        "可行动的告警与告警疲劳",
+        "值班轮转与升级策略",
+        "Runbook 编写",
+        "值班负担度量"
+      ],
+      "practice": "盘点一个服务的全部告警，删掉或合并不可行动的，为剩下的每条写 Runbook。",
+      "resources": [
+        {
+          "title": "Google SRE Book: Being On-Call",
+          "url": "https://sre.google/sre-book/being-on-call/"
+        }
+      ],
+      "cluster": "sre-platform-reliability",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "A",
+        "T",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "incident",
+      "name": "故障响应与复盘",
+      "description": "重大故障中的指挥、沟通、止血，以及事后的无责复盘和改进项跟踪。",
+      "concepts": [
+        "事件分级与升级流程",
+        "Incident Commander 与角色分工",
+        "先止血后根因",
+        "Runbook",
+        "无责复盘与改进项闭环"
+      ],
+      "practice": "挑一次公开的大厂故障报告，按复盘模板重写：时间线、影响、根因、做得好的、改进项。",
+      "resources": [
+        {
+          "title": "PagerDuty Incident Response 文档",
+          "url": "https://response.pagerduty.com/"
+        },
+        {
+          "title": "Google SRE Book: Postmortem Culture",
+          "url": "https://sre.google/sre-book/postmortem-culture/"
+        }
+      ],
+      "cluster": "sre-platform-reliability",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "A",
+        "T",
+        "MEITUAN",
+        "MERCARI"
+      ]
+    },
+    {
+      "slug": "resilience",
+      "name": "限流、熔断与降级",
+      "description": "让系统在过载和依赖故障时有损可用，而不是雪崩。",
+      "concepts": [
+        "超时、重试与退避",
+        "限流算法（令牌桶、滑动窗口）",
+        "熔断与舱壁隔离",
+        "优雅降级与负载卸除"
+      ],
+      "practice": "给一个调用下游的服务加上超时、带抖动的重试、熔断和限流，用故障注入验证下游变慢时不会拖垮上游。",
+      "resources": [
+        {
+          "title": "Google SRE Book: Handling Overload",
+          "url": "https://sre.google/sre-book/handling-overload/"
+        },
+        {
+          "title": "Michael Nygard《Release It!》"
+        },
+        {
+          "title": "Resilience4j 文档",
+          "url": "https://resilience4j.readme.io/"
+        }
+      ],
+      "cluster": "sre-platform-reliability",
+      "companies": [
+        "REDDIT",
+        "A",
+        "T",
+        "MEITUAN",
+        "MERCARI"
+      ]
+    },
+    {
+      "slug": "capacity",
+      "name": "容量规划与压测",
+      "description": "预测需求、评估容量水位，用单机和全链路压测验证系统能扛住峰值和大促。",
+      "concepts": [
+        "容量模型与水位",
+        "单机压测与全链路压测",
+        "大促与峰值保障",
+        "资源利用率与 right-sizing"
+      ],
+      "practice": "用 k6 对一个服务做阶梯压测，找到拐点，推算支撑 3 倍流量需要的实例数。",
+      "resources": [
+        {
+          "title": "Grafana k6 文档",
+          "url": "https://grafana.com/docs/k6/latest/"
+        },
+        {
+          "title": "Google SRE Book: Software Engineering in SRE",
+          "url": "https://sre.google/sre-book/software-engineering-in-sre/"
+        }
+      ],
+      "cluster": "sre-platform-reliability",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B",
+        "MEITUAN",
+        "MERCARI"
+      ]
+    },
+    {
+      "slug": "dr",
+      "name": "容灾与多活",
+      "description": "可用区、地域级故障下业务不中断或快速恢复：备份恢复、主备切换、单元化多活。",
+      "concepts": [
+        "RPO 与 RTO",
+        "备份与恢复演练",
+        "多 AZ、多地域架构",
+        "单元化（SET 化）多活"
+      ],
+      "practice": "为一个有数据库的服务设计跨 AZ 容灾方案，写出切换步骤，并实际演练一次恢复，记录 RTO。",
+      "resources": [
+        {
+          "title": "AWS Well-Architected Reliability Pillar",
+          "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html"
+        },
+        {
+          "title": "Google Cloud Disaster Recovery Planning Guide",
+          "url": "https://cloud.google.com/architecture/dr-scenarios-planning-guide"
+        }
+      ],
+      "cluster": "sre-platform-reliability",
+      "companies": [
+        "A",
+        "T",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "chaos",
+      "name": "混沌工程与故障演练",
+      "description": "主动注入故障，验证系统和团队的应对能力，在真实故障前发现弱点。",
+      "concepts": [
+        "稳态假设与实验设计",
+        "爆炸半径控制",
+        "故障注入工具（Chaos Mesh 等）",
+        "演练（Game Day）组织"
+      ],
+      "practice": "在测试集群用 Chaos Mesh 注入 Pod 失败和网络延迟，验证服务 SLO 是否守住，写一份演练报告。",
+      "resources": [
+        {
+          "title": "Principles of Chaos Engineering",
+          "url": "https://principlesofchaos.org/"
+        },
+        {
+          "title": "Chaos Mesh 文档",
+          "url": "https://chaos-mesh.org/docs/"
+        }
+      ],
+      "cluster": "sre-platform-reliability",
+      "companies": [
+        "A",
+        "T",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "toil-automation",
+      "name": "消除琐事与运维自动化",
+      "description": "把重复的手工运维变成代码和自愈系统。SRE 的本职是写软件解决运维问题，而不是人肉处理。",
+      "concepts": [
+        "琐事（toil）的识别与度量",
+        "运维工具与 CLI 开发",
+        "自愈与自动修复",
+        "巡检与变更自动化"
+      ],
+      "practice": "记录自己一周的手工运维操作，挑耗时最多的一项写成工具或自愈脚本，统计节省的时间。",
+      "resources": [
+        {
+          "title": "Google SRE Book: Eliminating Toil",
+          "url": "https://sre.google/sre-book/eliminating-toil/"
+        }
+      ],
+      "cluster": "sre-platform-reliability",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "cloud",
+      "name": "公有云基础（AWS/GCP）",
+      "description": "计算、网络、存储和身份权限四件基础，以及托管服务的选型和架构最佳实践。多数岗位要求有生产级 AWS 或 GCP 经验。",
+      "concepts": [
+        "VPC、子网与安全组",
+        "计算选型：VM、容器、Serverless、托管 K8s",
+        "对象存储与托管数据库",
+        "IAM 与最小权限",
+        "Well-Architected 框架与成本"
+      ],
+      "practice": "在 AWS 或 GCP 上部署一个三层应用：VPC、负载均衡、容器运行时、托管数据库和对象存储，按最小权限配 IAM，画出网络拓扑并估算月成本。",
+      "resources": [
+        {
+          "title": "AWS Well-Architected Framework",
+          "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html"
+        },
+        {
+          "title": "Google Cloud Architecture Framework",
+          "url": "https://cloud.google.com/architecture/framework"
+        }
+      ],
+      "cluster": "sre-platform-cloud",
+      "companies": [
+        "GITLAB",
+        "COINBASE",
+        "AIRBNB",
+        "A",
+        "B",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "iac",
+      "name": "基础设施即代码",
+      "description": "用代码声明和变更基础设施，并让变更可评审、可回滚、可检测漂移。",
+      "concepts": [
+        "Terraform 状态与 plan/apply",
+        "模块化与复用",
+        "漂移检测",
+        "大爆炸半径变更的分阶段迁移"
+      ],
+      "practice": "用 Terraform 写一个可复用模块（VPC + 集群），通过 PR + plan 评审流程部署两个环境。",
+      "resources": [
+        {
+          "title": "Terraform 官方文档",
+          "url": "https://developer.hashicorp.com/terraform/docs"
+        },
+        {
+          "title": "Yevgeniy Brikman《Terraform: Up & Running》"
+        }
+      ],
+      "cluster": "sre-platform-cloud",
+      "companies": [
+        "GITLAB",
+        "CLOUDFLARE",
+        "A",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "cloud-governance",
+      "name": "云账号与权限治理",
+      "description": "多账号、多项目的组织结构、IAM 最小权限和统一管控。金融类平台岗明确要求管理几十个 AWS 账号。",
+      "concepts": [
+        "Landing Zone 与多账号结构",
+        "IAM 与最小权限",
+        "Workload Identity",
+        "SCP / 组织策略"
+      ],
+      "practice": "用 AWS Organizations 或 GCP 资源层级设计一套 dev/staging/prod 账号结构，并写出 SCP 或组织策略。",
+      "resources": [
+        {
+          "title": "AWS Organizations 最佳实践",
+          "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_best-practices.html"
+        }
+      ],
+      "cluster": "sre-platform-cloud",
+      "companies": [
+        "COINBASE",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "finops",
+      "name": "云成本治理（FinOps）",
+      "description": "让云支出可见、可归因、可优化：标签与分摊、资源 right-sizing、竞价实例与承诺折扣。",
+      "concepts": [
+        "成本可见性与分摊",
+        "right-sizing 与闲置回收",
+        "Spot 与承诺折扣",
+        "用量计量与成本归因"
+      ],
+      "practice": "给一个 K8s 集群部署 OpenCost，按 namespace 出成本报表，找出最大的 3 项浪费。",
+      "resources": [
+        {
+          "title": "FinOps Framework",
+          "url": "https://www.finops.org/framework/"
+        },
+        {
+          "title": "OpenCost 文档",
+          "url": "https://www.opencost.io/docs/"
+        }
+      ],
+      "cluster": "sre-platform-cloud",
+      "companies": [
+        "GITLAB",
+        "B",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "traffic-edge",
+      "name": "流量入口与负载均衡",
+      "description": "从 DNS、CDN、WAF 到四七层负载均衡的整条入口链路，以及全球流量调度。",
+      "concepts": [
+        "DNS 与 Anycast / BGP",
+        "L4 与 L7 负载均衡",
+        "CDN 与边缘缓存",
+        "WAF 与入口安全"
+      ],
+      "practice": "画出一次用户请求从 DNS 解析到 Pod 的完整路径，标出每一跳可能的故障和排查命令。",
+      "resources": [
+        {
+          "title": "Google SRE Book: Load Balancing at the Frontend",
+          "url": "https://sre.google/sre-book/load-balancing-frontend/"
+        },
+        {
+          "title": "Cloudflare Learning: What is DNS",
+          "url": "https://www.cloudflare.com/learning/dns/what-is-dns/"
+        }
+      ],
+      "cluster": "sre-platform-cloud",
+      "companies": [
+        "REDDIT",
+        "CLOUDFLARE",
+        "A",
+        "B",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "virt",
+      "cluster": "sre-platform-cloud",
+      "companies": [
+        "GITLAB",
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "infra-security",
+      "name": "基础设施安全与合规",
+      "description": "密钥管理、策略即代码、集群加固和合规审计，让平台默认安全。",
+      "concepts": [
+        "密钥管理（Vault、KMS）",
+        "策略即代码（OPA、Kyverno）",
+        "集群加固与 CIS 基线",
+        "合规审计自动化（PCI DSS 等）"
+      ],
+      "practice": "在 K8s 集群部署 Kyverno，写 3 条策略（禁止 privileged、强制资源限制、只允许内部镜像仓库），验证拦截效果。",
+      "resources": [
+        {
+          "title": "Kubernetes Security Checklist",
+          "url": "https://kubernetes.io/docs/concepts/security/security-checklist/"
+        },
+        {
+          "title": "HashiCorp Vault 文档",
+          "url": "https://developer.hashicorp.com/vault/docs"
+        }
+      ],
+      "cluster": "sre-platform-cloud",
+      "companies": [
+        "GITLAB",
+        "CLOUDFLARE",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "config-mgmt",
+      "name": "配置管理",
+      "description": "对大规模服务器机群做声明式配置和一致性管理，物理机和 VM 机群仍大量依赖它。",
+      "concepts": [
+        "幂等的配置声明",
+        "Ansible / Salt 的推拉模型",
+        "配置漂移",
+        "不可变基础设施的取舍"
+      ],
+      "practice": "用 Ansible 写一个 role，把一批新机器配置成统一基线（用户、内核参数、监控 agent），重复执行验证幂等。",
+      "resources": [
+        {
+          "title": "Ansible 文档",
+          "url": "https://docs.ansible.com/"
+        }
+      ],
+      "cluster": "sre-platform-cloud",
+      "companies": [
+        "CLOUDFLARE",
+        "A"
+      ]
+    },
+    {
+      "slug": "docker",
+      "name": "容器与镜像",
+      "description": "把应用和运行环境打包成镜像，保证本地、CI 和生产一致，是云原生部署的最小单元。",
+      "concepts": [
+        "Dockerfile 与多阶段构建",
+        "镜像分层与构建缓存",
+        "OCI 规范与容器运行时",
+        "镜像瘦身与安全扫描",
+        "docker compose 本地编排"
+      ],
+      "practice": "把一个服务的镜像从 1GB 缩到 100MB 以内，改成非 root 运行并加健康检查，再用 compose 拉起它依赖的数据库和缓存。",
+      "resources": [
+        {
+          "title": "Docker 官方文档",
+          "url": "https://docs.docker.com/"
+        },
+        {
+          "title": "OCI Runtime Specification",
+          "url": "https://github.com/opencontainers/runtime-spec"
+        }
+      ],
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "REDDIT",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "B",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "k8s",
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "T",
+        "B",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "k8s-cluster-ops",
+      "name": "K8s 集群生命周期运维",
+      "description": "生产集群的升级、节点池策略、插件管理、etcd 运维和故障排查。平台团队的日常工作。",
+      "concepts": [
+        "控制面与节点的无停机升级",
+        "节点池与 Spot 策略",
+        "插件（CNI、cert-manager 等）管理",
+        "etcd 备份与集群故障排查"
+      ],
+      "practice": "用 kind 或 kubeadm 搭一个多节点集群，完成一次小版本升级，过程中保持一个服务持续可用。",
+      "resources": [
+        {
+          "title": "Kubernetes: Upgrading a Cluster",
+          "url": "https://kubernetes.io/docs/tasks/administer-cluster/cluster-upgrade/"
+        },
+        {
+          "title": "etcd Operations Guide",
+          "url": "https://etcd.io/docs/latest/op-guide/"
+        }
+      ],
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "GITLAB",
+        "COINBASE",
+        "AIRBNB",
+        "T",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "k8s-controller",
+      "name": "K8s 控制器与 Operator 开发",
+      "description": "用 controller-runtime 写自定义控制器、CRD 和准入 Webhook，把运维知识变成调和循环。",
+      "concepts": [
+        "调和循环与幂等",
+        "CRD 设计与版本",
+        "准入 Webhook",
+        "controller-runtime 与测试"
+      ],
+      "practice": "用 kubebuilder 写一个 Operator：声明一个 CR 自动创建 Deployment、Service 和告警规则，并写 envtest 测试。",
+      "resources": [
+        {
+          "title": "The Kubebuilder Book",
+          "url": "https://book.kubebuilder.io/"
+        },
+        {
+          "title": "controller-runtime",
+          "url": "https://github.com/kubernetes-sigs/controller-runtime"
+        }
+      ],
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "GITLAB",
+        "T",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "autoscaling",
+      "name": "弹性伸缩",
+      "description": "Pod 级和节点级的自动伸缩，在流量尖峰下保住延迟，在低谷时省下成本。",
+      "concepts": [
+        "HPA / VPA",
+        "Cluster Autoscaler 与 Karpenter",
+        "事件驱动伸缩（KEDA）",
+        "伸缩延迟与预热"
+      ],
+      "practice": "给一个服务配 HPA 和 Karpenter，压测时观察 Pod 和节点扩容时间线，找出最慢的环节。",
+      "resources": [
+        {
+          "title": "Kubernetes Autoscaling Workloads",
+          "url": "https://kubernetes.io/docs/concepts/workloads/autoscaling/"
+        },
+        {
+          "title": "Karpenter 文档",
+          "url": "https://karpenter.sh/docs/"
+        }
+      ],
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "GITLAB",
+        "AIRBNB",
+        "T",
+        "B",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "k8s-net",
+      "name": "K8s 网络",
+      "description": "Pod 网络、Service、Ingress 和网络策略的实现原理，排查跨网络边界的故障。",
+      "concepts": [
+        "CNI 插件与 Pod 网络",
+        "Service 与 kube-proxy / eBPF 数据面",
+        "Ingress 与 Gateway API",
+        "NetworkPolicy"
+      ],
+      "practice": "在集群里抓包追踪一次 Pod 到 Service 的请求，解释每一跳的 NAT 和路由；再加 NetworkPolicy 验证隔离。",
+      "resources": [
+        {
+          "title": "Kubernetes Services, Load Balancing, and Networking",
+          "url": "https://kubernetes.io/docs/concepts/services-networking/"
+        },
+        {
+          "title": "Cilium 文档",
+          "url": "https://docs.cilium.io/"
+        }
+      ],
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "T",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "service-mesh",
+      "name": "服务网格与服务治理",
+      "description": "用 Sidecar 或 Ambient 网格统一处理服务间的流量管理、mTLS 和可观测，以及服务注册发现等治理能力。",
+      "concepts": [
+        "Envoy 与 xDS",
+        "Istio 流量管理（路由、重试、熔断）",
+        "mTLS 与零信任",
+        "网格的性能开销与运维"
+      ],
+      "practice": "在集群装 Istio，给一个服务做 10% 金丝雀路由和故障注入，观察 Envoy 指标。",
+      "resources": [
+        {
+          "title": "Istio 文档",
+          "url": "https://istio.io/latest/docs/"
+        },
+        {
+          "title": "Envoy 文档",
+          "url": "https://www.envoyproxy.io/docs"
+        }
+      ],
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "REDDIT",
+        "COINBASE",
+        "AIRBNB",
+        "A",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "tenant",
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "GITLAB",
+        "MERCARI"
+      ]
+    },
+    {
+      "slug": "cpdp",
+      "cluster": "sre-platform-k8s",
+      "companies": [
+        "GITLAB",
+        "T",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "testing",
+      "cluster": "sre-platform-delivery",
+      "companies": [
+        "CLOUDFLARE",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "ci-cd",
+      "name": "CI/CD",
+      "description": "从提交到上线的自动化流水线：构建、测试、制品、部署和回滚，以及流水线自身的速度和可靠性。",
+      "concepts": [
+        "流水线阶段与缓存",
+        "制品版本与环境晋级",
+        "质量门禁与预览环境",
+        "流水线即代码",
+        "回滚策略"
+      ],
+      "practice": "用 GitHub Actions 或 GitLab CI 给一个服务搭完整流水线：测试、构建镜像、推仓库、部署到 staging。",
+      "resources": [
+        {
+          "title": "GitHub Actions 文档",
+          "url": "https://docs.github.com/en/actions"
+        },
+        {
+          "title": "Jez Humble & David Farley《Continuous Delivery》"
+        }
+      ],
+      "cluster": "sre-platform-delivery",
+      "companies": [
+        "GITLAB",
+        "CLOUDFLARE",
+        "A",
+        "B",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "gitops",
+      "name": "GitOps",
+      "description": "以 Git 为唯一事实来源，由控制器持续把集群调和到声明状态。",
+      "concepts": [
+        "声明式与拉模式部署",
+        "Argo CD / Flux",
+        "多环境与多集群管理",
+        "Atlantis 等 IaC 的 PR 工作流"
+      ],
+      "practice": "用 Argo CD 管理两个环境的同一应用，通过 PR 推进版本，并演示一次回滚。",
+      "resources": [
+        {
+          "title": "OpenGitOps",
+          "url": "https://opengitops.dev/"
+        },
+        {
+          "title": "Argo CD 文档",
+          "url": "https://argo-cd.readthedocs.io/"
+        }
+      ],
+      "cluster": "sre-platform-delivery",
+      "companies": [
+        "GITLAB",
+        "COINBASE",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "safe-release",
+      "name": "变更管理与安全发布",
+      "description": "大多数故障由变更引起。用特性开关、灰度、金丝雀分析和自动回滚降低每次上线的风险。",
+      "concepts": [
+        "特性开关与生命周期",
+        "灰度与金丝雀发布",
+        "基于指标的自动回滚",
+        "变更评审与变更窗口",
+        "无停机发布与数据库迁移"
+      ],
+      "practice": "用 Argo Rollouts 给服务配金丝雀发布，接 Prometheus 分析，故意发一个坏版本验证自动回滚。",
+      "resources": [
+        {
+          "title": "Google SRE Workbook: Canarying Releases",
+          "url": "https://sre.google/workbook/canarying-releases/"
+        },
+        {
+          "title": "Argo Rollouts 文档",
+          "url": "https://argo-rollouts.readthedocs.io/"
+        },
+        {
+          "title": "Martin Fowler: Feature Toggles",
+          "url": "https://martinfowler.com/articles/feature-toggles.html"
+        }
+      ],
+      "cluster": "sre-platform-delivery",
+      "companies": [
+        "GITLAB",
+        "REDDIT",
+        "COINBASE",
+        "CLOUDFLARE",
+        "A",
+        "T",
+        "MEITUAN",
+        "MERCARI",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "idp",
+      "name": "内部开发者平台",
+      "description": "把基础设施封装成自助服务和黄金路径，让产品工程师几分钟内起一个新服务。平台工程的核心产出。",
+      "concepts": [
+        "黄金路径（Golden Path）",
+        "自助服务模板与 CLI",
+        "服务目录（Backstage）",
+        "把开发者体验当作 SLI"
+      ],
+      "practice": "用 Backstage 软件模板做一个「新建服务」向导：一次生成仓库、CI、部署配置和告警。",
+      "resources": [
+        {
+          "title": "CNCF Platforms White Paper",
+          "url": "https://tag-app-delivery.cncf.io/whitepapers/platforms/"
+        },
+        {
+          "title": "Backstage 文档",
+          "url": "https://backstage.io/docs/"
+        }
+      ],
+      "cluster": "sre-platform-delivery",
+      "companies": [
+        "COINBASE",
+        "AIRBNB",
+        "CLOUDFLARE",
+        "MERCARI",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "sql-db",
+      "cluster": "sre-platform-data",
+      "companies": [
+        "CLOUDFLARE",
+        "A",
+        "MEITUAN",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "cache",
+      "cluster": "sre-platform-data",
+      "companies": [
+        "REDDIT",
+        "A",
+        "MEITUAN",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "mq",
+      "cluster": "sre-platform-data",
+      "companies": [
+        "REDDIT",
+        "CLOUDFLARE",
+        "A",
+        "MEITUAN",
+        "PAYPAY",
+        "LINEYAHOO"
+      ]
+    },
+    {
+      "slug": "stateful-ops",
+      "name": "有状态中间件运维",
+      "description": "数据库、消息、协调服务和分布式存储在生产上的部署、扩容、备份和故障处理。Cloudflare 等平台团队直接运营 Postgres、Kafka、Ceph。",
+      "concepts": [
+        "StatefulSet 与持久卷",
+        "备份、恢复与数据校验",
+        "集群扩缩容与再均衡",
+        "etcd / ZooKeeper / Ceph 运维"
+      ],
+      "practice": "在 K8s 上用 Operator 部署一个 PostgreSQL 集群，演练主节点故障切换和从备份恢复。",
+      "resources": [
+        {
+          "title": "Kubernetes StatefulSets",
+          "url": "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/"
+        },
+        {
+          "title": "Ceph 文档",
+          "url": "https://docs.ceph.com/"
+        }
+      ],
+      "cluster": "sre-platform-data",
+      "companies": [
+        "REDDIT",
+        "CLOUDFLARE",
+        "T",
+        "B",
+        "LINEYAHOO"
+      ]
+    }
+  ],
+  "prereqs": [
+    [
+      "cache",
+      "sys-design"
+    ],
+    [
+      "capacity",
+      "autoscaling"
+    ],
+    [
+      "capacity",
+      "finops"
+    ],
+    [
+      "ci-cd",
+      "gitops"
+    ],
+    [
+      "ci-cd",
+      "idp"
+    ],
+    [
+      "ci-cd",
+      "safe-release"
+    ],
+    [
+      "cloud",
+      "cloud-governance"
+    ],
+    [
+      "cloud",
+      "finops"
+    ],
+    [
+      "cloud",
+      "iac"
+    ],
+    [
+      "cloud-governance",
+      "infra-security"
+    ],
+    [
+      "dist",
+      "mq"
+    ],
+    [
+      "dist",
+      "otel-tracing"
+    ],
+    [
+      "dist",
+      "resilience"
+    ],
+    [
+      "dist",
+      "sys-design"
+    ],
+    [
+      "docker",
+      "ci-cd"
+    ],
+    [
+      "docker",
+      "cloud"
+    ],
+    [
+      "docker",
+      "k8s"
+    ],
+    [
+      "iac",
+      "cloud-governance"
+    ],
+    [
+      "iac",
+      "gitops"
+    ],
+    [
+      "iac",
+      "k8s-cluster-ops"
+    ],
+    [
+      "incident",
+      "aiops"
+    ],
+    [
+      "incident",
+      "chaos"
+    ],
+    [
+      "k8s",
+      "autoscaling"
+    ],
+    [
+      "k8s",
+      "idp"
+    ],
+    [
+      "k8s",
+      "k8s-cluster-ops"
+    ],
+    [
+      "k8s",
+      "k8s-controller"
+    ],
+    [
+      "k8s",
+      "k8s-net"
+    ],
+    [
+      "k8s",
+      "stateful-ops"
+    ],
+    [
+      "k8s-controller",
+      "cpdp"
+    ],
+    [
+      "k8s-net",
+      "service-mesh"
+    ],
+    [
+      "k8s-net",
+      "tenant"
+    ],
+    [
+      "lang",
+      "k8s-controller"
+    ],
+    [
+      "lang",
+      "toil-automation"
+    ],
+    [
+      "log-pipeline",
+      "aiops"
+    ],
+    [
+      "metrics-monitoring",
+      "capacity"
+    ],
+    [
+      "metrics-monitoring",
+      "safe-release"
+    ],
+    [
+      "metrics-monitoring",
+      "slo"
+    ],
+    [
+      "mq",
+      "stateful-ops"
+    ],
+    [
+      "mq",
+      "sys-design"
+    ],
+    [
+      "net",
+      "k8s-net"
+    ],
+    [
+      "net",
+      "sys-troubleshoot"
+    ],
+    [
+      "net",
+      "traffic-edge"
+    ],
+    [
+      "observability",
+      "incident"
+    ],
+    [
+      "observability",
+      "log-pipeline"
+    ],
+    [
+      "observability",
+      "metrics-monitoring"
+    ],
+    [
+      "observability",
+      "oncall"
+    ],
+    [
+      "observability",
+      "otel-tracing"
+    ],
+    [
+      "observability",
+      "perf"
+    ],
+    [
+      "observability",
+      "safe-release"
+    ],
+    [
+      "oncall",
+      "incident"
+    ],
+    [
+      "os",
+      "config-mgmt"
+    ],
+    [
+      "os",
+      "docker"
+    ],
+    [
+      "os",
+      "infra-security"
+    ],
+    [
+      "os",
+      "sys-troubleshoot"
+    ],
+    [
+      "perf",
+      "capacity"
+    ],
+    [
+      "resilience",
+      "dr"
+    ],
+    [
+      "resilience",
+      "sys-design"
+    ],
+    [
+      "slo",
+      "chaos"
+    ],
+    [
+      "slo",
+      "oncall"
+    ],
+    [
+      "sql-db",
+      "cache"
+    ],
+    [
+      "sql-db",
+      "stateful-ops"
+    ],
+    [
+      "sql-db",
+      "sys-design"
+    ],
+    [
+      "stateful-ops",
+      "dr"
+    ],
+    [
+      "sys-design",
+      "dr"
+    ],
+    [
+      "sys-design",
+      "tenant"
+    ],
+    [
+      "sys-troubleshoot",
+      "incident"
+    ],
+    [
+      "sys-troubleshoot",
+      "perf"
+    ],
+    [
+      "testing",
+      "ci-cd"
+    ],
+    [
+      "toil-automation",
+      "aiops"
+    ],
+    [
+      "traffic-edge",
+      "service-mesh"
+    ]
+  ],
+  "path": [
+    {
+      "title": "系统基础",
+      "skills": [
+        "os",
+        "net",
+        "lang",
+        "dist",
+        "docker"
+      ]
+    },
+    {
+      "title": "云与交付入门",
+      "skills": [
+        "cloud",
+        "iac",
+        "k8s",
+        "ci-cd"
+      ]
+    },
+    {
+      "title": "可观测与排障",
+      "skills": [
+        "observability",
+        "metrics-monitoring",
+        "log-pipeline",
+        "sys-troubleshoot"
+      ]
+    },
+    {
+      "title": "可靠性工程",
+      "skills": [
+        "slo",
+        "oncall",
+        "incident",
+        "resilience",
+        "sys-design",
+        "capacity",
+        "safe-release"
+      ]
+    },
+    {
+      "title": "平台构建",
+      "skills": [
+        "k8s-cluster-ops",
+        "k8s-controller",
+        "autoscaling",
+        "gitops",
+        "idp",
+        "toil-automation"
+      ]
+    },
+    {
+      "title": "进阶与规模化",
+      "skills": [
+        "dr",
+        "chaos",
+        "service-mesh",
+        "finops",
+        "aiops"
+      ]
+    }
+  ]
+}

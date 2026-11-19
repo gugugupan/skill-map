@@ -1,0 +1,1214 @@
+{
+  "role": {
+    "slug": "ai-app",
+    "name_zh": "AI 应用工程师"
+  },
+  "clusters": [
+    {
+      "slug": "ai-app-found",
+      "name": "工程底座",
+      "color": "#5B6B7A"
+    },
+    {
+      "slug": "ai-app-llm",
+      "name": "模型调用",
+      "color": "#3D5A99"
+    },
+    {
+      "slug": "ai-app-rag",
+      "name": "知识与检索",
+      "color": "#2A8C82"
+    },
+    {
+      "slug": "ai-app-agent",
+      "name": "Agent 与工作流",
+      "color": "#7A4F8A"
+    },
+    {
+      "slug": "ai-app-ux",
+      "name": "AI 交互体验",
+      "color": "#C08A1E"
+    },
+    {
+      "slug": "ai-app-quality",
+      "name": "质量与运营",
+      "color": "#B23A48"
+    },
+    {
+      "slug": "ai-app-product",
+      "name": "产品化与交付",
+      "color": "#2F7FB8"
+    }
+  ],
+  "companies": [
+    {
+      "code": "RAMP",
+      "name": "Ramp"
+    },
+    {
+      "code": "LINEAR",
+      "name": "Linear"
+    },
+    {
+      "code": "FIGMA",
+      "name": "Figma"
+    },
+    {
+      "code": "NOTION",
+      "name": "Notion"
+    },
+    {
+      "code": "PERPLEXITY",
+      "name": "Perplexity"
+    },
+    {
+      "code": "BYTEDANCE",
+      "name": "字节跳动"
+    },
+    {
+      "code": "T",
+      "name": "腾讯"
+    },
+    {
+      "code": "B",
+      "name": "百度"
+    },
+    {
+      "code": "LAYERX",
+      "name": "LayerX"
+    },
+    {
+      "code": "UBIE",
+      "name": "Ubie"
+    },
+    {
+      "code": "PAYPAY",
+      "name": "PayPay"
+    }
+  ],
+  "postings": [
+    {
+      "company": "RAMP",
+      "title": "Applied AI Engineer",
+      "url": "https://jobs.ashbyhq.com/ramp/d204e136-2749-42de-82b4-88a0dd352090"
+    },
+    {
+      "company": "RAMP",
+      "title": "Applied AI Engineer, Fullstack",
+      "url": "https://jobs.ashbyhq.com/ramp/6a7e382f-240a-4952-b9e5-7fe2b3856bc9"
+    },
+    {
+      "company": "LINEAR",
+      "title": "Senior / Staff Product Engineer, Applied AI",
+      "url": "https://jobs.ashbyhq.com/linear/b4a7764e-c680-4bdf-9956-dc78f2ca94d5"
+    },
+    {
+      "company": "FIGMA",
+      "title": "Software Engineer - AI Product",
+      "url": "https://boards.greenhouse.io/figma/jobs/5551730004?gh_jid=5551730004"
+    },
+    {
+      "company": "NOTION",
+      "title": "Software Engineer, Early Career (AI)",
+      "url": "https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28"
+    },
+    {
+      "company": "PERPLEXITY",
+      "title": "Member of Technical Staff (Software Engineer, Applied AI)",
+      "url": "https://jobs.ashbyhq.com/Perplexity/3c656963-876a-458d-bca6-916a42a24c1a"
+    },
+    {
+      "company": "BYTEDANCE",
+      "title": "大模型应用开发工程师 - 飞书项目",
+      "url": "https://jobs.bytedance.com/experienced/position/7667047344642640133/detail"
+    },
+    {
+      "company": "BYTEDANCE",
+      "title": "大模型应用开发工程师-抖音生态与运营",
+      "url": "https://jobs.bytedance.com/experienced/position/7478147326294051090/detail"
+    },
+    {
+      "company": "BYTEDANCE",
+      "title": "AI大模型应用开发专家-飞书多维表格",
+      "url": "https://jobs.bytedance.com/experienced/position/7594826319935588661/detail"
+    },
+    {
+      "company": "T",
+      "title": "微信基础-大模型应用开发工程师",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2110621118984531968"
+    },
+    {
+      "company": "T",
+      "title": "混元-大模型应用开发工程师（北京/深圳）",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272"
+    },
+    {
+      "company": "T",
+      "title": "企业微信-AI应用后台开发工程师-智能助理应用(成都/北京)",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2026648914832293888"
+    },
+    {
+      "company": "B",
+      "title": "大模型应用研发工程师（J103341）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/a5ff8d15-b547-4a87-ba55-a128dae953cd"
+    },
+    {
+      "company": "B",
+      "title": "数据智能应用高级全栈研发工程师（J99238）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/7a198150-b3ce-4c8b-9432-01ddbafe227a"
+    },
+    {
+      "company": "LAYERX",
+      "title": "【バクラク】シニアAI・LLMエンジニア",
+      "url": "https://www.bizreach.jp/job/view/8443829/"
+    },
+    {
+      "company": "UBIE",
+      "title": "AI Architect【サービス統括本部】",
+      "url": "https://herp.careers/v1/ubiehr/f5-1jXvnBMVv"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "AI・次世代業務システム開発リード（マネージャー候補）",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/5704642004"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "エンタープライズシステム開発／テックリード（生成AI活用・内製開発）",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/5298429004"
+    }
+  ],
+  "skills": [
+    {
+      "slug": "python",
+      "cluster": "ai-app-found",
+      "companies": [
+        "PERPLEXITY",
+        "B",
+        "LAYERX",
+        "UBIE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "ts",
+      "cluster": "ai-app-found",
+      "companies": [
+        "RAMP",
+        "LINEAR",
+        "BYTEDANCE",
+        "B",
+        "LAYERX",
+        "UBIE"
+      ]
+    },
+    {
+      "slug": "web-basics",
+      "cluster": "ai-app-found",
+      "companies": [
+        "LINEAR",
+        "BYTEDANCE"
+      ]
+    },
+    {
+      "slug": "api-design",
+      "cluster": "ai-app-found",
+      "companies": [
+        "RAMP",
+        "LINEAR",
+        "NOTION",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "sql-db",
+      "cluster": "ai-app-found",
+      "companies": [
+        "LINEAR",
+        "NOTION",
+        "T",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "cache",
+      "cluster": "ai-app-found",
+      "companies": [
+        "LINEAR",
+        "T",
+        "BYTEDANCE"
+      ]
+    },
+    {
+      "slug": "mq",
+      "cluster": "ai-app-found",
+      "companies": [
+        "T"
+      ]
+    },
+    {
+      "slug": "sys-design",
+      "cluster": "ai-app-found",
+      "companies": [
+        "T",
+        "B"
+      ]
+    },
+    {
+      "slug": "testing",
+      "cluster": "ai-app-found",
+      "companies": [
+        "BYTEDANCE",
+        "B",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "docker",
+      "cluster": "ai-app-found",
+      "companies": [
+        "T",
+        "B",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "cloud",
+      "cluster": "ai-app-found",
+      "companies": [
+        "RAMP",
+        "LINEAR",
+        "LAYERX",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "llm",
+      "cluster": "ai-app-llm",
+      "companies": [
+        "FIGMA",
+        "BYTEDANCE",
+        "T"
+      ]
+    },
+    {
+      "slug": "llm-api",
+      "name": "LLM API 集成",
+      "description": "把模型接进产品的基本功：鉴权、流式、重试、超时、多轮消息组装。Ubie 要求用 LLM API 开发并运营系统，Notion、Ramp 要求把 LLM 用在真实生产场景。",
+      "concepts": [
+        "Messages / Chat Completions 结构",
+        "流式响应与中途取消",
+        "速率限制、重试与超时",
+        "token 计数与上下文上限"
+      ],
+      "practice": "封装一个统一的模型客户端：支持两家厂商、流式输出、指数退避重试，并记录每次调用的 token 和耗时。",
+      "resources": [
+        {
+          "title": "OpenAI API 文档",
+          "url": "https://platform.openai.com/docs"
+        },
+        {
+          "title": "Anthropic API 文档",
+          "url": "https://docs.anthropic.com/en/api/messages"
+        }
+      ],
+      "cluster": "ai-app-llm",
+      "companies": [
+        "RAMP",
+        "NOTION",
+        "UBIE"
+      ]
+    },
+    {
+      "slug": "prompt-eng",
+      "name": "Prompt 工程",
+      "description": "用指令、示例和结构让模型稳定产出想要的结果，并像代码一样对提示词做版本管理和评估。",
+      "concepts": [
+        "系统提示与角色",
+        "少样本示例",
+        "分步指令与结构化输出",
+        "Prompt 模板化与版本管理",
+        "提示词注入风险"
+      ],
+      "practice": "为一个客服回复场景写三版 Prompt，用 30 条固定样例对比效果，记录每版的改动和得分。",
+      "resources": [
+        {
+          "title": "Anthropic Prompt Engineering 指南",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
+        },
+        {
+          "title": "OpenAI Prompt Engineering 指南",
+          "url": "https://platform.openai.com/docs/guides/prompt-engineering"
+        }
+      ],
+      "cluster": "ai-app-llm",
+      "companies": [
+        "LINEAR",
+        "BYTEDANCE",
+        "T",
+        "B",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "structured-output",
+      "name": "结构化输出与信息抽取",
+      "description": "让模型输出可被程序消费的 JSON。Ramp 把 Structured Extraction 列为核心项目（开源了 jsonformer），百度要求多步 Tool-call 的参数提取经验。",
+      "concepts": [
+        "JSON Schema 约束",
+        "约束解码与 Structured Outputs",
+        "校验失败的重试与修复",
+        "字段级置信度"
+      ],
+      "practice": "从 50 张发票文本中抽取金额、日期、供应商，用 Schema 约束输出并统计字段准确率。",
+      "resources": [
+        {
+          "title": "OpenAI Structured Outputs 指南",
+          "url": "https://platform.openai.com/docs/guides/structured-outputs"
+        },
+        {
+          "title": "jsonformer",
+          "url": "https://github.com/1rgs/jsonformer"
+        },
+        {
+          "title": "Instructor",
+          "url": "https://github.com/567-labs/instructor"
+        }
+      ],
+      "cluster": "ai-app-llm",
+      "companies": [
+        "RAMP",
+        "B"
+      ]
+    },
+    {
+      "slug": "tools",
+      "cluster": "ai-app-llm",
+      "companies": [
+        "T",
+        "BYTEDANCE",
+        "B",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "multimodal",
+      "name": "多模态应用",
+      "description": "图片、语音、文档混合输入输出。腾讯微信要求多模态交互管道，字节飞书要求多模态消息呈现，腾讯混元涉及语音输入与播报。",
+      "concepts": [
+        "图像理解输入",
+        "语音识别与合成",
+        "实时语音对话",
+        "多模态消息的存储与渲染"
+      ],
+      "practice": "做一个截图问答功能：用户上传截图并提问，模型给出带区域描述的回答。",
+      "resources": [
+        {
+          "title": "Anthropic Vision 文档",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/vision"
+        },
+        {
+          "title": "OpenAI Realtime API 文档",
+          "url": "https://platform.openai.com/docs/guides/realtime"
+        }
+      ],
+      "cluster": "ai-app-llm",
+      "companies": [
+        "T",
+        "BYTEDANCE"
+      ]
+    },
+    {
+      "slug": "gateway",
+      "cluster": "ai-app-llm",
+      "companies": [
+        "T"
+      ]
+    },
+    {
+      "slug": "fine-tune",
+      "name": "微调与对齐基础",
+      "description": "Prompt 和 RAG 不够时，用领域数据微调模型。Ramp、Linear 提到微调，字节抖音要求 LoRA/QLoRA 和 DPO，腾讯微信提到模型微调。应用工程师需要会判断何时值得微调、怎么准备数据。",
+      "concepts": [
+        "SFT 数据构建",
+        "LoRA / QLoRA",
+        "DPO 等偏好对齐",
+        "微调与 Prompt / RAG 的取舍"
+      ],
+      "practice": "用 LoRA 在一个小开源模型上微调一个分类任务，和少样本 Prompt 的效果与成本做对比。",
+      "resources": [
+        {
+          "title": "LoRA 论文",
+          "url": "https://arxiv.org/abs/2106.09685"
+        },
+        {
+          "title": "DPO 论文",
+          "url": "https://arxiv.org/abs/2305.18290"
+        },
+        {
+          "title": "Hugging Face PEFT 文档",
+          "url": "https://huggingface.co/docs/peft"
+        }
+      ],
+      "cluster": "ai-app-llm",
+      "companies": [
+        "RAMP",
+        "LINEAR",
+        "PERPLEXITY",
+        "BYTEDANCE",
+        "T"
+      ]
+    },
+    {
+      "slug": "embedding-search",
+      "name": "Embedding 与向量检索",
+      "description": "把文本变成向量做语义检索，是 RAG、推荐和语义搜索的底座。",
+      "concepts": [
+        "Embedding 模型选型",
+        "向量相似度（cosine / dot）",
+        "ANN 索引（HNSW / IVF）",
+        "向量库与 pgvector"
+      ],
+      "practice": "用 pgvector 给 1 万篇文档建索引，比较精确检索和 HNSW 的召回率与延迟。",
+      "resources": [
+        {
+          "title": "pgvector",
+          "url": "https://github.com/pgvector/pgvector"
+        },
+        {
+          "title": "Sentence-BERT 论文",
+          "url": "https://arxiv.org/abs/1908.10084"
+        }
+      ],
+      "cluster": "ai-app-rag",
+      "companies": [
+        "FIGMA",
+        "NOTION"
+      ]
+    },
+    {
+      "slug": "doc-parsing",
+      "name": "文档解析与切分",
+      "description": "知识库质量取决于入库前的处理：PDF、Office、表格要先解析和切分。LayerX 的 Agent 要自己读懂票据文档，字节抖音要求整理业务信息构建知识库。",
+      "concepts": [
+        "PDF / Office / 表格解析",
+        "OCR 与版面分析",
+        "切分策略（固定长度、按结构、语义）",
+        "元数据与增量更新"
+      ],
+      "practice": "把一批含表格的 PDF 解析入库，比较三种切分策略在 20 个问题上的检索命中率。",
+      "resources": [
+        {
+          "title": "Docling",
+          "url": "https://github.com/docling-project/docling"
+        },
+        {
+          "title": "Unstructured 文档",
+          "url": "https://docs.unstructured.io/"
+        }
+      ],
+      "cluster": "ai-app-rag",
+      "companies": [
+        "BYTEDANCE",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "rag",
+      "cluster": "ai-app-rag",
+      "companies": [
+        "RAMP",
+        "FIGMA",
+        "NOTION",
+        "PERPLEXITY",
+        "BYTEDANCE",
+        "T",
+        "PAYPAY",
+        "UBIE",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "memory",
+      "cluster": "ai-app-rag",
+      "companies": [
+        "PERPLEXITY",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "ctxeng",
+      "cluster": "ai-app-agent",
+      "companies": [
+        "PERPLEXITY",
+        "T",
+        "B",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "loop",
+      "cluster": "ai-app-agent",
+      "companies": [
+        "RAMP",
+        "LINEAR",
+        "PERPLEXITY",
+        "BYTEDANCE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "patterns",
+      "cluster": "ai-app-agent",
+      "companies": [
+        "BYTEDANCE",
+        "B"
+      ]
+    },
+    {
+      "slug": "multi",
+      "cluster": "ai-app-agent",
+      "companies": [
+        "BYTEDANCE",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "llm-workflow",
+      "name": "LLM 工作流编排",
+      "description": "把多次模型调用、检索和工具串成稳定的业务流程。字节多维表格要求 Workflow 编排，腾讯要求 LangChain / dify 生产经验，Linear 要把模型变成结构化、可靠的工作流。",
+      "concepts": [
+        "链式、分支与并行步骤",
+        "LangGraph / dify 等框架",
+        "状态与中间结果",
+        "工作流与自主 Agent 的取舍"
+      ],
+      "practice": "用 LangGraph 实现「检索 → 起草 → 自检 → 修改」的工作流，并能在任一步失败后重跑。",
+      "resources": [
+        {
+          "title": "LangGraph 官方文档",
+          "url": "https://langchain-ai.github.io/langgraph/"
+        },
+        {
+          "title": "Dify 文档",
+          "url": "https://docs.dify.ai/"
+        }
+      ],
+      "cluster": "ai-app-agent",
+      "companies": [
+        "LINEAR",
+        "BYTEDANCE",
+        "T",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "durable",
+      "cluster": "ai-app-agent",
+      "companies": [
+        "LINEAR"
+      ]
+    },
+    {
+      "slug": "hitl",
+      "cluster": "ai-app-agent",
+      "companies": [
+        "BYTEDANCE",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "streaming-ui",
+      "name": "流式交互与实时渲染",
+      "description": "逐字输出、思考过程、工具进度都要实时呈现。字节飞书要求 SSE/WebSocket 流式渲染，腾讯混元要求流式输出与弱网处理，Ramp 要处理实时、Agent 驱动的界面。",
+      "concepts": [
+        "SSE 与 WebSocket",
+        "增量 Markdown 渲染",
+        "工具调用与任务进度的展示",
+        "中断、重试与断线续传",
+        "前端状态与流式事件的对齐"
+      ],
+      "practice": "做一个聊天界面：流式渲染 Markdown 与代码块，支持停止生成和断线后从最后一条事件续传。",
+      "resources": [
+        {
+          "title": "MDN: Server-sent events",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events"
+        },
+        {
+          "title": "Vercel AI SDK 文档",
+          "url": "https://ai-sdk.dev/docs"
+        }
+      ],
+      "cluster": "ai-app-ux",
+      "companies": [
+        "RAMP",
+        "BYTEDANCE",
+        "T"
+      ]
+    },
+    {
+      "slug": "gen-ui",
+      "name": "Generative UI 与 Agentic UI",
+      "description": "界面由模型输出动态生成：卡片、表单、Artifact 预览。字节飞书在探索 Generative UI / Agentic UI，Ramp 让 Agent 在数据层上产出可交互的分析结果。",
+      "concepts": [
+        "工具调用映射到组件",
+        "动态卡片与表单",
+        "Artifact 预览与编辑",
+        "组件白名单与安全渲染"
+      ],
+      "practice": "让模型通过工具调用返回「天气卡片 / 表格 / 图表」三种组件，前端按类型渲染并支持用户修改后回传。",
+      "resources": [
+        {
+          "title": "Vercel AI SDK：Generative User Interfaces",
+          "url": "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces"
+        }
+      ],
+      "cluster": "ai-app-ux",
+      "companies": [
+        "RAMP",
+        "BYTEDANCE"
+      ]
+    },
+    {
+      "slug": "ai-ux",
+      "name": "AI 产品交互设计",
+      "description": "让不确定的模型输出变得可信、可控、好用：引用溯源、进度与思考过程可视化、人工确认和纠错。",
+      "concepts": [
+        "引用与溯源",
+        "不确定性与错误的呈现",
+        "任务时间线与人工确认",
+        "用户修正与撤销",
+        "感知延迟与渐进呈现"
+      ],
+      "practice": "给一个 RAG 问答加上引用角标、点击跳转原文、「回答有误」反馈按钮，并观察用户是否更信任结果。",
+      "resources": [
+        {
+          "title": "Google People + AI Guidebook",
+          "url": "https://pair.withgoogle.com/guidebook/"
+        },
+        {
+          "title": "Microsoft Guidelines for Human-AI Interaction",
+          "url": "https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/"
+        }
+      ],
+      "cluster": "ai-app-ux",
+      "companies": [
+        "RAMP",
+        "LINEAR",
+        "BYTEDANCE"
+      ]
+    },
+    {
+      "slug": "mobile-llm",
+      "name": "移动端与端侧 LLM",
+      "description": "在 App 里接入模型：流式、会话、弱网，以及端侧推理。腾讯混元要求 iOS/Android 大模型 App 研发，包括端侧量化模型运行与首 Token 延迟优化。",
+      "concepts": [
+        "移动端流式与弱网处理",
+        "端侧推理与量化模型",
+        "模型文件下载与管理",
+        "内存、功耗与隐私"
+      ],
+      "practice": "在手机上跑一个量化小模型做离线摘要，联网时切换到云端模型，对比首 Token 延迟与耗电。",
+      "resources": [
+        {
+          "title": "MLC LLM",
+          "url": "https://llm.mlc.ai/"
+        },
+        {
+          "title": "Google AI Edge：LLM Inference",
+          "url": "https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference"
+        }
+      ],
+      "cluster": "ai-app-ux",
+      "companies": [
+        "T"
+      ]
+    },
+    {
+      "slug": "evals",
+      "cluster": "ai-app-quality",
+      "companies": [
+        "LINEAR",
+        "FIGMA",
+        "NOTION",
+        "PERPLEXITY",
+        "BYTEDANCE",
+        "UBIE",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "trace",
+      "cluster": "ai-app-quality",
+      "companies": [
+        "BYTEDANCE",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "observability",
+      "cluster": "ai-app-quality",
+      "companies": [
+        "NOTION",
+        "BYTEDANCE",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "ab-test",
+      "name": "线上实验与 A/B 测试",
+      "description": "用线上实验验证改动对真实用户的影响：分流、指标、显著性和护栏。离线评测好不代表线上有效。",
+      "concepts": [
+        "实验设计与分流",
+        "指标选择与护栏指标",
+        "统计显著性与样本量",
+        "离线评测与在线指标的对齐"
+      ],
+      "practice": "为两个 Prompt 版本设计一次 A/B 实验：定义主指标和护栏指标，估算样本量，写出结论模板。",
+      "resources": [
+        {
+          "title": "Kohavi 等《Trustworthy Online Controlled Experiments》"
+        }
+      ],
+      "cluster": "ai-app-quality",
+      "companies": [
+        "FIGMA",
+        "PERPLEXITY",
+        "BYTEDANCE"
+      ]
+    },
+    {
+      "slug": "data-flywheel",
+      "name": "反馈闭环与错误分析",
+      "description": "从线上失败案例中持续改进：收集反馈、归类 bad case、补进评测集、修复后回归。LayerX 要求分析失败案例和边界情况来改进产品，Perplexity 要求持续监控与迭代。",
+      "concepts": [
+        "用户反馈采集（显式与隐式）",
+        "错误分类与根因分析",
+        "bad case 回流评测集",
+        "数据标注与质检"
+      ],
+      "practice": "拉取 100 条线上对话日志，人工归类失败原因，做一张错误分布表，并把前三类加入评测集。",
+      "resources": [
+        {
+          "title": "Hamel Husain：Your AI Product Needs Evals",
+          "url": "https://hamel.dev/blog/posts/evals/"
+        },
+        {
+          "title": "Eugene Yan：Patterns for Building LLM-based Systems & Products",
+          "url": "https://eugeneyan.com/writing/llm-patterns/"
+        }
+      ],
+      "cluster": "ai-app-quality",
+      "companies": [
+        "PERPLEXITY",
+        "BYTEDANCE",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "guard",
+      "cluster": "ai-app-quality",
+      "companies": [
+        "LINEAR",
+        "NOTION",
+        "T",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "cost",
+      "cluster": "ai-app-quality",
+      "companies": [
+        "NOTION",
+        "BYTEDANCE",
+        "T",
+        "UBIE",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "product-sense",
+      "name": "AI 产品感与问题定义",
+      "description": "判断什么问题适合用 AI 解、做到什么程度够用。Linear 要求产品敏感度，Figma 要求把建模工作和业务价值联系起来，LayerX 要求从顾客业务中发现并定义问题，腾讯要求良好的产品意识。",
+      "concepts": [
+        "用户问题与 AI 能力的匹配",
+        "可接受错误率与兜底方案",
+        "成功指标定义",
+        "与产品、设计、算法的协作"
+      ],
+      "practice": "挑一个现有产品功能，写一页「是否该加 AI」的分析：用户问题、失败代价、成功指标和最小可行方案。",
+      "resources": [
+        {
+          "title": "Chip Huyen《AI Engineering》"
+        }
+      ],
+      "cluster": "ai-app-product",
+      "companies": [
+        "LINEAR",
+        "FIGMA",
+        "T",
+        "LAYERX"
+      ]
+    },
+    {
+      "slug": "proto",
+      "name": "快速原型与 0→1",
+      "description": "AI 功能不确定性高，先做原型验证再投入。Figma 要求 0→1 原型经验，Linear 要求原型和迭代智能工作流，Notion 要求原型到功能上线，PayPay 要求 PoC 到正式开发。",
+      "concepts": [
+        "最小可行原型",
+        "用真实数据快速验证",
+        "原型到生产的差距清单",
+        "何时停止和放弃"
+      ],
+      "practice": "两天内做一个 AI 功能原型，用 10 个真实用户样例验证，写出进入生产前要补的清单。",
+      "resources": [
+        {
+          "title": "Basecamp《Shape Up》",
+          "url": "https://basecamp.com/shapeup"
+        }
+      ],
+      "cluster": "ai-app-product",
+      "companies": [
+        "LINEAR",
+        "FIGMA",
+        "NOTION",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "biz-automation",
+      "name": "业务流程自动化与系统集成",
+      "description": "把 LLM 嵌进企业已有系统和流程，打通数据与服务，实现端到端自动化。PayPay 要求结合 SaaS、AI、数据平台做端到端业务自动化，腾讯企业微信要打通企业自有数据，字节多维表格和百度在做无代码/低代码的 AI 应用构建。",
+      "concepts": [
+        "业务流程拆解与 To-Be 设计",
+        "SaaS 与内部系统 API 集成",
+        "权限与数据边界",
+        "低代码 / 无代码编排"
+      ],
+      "practice": "选一个报销或审批流程，用 LLM 加两个内部 API 做端到端自动化，标出需要人确认的节点。",
+      "resources": [
+        {
+          "title": "n8n 文档",
+          "url": "https://docs.n8n.io/"
+        }
+      ],
+      "cluster": "ai-app-product",
+      "companies": [
+        "BYTEDANCE",
+        "T",
+        "B",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "agentic",
+      "cluster": "ai-app-product",
+      "companies": [
+        "RAMP",
+        "FIGMA",
+        "PERPLEXITY",
+        "B",
+        "LAYERX",
+        "PAYPAY"
+      ]
+    }
+  ],
+  "prereqs": [
+    [
+      "ab-test",
+      "data-flywheel"
+    ],
+    [
+      "ai-ux",
+      "gen-ui"
+    ],
+    [
+      "api-design",
+      "biz-automation"
+    ],
+    [
+      "api-design",
+      "llm-api"
+    ],
+    [
+      "api-design",
+      "sys-design"
+    ],
+    [
+      "cache",
+      "cost"
+    ],
+    [
+      "cache",
+      "sys-design"
+    ],
+    [
+      "doc-parsing",
+      "rag"
+    ],
+    [
+      "docker",
+      "cloud"
+    ],
+    [
+      "embedding-search",
+      "memory"
+    ],
+    [
+      "embedding-search",
+      "rag"
+    ],
+    [
+      "evals",
+      "ab-test"
+    ],
+    [
+      "evals",
+      "data-flywheel"
+    ],
+    [
+      "evals",
+      "fine-tune"
+    ],
+    [
+      "hitl",
+      "biz-automation"
+    ],
+    [
+      "llm",
+      "embedding-search"
+    ],
+    [
+      "llm",
+      "fine-tune"
+    ],
+    [
+      "llm",
+      "llm-api"
+    ],
+    [
+      "llm",
+      "prompt-eng"
+    ],
+    [
+      "llm-api",
+      "cost"
+    ],
+    [
+      "llm-api",
+      "gateway"
+    ],
+    [
+      "llm-api",
+      "mobile-llm"
+    ],
+    [
+      "llm-api",
+      "multimodal"
+    ],
+    [
+      "llm-api",
+      "proto"
+    ],
+    [
+      "llm-api",
+      "streaming-ui"
+    ],
+    [
+      "llm-api",
+      "structured-output"
+    ],
+    [
+      "llm-workflow",
+      "biz-automation"
+    ],
+    [
+      "llm-workflow",
+      "durable"
+    ],
+    [
+      "llm-workflow",
+      "patterns"
+    ],
+    [
+      "mq",
+      "durable"
+    ],
+    [
+      "mq",
+      "sys-design"
+    ],
+    [
+      "observability",
+      "ab-test"
+    ],
+    [
+      "observability",
+      "trace"
+    ],
+    [
+      "product-sense",
+      "ai-ux"
+    ],
+    [
+      "product-sense",
+      "proto"
+    ],
+    [
+      "prompt-eng",
+      "agentic"
+    ],
+    [
+      "prompt-eng",
+      "ai-ux"
+    ],
+    [
+      "prompt-eng",
+      "ctxeng"
+    ],
+    [
+      "prompt-eng",
+      "evals"
+    ],
+    [
+      "prompt-eng",
+      "guard"
+    ],
+    [
+      "prompt-eng",
+      "llm-workflow"
+    ],
+    [
+      "prompt-eng",
+      "structured-output"
+    ],
+    [
+      "python",
+      "doc-parsing"
+    ],
+    [
+      "python",
+      "fine-tune"
+    ],
+    [
+      "python",
+      "llm-api"
+    ],
+    [
+      "sql-db",
+      "cache"
+    ],
+    [
+      "sql-db",
+      "embedding-search"
+    ],
+    [
+      "sql-db",
+      "sys-design"
+    ],
+    [
+      "streaming-ui",
+      "gen-ui"
+    ],
+    [
+      "streaming-ui",
+      "mobile-llm"
+    ],
+    [
+      "structured-output",
+      "tools"
+    ],
+    [
+      "testing",
+      "evals"
+    ],
+    [
+      "tools",
+      "gen-ui"
+    ],
+    [
+      "tools",
+      "llm-workflow"
+    ],
+    [
+      "trace",
+      "data-flywheel"
+    ],
+    [
+      "ts",
+      "streaming-ui"
+    ],
+    [
+      "web-basics",
+      "api-design"
+    ],
+    [
+      "web-basics",
+      "streaming-ui"
+    ]
+  ],
+  "path": [
+    {
+      "title": "工程底座",
+      "skills": [
+        "python",
+        "ts",
+        "web-basics",
+        "api-design",
+        "sql-db"
+      ]
+    },
+    {
+      "title": "调用模型",
+      "skills": [
+        "llm",
+        "llm-api",
+        "prompt-eng",
+        "structured-output",
+        "streaming-ui"
+      ]
+    },
+    {
+      "title": "知识与检索",
+      "skills": [
+        "embedding-search",
+        "doc-parsing",
+        "rag"
+      ]
+    },
+    {
+      "title": "Agent 与工作流",
+      "skills": [
+        "agentic",
+        "tools",
+        "loop",
+        "llm-workflow",
+        "ctxeng",
+        "memory",
+        "hitl"
+      ]
+    },
+    {
+      "title": "质量闭环",
+      "skills": [
+        "observability",
+        "trace",
+        "evals",
+        "ab-test",
+        "data-flywheel",
+        "guard",
+        "cost"
+      ]
+    },
+    {
+      "title": "产品化与交付",
+      "skills": [
+        "product-sense",
+        "ai-ux",
+        "gen-ui",
+        "proto",
+        "biz-automation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1496 @@
+{
+  "role": {
+    "slug": "data-eng",
+    "name_zh": "数据工程师"
+  },
+  "clusters": [
+    {
+      "slug": "data-eng-found",
+      "name": "工程基础",
+      "color": "#5B6B7A"
+    },
+    {
+      "slug": "data-eng-model",
+      "name": "数仓与建模",
+      "color": "#3D5A99"
+    },
+    {
+      "slug": "data-eng-batch",
+      "name": "批处理与编排",
+      "color": "#2A8C82"
+    },
+    {
+      "slug": "data-eng-stream",
+      "name": "实时与流处理",
+      "color": "#B23A48"
+    },
+    {
+      "slug": "data-eng-storage",
+      "name": "存储与查询引擎",
+      "color": "#C08A1E"
+    },
+    {
+      "slug": "data-eng-gov",
+      "name": "数据质量与治理",
+      "color": "#6E8A2A"
+    },
+    {
+      "slug": "data-eng-ops",
+      "name": "平台与生产运维",
+      "color": "#7A4F8A"
+    },
+    {
+      "slug": "data-eng-ai",
+      "name": "数据 × AI",
+      "color": "#2F7FB8"
+    }
+  ],
+  "companies": [
+    {
+      "code": "AIRBNB",
+      "name": "Airbnb"
+    },
+    {
+      "code": "DISCORD",
+      "name": "Discord"
+    },
+    {
+      "code": "COINBASE",
+      "name": "Coinbase"
+    },
+    {
+      "code": "BREX",
+      "name": "Brex"
+    },
+    {
+      "code": "CHIME",
+      "name": "Chime"
+    },
+    {
+      "code": "T",
+      "name": "腾讯"
+    },
+    {
+      "code": "A",
+      "name": "阿里"
+    },
+    {
+      "code": "MEITUAN",
+      "name": "美团"
+    },
+    {
+      "code": "PAYPAY",
+      "name": "PayPay"
+    },
+    {
+      "code": "WOVEN",
+      "name": "Woven by Toyota"
+    }
+  ],
+  "postings": [
+    {
+      "company": "AIRBNB",
+      "title": "Senior Data Engineer Tech Foundations",
+      "url": "https://careers.airbnb.com/positions/8396777?gh_jid=8396777"
+    },
+    {
+      "company": "AIRBNB",
+      "title": "Senior Staff Data Engineer, Foundational Data",
+      "url": "https://careers.airbnb.com/positions/8224032?gh_jid=8224032"
+    },
+    {
+      "company": "DISCORD",
+      "title": "Senior Data Engineer, Ads",
+      "url": "https://job-boards.greenhouse.io/discord/jobs/8299493002"
+    },
+    {
+      "company": "DISCORD",
+      "title": "Staff Data Engineer",
+      "url": "https://job-boards.greenhouse.io/discord/jobs/8691572002"
+    },
+    {
+      "company": "COINBASE",
+      "title": "Senior Software Engineer, Data Engineering Platform",
+      "url": "https://www.coinbase.com/careers/positions/8082199?gh_jid=8082199"
+    },
+    {
+      "company": "BREX",
+      "title": "Data Engineer",
+      "url": "https://www.brex.com/careers/8366850002?gh_jid=8366850002"
+    },
+    {
+      "company": "CHIME",
+      "title": "Senior Software Engineer, Data Engineering",
+      "url": "https://boards.greenhouse.io/chime/jobs/8505462002?gh_jid=8505462002"
+    },
+    {
+      "company": "T",
+      "title": "微信小游戏-数据开发工程师",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2110620275749076992"
+    },
+    {
+      "company": "T",
+      "title": "电商-数据仓库开发工程师",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2098594911686410240"
+    },
+    {
+      "company": "T",
+      "title": "微信基础-大数据工程师-AI方向",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2110191971174891520"
+    },
+    {
+      "company": "T",
+      "title": "智能体-数据治理高级工程师-WorkBuddy",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2092162824909537280"
+    },
+    {
+      "company": "A",
+      "title": "菜鸟驿站-资深数据开发工程师-杭州",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100039480002"
+    },
+    {
+      "company": "A",
+      "title": "飞猪-高级数据开发工程师/专家-搜推广",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100041700001"
+    },
+    {
+      "company": "A",
+      "title": "淘天集团-高级数据开发工程师-财务信息化",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100032460002"
+    },
+    {
+      "company": "A",
+      "title": "阿里健康-数据开发-北京",
+      "url": "https://talent.alibaba.com/off-campus/position-detail?positionId=100047160002"
+    },
+    {
+      "company": "MEITUAN",
+      "title": "Keeta 大数据开发",
+      "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4828413893&highlightType=social"
+    },
+    {
+      "company": "MEITUAN",
+      "title": "骑行-数据开发工程师",
+      "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4885047275&highlightType=social"
+    },
+    {
+      "company": "MEITUAN",
+      "title": "商业增值-大数据开发工程师（广告方向）",
+      "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4686125855&highlightType=social"
+    },
+    {
+      "company": "PAYPAY",
+      "title": "Data Infrastructure Engineer",
+      "url": "https://job-boards.greenhouse.io/paypay/jobs/5998699004"
+    },
+    {
+      "company": "WOVEN",
+      "title": "Data Engineer, City Data Platform Development (Employment for People with Disabilities)",
+      "url": "https://jobs.lever.co/woven-by-toyota/4dbb4c3c-8b8a-40c2-bbb7-6ec96ef77edb"
+    }
+  ],
+  "skills": [
+    {
+      "slug": "python",
+      "name": "Python 工程",
+      "description": "AI 应用和数据工程的主力语言：模型 SDK、数据管道、调度 DAG 和评测脚本大多先有 Python 版本。",
+      "concepts": [
+        "类型标注与项目结构（pyproject、uv）",
+        "asyncio 并发",
+        "生成器与内存友好的批处理",
+        "pandas / Polars / PyArrow",
+        "Pydantic 校验与可测试的模块设计"
+      ],
+      "practice": "用 Python 写一个读取 CSV、清洗后写入 Parquet 的 CLI，带单元测试和类型检查。",
+      "resources": [
+        {
+          "title": "Python 官方教程",
+          "url": "https://docs.python.org/3/tutorial/"
+        },
+        {
+          "title": "Luciano Ramalho《Fluent Python》"
+        }
+      ],
+      "cluster": "data-eng-found",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "COINBASE",
+        "BREX",
+        "CHIME",
+        "T",
+        "A",
+        "PAYPAY",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "sql-db",
+      "cluster": "data-eng-found",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "COINBASE",
+        "BREX",
+        "CHIME",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "data-modeling",
+      "name": "数据建模",
+      "description": "把业务对象、事件和关系抽象成能长期演进的数据结构。模型一旦上线就很难改，事务库和分析库的取舍也不同。",
+      "concepts": [
+        "概念、逻辑、物理模型",
+        "范式与反范式",
+        "按访问模式建模",
+        "主键、约束与软删除",
+        "Schema 演进与在线迁移"
+      ],
+      "practice": "为一个外卖业务画出概念模型和 3NF 逻辑模型，再说明哪些表适合反范式化给分析用。",
+      "resources": [
+        {
+          "title": "Kleppmann《Designing Data-Intensive Applications》",
+          "url": "https://dataintensive.net/"
+        },
+        {
+          "title": "Martin Fowler: Evolutionary Database Design",
+          "url": "https://martinfowler.com/articles/evodb.html"
+        }
+      ],
+      "cluster": "data-eng-found",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "BREX",
+        "CHIME",
+        "T",
+        "A",
+        "MEITUAN",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "git-collab",
+      "cluster": "data-eng-found",
+      "companies": [
+        "COINBASE",
+        "DISCORD",
+        "BREX"
+      ]
+    },
+    {
+      "slug": "dist",
+      "cluster": "data-eng-found",
+      "companies": [
+        "AIRBNB",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "linux-shell",
+      "name": "Linux 与 Shell",
+      "description": "大数据作业跑在 Linux 集群上，排查任务、看日志、写运维脚本都离不开 Shell。",
+      "concepts": [
+        "常用文本处理（grep / awk / sed）",
+        "进程、内存与磁盘排查",
+        "Shell 脚本与 cron",
+        "SSH 与权限"
+      ],
+      "practice": "写一个 Shell 脚本统计某个目录下日志的错误数并按小时汇总，再用 cron 定时运行。",
+      "resources": [
+        {
+          "title": "The Linux Command Line",
+          "url": "https://linuxcommand.org/tlcl.php"
+        }
+      ],
+      "cluster": "data-eng-found",
+      "companies": [
+        "COINBASE",
+        "T",
+        "A",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "jvm",
+      "cluster": "data-eng-found",
+      "companies": [
+        "AIRBNB",
+        "COINBASE",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "dim-modeling",
+      "name": "维度建模",
+      "description": "Kimball 方法：事实表、维度表、缓慢变化维。Airbnb、Discord、腾讯、美团都把它写进硬要求。",
+      "concepts": [
+        "事实表类型（事务、周期快照、累积快照）",
+        "星型与雪花模型",
+        "缓慢变化维（SCD Type 1/2）",
+        "一致性维度与总线矩阵"
+      ],
+      "practice": "为一个订阅业务设计星型模型：订单事实表、用户和商品维度，并用 SCD2 记录用户等级变化。",
+      "resources": [
+        {
+          "title": "Kimball《The Data Warehouse Toolkit》"
+        },
+        {
+          "title": "Kimball Group 维度建模技术",
+          "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/"
+        }
+      ],
+      "cluster": "data-eng-model",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "dw-layering",
+      "name": "数仓分层与主题域",
+      "description": "ODS / DWD / DWS / ADS 分层和主题域划分，是国内数仓岗的通用语言。腾讯电商 JD 直接列出了五层。",
+      "concepts": [
+        "ODS / DWD / DWM / DWS / ADS 分层职责",
+        "主题域与数据域划分",
+        "公共维度沉淀",
+        "数据生命周期与冷热分层"
+      ],
+      "practice": "把一个电商业务的 20 张源表规划成分层数仓，写出每层的表清单和依赖关系图。",
+      "resources": [
+        {
+          "title": "阿里巴巴数据技术及产品部《大数据之路：阿里巴巴大数据实践》"
+        }
+      ],
+      "cluster": "data-eng-model",
+      "companies": [
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "metrics-layer",
+      "name": "指标体系与语义层",
+      "description": "统一指标口径，让报表、实验和 AI 取数用同一套定义。Airbnb 用 Minerva，Discord 维护语义层，腾讯和美团要求统一口径。",
+      "concepts": [
+        "原子指标、派生指标与复合指标",
+        "指标口径与维度管理",
+        "语义层（dbt Semantic Layer、Minerva）",
+        "面向 AI 的指标与元数据"
+      ],
+      "practice": "为一个订阅产品定义 5 个核心指标（含口径、维度和计算 SQL），并用 dbt 语义层实现其中两个。",
+      "resources": [
+        {
+          "title": "dbt Semantic Layer 文档",
+          "url": "https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl"
+        },
+        {
+          "title": "Airbnb Minerva 指标平台博客",
+          "url": "https://medium.com/airbnb-engineering/how-airbnb-achieved-metric-consistency-at-scale-f23cc53dea70"
+        }
+      ],
+      "cluster": "data-eng-model",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "BREX",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "tracking",
+      "name": "埋点与事件模型",
+      "description": "从客户端和服务端埋点到事件表的数据源头设计：事件模型、命名规范、版本管理和验收。",
+      "concepts": [
+        "事件、属性与用户 / Session 模型",
+        "埋点命名规范与版本管理",
+        "无痕 / 自动埋点与客户端、服务端埋点取舍",
+        "埋点验收与质量校验",
+        "隐私与同意管理"
+      ],
+      "practice": "为一个聊天产品写一份埋点规范（10 个事件），并设计验收用的校验 SQL。",
+      "resources": [
+        {
+          "title": "Snowplow 文档",
+          "url": "https://docs.snowplow.io/"
+        }
+      ],
+      "cluster": "data-eng-model",
+      "companies": [
+        "T"
+      ]
+    },
+    {
+      "slug": "spark-batch",
+      "name": "Spark 分布式批处理",
+      "description": "大规模离线计算的事实标准。Airbnb、Chime、腾讯、美团、阿里都要求 Spark，且常要求懂原理和调优。",
+      "concepts": [
+        "RDD / DataFrame 与惰性执行",
+        "Shuffle、分区与数据倾斜",
+        "Catalyst 优化器与 AQE",
+        "内存管理与资源调优"
+      ],
+      "practice": "用 Spark 处理 10GB 以上的公开数据集，人为制造一次数据倾斜，再用加盐或 AQE 解决并对比耗时。",
+      "resources": [
+        {
+          "title": "Apache Spark 官方文档",
+          "url": "https://spark.apache.org/docs/latest/"
+        },
+        {
+          "title": "Chambers & Zaharia《Spark: The Definitive Guide》"
+        }
+      ],
+      "cluster": "data-eng-batch",
+      "companies": [
+        "AIRBNB",
+        "CHIME",
+        "T",
+        "A",
+        "MEITUAN",
+        "PAYPAY",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "hadoop-hive",
+      "name": "Hadoop 与 Hive",
+      "description": "HDFS、YARN 和 Hive 仍是国内离线数仓的底座。理解 MapReduce 是理解后续引擎的起点。",
+      "concepts": [
+        "HDFS 与块存储",
+        "YARN 资源调度",
+        "Hive 表、分区与分桶",
+        "MapReduce 执行模型"
+      ],
+      "practice": "在 Docker 里起一个单机 Hadoop + Hive，建分区表并对比分区裁剪前后的扫描量。",
+      "resources": [
+        {
+          "title": "Apache Hive 文档",
+          "url": "https://hive.apache.org/"
+        },
+        {
+          "title": "Google MapReduce 论文",
+          "url": "https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/"
+        }
+      ],
+      "cluster": "data-eng-batch",
+      "companies": [
+        "T",
+        "A",
+        "MEITUAN",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "etl-elt",
+      "name": "ETL / ELT 管道设计",
+      "description": "把源数据变成可信数据集的核心工作：抽取、转换、加载，以及增量、幂等和重跑。",
+      "concepts": [
+        "ETL 与 ELT 的取舍",
+        "全量、增量与分区覆盖",
+        "幂等写入与可重跑",
+        "Schema 变更处理"
+      ],
+      "practice": "实现一个按天分区的增量 ETL：支持重跑任意一天而不产生重复数据。",
+      "resources": [
+        {
+          "title": "Joe Reis & Matt Housley《Fundamentals of Data Engineering》"
+        },
+        {
+          "title": "Maxime Beauchemin《Functional Data Engineering》",
+          "url": "https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a"
+        }
+      ],
+      "cluster": "data-eng-batch",
+      "companies": [
+        "AIRBNB",
+        "COINBASE",
+        "BREX",
+        "CHIME",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "orchestration",
+      "name": "工作流编排与调度",
+      "description": "用 DAG 管理成百上千个任务的依赖、重试和 SLA。Airflow 最常见，Discord 用 Dagster，国内多用自研调度平台。",
+      "concepts": [
+        "DAG、依赖与调度周期",
+        "重试、超时与告警",
+        "参数化与动态任务",
+        "资产（asset）导向的编排"
+      ],
+      "practice": "用 Airflow 或 Dagster 编排一个三步管道（抽取、转换、校验），配置失败重试和 SLA 告警。",
+      "resources": [
+        {
+          "title": "Apache Airflow 文档",
+          "url": "https://airflow.apache.org/docs/"
+        },
+        {
+          "title": "Dagster 文档",
+          "url": "https://docs.dagster.io/"
+        }
+      ],
+      "cluster": "data-eng-batch",
+      "companies": [
+        "AIRBNB",
+        "COINBASE",
+        "DISCORD",
+        "BREX",
+        "CHIME",
+        "T",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "sql-transform",
+      "name": "SQL 转换框架（dbt）",
+      "description": "用工程化方式管理 SQL 模型：模块化、测试、文档和依赖。Discord、Brex 明确要求 dbt。",
+      "concepts": [
+        "模型、ref 与依赖图",
+        "增量模型与物化方式",
+        "测试、文档与 exposures",
+        "宏与 Jinja 模板"
+      ],
+      "practice": "用 dbt 把一组原始表建成 staging → mart 两层模型，加上唯一性和非空测试并生成文档站。",
+      "resources": [
+        {
+          "title": "dbt 文档",
+          "url": "https://docs.getdbt.com/"
+        }
+      ],
+      "cluster": "data-eng-batch",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "BREX"
+      ]
+    },
+    {
+      "slug": "backfill",
+      "name": "迁移、回填与历史数据",
+      "description": "改了模型就要回填历史、换引擎就要迁移。Airbnb 要求通过依赖分析、校验和受控切换安全完成。",
+      "concepts": [
+        "回填策略与资源控制",
+        "新旧表对账与双跑",
+        "受控切换与回滚方案",
+        "历史数据回溯与口径追溯"
+      ],
+      "practice": "给一张已有一年数据的表加新字段，设计回填计划（分批、校验、切换、回滚）并执行一次小规模演练。",
+      "resources": [
+        {
+          "title": "Joe Reis & Matt Housley《Fundamentals of Data Engineering》"
+        }
+      ],
+      "cluster": "data-eng-batch",
+      "companies": [
+        "AIRBNB",
+        "T"
+      ]
+    },
+    {
+      "slug": "mq",
+      "cluster": "data-eng-stream",
+      "companies": [
+        "DISCORD",
+        "MEITUAN",
+        "PAYPAY",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "stream-processing",
+      "name": "流处理",
+      "description": "处理无界数据流：事件时间、窗口、状态和容错。Flink 是最常见的引擎，Kafka Streams、Spark Structured Streaming 也常见。",
+      "concepts": [
+        "事件时间、Watermark 与乱序",
+        "窗口类型与状态管理",
+        "Checkpoint 与 exactly-once 的边界",
+        "流批一体",
+        "Flink SQL"
+      ],
+      "practice": "用 Flink 从 Kafka 读点击流，按 5 分钟滚动窗口统计 PV/UV，并验证任务重启后结果不重复。",
+      "resources": [
+        {
+          "title": "Apache Flink 文档",
+          "url": "https://nightlies.apache.org/flink/flink-docs-stable/"
+        },
+        {
+          "title": "Akidau 等《Streaming Systems》"
+        }
+      ],
+      "cluster": "data-eng-stream",
+      "companies": [
+        "DISCORD",
+        "T",
+        "A",
+        "MEITUAN",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "realtime-dw",
+      "name": "实时数仓",
+      "description": "把分层数仓搬到实时链路上：实时明细、实时汇总和实时大屏。腾讯电商要求基于 Flink SQL 做实时数仓。",
+      "concepts": [
+        "Lambda 与 Kappa 架构",
+        "实时分层与维表关联",
+        "流批一体与数据湖（Paimon / Hudi）",
+        "实时与离线结果对账"
+      ],
+      "practice": "搭一条 Kafka → Flink SQL → Doris 的实时链路，出一张实时 GMV 看板，并与离线结果对账。",
+      "resources": [
+        {
+          "title": "Apache Paimon 文档",
+          "url": "https://paimon.apache.org/"
+        }
+      ],
+      "cluster": "data-eng-stream",
+      "companies": [
+        "DISCORD",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "data-integration",
+      "name": "数据接入与集成",
+      "description": "把业务库、第三方 API、SaaS 和事件流接进数仓。Airbnb 要求管理多源 schema 变化，PayPay 提到 CDC。",
+      "concepts": [
+        "CDC 与 binlog 同步（Debezium）",
+        "第三方 API 与 SaaS 接入",
+        "Schema 漂移处理",
+        "批量与流式接入的取舍"
+      ],
+      "practice": "用 Debezium 把一张 MySQL 表的变更同步到 Kafka，再落成一张可查询的快照表。",
+      "resources": [
+        {
+          "title": "Debezium 文档",
+          "url": "https://debezium.io/documentation/"
+        },
+        {
+          "title": "Airbyte 文档",
+          "url": "https://docs.airbyte.com/"
+        }
+      ],
+      "cluster": "data-eng-stream",
+      "companies": [
+        "AIRBNB",
+        "COINBASE",
+        "DISCORD",
+        "BREX",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "lakehouse",
+      "name": "数据湖与开放表格式",
+      "description": "Iceberg、Hudi、Delta 让对象存储上的数据支持事务和 schema 演进。Airbnb、腾讯、阿里、PayPay 都在用湖仓。",
+      "concepts": [
+        "Parquet / ORC 列式格式",
+        "Iceberg / Hudi / Delta 的快照与事务",
+        "分区演进与小文件治理",
+        "湖仓一体架构"
+      ],
+      "practice": "用 Spark 建一张 Iceberg 表，做一次 schema 变更和时间旅行查询，再合并小文件。",
+      "resources": [
+        {
+          "title": "Apache Iceberg 文档",
+          "url": "https://iceberg.apache.org/docs/latest/"
+        },
+        {
+          "title": "Lakehouse 论文（CIDR 2021）",
+          "url": "https://www.cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf"
+        }
+      ],
+      "cluster": "data-eng-storage",
+      "companies": [
+        "AIRBNB",
+        "COINBASE",
+        "T",
+        "A",
+        "PAYPAY",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "olap",
+      "name": "OLAP 引擎",
+      "description": "面向即席查询和报表的 MPP 引擎。国内 JD 常点名 Doris、ClickHouse、StarRocks，Chime 要求 MPP 数据库经验。",
+      "concepts": [
+        "MPP 架构与列式执行",
+        "分区、分桶与排序键",
+        "物化视图与预聚合",
+        "Presto / Trino 联邦查询"
+      ],
+      "practice": "在 Doris 或 ClickHouse 上导入千万行数据，对比不同分区分桶与物化视图下的查询耗时。",
+      "resources": [
+        {
+          "title": "ClickHouse 文档",
+          "url": "https://clickhouse.com/docs"
+        },
+        {
+          "title": "Apache Doris 文档",
+          "url": "https://doris.apache.org/docs/"
+        }
+      ],
+      "cluster": "data-eng-storage",
+      "companies": [
+        "CHIME",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "cloud-dw",
+      "name": "云数据仓库",
+      "description": "Snowflake、BigQuery、Redshift、MaxCompute 等托管数仓。美国 JD 几乎都要求至少一种。",
+      "concepts": [
+        "存算分离架构",
+        "虚拟仓库与弹性计算",
+        "按扫描量计费与分区 / 聚簇",
+        "权限与数据共享"
+      ],
+      "practice": "在 BigQuery 或 Snowflake 免费额度内建一张分区聚簇表，比较同一查询在优化前后的扫描量和费用。",
+      "resources": [
+        {
+          "title": "Snowflake 文档",
+          "url": "https://docs.snowflake.com/"
+        },
+        {
+          "title": "BigQuery 文档",
+          "url": "https://cloud.google.com/bigquery/docs"
+        }
+      ],
+      "cluster": "data-eng-storage",
+      "companies": [
+        "COINBASE",
+        "DISCORD",
+        "BREX",
+        "CHIME",
+        "A"
+      ]
+    },
+    {
+      "slug": "query-opt",
+      "name": "查询性能优化",
+      "description": "海量数据下 SQL 慢一个数量级就意味着 SLA 失守和成本翻倍。腾讯、美团、阿里都要求有大规模 SQL 调优经验。",
+      "concepts": [
+        "执行计划阅读",
+        "Join 策略（broadcast / shuffle）",
+        "谓词下推与分区裁剪",
+        "数据倾斜诊断"
+      ],
+      "practice": "找一条慢查询，读执行计划定位瓶颈，通过改写或调整 join 策略把耗时降一半。",
+      "resources": [
+        {
+          "title": "Use The Index, Luke",
+          "url": "https://use-the-index-luke.com/"
+        }
+      ],
+      "cluster": "data-eng-storage",
+      "companies": [
+        "AIRBNB",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "nosql",
+      "cluster": "data-eng-storage",
+      "companies": [
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "data-quality",
+      "name": "数据质量与数据测试",
+      "description": "准确、完整、一致、及时。所有 JD 都要求，Airbnb 要求自动化测试与对账，Discord 要求面向 ML 输入的质量框架。",
+      "concepts": [
+        "质量维度：完整性、准确性、一致性、及时性",
+        "断言式数据测试（dbt tests、Great Expectations）",
+        "对账与差异排查",
+        "质量规则分级与阻断"
+      ],
+      "practice": "给一条管道加上 5 条数据测试（唯一、非空、取值范围、参照完整性、行数波动），失败时阻断下游。",
+      "resources": [
+        {
+          "title": "Great Expectations 文档",
+          "url": "https://docs.greatexpectations.io/"
+        },
+        {
+          "title": "dbt 数据测试文档",
+          "url": "https://docs.getdbt.com/docs/build/data-tests"
+        }
+      ],
+      "cluster": "data-eng-gov",
+      "companies": [
+        "AIRBNB",
+        "COINBASE",
+        "DISCORD",
+        "BREX",
+        "CHIME",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "data-observability",
+      "name": "数据可观测与 SLA",
+      "description": "对数据本身做监控：新鲜度、体量、分布异常和 SLA。Discord 要求自动异常检测和 SLA 基础设施。",
+      "concepts": [
+        "新鲜度、体量与分布监控",
+        "异常检测",
+        "数据 SLA / SLO 定义",
+        "告警分级与值班"
+      ],
+      "practice": "为三张核心表配置新鲜度和行数监控，用简单的统计方法做异常检测并接入告警。",
+      "resources": [
+        {
+          "title": "Moses 等《Data Quality Fundamentals》"
+        }
+      ],
+      "cluster": "data-eng-gov",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "CHIME",
+        "T",
+        "A"
+      ]
+    },
+    {
+      "slug": "metadata-lineage",
+      "name": "元数据、血缘与数据目录",
+      "description": "让人和 Agent 都能找到表、看懂字段、追溯上下游。Coinbase、阿里、腾讯都提到血缘和目录。",
+      "concepts": [
+        "技术元数据与业务元数据",
+        "表级与字段级血缘",
+        "数据目录与搜索",
+        "OpenLineage 标准"
+      ],
+      "practice": "用 OpenLineage 或 DataHub 采集一条 Airflow 管道的血缘，并在 UI 里追溯一个字段的上游。",
+      "resources": [
+        {
+          "title": "OpenLineage 文档",
+          "url": "https://openlineage.io/docs/"
+        },
+        {
+          "title": "DataHub 文档",
+          "url": "https://datahubproject.io/docs/"
+        }
+      ],
+      "cluster": "data-eng-gov",
+      "companies": [
+        "AIRBNB",
+        "COINBASE",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "data-governance",
+      "name": "数据治理与访问控制",
+      "description": "数据标准、权限、敏感数据和合规。Coinbase 要求跨存储层的访问控制，PayPay 要求按合规实施治理和安全控制。",
+      "concepts": [
+        "数据标准与资产管理",
+        "细粒度权限（行列级、标签）",
+        "敏感数据分级与脱敏",
+        "审计与合规"
+      ],
+      "practice": "为一个数据集设计行列级权限和脱敏策略，并用 Unity Catalog 或 Ranger 实现其中一部分。",
+      "resources": [
+        {
+          "title": "DAMA《DMBOK 数据管理知识体系》"
+        },
+        {
+          "title": "Unity Catalog 文档",
+          "url": "https://docs.databricks.com/en/data-governance/unity-catalog/index.html"
+        }
+      ],
+      "cluster": "data-eng-gov",
+      "companies": [
+        "COINBASE",
+        "CHIME",
+        "T",
+        "A",
+        "MEITUAN",
+        "PAYPAY",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "data-contracts",
+      "name": "数据契约",
+      "description": "上游产生数据、下游消费数据，双方需要约定 schema、语义和 SLA。Airbnb 和 Discord 都要求定义源头契约。",
+      "concepts": [
+        "Schema 与语义约定",
+        "变更通知与兼容性",
+        "契约测试",
+        "生产者负责制"
+      ],
+      "practice": "为一个上游事件写一份数据契约（字段、类型、约束、SLA），并在 CI 中加入破坏性变更检查。",
+      "resources": [
+        {
+          "title": "Chad Sanderson《Data Contracts》"
+        }
+      ],
+      "cluster": "data-eng-gov",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "COINBASE"
+      ]
+    },
+    {
+      "slug": "ci-cd",
+      "cluster": "data-eng-ops",
+      "companies": [
+        "DISCORD",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "testing",
+      "cluster": "data-eng-ops",
+      "companies": [
+        "AIRBNB",
+        "DISCORD"
+      ]
+    },
+    {
+      "slug": "observability",
+      "cluster": "data-eng-ops",
+      "companies": [
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "incident",
+      "cluster": "data-eng-ops",
+      "companies": [
+        "AIRBNB",
+        "CHIME",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "iac",
+      "cluster": "data-eng-ops",
+      "companies": [
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "docker",
+      "cluster": "data-eng-ops",
+      "companies": [
+        "COINBASE"
+      ]
+    },
+    {
+      "slug": "cloud",
+      "cluster": "data-eng-ops",
+      "companies": [
+        "CHIME",
+        "PAYPAY",
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "api-design",
+      "cluster": "data-eng-ops",
+      "companies": [
+        "WOVEN"
+      ]
+    },
+    {
+      "slug": "data-platform",
+      "name": "自助数据平台",
+      "description": "把管道、接入、质量和权限做成 SDK 与自助工具，让上千条管道不必理解底层。Coinbase 整个岗位都在做这件事。",
+      "concepts": [
+        "管道 SDK 与模板化接入",
+        "自助式管道创建与排障",
+        "Paved Path 与最佳实践沉淀",
+        "平台多租户与配额"
+      ],
+      "practice": "封装一个配置驱动的接入框架：写一个 YAML 就能生成抽取、校验、入仓三步管道。",
+      "resources": [
+        {
+          "title": "Joe Reis & Matt Housley《Fundamentals of Data Engineering》"
+        }
+      ],
+      "cluster": "data-eng-ops",
+      "companies": [
+        "AIRBNB",
+        "COINBASE",
+        "DISCORD",
+        "PAYPAY"
+      ]
+    },
+    {
+      "slug": "data-cost",
+      "name": "数据成本优化",
+      "description": "计算和存储的账单随数据量线性增长。Airbnb 要求降低计算成本，腾讯要求降低数据处理成本，美团把成本列为治理方向。",
+      "concepts": [
+        "计算资源与作业成本归因",
+        "存储分层与生命周期",
+        "查询与作业的成本优化",
+        "FinOps 方法"
+      ],
+      "practice": "统计一个数仓一周内最贵的 10 个作业，挑一个优化，量化节省的计算量。",
+      "resources": [
+        {
+          "title": "FinOps Framework",
+          "url": "https://www.finops.org/framework/"
+        }
+      ],
+      "cluster": "data-eng-ops",
+      "companies": [
+        "AIRBNB",
+        "DISCORD",
+        "T",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "data-agent",
+      "name": "Data Agent 与 NL2SQL",
+      "description": "让 Agent 能找表、写 SQL、做分析。国内 JD 几乎都在招这个方向：智能找表、问数、智能 ETL、质量巡检。",
+      "concepts": [
+        "NL2SQL 与 schema linking",
+        "面向 Agent 的元数据与语义层",
+        "问数准确率评测",
+        "智能 ETL 与质量巡检"
+      ],
+      "practice": "基于一个小型数仓搭一个 NL2SQL 原型，用 20 个问题评测准确率，并分析错误来自找表还是写 SQL。",
+      "resources": [
+        {
+          "title": "BIRD-SQL 基准",
+          "url": "https://bird-bench.github.io/"
+        },
+        {
+          "title": "Spider NL2SQL 基准",
+          "url": "https://yale-lily.github.io/spider"
+        }
+      ],
+      "cluster": "data-eng-ai",
+      "companies": [
+        "DISCORD",
+        "BREX",
+        "T",
+        "A",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "ml-data",
+      "name": "特征与训练数据管道",
+      "description": "为模型供数：特征、标签、样本和训练数据质量。Discord 广告要求特征与标签生成，飞猪要求用户实时/离线特征。",
+      "concepts": [
+        "离线与实时特征",
+        "标签生成与样本拼接",
+        "特征一致性与穿越问题",
+        "Feature Store"
+      ],
+      "practice": "用 Feast 定义一组用户特征，分别做离线训练集导出和在线读取，验证两边一致。",
+      "resources": [
+        {
+          "title": "Feast 文档",
+          "url": "https://docs.feast.dev/"
+        },
+        {
+          "title": "Chip Huyen《Designing Machine Learning Systems》"
+        }
+      ],
+      "cluster": "data-eng-ai",
+      "companies": [
+        "DISCORD",
+        "A"
+      ]
+    },
+    {
+      "slug": "agentic",
+      "cluster": "data-eng-ai",
+      "companies": [
+        "BREX",
+        "COINBASE",
+        "T",
+        "MEITUAN"
+      ]
+    },
+    {
+      "slug": "bi-dashboard",
+      "name": "BI 与数据可视化",
+      "description": "数据产品的最后一公里：报表、看板和自助分析。Discord、Brex 把 Looker / Tableau 列为加分项。",
+      "concepts": [
+        "BI 语义模型（LookML 等）",
+        "看板设计与指标呈现",
+        "自助分析与权限",
+        "报表性能与缓存"
+      ],
+      "practice": "用 Superset 或 Looker Studio 基于自己的 mart 表做一个包含 5 个核心指标的看板。",
+      "resources": [
+        {
+          "title": "Apache Superset 文档",
+          "url": "https://superset.apache.org/docs/intro"
+        },
+        {
+          "title": "Looker 文档",
+          "url": "https://cloud.google.com/looker/docs"
+        }
+      ],
+      "cluster": "data-eng-ai",
+      "companies": [
+        "DISCORD",
+        "COINBASE",
+        "BREX"
+      ]
+    }
+  ],
+  "prereqs": [
+    [
+      "agentic",
+      "data-agent"
+    ],
+    [
+      "api-design",
+      "data-integration"
+    ],
+    [
+      "ci-cd",
+      "data-platform"
+    ],
+    [
+      "cloud",
+      "cloud-dw"
+    ],
+    [
+      "cloud",
+      "iac"
+    ],
+    [
+      "cloud-dw",
+      "data-cost"
+    ],
+    [
+      "data-integration",
+      "data-contracts"
+    ],
+    [
+      "data-modeling",
+      "data-contracts"
+    ],
+    [
+      "data-modeling",
+      "dim-modeling"
+    ],
+    [
+      "data-modeling",
+      "tracking"
+    ],
+    [
+      "data-observability",
+      "incident"
+    ],
+    [
+      "data-quality",
+      "data-observability"
+    ],
+    [
+      "dim-modeling",
+      "dw-layering"
+    ],
+    [
+      "dim-modeling",
+      "metrics-layer"
+    ],
+    [
+      "dist",
+      "hadoop-hive"
+    ],
+    [
+      "dist",
+      "mq"
+    ],
+    [
+      "dist",
+      "spark-batch"
+    ],
+    [
+      "docker",
+      "ci-cd"
+    ],
+    [
+      "docker",
+      "cloud"
+    ],
+    [
+      "dw-layering",
+      "metrics-layer"
+    ],
+    [
+      "dw-layering",
+      "realtime-dw"
+    ],
+    [
+      "etl-elt",
+      "backfill"
+    ],
+    [
+      "etl-elt",
+      "data-integration"
+    ],
+    [
+      "etl-elt",
+      "data-quality"
+    ],
+    [
+      "etl-elt",
+      "orchestration"
+    ],
+    [
+      "etl-elt",
+      "sql-transform"
+    ],
+    [
+      "git-collab",
+      "ci-cd"
+    ],
+    [
+      "git-collab",
+      "sql-transform"
+    ],
+    [
+      "hadoop-hive",
+      "spark-batch"
+    ],
+    [
+      "jvm",
+      "spark-batch"
+    ],
+    [
+      "jvm",
+      "stream-processing"
+    ],
+    [
+      "linux-shell",
+      "hadoop-hive"
+    ],
+    [
+      "metadata-lineage",
+      "data-agent"
+    ],
+    [
+      "metadata-lineage",
+      "data-governance"
+    ],
+    [
+      "metrics-layer",
+      "bi-dashboard"
+    ],
+    [
+      "metrics-layer",
+      "data-agent"
+    ],
+    [
+      "mq",
+      "data-integration"
+    ],
+    [
+      "mq",
+      "stream-processing"
+    ],
+    [
+      "observability",
+      "data-observability"
+    ],
+    [
+      "observability",
+      "incident"
+    ],
+    [
+      "olap",
+      "realtime-dw"
+    ],
+    [
+      "orchestration",
+      "backfill"
+    ],
+    [
+      "orchestration",
+      "data-observability"
+    ],
+    [
+      "orchestration",
+      "data-platform"
+    ],
+    [
+      "orchestration",
+      "metadata-lineage"
+    ],
+    [
+      "python",
+      "etl-elt"
+    ],
+    [
+      "python",
+      "orchestration"
+    ],
+    [
+      "python",
+      "spark-batch"
+    ],
+    [
+      "query-opt",
+      "data-cost"
+    ],
+    [
+      "query-opt",
+      "olap"
+    ],
+    [
+      "realtime-dw",
+      "ml-data"
+    ],
+    [
+      "spark-batch",
+      "data-cost"
+    ],
+    [
+      "spark-batch",
+      "lakehouse"
+    ],
+    [
+      "spark-batch",
+      "ml-data"
+    ],
+    [
+      "spark-batch",
+      "stream-processing"
+    ],
+    [
+      "sql-db",
+      "cloud-dw"
+    ],
+    [
+      "sql-db",
+      "data-modeling"
+    ],
+    [
+      "sql-db",
+      "etl-elt"
+    ],
+    [
+      "sql-db",
+      "nosql"
+    ],
+    [
+      "sql-db",
+      "query-opt"
+    ],
+    [
+      "sql-db",
+      "sql-transform"
+    ],
+    [
+      "sql-transform",
+      "metadata-lineage"
+    ],
+    [
+      "stream-processing",
+      "realtime-dw"
+    ],
+    [
+      "testing",
+      "ci-cd"
+    ],
+    [
+      "testing",
+      "data-quality"
+    ],
+    [
+      "tracking",
+      "metrics-layer"
+    ]
+  ],
+  "path": [
+    {
+      "title": "工程基础",
+      "skills": [
+        "python",
+        "sql-db",
+        "linux-shell",
+        "git-collab",
+        "data-modeling"
+      ]
+    },
+    {
+      "title": "数仓建模与批处理",
+      "skills": [
+        "dim-modeling",
+        "dw-layering",
+        "etl-elt",
+        "orchestration",
+        "sql-transform",
+        "hadoop-hive",
+        "spark-batch"
+      ]
+    },
+    {
+      "title": "存储与查询引擎",
+      "skills": [
+        "query-opt",
+        "cloud-dw",
+        "olap",
+        "lakehouse"
+      ]
+    },
+    {
+      "title": "实时数据",
+      "skills": [
+        "mq",
+        "stream-processing",
+        "realtime-dw",
+        "data-integration"
+      ]
+    },
+    {
+      "title": "质量、治理与指标",
+      "skills": [
+        "data-quality",
+        "data-observability",
+        "metadata-lineage",
+        "data-governance",
+        "metrics-layer"
+      ]
+    },
+    {
+      "title": "生产化与数据 × AI",
+      "skills": [
+        "backfill",
+        "incident",
+        "data-cost",
+        "data-platform",
+        "data-agent"
+      ]
+    }
+  ]
+}
