@@ -17,10 +17,10 @@
 | 腾讯 (T) | 中国 | 电商-数据仓库开发工程师（重庆） | https://careers.tencent.com/jobdesc.html?postId=2098594911686410240 | 同上 | 2026-11-13 |
 | 腾讯 (T) | 中国 | 微信基础-大数据工程师-AI方向 | https://careers.tencent.com/jobdesc.html?postId=2110191971174891520 | 同上 | 2026-11-03 |
 | 腾讯 (T) | 中国 | 智能体-数据治理高级工程师-WorkBuddy | https://careers.tencent.com/jobdesc.html?postId=2092162824909537280 | 同上 | 2026-11-10 |
-| 阿里 (A) | 中国 | 菜鸟驿站-资深数据开发工程师-杭州 | https://talent.alibaba.com/off-campus/position-detail?positionId=100039480002 | 阿里招聘 `position/search`（带 XSRF cookie） | 2026-10 修改 |
-| 阿里 (A) | 中国 | 飞猪-高级数据开发工程师/专家-搜推广 | https://talent.alibaba.com/off-campus/position-detail?positionId=100041700001 | 同上 | 2026-11 修改 |
-| 阿里 (A) | 中国 | 淘天集团-高级数据开发工程师-财务信息化 | https://talent.alibaba.com/off-campus/position-detail?positionId=100032460002 | 同上 | 2026-10 修改 |
-| 阿里 (A) | 中国 | 阿里健康-数据开发-北京 | https://talent.alibaba.com/off-campus/position-detail?positionId=100047160002 | 同上 | 2026-10 修改 |
+| 阿里 (A) | 中国 | 菜鸟驿站-资深数据开发工程师-杭州 | https://talent-post.alibaba.com/off-campus/position-detail?positionId=100039480002 | 阿里招聘 `position/search`（带 XSRF cookie）；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 | 2026-10 修改 |
+| 阿里 (A) | 中国 | 飞猪-高级数据开发工程师/专家-搜推广 | https://talent-holding.alibaba.com/off-campus/position-detail?positionId=100041700001 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 | 2026-11 修改 |
+| 阿里 (A) | 中国 | 淘天集团-高级数据开发工程师-财务信息化 | https://talent.taotian.com/off-campus/position-detail?positionId=100032460002 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 | 2026-10 修改 |
+| 阿里 (A) | 中国 | 阿里健康-数据开发-北京 | https://careers.alihealth.cn/off-campus/position-detail?positionId=100047160002 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 | 2026-10 修改 |
 | 美团 (MEITUAN) | 中国 | Keeta 大数据开发 | https://zhaopin.meituan.com/web/position/detail?jobUnionId=4828413893&highlightType=social | 美团招聘 API `job/getJobList`（jobDuty / jobRequirement） | 2026-11 在架 |
 | 美团 (MEITUAN) | 中国 | 骑行-数据开发工程师 | https://zhaopin.meituan.com/web/position/detail?jobUnionId=4885047275&highlightType=social | 同上 | 2026-11 在架 |
 | 美团 (MEITUAN) | 中国 | 商业增值-大数据开发工程师（广告方向） | https://zhaopin.meituan.com/web/position/detail?jobUnionId=4686125855&highlightType=social | 同上 | 2026-11 在架 |

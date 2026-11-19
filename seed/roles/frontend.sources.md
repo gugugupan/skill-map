@@ -13,12 +13,12 @@
 | OpenAI (O) | 美 | Frontend Software Engineer, Codex App | https://jobs.ashbyhq.com/openai/5f6685ad-2fba-4e60-8982-fa142b33e194 | Ashby API |
 | OpenAI (O) | 美 | Frontend Software Engineer, ChatGPT Space | https://jobs.ashbyhq.com/openai/1f99d5d3-4512-4247-aaba-3133a3dabf5a | Ashby API |
 | Notion (NOTION) | 美 | Software Engineer, Web Infrastructure | https://jobs.ashbyhq.com/notion/06c2599d-4dd5-4f97-843f-7194b546f042 | Ashby API |
-| 阿里 (A) | 中 | 智元科技-前端开发工程师-广州 | https://talent.alibaba.com/off-campus/position-detail?positionId=100052760004 | talent.alibaba.com position/search 接口 |
-| 阿里 (A) | 中 | ATH事业群-AI 前端开发工程师-杭州 | https://talent.alibaba.com/off-campus/position-detail?positionId=100045840004 | 同上 |
-| 阿里 (A) | 中 | 娱驰BG-资深大前端/ 跨端开发专家 | https://talent.alibaba.com/off-campus/position-detail?positionId=100036840002 | 同上 |
-| 阿里 (A) | 中 | 千问事业部-AI视频剪辑前端开发专家-智能创作 | https://talent.alibaba.com/off-campus/position-detail?positionId=100010060039 | 同上 |
-| 阿里 (A) | 中 | 高德-前端开发工程师-共享专项 | https://talent.alibaba.com/off-campus/position-detail?positionId=5000014035 | 同上 |
-| 阿里 (A) | 中 | 诚云科技-前端开发工程师-融媒体 | https://talent.alibaba.com/off-campus/position-detail?positionId=100055580006 | 同上 |
+| 阿里 (A) | 中 | 智元科技-前端开发工程师-广州 | https://talent-holding.alibaba.com/off-campus/position-detail?positionId=100052760004 | talent.alibaba.com position/search 接口；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 |
+| 阿里 (A) | 中 | ATH事业群-AI 前端开发工程师-杭州 | https://careers-tongyi.alibaba.com/off-campus/position-detail?positionId=100045840004 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 |
+| 阿里 (A) | 中 | 娱驰BG-资深大前端/ 跨端开发专家 | https://talent-holding.alibaba.com/off-campus/position-detail?positionId=100036840002 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 |
+| 阿里 (A) | 中 | 千问事业部-AI视频剪辑前端开发专家-智能创作 | https://talent.quark.cn/off-campus/position-detail?positionId=100010060039 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 |
+| 阿里 (A) | 中 | 高德-前端开发工程师-共享专项 | https://talent.amap.com/off-campus/position-detail?positionId=5000014035 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 |
+| 阿里 (A) | 中 | 诚云科技-前端开发工程师-融媒体 | https://talent-holding.alibaba.com/off-campus/position-detail?positionId=100055580006 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 |
 | 腾讯 (T) | 中 | 《无畏契约》-前端开发工程师-（AI & 创新互动方向） | https://careers.tencent.com/jobdesc.html?postId=2088182151676870656 | careers.tencent.com ByPostId 接口 |
 | 腾讯 (T) | 中 | 智能体-桌面端开发负责人-WorkBuddy | https://careers.tencent.com/jobdesc.html?postId=2102397717010624512 | 同上 |
 | 百度 (B) | 中 | 前端工程师（J105469） | https://talent.baidu.com/jobs/detail/SOCIAL/673e2d85-1b34-466e-bf8c-fd0181870170 | talent.baidu.com getPostListNew 接口 |

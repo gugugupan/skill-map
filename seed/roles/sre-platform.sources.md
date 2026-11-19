@@ -12,8 +12,8 @@
 | 4 | Coinbase (COINBASE) | 美国 | Senior Software Engineer, Compute Platform | https://www.coinbase.com/careers/positions/7701645?gh_jid=7701645 | Greenhouse API `boards/coinbase`（absolute_url） | 2026-10-30 |
 | 5 | Airbnb (AIRBNB) | 美国 | Staff Software Engineer, Cloud Infrastructure | https://careers.airbnb.com/positions/8257909?gh_jid=8257909 | Greenhouse API `boards/airbnb`（absolute_url） | 2026-11-10 |
 | 6 | Cloudflare (CLOUDFLARE) | 美国公司（岗位在 Lisbon/London） | Systems Reliability Engineer - Core | https://boards.greenhouse.io/cloudflare/jobs/8324908?gh_jid=8324908 | Greenhouse API `boards/cloudflare` | 2026-11-09 |
-| 7 | 阿里 (A) | 中国 | 阿里云智能-站点可靠性工程（SRE）-杭州 | https://talent.alibaba.com/off-campus/position-detail?positionId=100055600002 | talent.alibaba.com `position/search` 接口（带 XSRF token） | 2026-11-11 |
-| 8 | 阿里 (A) | 中国 | 业务技术-高级开发工程师-SRE | https://talent.alibaba.com/off-campus/position-detail?positionId=100045600001 | 同上 | 2026-10-14 |
+| 7 | 阿里 (A) | 中国 | 阿里云智能-站点可靠性工程（SRE）-杭州 | https://careers.aliyun.com/off-campus/position-detail?positionId=100055600002 | talent.alibaba.com `position/search` 接口（带 XSRF token）；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 | 2026-11-11 |
+| 8 | 阿里 (A) | 中国 | 业务技术-高级开发工程师-SRE | https://talent-holding.alibaba.com/off-campus/position-detail?positionId=100045600001 | 同上；链接为各业务招聘官网详情页，2026-11-19 浏览器打开可见职位标题 | 2026-10-14 |
 | 9 | 腾讯 (T) | 中国 | 云原生高级SRE工程师（深圳/北京） | https://careers.tencent.com/jobdesc.html?postId=2113089267273216000 | careers.tencent.com `api/post/ByPostId` | 2026-11-02 |
 | 10 | 百度 (B) | 中国 | SRE工程师（J103236） | https://talent.baidu.com/jobs/detail/SOCIAL/552ea65a-df8b-4482-9cb7-9b5679752450 | talent.baidu.com `httservice/getPostListNew` | 2026-08-05 |
 | 11 | 百度 (B) | 中国 | 云计算运维研发Devops工程师（J94372） | https://talent.baidu.com/jobs/detail/SOCIAL/603db4ae-3f52-48c2-9fe2-2b9bf6c53261 | 同上 | 2025-10-10 |
