@@ -1,0 +1,12 @@
+[
+  {"code": "O", "name": "OpenAI", "jobs": [
+    {"title": "Agent 基础设施（截图）", "url": null},
+    {"title": "Software Engineer, Agent Runtime", "url": "https://openai.com/careers/software-engineer-product-infrastructure-agent-runtime-san-francisco/"}
+  ]},
+  {"code": "AN", "name": "Anthropic", "jobs": [
+    {"title": "Software Engineer, Sandboxing", "url": "https://jobs.accel.com/companies/anthropic/jobs/66236454-software-engineer-sandboxing"},
+    {"title": "Senior / Staff+ SWE, Autonomous Agent Infrastructure", "url": "https://job-boards.greenhouse.io/anthropic/jobs/5065894008"}
+  ]},
+  {"code": "A", "name": "阿里", "jobs": [{"title": "Agent 基础设施（截图）", "url": null}]},
+  {"code": "B", "name": "百度", "jobs": [{"title": "云原生 Agent Infra 高级研发工程师（截图）", "url": null}]}
+]

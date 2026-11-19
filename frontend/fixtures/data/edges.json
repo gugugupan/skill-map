@@ -1,0 +1,7 @@
+[
+  {"from": "os", "to": "iso", "type": "prereq"},
+  {"from": "os", "to": "sandbox", "type": "prereq"},
+  {"from": "iso", "to": "sandbox", "type": "prereq"},
+  {"from": "llm", "to": "loop", "type": "prereq"},
+  {"from": "loop", "to": "sandbox", "type": "prereq"}
+]

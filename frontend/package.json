@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:fixtures": "vite --mode fixtures",
     "build": "tsc -b && vite build",
+    "build:fixtures": "tsc -b && vite build --mode fixtures",
     "lint": "oxlint",
     "preview": "vite preview"
   },

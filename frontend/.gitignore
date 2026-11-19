@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Root .gitignore ignores every data/ directory; fixtures are hand-written and tracked.
+!fixtures/data/
