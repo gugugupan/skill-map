@@ -17,6 +17,7 @@ if str(BACKEND_DIR) not in sys.path:
 from app import db  # noqa: E402
 
 DEFAULT_HTML = SEED_DIR / "reference.html"
+DEFAULT_OVERRIDES = SEED_DIR / "reference_overrides.json"
 ROLE_FAMILY = "agent-infra"
 ROADMAP_ORIGIN = "reference"
 CONSTANTS = ("JD", "SOURCES", "CLUSTERS", "N", "PRE", "PATH")
@@ -52,6 +53,20 @@ def extract_constants(html: str) -> dict:
     program = "\n".join(snippets) + f"\nprocess.stdout.write(JSON.stringify({{{', '.join(CONSTANTS)}}}));\n"
     out = subprocess.run(["node", "-e", program], capture_output=True, text=True, check=True)
     return json.loads(out.stdout)
+
+
+def apply_overrides(sources: list, overrides: dict) -> None:
+    """Replace (title, url) of SOURCES jobs matched by (company code, original title), in place."""
+    for o in overrides["jobs"]:
+        hits = [
+            job
+            for src in sources if src["k"] == o["code"]
+            for job in src["jobs"] if job[0] == o["original_title"]
+        ]
+        if not hits:
+            raise ValueError(f"override not found in SOURCES: {o['code']} {o['original_title']!r}")
+        for job in hits:
+            job[0], job[1] = o["title"], o["url"]
 
 
 def _dumps(value) -> str:
@@ -159,8 +174,10 @@ def _import(conn, data: dict) -> None:
             )
 
 
-def import_reference(db_path=None, html_path=DEFAULT_HTML) -> None:
+def import_reference(db_path=None, html_path=DEFAULT_HTML, overrides_path=DEFAULT_OVERRIDES) -> None:
     data = extract_constants(Path(html_path).read_text(encoding="utf-8"))
+    if overrides_path is not None:
+        apply_overrides(data["SOURCES"], json.loads(Path(overrides_path).read_text(encoding="utf-8")))
     conn = db.connect(db_path)
     try:
         db.migrate(conn)

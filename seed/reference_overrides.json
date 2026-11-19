@@ -1,0 +1,36 @@
+{
+  "jobs": [
+    {
+      "code": "O",
+      "original_title": "Agent 基础设施（截图）",
+      "title": "Software Engineer, Agent Infrastructure",
+      "url": "https://jobs.ashbyhq.com/openai/c1316397-25bb-4add-9e9d-0e3ea8ba929a",
+      "fetched": "2026-11-19",
+      "via": "Ashby posting API (api.ashbyhq.com/posting-api/job-board/openai)"
+    },
+    {
+      "code": "A",
+      "original_title": "Agent 基础设施（截图）",
+      "title": "阿里云智能-agent sandbox运行时开发专家",
+      "url": "https://careers.aliyun.com/off-campus/position-detail?lang=zh&positionId=100013683001",
+      "fetched": "2026-11-19",
+      "via": "careers.aliyun.com social hiring search, read in browser"
+    },
+    {
+      "code": "B",
+      "original_title": "云原生 Agent Infra 高级研发工程师（截图）",
+      "title": "云原生 Agent Infra 高级研发工程师",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/4b326f6b-2c39-461c-ae64-69b4201c680e",
+      "fetched": "2026-11-19",
+      "via": "talent.baidu.com getPostListNew API"
+    },
+    {
+      "code": "X",
+      "original_title": "大模型基建部 AgentSphere（截图）",
+      "title": "【2027校招】AI Agent Infra 工程师",
+      "url": "https://job.xiaohongshu.com/campus/position/22062",
+      "fetched": "2026-11-19",
+      "via": "job.xiaohongshu.com pageQueryPosition API"
+    }
+  ]
+}

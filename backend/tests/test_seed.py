@@ -72,10 +72,10 @@ def test_field_mapping(db_file):
             " WHERE rc.role_family = 'agent-infra' ORDER BY rc.sort")][:2] == ["O", "AN"]
         src = conn.execute("SELECT * FROM source WHERE code = 'AN'").fetchone()
         assert (src["name"], src["company"], src["type"], src["url"]) == ("Anthropic", "Anthropic", "manual", None)
-        screenshot = conn.execute(
-            "SELECT url, status, role_family FROM job_posting WHERE title = '大模型基建部 AgentSphere（截图）'"
+        xhs = conn.execute(
+            "SELECT url, status, role_family FROM job_posting WHERE title = '【2027校招】AI Agent Infra 工程师'"
         ).fetchone()
-        assert tuple(screenshot) == (None, "open", "agent-infra")
+        assert tuple(xhs) == ("https://job.xiaohongshu.com/campus/position/22062", "open", "agent-infra")
         rm = conn.execute("SELECT params FROM roadmap").fetchone()
         assert json.loads(rm[0]) == {"origin": "reference"}
         first = conn.execute(
@@ -85,6 +85,39 @@ def test_field_mapping(db_file):
         assert tuple(first) == (1, "Agent 核心", 0, "llm")
     finally:
         conn.close()
+
+
+def test_overrides_replace_screenshot_jobs(db_file):
+    overrides = json.loads((SEED_DIR / "reference_overrides.json").read_text(encoding="utf-8"))["jobs"]
+    conn = db.connect(db_file)
+    try:
+        assert conn.execute("SELECT COUNT(*) FROM job_posting WHERE title LIKE '%截图%'").fetchone()[0] == 0
+        rows = {
+            (r[0], r[1]): r[2] for r in conn.execute(
+                "SELECT s.code, j.title, j.url FROM job_posting j JOIN source s ON s.id = j.source_id")
+        }
+        for o in overrides:
+            assert rows[(o["code"], o["title"])] == o["url"]
+    finally:
+        conn.close()
+
+
+def test_override_without_match_raises(tmp_path):
+    bad = tmp_path / "overrides.json"
+    bad.write_text(json.dumps({"jobs": [{
+        "code": "O", "original_title": "不存在的岗位（截图）",
+        "title": "x", "url": "https://example.com", "fetched": "2026-11-19",
+    }]}), encoding="utf-8")
+    with pytest.raises(ValueError, match="override not found"):
+        seed.import_reference(tmp_path / "seed.db", SEED_DIR / "reference.html", bad)
+
+
+def test_override_wrong_company_raises():
+    sources = [{"k": "A", "jobs": [["Agent 基础设施（截图）", ""]]}]
+    with pytest.raises(ValueError, match="override not found"):
+        seed.apply_overrides(sources, {"jobs": [{
+            "code": "B", "original_title": "Agent 基础设施（截图）", "title": "x", "url": "u"}]})
+    assert sources[0]["jobs"][0] == ["Agent 基础设施（截图）", ""]
 
 
 @pytest.mark.parametrize("title, expected", [
