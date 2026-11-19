@@ -1,0 +1,18 @@
+[
+ {
+  "code": "O",
+  "name": "OpenAI"
+ },
+ {
+  "code": "AN",
+  "name": "Anthropic"
+ },
+ {
+  "code": "A",
+  "name": "Alibaba"
+ },
+ {
+  "code": "B",
+  "name": "Baidu"
+ }
+]

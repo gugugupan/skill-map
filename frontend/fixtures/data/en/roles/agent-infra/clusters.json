@@ -1,0 +1,17 @@
+[
+ {
+  "slug": "found",
+  "name": "Engineering Foundations",
+  "color": "#5B6B7A"
+ },
+ {
+  "slug": "core",
+  "name": "Agent Core Mechanics",
+  "color": "#3D5A99"
+ },
+ {
+  "slug": "sec",
+  "name": "Sandbox and Security",
+  "color": "#B23A48"
+ }
+]

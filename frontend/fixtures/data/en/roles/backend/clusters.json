@@ -1,0 +1,12 @@
+[
+ {
+  "slug": "backend-data",
+  "name": "Data Storage",
+  "color": "#2A8C82"
+ },
+ {
+  "slug": "backend-dist",
+  "name": "Distributed Systems",
+  "color": "#C08A1E"
+ }
+]

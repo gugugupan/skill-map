@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pytest
 
@@ -8,6 +9,7 @@ from conftest import FIXTURE_ROLES, SEED_DIR, load_seed_module
 ref = load_seed_module("import_reference")
 roles = load_seed_module("import_roles")
 
+FIXTURE_I18N = Path(__file__).resolve().parent / "fixtures" / "i18n" / "en.json"
 ROLE_FILES = ["clusters.json", "companies.json", "sources.json", "skills.json", "edges.json", "roadmap.json"]
 GLOBAL_SKILL_KEYS = {"slug", "name", "description", "concepts", "practice", "resources", "prereqs", "unlocks"}
 
@@ -16,10 +18,10 @@ def load(out, name):
     return json.loads((out / name).read_text(encoding="utf-8"))
 
 
-def run_export(db_file, out):
+def run_export(db_file, out, i18n=None):
     conn = db.connect(db_file)
     try:
-        return export.export(conn, out)
+        return export.export(conn, out, i18n)
     finally:
         conn.close()
 
@@ -57,8 +59,18 @@ def out(multi_db, tmp_path_factory):
     (out / "roles" / "data-eng").mkdir(parents=True)
     (out / "roles" / "data-eng" / "skills.json").write_text("[]")
     (out / "keep.txt").write_text("x")
-    run_export(multi_db, out)
+    for name in export.LEGACY_FILES:
+        (out / "en" / name).parent.mkdir(parents=True, exist_ok=True)
+        (out / "en" / name).write_text("[]")
+    (out / "en" / "roadmaps").mkdir()
+    (out / "en" / "roles" / "data-eng").mkdir(parents=True)
+    (out / "en" / "roles" / "data-eng" / "skills.json").write_text("[]")
+    run_export(multi_db, out, FIXTURE_I18N)
     return out
+
+
+def rel_files(root):
+    return sorted(str(p.relative_to(root)) for p in root.rglob("*") if p.is_file())
 
 
 def test_reference_only(ref_out):
@@ -88,6 +100,8 @@ def test_layout(out):
     for role in ("agent-infra", "backend", "frontend"):
         assert sorted(p.name for p in (out / "roles" / role).iterdir()) == sorted(ROLE_FILES)
     assert "\\u" not in (out / "skills.json").read_text(encoding="utf-8")
+    zh = [f for f in rel_files(out) if not f.startswith("en/") and f != "keep.txt"]
+    assert rel_files(out / "en") == zh
 
 
 def test_roles_json(out):
@@ -169,9 +183,10 @@ def test_role_consistency(out):
 
 
 def test_deterministic(multi_db, out, tmp_path):
-    written = run_export(multi_db, tmp_path)
+    written = run_export(multi_db, tmp_path, FIXTURE_I18N)
+    assert any(str(p.relative_to(tmp_path)).startswith("en/") for p in written)
     for path in written:
         name = path.relative_to(tmp_path)
-        if str(name) == "meta.json":
+        if name.name == "meta.json":
             continue
         assert path.read_bytes() == (out / name).read_bytes(), name

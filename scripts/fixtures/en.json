@@ -1,0 +1,86 @@
+{
+  "roles": {
+    "agent-infra": {"name": "Agent Infra Engineer", "root_label": "Agent Infra Engineer"},
+    "backend": {"name": "Backend Engineer", "root_label": "Backend Engineer"}
+  },
+  "clusters": {
+    "found": "Engineering Foundations",
+    "core": "Agent Core Mechanics",
+    "sec": "Sandbox and Security",
+    "backend-data": "Data Storage",
+    "backend-dist": "Distributed Systems"
+  },
+  "companies": {
+    "O": "OpenAI",
+    "AN": "Anthropic",
+    "A": "Alibaba",
+    "B": "Baidu",
+    "STRIPE": "Stripe",
+    "MERCARI": "Mercari"
+  },
+  "phases": {
+    "agent-infra": ["Agent Core", "Sandbox and Security", "Engineering Foundations"],
+    "backend": ["System Foundations", "Data Storage"]
+  },
+  "resources": {
+    "Liz Rice《Container Security》": "Liz Rice, Container Security",
+    "namespaces(7) 手册": "namespaces(7) man page",
+    "Kleppmann《Designing Data-Intensive Applications》": "Kleppmann, Designing Data-Intensive Applications",
+    "Anthropic API 文档": "Anthropic API documentation",
+    "ReAct 论文（Yao et al., 2022）": "ReAct paper (Yao et al., 2022)",
+    "Firecracker 论文（NSDI 2020）": "Firecracker paper (NSDI 2020)",
+    "E2B 开源代码": "E2B source code",
+    "PostgreSQL 官方文档": "PostgreSQL official documentation",
+    "Redis 官方文档": "Redis official documentation"
+  },
+  "skills": {
+    "os": {
+      "name": "Linux and OS",
+      "description": "Namespaces, cgroups, seccomp, file systems and the process model. The foundation of every isolation technology and sandbox.",
+      "concepts": ["namespace / cgroups v2", "seccomp and capabilities", "overlayfs and copy-on-write"],
+      "practice": "Build a minimal container by hand with unshare and cgroups, limiting CPU, memory and network."
+    },
+    "dist": {
+      "name": "Distributed Systems",
+      "description": "Long-running tasks, state recovery and scheduling are all distributed systems problems at heart.",
+      "concepts": ["Consistency models and consensus (Raft)", "Idempotency and the limits of exactly-once"],
+      "practice": "Revisit the Raft lab from MIT 6.5840, focusing on how idempotency and retries are designed."
+    },
+    "llm": {
+      "name": "LLM Fundamentals",
+      "description": "Building an agent platform means understanding the input and output constraints of the model.",
+      "concepts": ["Tokens, context window, sampling parameters", "Function calling and structured output"],
+      "practice": "Without a framework, call the API directly and implement one multi-turn tool-use exchange."
+    },
+    "loop": {
+      "name": "Agent Loop",
+      "description": "The loop of model, tools and observations: the minimal core of every agent.",
+      "concepts": ["Stop conditions and max steps", "Returning tool errors to the model", "Interrupting for human approval"],
+      "practice": "Implement a complete agent loop with approval and interruption in under 200 lines."
+    },
+    "iso": {
+      "name": "Isolation Technologies",
+      "description": "Security and performance trade-offs between containers, gVisor, Firecracker and Kata.",
+      "concepts": ["Shared kernel vs. dedicated kernel", "gVisor user-space kernel", "Firecracker microVM"],
+      "practice": "On one machine, compare the startup latency and syscall overhead of the three runtimes."
+    },
+    "sandbox": {
+      "name": "Code Execution Sandbox",
+      "description": "The environment where agents write and run code, and the core product of agent infrastructure.",
+      "concepts": ["File system and workspace", "Network egress control", "Lifecycle and cleanup"],
+      "practice": "Build a code execution service with an API on top of Firecracker or gVisor."
+    },
+    "sql-db": {
+      "name": "Relational Databases and SQL",
+      "description": "Transactions, indexes and query optimization: the state foundation of most backend services.",
+      "concepts": ["ACID and isolation levels", "B+ tree indexes", "EXPLAIN and query plans"],
+      "practice": "Design indexes for a table with tens of millions of rows and compare query plans and latency before and after."
+    },
+    "cache": {
+      "name": "Caching",
+      "description": "Trade memory for latency and throughput while handling consistency and invalidation.",
+      "concepts": ["Cache-aside and write-through", "Cache breakdown, penetration and avalanche", "Redis data structures"],
+      "practice": "Add a Redis cache to a read-heavy endpoint and load-test its hit rate and P99."
+    }
+  }
+}

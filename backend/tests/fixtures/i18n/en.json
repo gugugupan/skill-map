@@ -1,0 +1,738 @@
+{
+  "roles": {
+    "agent-infra": {
+      "name": "Agent Infra Engineer",
+      "root_label": "Agent Infra Engineer"
+    },
+    "backend": {
+      "name": "Backend Engineer",
+      "root_label": "Backend Engineer"
+    },
+    "frontend": {
+      "name": "Frontend Engineer",
+      "root_label": "Frontend Engineer"
+    }
+  },
+  "clusters": {
+    "found": "Engineering Foundations",
+    "core": "Agent Core",
+    "rt": "Runtime",
+    "sec": "Sandbox and Security",
+    "ctx": "Context and Tools",
+    "eval": "Evals and Observability",
+    "plat": "Platform and Control Plane",
+    "front": "Frontier and Ways of Working",
+    "backend-data": "Data Storage",
+    "backend-dist": "Distributed Systems",
+    "frontend-web": "Web Foundations",
+    "frontend-eng": "Engineering Tooling"
+  },
+  "companies": {
+    "O": "OpenAI",
+    "AN": "Anthropic",
+    "CU": "Cursor",
+    "CG": "Cognition",
+    "A": "Alibaba",
+    "B": "Baidu",
+    "X": "Xiaohongshu (RED)",
+    "K": "Moonshot AI",
+    "T": "Tencent",
+    "JP": "Japanese companies",
+    "STRIPE": "Stripe",
+    "MERCARI": "Mercari"
+  },
+  "phases": {
+    "agent-infra": [
+      "Agent Core",
+      "Context and Tools",
+      "Long-Running Task Runtime",
+      "Sandbox and Security",
+      "Evals and Observability",
+      "Platform Engineering",
+      "Frontier"
+    ],
+    "backend": [
+      "Foundations",
+      "Advanced"
+    ],
+    "frontend": [
+      "Foundations",
+      "Engineering Tooling"
+    ]
+  },
+  "resources": {
+    "Liz Rice《Container Security》": "Liz Rice Container Security",
+    "man7.org 的 namespaces(7) 手册": "man7.org namespaces(7)",
+    "《Computer Networking: A Top-Down Approach》": "Computer Networking: A Top-Down Approach",
+    "Kleppmann《Designing Data-Intensive Applications》": "Kleppmann Designing Data-Intensive Applications",
+    "Raft 论文": "Raft",
+    "MIT 6.5840 课程": "MIT 6.5840",
+    "Kubernetes 官方文档": "Kubernetes",
+    "《The Go Programming Language》": "The Go Programming Language",
+    "《Rust for Rustaceans》": "Rust for Rustaceans",
+    "Karpathy「Let’s build GPT」视频": "Karpathy Let’s build GPT",
+    "Anthropic 与 OpenAI 的 API 文档": "Anthropic OpenAI API",
+    "ReAct 论文（Yao et al., 2022）": "ReAct Yao et al., 2022",
+    "Anthropic「Building Effective Agents」": "Anthropic Building Effective Agents",
+    "LangGraph 文档": "LangGraph",
+    "Anthropic「How we built our multi-agent research system」": "Anthropic How we built our multi-agent research system",
+    "Codex CLI 源码（GitHub）": "Codex CLI GitHub",
+    "OpenCode 源码（GitHub）": "OpenCode GitHub",
+    "Playwright 文档": "Playwright",
+    "OSWorld 基准": "OSWorld",
+    "Temporal 官方文档": "Temporal",
+    "DDIA 的事件溯源章节": "DDIA",
+    "OpenAI Responses API 与 Conversations 设计": "OpenAI Responses API Conversations",
+    "Anthropic Messages API 设计": "Anthropic Messages API",
+    "LangGraph checkpointer 文档": "LangGraph checkpointer",
+    "Saga 模式": "Saga",
+    "Borg 论文": "Borg",
+    "Firecracker snapshot 文档": "Firecracker snapshot",
+    "Google SRE Book 的过载处理章节": "Google SRE Book",
+    "Firecracker 论文（NSDI 2020）": "Firecracker NSDI 2020",
+    "gVisor 官方文档": "gVisor",
+    "Kata Containers 文档": "Kata Containers",
+    "E2B 开源代码": "E2B",
+    "Firecracker 入门文档": "Firecracker",
+    "MCP 授权规范": "MCP",
+    "HashiCorp Vault 文档": "HashiCorp Vault",
+    "Simon Willison 关于 prompt injection 的系列博客": "Simon Willison prompt injection",
+    "AWS Lambda 与 Firecracker 的设计资料": "AWS Lambda Firecracker",
+    "Anthropic「Effective context engineering for AI agents」": "Anthropic Effective context engineering for AI agents",
+    "MemGPT 论文": "MemGPT",
+    "Anthropic memory tool 文档": "Anthropic memory tool",
+    "Anthropic「Contextual Retrieval」": "Anthropic Contextual Retrieval",
+    "BEIR 基准": "BEIR",
+    "Anthropic「Writing effective tools for agents」": "Anthropic Writing effective tools for agents",
+    "MCP 官方规范（modelcontextprotocol.io）": "MCP modelcontextprotocol.io",
+    "Anthropic Agent Skills 文档": "Anthropic Agent Skills",
+    "API Gateway 设计资料（Envoy 文档）": "API Gateway Envoy",
+    "LangFuse 文档": "LangFuse",
+    "Anthropic「Demystifying evals for AI agents」": "Anthropic Demystifying evals for AI agents",
+    "Google SRE Book 的发布工程章节": "Google SRE Book (2)",
+    "Anthropic 与 OpenAI 的 prompt caching 文档": "Anthropic OpenAI prompt caching",
+    "Kubernetes 架构文档": "Kubernetes (2)",
+    "Envoy 与 xDS": "Envoy xDS",
+    "OCI Image 规范（作为类比）": "OCI Image",
+    "John Ousterhout《A Philosophy of Software Design》": "John Ousterhout A Philosophy of Software Design",
+    "Stripe API 设计相关文章": "Stripe API",
+    "DeepSeek-R1 论文（GRPO）": "DeepSeek-R1 GRPO",
+    "vLLM 论文（SOSP 2023）": "vLLM SOSP 2023",
+    "Claude Code 文档": "Claude Code",
+    "Codex 文档": "Codex",
+    "各家工程博客": "Untitled",
+    "Brendan Gregg《BPF Performance Tools》": "Brendan Gregg BPF Performance Tools",
+    "KVM 与 Firecracker 官方文档": "KVM Firecracker",
+    "Anthropic「Building Effective Agents」中关于人类检查点的部分": "Anthropic Building Effective Agents (2)",
+    "Google A2A 协议规范": "Google A2A",
+    "MCP 规范（对比阅读）": "MCP (2)",
+    "OpenAI background mode 文档": "OpenAI background mode",
+    "Server-Sent Events 规范": "Server-Sent Events",
+    "Kubernetes 多集群管理资料": "Kubernetes (3)",
+    "Anthropic Managed Agents 文档": "Anthropic Managed Agents",
+    "LiteLLM 源码": "LiteLLM",
+    "OpenRouter 文档": "OpenRouter",
+    "Google SRE Book 的灰度发布章节": "Google SRE Book (3)",
+    "Google《Site Reliability Engineering》": "Google Site Reliability Engineering",
+    "Chaos Engineering（O’Reilly）": "Chaos Engineering O’Reilly",
+    "PostgreSQL 官方文档": "PostgreSQL official documentation",
+    "Redis 官方文档": "Redis official documentation",
+    "TypeScript 官方文档": "TypeScript official documentation"
+  },
+  "skills": {
+    "os": {
+      "name": "Os",
+      "description": "Fixture description of os.",
+      "concepts": [
+        "os concept 1",
+        "os concept 2",
+        "os concept 3",
+        "os concept 4"
+      ],
+      "practice": "Fixture practice for os."
+    },
+    "net": {
+      "name": "Net",
+      "description": "Fixture description of net.",
+      "concepts": [
+        "net concept 1",
+        "net concept 2",
+        "net concept 3",
+        "net concept 4"
+      ],
+      "practice": "Fixture practice for net."
+    },
+    "dist": {
+      "name": "Dist",
+      "description": "Fixture description of dist.",
+      "concepts": [
+        "dist concept 1",
+        "dist concept 2",
+        "dist concept 3",
+        "dist concept 4"
+      ],
+      "practice": "Fixture practice for dist."
+    },
+    "k8s": {
+      "name": "K8S",
+      "description": "Fixture description of k8s.",
+      "concepts": [
+        "k8s concept 1",
+        "k8s concept 2",
+        "k8s concept 3",
+        "k8s concept 4"
+      ],
+      "practice": "Fixture practice for k8s."
+    },
+    "lang": {
+      "name": "Lang",
+      "description": "Fixture description of lang.",
+      "concepts": [
+        "lang concept 1",
+        "lang concept 2",
+        "lang concept 3",
+        "lang concept 4"
+      ],
+      "practice": "Fixture practice for lang."
+    },
+    "llm": {
+      "name": "Llm",
+      "description": "Fixture description of llm.",
+      "concepts": [
+        "llm concept 1",
+        "llm concept 2",
+        "llm concept 3",
+        "llm concept 4"
+      ],
+      "practice": "Fixture practice for llm."
+    },
+    "loop": {
+      "name": "Loop",
+      "description": "Fixture description of loop.",
+      "concepts": [
+        "loop concept 1",
+        "loop concept 2",
+        "loop concept 3",
+        "loop concept 4"
+      ],
+      "practice": "Fixture practice for loop."
+    },
+    "patterns": {
+      "name": "Patterns",
+      "description": "Fixture description of patterns.",
+      "concepts": [
+        "patterns concept 1",
+        "patterns concept 2",
+        "patterns concept 3",
+        "patterns concept 4"
+      ],
+      "practice": "Fixture practice for patterns."
+    },
+    "multi": {
+      "name": "Multi",
+      "description": "Fixture description of multi.",
+      "concepts": [
+        "multi concept 1",
+        "multi concept 2",
+        "multi concept 3",
+        "multi concept 4"
+      ],
+      "practice": "Fixture practice for multi."
+    },
+    "harness": {
+      "name": "Harness",
+      "description": "Fixture description of harness.",
+      "concepts": [
+        "harness concept 1",
+        "harness concept 2",
+        "harness concept 3",
+        "harness concept 4"
+      ],
+      "practice": "Fixture practice for harness."
+    },
+    "cua": {
+      "name": "Cua",
+      "description": "Fixture description of cua.",
+      "concepts": [
+        "cua concept 1",
+        "cua concept 2",
+        "cua concept 3",
+        "cua concept 4"
+      ],
+      "practice": "Fixture practice for cua."
+    },
+    "durable": {
+      "name": "Durable",
+      "description": "Fixture description of durable.",
+      "concepts": [
+        "durable concept 1",
+        "durable concept 2",
+        "durable concept 3",
+        "durable concept 4"
+      ],
+      "practice": "Fixture practice for durable."
+    },
+    "state": {
+      "name": "State",
+      "description": "Fixture description of state.",
+      "concepts": [
+        "state concept 1",
+        "state concept 2",
+        "state concept 3",
+        "state concept 4"
+      ],
+      "practice": "Fixture practice for state."
+    },
+    "ckpt": {
+      "name": "Ckpt",
+      "description": "Fixture description of ckpt.",
+      "concepts": [
+        "ckpt concept 1",
+        "ckpt concept 2",
+        "ckpt concept 3",
+        "ckpt concept 4"
+      ],
+      "practice": "Fixture practice for ckpt."
+    },
+    "sched": {
+      "name": "Sched",
+      "description": "Fixture description of sched.",
+      "concepts": [
+        "sched concept 1",
+        "sched concept 2",
+        "sched concept 3",
+        "sched concept 4"
+      ],
+      "practice": "Fixture practice for sched."
+    },
+    "conc": {
+      "name": "Conc",
+      "description": "Fixture description of conc.",
+      "concepts": [
+        "conc concept 1",
+        "conc concept 2",
+        "conc concept 3",
+        "conc concept 4"
+      ],
+      "practice": "Fixture practice for conc."
+    },
+    "iso": {
+      "name": "Iso",
+      "description": "Fixture description of iso.",
+      "concepts": [
+        "iso concept 1",
+        "iso concept 2",
+        "iso concept 3",
+        "iso concept 4"
+      ],
+      "practice": "Fixture practice for iso."
+    },
+    "sandbox": {
+      "name": "Sandbox",
+      "description": "Fixture description of sandbox.",
+      "concepts": [
+        "sandbox concept 1",
+        "sandbox concept 2",
+        "sandbox concept 3",
+        "sandbox concept 4"
+      ],
+      "practice": "Fixture practice for sandbox."
+    },
+    "identity": {
+      "name": "Identity",
+      "description": "Fixture description of identity.",
+      "concepts": [
+        "identity concept 1",
+        "identity concept 2",
+        "identity concept 3",
+        "identity concept 4"
+      ],
+      "practice": "Fixture practice for identity."
+    },
+    "cred": {
+      "name": "Cred",
+      "description": "Fixture description of cred.",
+      "concepts": [
+        "cred concept 1",
+        "cred concept 2",
+        "cred concept 3",
+        "cred concept 4"
+      ],
+      "practice": "Fixture practice for cred."
+    },
+    "inject": {
+      "name": "Inject",
+      "description": "Fixture description of inject.",
+      "concepts": [
+        "inject concept 1",
+        "inject concept 2",
+        "inject concept 3",
+        "inject concept 4"
+      ],
+      "practice": "Fixture practice for inject."
+    },
+    "tenant": {
+      "name": "Tenant",
+      "description": "Fixture description of tenant.",
+      "concepts": [
+        "tenant concept 1",
+        "tenant concept 2",
+        "tenant concept 3",
+        "tenant concept 4"
+      ],
+      "practice": "Fixture practice for tenant."
+    },
+    "ctxeng": {
+      "name": "Ctxeng",
+      "description": "Fixture description of ctxeng.",
+      "concepts": [
+        "ctxeng concept 1",
+        "ctxeng concept 2",
+        "ctxeng concept 3",
+        "ctxeng concept 4"
+      ],
+      "practice": "Fixture practice for ctxeng."
+    },
+    "memory": {
+      "name": "Memory",
+      "description": "Fixture description of memory.",
+      "concepts": [
+        "memory concept 1",
+        "memory concept 2",
+        "memory concept 3",
+        "memory concept 4"
+      ],
+      "practice": "Fixture practice for memory."
+    },
+    "rag": {
+      "name": "Rag",
+      "description": "Fixture description of rag.",
+      "concepts": [
+        "rag concept 1",
+        "rag concept 2",
+        "rag concept 3",
+        "rag concept 4"
+      ],
+      "practice": "Fixture practice for rag."
+    },
+    "tools": {
+      "name": "Tools",
+      "description": "Fixture description of tools.",
+      "concepts": [
+        "tools concept 1",
+        "tools concept 2",
+        "tools concept 3",
+        "tools concept 4"
+      ],
+      "practice": "Fixture practice for tools."
+    },
+    "mcp": {
+      "name": "Mcp",
+      "description": "Fixture description of mcp.",
+      "concepts": [
+        "mcp concept 1",
+        "mcp concept 2",
+        "mcp concept 3",
+        "mcp concept 4"
+      ],
+      "practice": "Fixture practice for mcp."
+    },
+    "skills": {
+      "name": "Skills",
+      "description": "Fixture description of skills.",
+      "concepts": [
+        "skills concept 1",
+        "skills concept 2",
+        "skills concept 3",
+        "skills concept 4"
+      ],
+      "practice": "Fixture practice for skills."
+    },
+    "registry": {
+      "name": "Registry",
+      "description": "Fixture description of registry.",
+      "concepts": [
+        "registry concept 1",
+        "registry concept 2",
+        "registry concept 3",
+        "registry concept 4"
+      ],
+      "practice": "Fixture practice for registry."
+    },
+    "trace": {
+      "name": "Trace",
+      "description": "Fixture description of trace.",
+      "concepts": [
+        "trace concept 1",
+        "trace concept 2",
+        "trace concept 3",
+        "trace concept 4"
+      ],
+      "practice": "Fixture practice for trace."
+    },
+    "evals": {
+      "name": "Evals",
+      "description": "Fixture description of evals.",
+      "concepts": [
+        "evals concept 1",
+        "evals concept 2",
+        "evals concept 3",
+        "evals concept 4"
+      ],
+      "practice": "Fixture practice for evals."
+    },
+    "gate": {
+      "name": "Gate",
+      "description": "Fixture description of gate.",
+      "concepts": [
+        "gate concept 1",
+        "gate concept 2",
+        "gate concept 3",
+        "gate concept 4"
+      ],
+      "practice": "Fixture practice for gate."
+    },
+    "cost": {
+      "name": "Cost",
+      "description": "Fixture description of cost.",
+      "concepts": [
+        "cost concept 1",
+        "cost concept 2",
+        "cost concept 3",
+        "cost concept 4"
+      ],
+      "practice": "Fixture practice for cost."
+    },
+    "cpdp": {
+      "name": "Cpdp",
+      "description": "Fixture description of cpdp.",
+      "concepts": [
+        "cpdp concept 1",
+        "cpdp concept 2",
+        "cpdp concept 3",
+        "cpdp concept 4"
+      ],
+      "practice": "Fixture practice for cpdp."
+    },
+    "lifecycle": {
+      "name": "Lifecycle",
+      "description": "Fixture description of lifecycle.",
+      "concepts": [
+        "lifecycle concept 1",
+        "lifecycle concept 2",
+        "lifecycle concept 3",
+        "lifecycle concept 4"
+      ],
+      "practice": "Fixture practice for lifecycle."
+    },
+    "abstraction": {
+      "name": "Abstraction",
+      "description": "Fixture description of abstraction.",
+      "concepts": [
+        "abstraction concept 1",
+        "abstraction concept 2",
+        "abstraction concept 3",
+        "abstraction concept 4"
+      ],
+      "practice": "Fixture practice for abstraction."
+    },
+    "devx": {
+      "name": "Devx",
+      "description": "Fixture description of devx.",
+      "concepts": [
+        "devx concept 1",
+        "devx concept 2",
+        "devx concept 3",
+        "devx concept 4"
+      ],
+      "practice": "Fixture practice for devx."
+    },
+    "rl": {
+      "name": "Rl",
+      "description": "Fixture description of rl.",
+      "concepts": [
+        "rl concept 1",
+        "rl concept 2",
+        "rl concept 3",
+        "rl concept 4"
+      ],
+      "practice": "Fixture practice for rl."
+    },
+    "serving": {
+      "name": "Serving",
+      "description": "Fixture description of serving.",
+      "concepts": [
+        "serving concept 1",
+        "serving concept 2",
+        "serving concept 3",
+        "serving concept 4"
+      ],
+      "practice": "Fixture practice for serving."
+    },
+    "agentic": {
+      "name": "Agentic",
+      "description": "Fixture description of agentic.",
+      "concepts": [
+        "agentic concept 1",
+        "agentic concept 2",
+        "agentic concept 3",
+        "agentic concept 4"
+      ],
+      "practice": "Fixture practice for agentic."
+    },
+    "research": {
+      "name": "Research",
+      "description": "Fixture description of research.",
+      "concepts": [
+        "research concept 1",
+        "research concept 2",
+        "research concept 3",
+        "research concept 4"
+      ],
+      "practice": "Fixture practice for research."
+    },
+    "virt": {
+      "name": "Virt",
+      "description": "Fixture description of virt.",
+      "concepts": [
+        "virt concept 1",
+        "virt concept 2",
+        "virt concept 3",
+        "virt concept 4"
+      ],
+      "practice": "Fixture practice for virt."
+    },
+    "guard": {
+      "name": "Guard",
+      "description": "Fixture description of guard.",
+      "concepts": [
+        "guard concept 1",
+        "guard concept 2",
+        "guard concept 3",
+        "guard concept 4"
+      ],
+      "practice": "Fixture practice for guard."
+    },
+    "hitl": {
+      "name": "Hitl",
+      "description": "Fixture description of hitl.",
+      "concepts": [
+        "hitl concept 1",
+        "hitl concept 2",
+        "hitl concept 3",
+        "hitl concept 4"
+      ],
+      "practice": "Fixture practice for hitl."
+    },
+    "a2a": {
+      "name": "A2A",
+      "description": "Fixture description of a2a.",
+      "concepts": [
+        "a2a concept 1",
+        "a2a concept 2",
+        "a2a concept 3",
+        "a2a concept 4"
+      ],
+      "practice": "Fixture practice for a2a."
+    },
+    "async": {
+      "name": "Async",
+      "description": "Fixture description of async.",
+      "concepts": [
+        "async concept 1",
+        "async concept 2",
+        "async concept 3",
+        "async concept 4"
+      ],
+      "practice": "Fixture practice for async."
+    },
+    "hybrid": {
+      "name": "Hybrid",
+      "description": "Fixture description of hybrid.",
+      "concepts": [
+        "hybrid concept 1",
+        "hybrid concept 2",
+        "hybrid concept 3",
+        "hybrid concept 4"
+      ],
+      "practice": "Fixture practice for hybrid."
+    },
+    "gateway": {
+      "name": "Gateway",
+      "description": "Fixture description of gateway.",
+      "concepts": [
+        "gateway concept 1",
+        "gateway concept 2",
+        "gateway concept 3",
+        "gateway concept 4"
+      ],
+      "practice": "Fixture practice for gateway."
+    },
+    "rollout": {
+      "name": "Rollout",
+      "description": "Fixture description of rollout.",
+      "concepts": [
+        "rollout concept 1",
+        "rollout concept 2",
+        "rollout concept 3",
+        "rollout concept 4"
+      ],
+      "practice": "Fixture practice for rollout."
+    },
+    "sre": {
+      "name": "Sre",
+      "description": "Fixture description of sre.",
+      "concepts": [
+        "sre concept 1",
+        "sre concept 2",
+        "sre concept 3",
+        "sre concept 4"
+      ],
+      "practice": "Fixture practice for sre."
+    },
+    "sql-db": {
+      "name": "Relational Databases and SQL",
+      "description": "Transactions, indexes and query optimization.",
+      "concepts": [
+        "Transaction isolation",
+        "B+ tree indexes",
+        "Query plans",
+        "MVCC"
+      ],
+      "practice": "Add an index to a slow query and compare the query plans."
+    },
+    "cache": {
+      "name": "Caching",
+      "description": "Caching strategies and consistency.",
+      "concepts": [
+        "Redis",
+        "Cache penetration",
+        "Eviction policies",
+        "Consistency"
+      ],
+      "practice": "Put a read cache in front of an endpoint."
+    },
+    "web-basics": {
+      "name": "Web and Browser Basics",
+      "description": "HTTP, the DOM and the rendering pipeline.",
+      "concepts": [
+        "HTTP caching",
+        "DOM",
+        "Event loop",
+        "Critical rendering path"
+      ],
+      "practice": "Profile a page's first paint with DevTools."
+    },
+    "ts": {
+      "name": "TypeScript",
+      "description": "The type system and project configuration.",
+      "concepts": [
+        "Generics",
+        "Type narrowing",
+        "tsconfig",
+        "Declaration files"
+      ],
+      "practice": "Migrate a JS module to strict-mode TypeScript."
+    }
+  }
+}

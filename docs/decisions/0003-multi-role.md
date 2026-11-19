@@ -100,3 +100,5 @@ data/roles/<role>/roadmap.json        → {phases:[{title,skills:[slug]}]}
 ```
 
 全局 `skills.json` 里的 prereqs/unlocks 是全局的；前端在某岗位里显示先修和可进入时，只列属于该岗位的。旧的 data/clusters.json 等顶层文件不再生成。
+
+**补充（英文版，见 0005）**：`data/en/` 是上面全部文件的英文镜像，路径和结构完全相同（`data/en/roles.json`、`data/en/skills.json`、`data/en/roles/<role>/*.json` 等），只替换岗位名、能力点文字、资料标题、类别名、公司名和阶段标题；职位标题不翻译。

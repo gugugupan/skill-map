@@ -1,0 +1,32 @@
+[
+ {
+  "code": "STRIPE",
+  "name": "Stripe",
+  "jobs": [
+   {
+    "title": "Backend Engineer, Payments",
+    "url": "https://stripe.com/jobs"
+   }
+  ]
+ },
+ {
+  "code": "MERCARI",
+  "name": "Mercari",
+  "jobs": [
+   {
+    "title": "Backend Engineer",
+    "url": "https://careers.mercari.com/"
+   }
+  ]
+ },
+ {
+  "code": "A",
+  "name": "Alibaba",
+  "jobs": [
+   {
+    "title": "Java 后端开发工程师（截图）",
+    "url": null
+   }
+  ]
+ }
+]

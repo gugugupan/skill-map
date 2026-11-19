@@ -1,0 +1,189 @@
+[
+ {
+  "slug": "os",
+  "name": "Linux and OS",
+  "description": "Namespaces, cgroups, seccomp, file systems and the process model. The foundation of every isolation technology and sandbox.",
+  "concepts": [
+   "namespace / cgroups v2",
+   "seccomp and capabilities",
+   "overlayfs and copy-on-write"
+  ],
+  "practice": "Build a minimal container by hand with unshare and cgroups, limiting CPU, memory and network.",
+  "resources": [
+   {
+    "title": "Liz Rice, Container Security",
+    "url": null,
+    "type": "book"
+   },
+   {
+    "title": "namespaces(7) man page",
+    "url": "https://man7.org/linux/man-pages/man7/namespaces.7.html",
+    "type": "doc"
+   }
+  ],
+  "prereqs": [],
+  "unlocks": [
+   "iso",
+   "sandbox"
+  ]
+ },
+ {
+  "slug": "dist",
+  "name": "Distributed Systems",
+  "description": "Long-running tasks, state recovery and scheduling are all distributed systems problems at heart.",
+  "concepts": [
+   "Consistency models and consensus (Raft)",
+   "Idempotency and the limits of exactly-once"
+  ],
+  "practice": "Revisit the Raft lab from MIT 6.5840, focusing on how idempotency and retries are designed.",
+  "resources": [
+   {
+    "title": "Kleppmann, Designing Data-Intensive Applications",
+    "url": null,
+    "type": "book"
+   }
+  ],
+  "prereqs": [],
+  "unlocks": [
+   "cache"
+  ]
+ },
+ {
+  "slug": "llm",
+  "name": "LLM Fundamentals",
+  "description": "Building an agent platform means understanding the input and output constraints of the model.",
+  "concepts": [
+   "Tokens, context window, sampling parameters",
+   "Function calling and structured output"
+  ],
+  "practice": "Without a framework, call the API directly and implement one multi-turn tool-use exchange.",
+  "resources": [
+   {
+    "title": "Anthropic API documentation",
+    "url": "https://docs.anthropic.com/",
+    "type": "doc"
+   }
+  ],
+  "prereqs": [],
+  "unlocks": [
+   "loop"
+  ]
+ },
+ {
+  "slug": "loop",
+  "name": "Agent Loop",
+  "description": "The loop of model, tools and observations: the minimal core of every agent.",
+  "concepts": [
+   "Stop conditions and max steps",
+   "Returning tool errors to the model",
+   "Interrupting for human approval"
+  ],
+  "practice": "Implement a complete agent loop with approval and interruption in under 200 lines.",
+  "resources": [
+   {
+    "title": "ReAct paper (Yao et al., 2022)",
+    "url": "https://arxiv.org/abs/2210.03629",
+    "type": "paper"
+   }
+  ],
+  "prereqs": [
+   "llm"
+  ],
+  "unlocks": [
+   "sandbox"
+  ]
+ },
+ {
+  "slug": "iso",
+  "name": "Isolation Technologies",
+  "description": "Security and performance trade-offs between containers, gVisor, Firecracker and Kata.",
+  "concepts": [
+   "Shared kernel vs. dedicated kernel",
+   "gVisor user-space kernel",
+   "Firecracker microVM"
+  ],
+  "practice": "On one machine, compare the startup latency and syscall overhead of the three runtimes.",
+  "resources": [
+   {
+    "title": "Firecracker paper (NSDI 2020)",
+    "url": null,
+    "type": "paper"
+   }
+  ],
+  "prereqs": [
+   "os"
+  ],
+  "unlocks": [
+   "sandbox"
+  ]
+ },
+ {
+  "slug": "sandbox",
+  "name": "Code Execution Sandbox",
+  "description": "The environment where agents write and run code, and the core product of agent infrastructure.",
+  "concepts": [
+   "File system and workspace",
+   "Network egress control",
+   "Lifecycle and cleanup"
+  ],
+  "practice": "Build a code execution service with an API on top of Firecracker or gVisor.",
+  "resources": [
+   {
+    "title": "E2B source code",
+    "url": "https://github.com/e2b-dev/E2B",
+    "type": "repo"
+   }
+  ],
+  "prereqs": [
+   "os",
+   "iso",
+   "loop"
+  ],
+  "unlocks": []
+ },
+ {
+  "slug": "sql-db",
+  "name": "Relational Databases and SQL",
+  "description": "Transactions, indexes and query optimization: the state foundation of most backend services.",
+  "concepts": [
+   "ACID and isolation levels",
+   "B+ tree indexes",
+   "EXPLAIN and query plans"
+  ],
+  "practice": "Design indexes for a table with tens of millions of rows and compare query plans and latency before and after.",
+  "resources": [
+   {
+    "title": "PostgreSQL official documentation",
+    "url": "https://www.postgresql.org/docs/",
+    "type": "doc"
+   }
+  ],
+  "prereqs": [],
+  "unlocks": [
+   "cache"
+  ]
+ },
+ {
+  "slug": "cache",
+  "name": "Caching",
+  "description": "Trade memory for latency and throughput while handling consistency and invalidation.",
+  "concepts": [
+   "Cache-aside and write-through",
+   "Cache breakdown, penetration and avalanche",
+   "Redis data structures"
+  ],
+  "practice": "Add a Redis cache to a read-heavy endpoint and load-test its hit rate and P99.",
+  "resources": [
+   {
+    "title": "Redis official documentation",
+    "url": "https://redis.io/docs/",
+    "type": "doc"
+   }
+  ],
+  "prereqs": [
+   "sql-db",
+   "dist"
+  ],
+  "unlocks": []
+ }
+]

@@ -1,0 +1,24 @@
+[
+ {
+  "slug": "agent-infra",
+  "name": "Agent Infra Engineer",
+  "root_label": "Agent Infra Engineer",
+  "counts": {
+   "companies": 4,
+   "postings": 6,
+   "skills": 6,
+   "edges": 5
+  }
+ },
+ {
+  "slug": "backend",
+  "name": "Backend Engineer",
+  "root_label": "Backend Engineer",
+  "counts": {
+   "companies": 3,
+   "postings": 3,
+   "skills": 4,
+   "edges": 2
+  }
+ }
+]

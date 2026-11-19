@@ -1,0 +1,38 @@
+[
+ {
+  "slug": "sql-db",
+  "cluster": "backend-data",
+  "companies": [
+   "STRIPE",
+   "MERCARI",
+   "A"
+  ],
+  "heat": 3
+ },
+ {
+  "slug": "cache",
+  "cluster": "backend-data",
+  "companies": [
+   "MERCARI",
+   "A"
+  ],
+  "heat": 2
+ },
+ {
+  "slug": "dist",
+  "cluster": "backend-dist",
+  "companies": [
+   "STRIPE",
+   "A"
+  ],
+  "heat": 2
+ },
+ {
+  "slug": "os",
+  "cluster": "backend-dist",
+  "companies": [
+   "A"
+  ],
+  "heat": 1
+ }
+]

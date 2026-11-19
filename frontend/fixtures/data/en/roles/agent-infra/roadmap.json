@@ -1,0 +1,25 @@
+{
+ "phases": [
+  {
+   "title": "Agent Core",
+   "skills": [
+    "llm",
+    "loop"
+   ]
+  },
+  {
+   "title": "Sandbox and Security",
+   "skills": [
+    "os",
+    "iso",
+    "sandbox"
+   ]
+  },
+  {
+   "title": "Engineering Foundations",
+   "skills": [
+    "dist"
+   ]
+  }
+ ]
+}

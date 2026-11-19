@@ -1,0 +1,18 @@
+{
+ "phases": [
+  {
+   "title": "System Foundations",
+   "skills": [
+    "os",
+    "dist"
+   ]
+  },
+  {
+   "title": "Data Storage",
+   "skills": [
+    "sql-db",
+    "cache"
+   ]
+  }
+ ]
+}

@@ -16,4 +16,4 @@ if [ -d "$ROOT/seed/roles" ]; then
 else
   echo "seed/roles not found, skipping role seeds"
 fi
-uv run python -m app.export "$@"
+uv run python -m app.export --i18n "$ROOT/seed/i18n/en.json" "$@"
