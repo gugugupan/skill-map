@@ -192,6 +192,24 @@ ERRORS = {
         lambda d: d["backend"]["postings"].pop(), "company 'AN' has no posting"),
     "reuse rewrites content": (
         lambda d: _skill(d, "backend", "dist").update(resources=[]), "reuse may only set"),
+    "duplicate posting in one file": (
+        lambda d: d["backend"]["postings"].append(dict(d["backend"]["postings"][0], url="https://example.com/2")),
+        "backend.json: postings[2]: duplicate posting STRIPE 'Software Engineer'"),
+    "cluster without slug": (
+        lambda d: d["backend"]["clusters"][1].pop("slug"), "backend.json: clusters[1]: missing 'slug'"),
+    "company without code": (
+        lambda d: d["frontend"]["companies"][0].pop("code"), "frontend.json: companies[0]: missing 'code'"),
+    "prereq not a pair": (
+        lambda d: d["backend"]["prereqs"].append(["cache"]), "backend.json: prereqs[2]: must be [from, to]"),
+    "prereq not an array": (
+        lambda d: d["backend"]["prereqs"].append("cache"), "backend.json: prereqs[2]: must be [from, to]"),
+    "role without slug": (
+        lambda d: d["frontend"]["role"].pop("slug"), "frontend.json: role: must be an object with a string 'slug'"),
+    "skill entry not an object": (
+        lambda d: d["backend"]["skills"].append("cache"), "backend.json: skills[3]: must be an object"),
+    "path skills not strings": (
+        lambda d: d["backend"]["path"][0].update(skills=[["dist"]]),
+        "backend.json: path[0]: 'skills' must be array of strings"),
 }
 
 
@@ -204,6 +222,25 @@ def test_errors_write_nothing(ref_db, tmp_path, case):
     with pytest.raises(roles.SeedError, match=re.escape(message)):
         roles.import_roles(ref_db, write_roles(tmp_path / "r", data))
     assert snapshot(ref_db) == before
+
+
+def test_invalid_json_is_seed_error(ref_db, tmp_path):
+    d = write_roles(tmp_path / "r", fixtures())
+    (d / "backend.json").write_text("{", encoding="utf-8")
+    before = snapshot(ref_db)
+    with pytest.raises(roles.SeedError, match=re.escape("backend.json: invalid JSON")):
+        roles.import_roles(ref_db, d)
+    assert snapshot(ref_db) == before
+
+
+def test_shape_errors_are_all_reported(ref_db, tmp_path):
+    data = fixtures()
+    data["backend"]["clusters"][0].pop("slug")
+    data["frontend"]["companies"][1].pop("code")
+    with pytest.raises(roles.SeedError) as e:
+        roles.import_roles(ref_db, write_roles(tmp_path / "r", data))
+    assert str(e.value).splitlines() == [
+        "backend.json: clusters[0]: missing 'slug'", "frontend.json: companies[1]: missing 'code'"]
 
 
 def test_cycle_with_existing_edges(ref_db, tmp_path):

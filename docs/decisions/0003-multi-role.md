@@ -14,7 +14,7 @@ M0 只有 Agent Infra 一个岗位：类别、公司热度、排列顺序都直�
 
 ### import_roles 报错规则
 
-未知 role；role 是 agent-infra 或两个文件同一 role；完整定义的 slug 撞已有 skill（上次由 import_roles 写入的除外，保证可重复导入）；两个文件都完整定义同一 slug；复用写了 slug/cluster/companies 以外的字段；完整定义缺 name/description/concepts/practice；引用不存在的 skill（复用、prereqs、path 里不属于本岗位的）、company（posting 或 skill.companies 不在本岗位 companies 里）、cluster；cluster 不带岗位前缀或属于别的岗位；同岗位颜色重复；公司没有 posting；posting 没有 url；新先修边两端都是 agent-infra 的 skill；全局先修成环。资源同标题时保留先到的 url，打印警告；先到的 url 为空而新记录有 url 时直接补上，不警告。
+未知 role；role 是 agent-infra 或两个文件同一 role；完整定义的 slug 撞已有 skill（上次由 import_roles 写入的除外，保证可重复导入）；两个文件都完整定义同一 slug；复用写了 slug/cluster/companies 以外的字段；完整定义缺 name/description/concepts/practice；引用不存在的 skill（复用、prereqs、path 里不属于本岗位的）、company（posting 或 skill.companies 不在本岗位 companies 里）、cluster；cluster 不带岗位前缀或属于别的岗位；同岗位颜色重复；公司没有 posting；posting 没有 url；同一文件内 (company, title) 重复的 posting；文件不是合法 JSON 或字段缺失、类型不对（按文件和位置报出，如 `clusters[1]: missing 'slug'`）；新先修边两端都是 agent-infra 的 skill；全局先修成环。资源同标题时保留先到的 url，打印警告；先到的 url 为空而新记录有 url 时直接补上，不警告。
 
 ---
 

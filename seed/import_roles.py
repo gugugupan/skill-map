@@ -33,8 +33,81 @@ def _dumps(value) -> str:
 
 
 def _load(roles_dir: Path) -> list[tuple[str, dict]]:
-    return [(f.name, json.loads(f.read_text(encoding="utf-8")))
-            for f in sorted(Path(roles_dir).glob("*.json"))]
+    files, errors = [], []
+    for f in sorted(Path(roles_dir).glob("*.json")):
+        try:
+            files.append((f.name, json.loads(f.read_text(encoding="utf-8"))))
+        except json.JSONDecodeError as e:
+            errors.append(f"{f.name}: invalid JSON: {e}")
+    if errors:
+        raise SeedError("\n".join(errors))
+    return files
+
+
+STR, OPT_STR, LIST, STR_LIST = "string", "string or null", "array", "array of strings"
+# section -> {field: (kind, required)}; skills' content fields are only required for full definitions,
+# which validate() checks.
+SHAPE = {
+    "clusters": {"slug": (STR, True), "name": (STR, True), "color": (STR, True)},
+    "companies": {"code": (STR, True), "name": (OPT_STR, False)},
+    "postings": {"company": (STR, True), "title": (STR, True), "url": (OPT_STR, False)},
+    "skills": {"slug": (STR, True), "cluster": (STR, True), "companies": (STR_LIST, False),
+               "name": (STR, False), "description": (STR, False), "concepts": (LIST, False),
+               "practice": (STR, False), "resources": (LIST, False)},
+    "path": {"title": (STR, True), "skills": (STR_LIST, True)},
+}
+RESOURCE_SHAPE = {"title": (STR, True), "url": (OPT_STR, False)}
+
+
+def _is(value, kind: str) -> bool:
+    if kind == STR:
+        return isinstance(value, str)
+    if kind == OPT_STR:
+        return value is None or isinstance(value, str)
+    if kind == LIST:
+        return isinstance(value, list)
+    return isinstance(value, list) and all(isinstance(v, str) for v in value)
+
+
+def _check_fields(item, fields: dict, where: str) -> list[str]:
+    if not isinstance(item, dict):
+        return [f"{where}: must be an object"]
+    errors = []
+    for key, (kind, required) in fields.items():
+        if key not in item:
+            if required:
+                errors.append(f"{where}: missing {key!r}")
+        elif not _is(item[key], kind):
+            errors.append(f"{where}: {key!r} must be {kind}")
+    return errors
+
+
+def _check_shape(fname: str, data) -> list[str]:
+    """Structural errors that would otherwise surface as KeyError/TypeError in validate() or _write()."""
+    if not isinstance(data, dict):
+        return [f"{fname}: top level must be an object"]
+    errors = []
+    role = data.get("role")
+    if not isinstance(role, dict) or not isinstance(role.get("slug"), str):
+        errors.append(f"{fname}: role: must be an object with a string 'slug'")
+    for section, fields in SHAPE.items():
+        items = data.get(section, [])
+        if not isinstance(items, list):
+            errors.append(f"{fname}: {section}: must be an array")
+            continue
+        for i, item in enumerate(items):
+            errors += _check_fields(item, fields, f"{fname}: {section}[{i}]")
+            if section == "skills" and isinstance(item, dict) and isinstance(item.get("resources"), list):
+                for j, r in enumerate(item["resources"]):
+                    errors += _check_fields(r, RESOURCE_SHAPE, f"{fname}: skills[{i}].resources[{j}]")
+    prereqs = data.get("prereqs", [])
+    if not isinstance(prereqs, list):
+        errors.append(f"{fname}: prereqs: must be an array")
+    else:
+        for i, pair in enumerate(prereqs):
+            if not (isinstance(pair, list) and len(pair) == 2 and all(isinstance(e, str) for e in pair)):
+                errors.append(f"{fname}: prereqs[{i}]: must be [from, to] with two skill slugs")
+    return errors
 
 
 def _has_cycle(edges: set[tuple[str, str]]) -> list[str] | None:
@@ -64,7 +137,9 @@ def _has_cycle(edges: set[tuple[str, str]]) -> list[str] | None:
 
 def validate(conn, files: list[tuple[str, dict]]) -> list[tuple[str, dict]]:
     """Return the files ordered by role sort, or raise SeedError listing every problem."""
-    errors: list[str] = []
+    errors = [e for fname, data in files for e in _check_shape(fname, data)]
+    if errors:
+        raise SeedError("\n".join(errors))
     roles = {r["slug"]: r["sort"] for r in conn.execute("SELECT slug, sort FROM role")}
     existing_skills = {r[0] for r in conn.execute("SELECT slug FROM skill")}
     reference_skills = {r[0] for r in conn.execute(
@@ -126,7 +201,12 @@ def validate(conn, files: list[tuple[str, dict]]) -> list[tuple[str, dict]]:
             if not c.get("name") and c["code"] not in known_codes:
                 errors.append(f"{fname}: company {c['code']!r} is new and needs a name")
         posted = set()
-        for p in data.get("postings", []):
+        seen_postings: set[tuple[str, str]] = set()
+        for i, p in enumerate(data.get("postings", [])):
+            key = (p["company"], p["title"])
+            if key in seen_postings:
+                errors.append(f"{fname}: postings[{i}]: duplicate posting {p['company']} {p['title']!r}")
+            seen_postings.add(key)
             if p.get("company") not in codes:
                 errors.append(f"{fname}: posting {p.get('title')!r} references company "
                               f"{p.get('company')!r} not in this role's companies")
