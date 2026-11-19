@@ -63,7 +63,7 @@ def test_field_mapping(db_file):
         assert s["status"] == "active" and len(json.loads(s["concepts"])) == 4
         rs = conn.execute("SELECT * FROM role_skill WHERE skill_id = ?", (s["id"],)).fetchall()
         assert [(r["role_family"], r["cluster_slug"], r["sort"]) for r in rs] == [("agent-infra", "found", 0)]
-        assert json.loads(rs[0]["reference_companies"]) == ["A", "B", "X", "AN"]
+        assert json.loads(rs[0]["reference_companies"]) == ["A", "B", "AN"]
         assert [tuple(r) for r in conn.execute(
             "SELECT slug, role_family FROM cluster ORDER BY sort")][:2] == [
             ("found", "agent-infra"), ("core", "agent-infra")]
@@ -118,6 +118,70 @@ def test_override_wrong_company_raises():
         seed.apply_overrides(sources, {"jobs": [{
             "code": "B", "original_title": "Agent 基础设施（截图）", "title": "x", "url": "u"}]})
     assert sources[0]["jobs"][0] == ["Agent 基础设施（截图）", ""]
+
+
+def _companies(path):
+    conn = db.connect(path)
+    try:
+        return {r[0]: json.loads(r[1]) for r in conn.execute(
+            "SELECT s.slug, rs.reference_companies FROM role_skill rs JOIN skill s ON s.id = rs.skill_id"
+            " WHERE rs.role_family = 'agent-infra'")}
+    finally:
+        conn.close()
+
+
+def test_skill_companies_applied(db_file, tmp_path):
+    spec = json.loads((SEED_DIR / "reference_overrides.json").read_text(encoding="utf-8"))["skill_companies"]
+    raw = tmp_path / "raw.db"
+    seed.import_reference(raw, SEED_DIR / "reference.html", None)
+    before, after = _companies(raw), _companies(db_file)
+    assert set(before) == set(after)
+    for slug in before:
+        change = spec.get(slug, {})
+        expected = [c for c in before[slug] if c not in change.get("remove", [])] + change.get("add", [])
+        assert after[slug] == expected
+        assert after[slug]
+    assert after["durable"] == ["O", "X", "AN"]
+    assert after["cpdp"] == ["X"]
+    assert "O" in after["rl"] and "A" in after["cua"]
+    assert "O" not in after["rag"] and "A" not in after["dist"]
+
+
+NODES = [{"id": "a", "jd": "O A"}, {"id": "b", "jd": "A"}]
+CODES = {"O": "OpenAI", "A": "阿里", "B": "百度"}
+
+
+@pytest.mark.parametrize("spec, match", [
+    ({"zzz": {"add": ["B"]}}, "unknown skill"),
+    ({"a": {"add": ["ZZ"]}}, "unknown company"),
+    ({"a": {"remove": ["ZZ"]}}, "unknown company"),
+    ({"a": {"remove": ["B"]}}, "not in"),
+    ({"a": {"add": ["O"]}}, "already in"),
+    ({"a": {"drop": ["O"]}}, "unknown keys"),
+])
+def test_skill_companies_errors(spec, match):
+    nodes = [dict(n) for n in NODES]
+    with pytest.raises(ValueError, match=match):
+        seed.apply_skill_companies(nodes, CODES, spec)
+
+
+def test_skill_companies_edit():
+    nodes = [dict(n) for n in NODES]
+    assert seed.apply_skill_companies(nodes, CODES, {"a": {"remove": ["O"], "add": ["B"]}}) == []
+    assert nodes[0]["jd"] == "A B"
+
+
+def test_skill_companies_never_empty():
+    nodes = [dict(n) for n in NODES]
+    assert seed.apply_skill_companies(nodes, CODES, {"b": {"remove": ["A"]}, "a": {"remove": ["O"]}}) == ["b"]
+    assert nodes[1]["jd"] == "A" and nodes[0]["jd"] == "A"
+
+
+def test_skill_companies_error_aborts_import(tmp_path):
+    bad = tmp_path / "overrides.json"
+    bad.write_text(json.dumps({"jobs": [], "skill_companies": {"os": {"remove": ["O"]}}}), encoding="utf-8")
+    with pytest.raises(ValueError, match="not in"):
+        seed.import_reference(tmp_path / "seed.db", SEED_DIR / "reference.html", bad)
 
 
 @pytest.mark.parametrize("title, expected", [

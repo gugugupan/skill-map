@@ -147,7 +147,7 @@ def test_agent_infra_unchanged(ref_out, out):
         assert a.read_bytes() == b.read_bytes(), name
     skills = load(out, "roles/agent-infra/skills.json")
     os_ = skills[0]
-    assert os_ == {"slug": "os", "cluster": "found", "companies": ["A", "B", "X", "AN"], "heat": 4}
+    assert os_ == {"slug": "os", "cluster": "found", "companies": ["A", "B", "AN"], "heat": 3}
     clusters = {c["slug"] for c in load(out, "roles/agent-infra/clusters.json")}
     assert all(s["cluster"] in clusters for s in skills)
 

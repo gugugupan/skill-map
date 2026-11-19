@@ -32,5 +32,92 @@
       "fetched": "2026-11-19",
       "via": "job.xiaohongshu.com pageQueryPosition API"
     }
-  ]
+  ],
+  "skill_companies": {
+    "agentic": {
+      "add": ["A"]
+    },
+    "ckpt": {
+      "add": ["O"],
+      "remove": ["A"]
+    },
+    "conc": {
+      "add": ["O"]
+    },
+    "cpdp": {
+      "remove": ["B"]
+    },
+    "ctxeng": {
+      "remove": ["O", "A"]
+    },
+    "cua": {
+      "add": ["A"]
+    },
+    "dist": {
+      "remove": ["A"]
+    },
+    "durable": {
+      "remove": ["B"]
+    },
+    "evals": {
+      "remove": ["O"]
+    },
+    "harness": {
+      "add": ["O"]
+    },
+    "identity": {
+      "remove": ["O", "A"]
+    },
+    "inject": {
+      "remove": ["O"]
+    },
+    "k8s": {
+      "add": ["O"]
+    },
+    "llm": {
+      "remove": ["A"]
+    },
+    "loop": {
+      "remove": ["A"]
+    },
+    "mcp": {
+      "add": ["A"]
+    },
+    "multi": {
+      "remove": ["O", "A"]
+    },
+    "os": {
+      "remove": ["X"]
+    },
+    "patterns": {
+      "remove": ["A"]
+    },
+    "rag": {
+      "remove": ["O", "A"]
+    },
+    "rl": {
+      "add": ["O"]
+    },
+    "sched": {
+      "add": ["O"]
+    },
+    "serving": {
+      "remove": ["A"]
+    },
+    "skills": {
+      "add": ["O"]
+    },
+    "tenant": {
+      "remove": ["A"]
+    },
+    "tools": {
+      "remove": ["A"]
+    },
+    "trace": {
+      "remove": ["A"]
+    },
+    "virt": {
+      "add": ["A"]
+    }
+  }
 }

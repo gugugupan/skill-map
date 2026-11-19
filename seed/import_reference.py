@@ -69,6 +69,38 @@ def apply_overrides(sources: list, overrides: dict) -> None:
             job[0], job[1] = o["title"], o["url"]
 
 
+def apply_skill_companies(nodes: list, codes, spec: dict) -> list[str]:
+    """Edit N[].jd in place from {slug: {"add": [...], "remove": [...]}}.
+
+    Returns the slugs whose edit would leave no company; those keep their original jd.
+    """
+    by_slug = {n["id"]: n for n in nodes}
+    kept = []
+    for slug, change in spec.items():
+        if slug not in by_slug:
+            raise ValueError(f"skill_companies: unknown skill {slug!r}")
+        unknown = set(change) - {"add", "remove"}
+        if unknown:
+            raise ValueError(f"skill_companies: {slug}: unknown keys {sorted(unknown)}")
+        current = by_slug[slug]["jd"].split()
+        add, remove = change.get("add", []), change.get("remove", [])
+        for code in add + remove:
+            if code not in codes:
+                raise ValueError(f"skill_companies: {slug}: unknown company {code!r}")
+        for code in remove:
+            if code not in current:
+                raise ValueError(f"skill_companies: {slug}: remove {code!r} not in {current}")
+        for code in add:
+            if code in current:
+                raise ValueError(f"skill_companies: {slug}: add {code!r} already in {current}")
+        result = [c for c in current if c not in remove] + add
+        if not result:
+            kept.append(slug)
+            continue
+        by_slug[slug]["jd"] = " ".join(result)
+    return kept
+
+
 def _dumps(value) -> str:
     return json.dumps(value, ensure_ascii=False)
 
@@ -177,7 +209,11 @@ def _import(conn, data: dict) -> None:
 def import_reference(db_path=None, html_path=DEFAULT_HTML, overrides_path=DEFAULT_OVERRIDES) -> None:
     data = extract_constants(Path(html_path).read_text(encoding="utf-8"))
     if overrides_path is not None:
-        apply_overrides(data["SOURCES"], json.loads(Path(overrides_path).read_text(encoding="utf-8")))
+        overrides = json.loads(Path(overrides_path).read_text(encoding="utf-8"))
+        apply_overrides(data["SOURCES"], overrides)
+        kept = apply_skill_companies(data["N"], data["JD"], overrides.get("skill_companies", {}))
+        for slug in kept:
+            print(f"skill_companies: {slug} would have no company, kept original mapping", file=sys.stderr)
     conn = db.connect(db_path)
     try:
         db.migrate(conn)

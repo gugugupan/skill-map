@@ -20,7 +20,7 @@
 
 ## 能力点对照
 
-范围：参考实现里 `jd` 字段含该公司代码的能力点。这里只做报告，`reference_companies` 映射没有改。「支持」列给新 JD 正文的原文短引；不支持的写「无」。
+范围：参考实现里 `jd` 字段含该公司代码的能力点。下表是调整前的核对；据此做的调整见下文「映射调整」。「支持」列给新 JD 正文的原文短引；不支持的写「无」。
 
 ### O · Software Engineer, Agent Infrastructure（支持 7 / 24）
 
@@ -151,3 +151,63 @@
 
 - B、X 的新 JD 和原截图几乎一一对应，映射基本成立。
 - O、A 换成了范围更窄的职位：O 偏训练/部署底座和虚拟化，A 偏沙箱运行时。原截图里提到的 Agent 应用层能力（上下文、记忆、评测、身份等）在新 JD 里多数找不到原文支撑。要不要据此调整 `reference_companies`，需要另行决定。
+
+## 映射调整
+
+用户决定以真实 JD 为准调整 `reference_companies`。调整写在 `seed/reference_overrides.json` 的 `skill_companies`（`{"<能力点>": {"add": [...], "remove": [...]}}`），由 `seed/import_reference.py` 导入时应用；能力点或公司代码不存在、remove 的代码本来不在、add 的代码本来已在都会报错；某能力点若因此没有公司，保留原映射。新增的公司代码排在原列表之后。
+
+范围：O 用 agent-infra 里全部 3 份 JD（Agent Infrastructure、Agent Runtime、Codex Core Agents，正文 2026-11-19 取自 Ashby 公开接口 `api.ashbyhq.com/posting-api/job-board/openai`，标题与 SOURCES 里的链接一致），对 50 个能力点逐个核对；A 用唯一的 JD（阿里云 agent sandbox运行时开发专家，浏览器读正文）同样核对 50 个；B、X 只去掉上表确认无证据的；其他 6 家不动。没有能力点因调整变成 0 家。
+
+能力点数：O 24 → 25，A 25 → 16，B 25 → 23，X 31 → 30。
+
+### O · OpenAI（+7 / −6）
+
+| 能力点 | 调整 | 原文短引 / 理由 |
+| --- | --- | --- |
+| k8s 云原生与 K8s | add | "a novel container orchestration platform … beyond what's possible with systems like Kubernetes"（Agent Infrastructure） |
+| harness Harness 工程 | add | "The Codex Core Agent team builds the kernel of Codex"（Codex Core Agents） |
+| ckpt Checkpoint 与恢复 | add | "reasoning about state, concurrency, asynchronous work, and failure recovery"（Agent Runtime） |
+| sched 调度与弹性 | add | "Support model rollouts, capacity planning"；"container orchestration platform built in-house" |
+| conc 高并发与资源治理 | add | "reasoning about state, concurrency, asynchronous work"（Agent Runtime） |
+| skills Skills / CLI / SDK | add | "the infrastructure behind sandboxed execution, … app-server and SDK boundaries"（Codex Core Agents） |
+| rl Agentic RL 基础设施 | add | "design and scale the environment in which agentic models are trained"（Agent Infrastructure） |
+| multi Multi-Agent 与委托 | remove | 只有单个 agent 的多步编排（"multi-step, tool-using workflows"），没有子代理或委托 |
+| identity Agent 身份与委托授权 | remove | 三份都没提身份、授权或权限 |
+| inject Prompt 注入与工具安全 | remove | 只有泛泛的 "safe, reliable behavior"、"security"，没提注入或外泄 |
+| ctxeng Context Engineering | remove | 只有 "Optimize tokens"（归入成本）和跨任务持久化上下文（归入记忆），没有上下文组装 |
+| rag 检索与 RAG | remove | 三份都没提检索或搜索 |
+| evals Eval 体系 | remove | 只有运行和调试模型生成的代码，没有评测体系 |
+
+保留的 18 个及证据：dist "Strong distributed systems fundamentals"；lang "Python, Go, Rust, TypeScript"；llm "Familiarity with LLMs, agents, or tool-use frameworks"；loop "the core execution loop and interfaces"；cua "power products such as Codex, Operator"；durable "persistent agent state, asynchronous execution … carry work forward over time"；state / memory "Create state and memory systems"；iso "sandboxing, isolation, and reproducibility"；sandbox "sandboxed execution"；tools "connects agents with tools and execution environments"；trace "through observability, production debugging"；cost "Optimize tokens, latency, reliability, and cost"；abstraction "clear APIs, useful abstractions"；devx "Strong product judgment and developer empathy"；virt "virtualization and containerization technologies"；async "asynchronous execution, orchestration, and progress reporting"；rollout "Support model rollouts"。
+
+### A · 阿里（+4 / −13）
+
+| 能力点 | 调整 | 原文短引 / 理由 |
+| --- | --- | --- |
+| cua Computer / Browser Use | add | 「构建支持全功能桌面的沙箱，实现ComputerUse环境」 |
+| virt 虚拟化与 eBPF | add | 「突破OS 层虚拟化瓶颈」；「深入理解容器与虚拟化技术栈」 |
+| mcp MCP | add | 「具备 Agent 平台构建、Skills开发、MCP部署等实战经验者优先」 |
+| agentic Agentic 工作方式 | add | 「熟练使用 AI 开发工具」 |
+| dist 分布式系统 | remove | 正文没提分布式 |
+| llm LLM 基础 | remove | 没提模型本身 |
+| loop Agent Loop | remove | 没提 Agent 执行循环 |
+| patterns 执行架构模式 | remove | 没提执行架构 |
+| multi Multi-Agent 与委托 | remove | 没提多 Agent |
+| ckpt Checkpoint 与恢复 | remove | 没提检查点或恢复 |
+| identity Agent 身份与委托授权 | remove | 没提身份或授权 |
+| tenant 多租户隔离 | remove | 没提多租户 |
+| ctxeng Context Engineering | remove | 没提上下文 |
+| rag 检索与 RAG | remove | 没提检索 |
+| tools 工具设计 | remove | 没提工具设计（只有「AI 开发工具」，指开发者工具） |
+| trace Tracing 与可观测 | remove | 没提可观测 |
+| serving 推理服务 | remove | 没提推理 |
+
+保留的 12 个及证据：os / net 「扎实的操作系统内核、计算机网络与体系结构基础」；k8s 「推动云原生AI领域前沿技术预研」（只有「云原生」字样，较弱）；lang 「精通 Go / C++ / Rust / Python 中的至少一种」；sched 「打造毫秒级启动的轻量化 Web 沙箱」；conc 「极致轻量化与高并发承载能力」；iso 「轻量级容器（如 Kata Containers, Firecracker）」；sandbox 「统一沙箱管理引擎研发」；skills 「Skills开发、MCP部署等实战经验者优先」；evals 「熟悉当前开源 Agent 评测框架」；cost 「抠内存、压榨毫秒级启动延迟」；rl 「熟悉业界主流的Agent Infra、Agent Sandbox、Agent RL等技术」。
+
+### B · 百度（−2）、X · 小红书（−1）
+
+| 能力点 | 公司 | 调整 | 理由 |
+| --- | --- | --- | --- |
+| durable Durable Execution | B | remove | 新 JD 没提任务状态不丢或持久执行 |
+| cpdp Control Plane 与 Data Plane | B | remove | 新 JD 没提控制面 / 数据面 |
+| os Linux 与 OS | X | remove | 新 JD 没提 Linux 或操作系统 |
