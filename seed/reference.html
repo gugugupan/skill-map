@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agent Infra 知识图谱</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+:root{
+  --bg:#EDF0F2; --surface:#FFFFFF; --ink:#18202B; --muted:#5E6873; --line:#C9D0D6; --edge:#AEB7BF;
+  --focus:#2F6FB3;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#12171D; --surface:#1A2129; --ink:#E4E8EC; --muted:#93A0AC; --line:#2C3640; --edge:#3A4652;
+    --focus:#7FB2E8; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12171D; --surface:#1A2129; --ink:#E4E8EC; --muted:#93A0AC; --line:#2C3640; --edge:#3A4652;
+  --focus:#7FB2E8; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.6}
+.app{display:grid;grid-template-rows:auto 1fr;height:100%}
+header{padding:16px 20px 12px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:end}
+h1{font-size:22px;line-height:1.2;margin:0;font-weight:700;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:13px;margin-top:2px}
+.prog{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.bar{width:140px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ink);width:0;transition:width .3s}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.chip{font:inherit;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);
+  background:transparent;color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+main{display:grid;grid-template-columns:1fr 400px;min-height:0}
+#graph{position:relative;min-height:0;overflow:hidden}
+#graph svg{width:100%;height:100%;display:block;cursor:grab}
+.legend{position:absolute;left:14px;bottom:12px;display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;color:var(--muted);max-width:70%;pointer-events:none}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend b{width:9px;height:9px;border-radius:50%;display:inline-block}
+.hint{position:absolute;right:14px;bottom:12px;font-size:12px;color:var(--muted)}
+aside{border-left:1px solid var(--line);background:var(--surface);overflow-y:auto;padding:22px 24px 40px}
+aside h2{font-size:20px;line-height:1.3;margin:4px 0 6px}
+aside h3{font-size:13px;font-weight:600;color:var(--muted);margin:20px 0 6px}
+aside p{margin:0 0 8px;max-width:62ch}
+aside ul{margin:0;padding-left:18px}
+aside li{margin:3px 0}
+.cl{font-size:13px;font-weight:600}
+.jd{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.jd span{font-size:12px;padding:1px 8px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
+.jd span.on{color:var(--ink);border-color:var(--ink)}
+.status{display:flex;gap:0;margin-top:16px;border:1px solid var(--line);border-radius:8px;overflow:hidden;width:max-content}
+.status button{font:inherit;font-size:13px;padding:6px 14px;border:0;background:transparent;color:var(--ink);cursor:pointer}
+.status button+button{border-left:1px solid var(--line)}
+.status button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.links a{color:var(--focus);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.path li{margin:8px 0}
+.path a{color:var(--ink);cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.path a.done{color:var(--muted);text-decoration:line-through}
+.back{font:inherit;font-size:13px;color:var(--muted);background:none;border:0;padding:0;cursor:pointer}
+.node text{font-size:12px;fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round}
+.node.hub text{font-size:13px;font-weight:700}
+.node.root text{font-size:15px;font-weight:700}
+.node{cursor:pointer}
+.node.dim{opacity:.15}
+.link{stroke:var(--edge);stroke-width:1}
+.link.pre{stroke-dasharray:3 3}
+.link.dim{opacity:.1}
+.link.hl{stroke:var(--ink);stroke-width:1.6;opacity:1}
+@media (max-width:820px){
+  main{grid-template-columns:1fr;grid-template-rows:62vh auto}
+  aside{border-left:0;border-top:1px solid var(--line);overflow:visible}
+  .app{height:auto}
+  .filters{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div>
+    <h1>Agent Infra 知识图谱</h1>
+    <div class="sub">来自 10 家公司、25 份 Agent Infra 相关 JD 的能力地图（2026 年 11 月整理）</div>
+  </div>
+  <div class="prog"><div class="bar"><i id="barFill"></i></div><span id="progText"></span></div>
+  <div class="filters" role="group" aria-label="按公司筛选" id="filters"></div>
+</header>
+<main>
+  <div id="graph">
+    <svg id="svg" aria-label="知识图谱"></svg>
+    <div class="legend" id="legend"></div>
+    <div class="hint">拖动平移，滚轮缩放，点击节点查看</div>
+  </div>
+  <aside id="panel" aria-live="polite"></aside>
+</main>
+</div>
+
+<script>
+const JD = {O:'OpenAI', AN:'Anthropic', CU:'Cursor', CG:'Cognition', A:'阿里', B:'百度', X:'小红书', K:'月之暗面', T:'腾讯', JP:'日本企业'};
+const SOURCES = [
+ {k:'O',jobs:[['Agent 基础设施（截图）',''],['Software Engineer, Agent Runtime','https://openai.com/careers/software-engineer-product-infrastructure-agent-runtime-san-francisco/'],['Software Engineer, Codex Core Agents','https://jobs.khoslaventures.com/companies/openai/jobs/72312220-software-engineer-codex-core-agents']]},
+ {k:'AN',jobs:[['Software Engineer, Sandboxing','https://jobs.accel.com/companies/anthropic/jobs/66236454-software-engineer-sandboxing'],['Staff+ SWE, Claude Managed Agents','https://jobs.generalcatalyst.com/companies/anthropic/jobs/90674062-staff-software-engineer-claude-managed-agents'],['Senior / Staff+ SWE, Autonomous Agent Infrastructure','https://job-boards.greenhouse.io/anthropic/jobs/5065894008'],['Claude App Infrastructure','https://www.metaintro.com/job/claude-app-infrastructure-at-anthropic-fedce72a-39d5-530e-b42b-80ff4fa69c2e']]},
+ {k:'CU',jobs:[['Software Engineer, Agent Harness','https://zerogtalent.com/ai-jobs/cursor/software-engineer-agent-harness-6e6f5bc2-eb32-40e2-bba9-cfa56479600d'],['Software Engineer, Core Services','https://jobs.thrivecap.com/companies/anysphere-2/jobs/73582962-software-engineer-core-services'],['Software Engineer, ML Infrastructure','https://cursor.com/careers/software-engineer-ml-infrastructure']]},
+ {k:'CG',jobs:[['Software Engineer, Infrastructure（Devin）','https://builtinvancouver.org/job/software-engineer-infrastructure/9064896'],['Research Engineer, ML Infrastructure','https://jobsbyculture.com/jobs/cognition/research-engineer-ml-infrastructure']]},
+ {k:'A',jobs:[['Agent 基础设施（截图）','']]},
+ {k:'B',jobs:[['云原生 Agent Infra 高级研发工程师（截图）','']]},
+ {k:'X',jobs:[['大模型基建部 AgentSphere（截图）','']]},
+ {k:'K',jobs:[['Kimi Agent 工程、全栈、多智能体等岗位','https://datahub.ac.cn/ai-jobs/companies/company-819fc19826.html'],['Agentic RL 研究科学家 / 工程师','https://github.com/relic-yuexi/2027_JD_LLM']]},
+ {k:'T',jobs:[['AI Infra SRE（Agent 沙箱）','https://careers.tencent.com/jobdesc.html?postId=2113089269949186048'],['腾讯广告 Agent Infra 方向','https://jobs.niuqizp.com/archivejob-vml55LNNt.html'],['微信 Agent 应用后台','https://careers.tencent.com/jobdesc.html?postId=2062097139483459584']]},
+ {k:'JP',jobs:[['LLM 平台与 Agent 执行基盘','https://www.kotora.jp/job/detail.php?jid=1565274'],['Arent：Agent Platform / LLMOps','https://paiza.jp/job_offers/41403'],['SENSY：LLM 产品工程师','https://herp.careers/v1/sensy/4j6vz754gRez']]}
+];
+
+const CLUSTERS = {
+  found:{name:'工程基础', color:'#5B6B7A'},
+  core:{name:'Agent 核心机制', color:'#3D5A99'},
+  rt:{name:'运行时', color:'#2A8C82'},
+  sec:{name:'沙箱与安全', color:'#B23A48'},
+  ctx:{name:'上下文与工具', color:'#C08A1E'},
+  eval:{name:'评测与可观测', color:'#6E8A2A'},
+  plat:{name:'平台与控制面', color:'#7A4F8A'},
+  front:{name:'前沿与工作方式', color:'#2F7FB8'}
+};
+
+const N = [
+ // 工程基础
+ {id:'os',c:'found',n:'Linux 与 OS',jd:'A B X AN',d:'namespace、cgroups、seccomp、文件系统与进程模型。所有隔离技术和沙箱的底座。',k:['namespace / cgroups v2','seccomp 与 capabilities','overlayfs 与 copy-on-write','进程信号与生命周期'],p:'用 unshare + cgroups 手搓一个最小容器，限制 CPU、内存和网络。',r:['Liz Rice《Container Security》','man7.org 的 namespaces(7) 手册']},
+ {id:'net',c:'found',n:'计算机网络',jd:'A B',d:'Agent 平台大量依赖流式和长连接，网络出口控制也是安全边界。',k:['HTTP/2、gRPC','SSE 与 WebSocket 流式','出口代理与域名白名单','TLS 与 mTLS'],p:'写一个支持 SSE 流式转发的 LLM 网关，带超时和重试。',r:['《Computer Networking: A Top-Down Approach》']},
+ {id:'dist',c:'found',n:'分布式系统',jd:'O A B X AN CU CG',d:'长任务、状态恢复、调度本质上都是分布式问题。四家都把它列为核心。',k:['一致性模型与共识（Raft）','幂等与 exactly-once 的边界','消息队列与事件驱动','故障检测与重试语义'],p:'复习 MIT 6.5840 的 Raft Lab，重点关注幂等和重试的设计。',r:['Kleppmann《Designing Data-Intensive Applications》','Raft 论文','MIT 6.5840 课程']},
+ {id:'k8s',c:'found',n:'云原生与 K8s',jd:'A B T CG',d:'百度明确要求掌握 Operator，阿里要求 K8s/Serverless。沙箱实例的编排大多建在 K8s 之上。',k:['Pod、调度器、资源配额','CRD 与 Operator 模式','RuntimeClass（接入 gVisor/Kata）','HPA 与弹性伸缩'],p:'用 kubebuilder 写一个管理 Sandbox CRD 的 Operator。',r:['Kubernetes 官方文档','The Kubebuilder Book']},
+ {id:'lang',c:'found',n:'Go / Rust / Python',jd:'O A B X AN CU',d:'Go 用于平台和控制面，Rust 用于沙箱和高性能组件，Python 用于 Agent 和评测生态。',k:['Go 并发与 context 取消','Rust async 与内存安全','Python asyncio','TypeScript（SDK 与 MCP）'],p:'用 Go 实现一个带取消和超时传播的工具执行器。',r:['《The Go Programming Language》','《Rust for Rustaceans》']},
+
+ // Agent 核心
+ {id:'llm',c:'core',n:'LLM 基础',jd:'O A B X AN CU K JP',d:'要做 Agent 平台，必须理解模型的输入输出约束。',k:['token、上下文窗口、采样参数','function calling 与 structured output','KV cache 与 prompt caching','模型能力边界与幻觉'],p:'不用框架，直接调 API 实现一次多轮工具调用。',r:['Karpathy「Let’s build GPT」视频','Anthropic 与 OpenAI 的 API 文档']},
+ {id:'loop',c:'core',n:'Agent Loop',jd:'O A B X AN CU K',d:'模型、工具、观察三者构成的循环，所有 Agent 的最小内核。',k:['停止条件与最大步数','工具错误回传','人类审批中断','流式与可中断'],p:'200 行内实现一个完整的 Agent Loop，带审批和中断。',r:['ReAct 论文（Yao et al., 2022）','Anthropic「Building Effective Agents」']},
+ {id:'patterns',c:'core',n:'执行架构模式',jd:'A X JP',d:'小红书要求支持 ReAct、Workflow、Planner-Executor、Multi-Agent 等不同执行架构。',k:['Workflow 与 Agent 的取舍','Planner-Executor','Orchestrator-Workers','Evaluator-Optimizer'],p:'同一个任务分别用 Workflow 和自主 Agent 实现，比较成功率和成本。',r:['Anthropic「Building Effective Agents」','LangGraph 文档']},
+ {id:'multi',c:'core',n:'Multi-Agent 与委托',jd:'O A B X AN CU CG JP',d:'子代理、委托和并行执行，核心难点是上下文隔离和结果汇总。',k:['子代理与上下文隔离','并行扇出与汇总','委托的权限边界','token 成本放大'],p:'实现一个 lead agent 并行派发 3 个子代理的研究任务。',r:['Anthropic「How we built our multi-agent research system」']},
+ {id:'harness',c:'core',n:'Harness 工程',jd:'B X AN CU K',d:'模型之外的一切：上下文组装、工具、循环、审批、遥测。小红书称之为 Harness Kernel，百度称为 Harness 工程。',k:['模型适配层解耦','上下文组装管线','工具调用与审批钩子','遥测埋点'],p:'阅读 Codex CLI 或 OpenCode 的开源实现，画出它的模块图。',r:['Codex CLI 源码（GitHub）','OpenCode 源码（GitHub）']},
+ {id:'cua',c:'core',n:'Computer / Browser Use',jd:'O B AN',d:'截图、动作、观察的循环，需要 VM 或浏览器环境作为基础设施。',k:['截图与坐标动作','DOM 与可访问性树','Playwright 自动化','环境快照与复用'],p:'用 Playwright 加一个模型做一个能完成表单任务的 Browser Agent。',r:['Playwright 文档','OSWorld 基准']},
+
+ // 运行时
+ {id:'durable',c:'rt',n:'Durable Execution',jd:'O B X AN',d:'长任务的核心：进程会挂，任务状态和结果不能丢。',k:['工作流引擎与事件溯源','确定性 replay','活动重试与超时','长时间等待（人类审批）'],p:'用 Temporal 把一个 Agent Loop 改写成可恢复的工作流。',r:['Temporal 官方文档','DDIA 的事件溯源章节']},
+ {id:'state',c:'rt',n:'状态模型',jd:'O X AN K',d:'小红书点名研究 Session、Event、Turn、Deployment、Workspace 等状态模型。',k:['Session 与 Turn 的边界','事件日志作为事实来源','Workspace（文件系统状态）','运行实例可替换'],p:'为你的 Agent 设计一套事件 schema，要求能从日志完整重建状态。',r:['OpenAI Responses API 与 Conversations 设计','Anthropic Messages API 设计']},
+ {id:'ckpt',c:'rt',n:'Checkpoint 与恢复',jd:'A X AN CG',d:'阿里要求检查点恢复保障长任务可靠性，小红书要求断点恢复和故障迁移。',k:['checkpoint 粒度','工具调用的幂等键','副作用的补偿（Saga）','沙箱文件系统快照'],p:'在任意一步 kill 进程，验证 Agent 能从断点继续且不重复副作用。',r:['LangGraph checkpointer 文档','Saga 模式']},
+ {id:'sched',c:'rt',n:'调度与弹性',jd:'A B CU CG',d:'海量 Agent 和沙箱实例的调度、冷启动与伸缩。',k:['任务队列与优先级','背压与公平调度','冷启动与预热池','快照恢复加速启动'],p:'设计一个沙箱预热池，测量冷启动 P50 和 P99。',r:['Borg 论文','Firecracker snapshot 文档']},
+ {id:'conc',c:'rt',n:'高并发与资源治理',jd:'A B T',d:'模型调用有限流，沙箱有资源上限，多租户需要公平。',k:['配额与令牌桶','上游模型限流处理','租户级公平','成本归因'],p:'实现一个按租户限流的模型调用代理。',r:['Google SRE Book 的过载处理章节']},
+
+ // 沙箱与安全
+ {id:'iso',c:'sec',n:'隔离技术',jd:'O A B X AN CG',d:'四家都提到。Container、gVisor、Firecracker、Kata 的安全性和性能权衡是面试高频题。',k:['共享内核与独立内核','gVisor 用户态内核','Firecracker microVM','Kata 与 RuntimeClass'],p:'在同一台机器上对比三种运行时的启动延迟和 syscall 开销。',r:['Firecracker 论文（NSDI 2020）','gVisor 官方文档','Kata Containers 文档']},
+ {id:'sandbox',c:'sec',n:'代码执行沙箱',jd:'O A B X AN CG K T',d:'Agent 写代码、跑代码的环境，是 Agent 基础设施的核心产品。',k:['文件系统与 Workspace','网络出口控制','CPU、内存、时间限制','生命周期与回收'],p:'基于 Firecracker 或 gVisor 做一个带 API 的代码执行服务。',r:['E2B 开源代码','Firecracker 入门文档']},
+ {id:'identity',c:'sec',n:'Agent 身份与委托授权',jd:'O A X AN JP',d:'Agent 代表谁在行动？需要身份、委托和最小权限。',k:['OAuth 2.0 与 on-behalf-of','Token Exchange（RFC 8693）','最小权限与范围收窄','人类审批作为授权'],p:'设计 Agent 代表用户访问 GitHub 的授权流程，权限可撤销、可审计。',r:['RFC 8693','MCP 授权规范']},
+ {id:'cred',c:'sec',n:'Credential 管理',jd:'X AN JP',d:'密钥绝不能进入模型上下文。',k:['密钥不进上下文','出口代理注入凭证','短期凭证','审计日志'],p:'实现一个在网络层注入 API Key 的代理，让沙箱内代码看不到密钥。',r:['HashiCorp Vault 文档']},
+ {id:'inject',c:'sec',n:'Prompt 注入与工具安全',jd:'O X',d:'间接注入和数据外泄，是 Agent 在生产环境最现实的安全风险。',k:['直接与间接注入','私有数据、不可信内容、外部通信三者组合的风险','工具权限分级','输出过滤与审批'],p:'对你自己的 Agent 做红队测试：通过网页内容诱导它泄露数据。',r:['Simon Willison 关于 prompt injection 的系列博客','OWASP Top 10 for LLM Applications']},
+ {id:'tenant',c:'sec',n:'多租户隔离',jd:'A B AN',d:'百度要求高安全等级的多租户隔离方案，阿里要求多租户隔离经验。',k:['计算、网络、数据隔离','噪声邻居','租户级加密','隔离等级与成本'],p:'为沙箱平台写一份多租户威胁模型文档。',r:['AWS Lambda 与 Firecracker 的设计资料']},
+
+ // 上下文与工具
+ {id:'ctxeng',c:'ctx',n:'Context Engineering',jd:'O A B X AN K',d:'在有限窗口和成本约束下，决定模型看到什么。',k:['上下文组装与排序','压缩与摘要（compaction）','上下文衰减','缓存友好的结构'],p:'给长任务 Agent 加上自动 compaction，对比前后成功率。',r:['Anthropic「Effective context engineering for AI agents」']},
+ {id:'memory',c:'ctx',n:'分层记忆',jd:'O X AN JP',d:'短期、工作、长期记忆，以及写入与检索策略。',k:['工作记忆与长期记忆','写入时机与冲突','基于文件的记忆','个性化'],p:'为 Agent 实现一个基于文件的记忆工具，测试跨会话召回。',r:['MemGPT 论文','Anthropic memory tool 文档']},
+ {id:'rag',c:'ctx',n:'检索与 RAG',jd:'O A X JP',d:'OpenAI 提到搜索和关联上下文，阿里提到知识检索。',k:['向量、BM25 与混合检索','重排序','Agentic search 与预建索引的取舍','Grounding 与引用'],p:'在同一语料上对比混合检索与 Agent 自主 grep 搜索的效果。',r:['Anthropic「Contextual Retrieval」','BEIR 基准']},
+ {id:'tools',c:'ctx',n:'工具设计',jd:'O A B X CU K JP',d:'工具是 Agent 的 API，设计质量直接影响成功率。',k:['schema 与命名','对模型友好的错误信息','粒度与 token 效率','分页与截断'],p:'把一个现有 REST API 改造成 Agent 友好的工具集，并做 eval 对比。',r:['Anthropic「Writing effective tools for agents」']},
+ {id:'mcp',c:'ctx',n:'MCP',jd:'B X T JP',d:'工具和数据接入的事实标准协议。',k:['tools、resources、prompts','stdio 与 Streamable HTTP','授权流程','Server 开发'],p:'为你熟悉的内部系统写一个 MCP Server，接入 Claude 或 Codex。',r:['MCP 官方规范（modelcontextprotocol.io）']},
+ {id:'skills',c:'ctx',n:'Skills / CLI / SDK',jd:'A B X K JP',d:'面向 Agent 的产品接口。百度称之为 Agent-Ready 产品体验。',k:['渐进式披露','CLI 作为 Agent 接口','SDK 设计','对 Agent 的可组合性'],p:'为一个内部流程写一个 Skill，观察 Agent 何时加载、何时用错。',r:['Anthropic Agent Skills 文档']},
+ {id:'registry',c:'ctx',n:'Tool Registry 与 Gateway',jd:'X JP',d:'工具、Skill、MCP Server 的注册、版本、发现与调用治理。',k:['注册与版本','发现与检索','调用网关与审计','灰度与下线'],p:'设计一个 MCP Gateway：统一鉴权、限流、审计多个 MCP Server。',r:['API Gateway 设计资料（Envoy 文档）']},
+
+ // 评测与可观测
+ {id:'trace',c:'eval',n:'Tracing 与可观测',jd:'O A B X AN JP',d:'Agent 执行链路长且非确定，必须能看到每一步。',k:['OpenTelemetry GenAI 语义约定','span 设计（turn、tool、model）','LangFuse','日志、指标与 trace 关联'],p:'给 Agent 接入 OpenTelemetry，在 Grafana 中看完整的 trace。',r:['OpenTelemetry GenAI semantic conventions','LangFuse 文档']},
+ {id:'evals',c:'eval',n:'Eval 体系',jd:'O A X AN CU K JP',d:'把不确定系统变成可度量、可比较的系统。',k:['数据集构建','代码判分、模型判分、人工判分','pass@k 与非确定性','环境化评测'],p:'为你的 Agent 建 50 条评测用例，跑出基线分数。',r:['SWE-bench','τ-bench','Anthropic「Demystifying evals for AI agents」']},
+ {id:'gate',c:'eval',n:'上线 Gate 与回归',jd:'X JP',d:'模型、Prompt、工具的每次变更都要能评估、对比、安全发布。',k:['回归套件','上线 Gate','线上抽样','Bad Case 回流'],p:'在 CI 中加一个 eval gate：分数下降超过阈值就阻止合并。',r:['Google SRE Book 的发布工程章节']},
+ {id:'cost',c:'eval',n:'成本与延迟优化',jd:'O A CU JP',d:'OpenAI 要求在任务完成、成本、延迟上拿出可衡量收益。',k:['prompt caching','模型路由','并行工具调用','token 预算'],p:'测量一个任务的 token 分布，用缓存和路由把成本降一半。',r:['Anthropic 与 OpenAI 的 prompt caching 文档']},
+
+ // 平台与控制面
+ {id:'cpdp',c:'plat',n:'Control Plane 与 Data Plane',jd:'B X',d:'小红书明确要求能区分二者。经典的平台架构思想。',k:['控制面：配置、策略、生命周期','数据面：执行与流量','两者的故障隔离','声明式与调和循环'],p:'把你的 Agent 平台拆成控制面和数据面，画架构图。',r:['Kubernetes 架构文档','Envoy 与 xDS']},
+ {id:'lifecycle',c:'plat',n:'Agent 资产与生命周期',jd:'X',d:'统一的 Agent Artifact、Owner、版本、权限、策略、发布模型。',k:['Agent 定义即资产','版本与发布','策略与权限','统一纳管 BYO Agent'],p:'设计一份 Agent Artifact 的 schema，覆盖身份、版本、策略。',r:['OCI Image 规范（作为类比）']},
+ {id:'abstraction',c:'plat',n:'平台抽象设计',jd:'O X',d:'OpenAI 要求把复杂系统抽象成简单、持久的基本单元。',k:['原语的选择','稳定的 API 边界','可组合性','为未来模型留空间'],p:'挑一个现有 Agent 框架，写一页评论：哪些抽象会随模型变强而过时。',r:['John Ousterhout《A Philosophy of Software Design》']},
+ {id:'devx',c:'plat',n:'开发者体验与协作',jd:'O AN CG',d:'OpenAI 强调开发者同理心，与研究、产品团队合作。',k:['文档即产品','内部用户访谈','SDK 人机工学','把研究进展转为平台能力'],p:'找 3 位同事试用你的平台，记录他们卡住的地方。',r:['Stripe API 设计相关文章']},
+
+ // 前沿
+ {id:'rl',c:'front',n:'Agentic RL 基础设施',jd:'A B K CG CU',d:'训练 Agent 需要海量沙箱环境、rollout 和 reward。百度和阿里都提到。',k:['环境即沙箱','大规模 rollout','reward 设计','训练与推理协同'],p:'读一篇 Agentic RL 论文，画出其 rollout 基础设施。',r:['DeepSeek-R1 论文（GRPO）','SWE-Gym']},
+ {id:'serving',c:'front',n:'推理服务',jd:'A B T',d:'理解推理侧，才能做好成本和延迟优化。',k:['continuous batching','PagedAttention','KV cache 复用','投机解码'],p:'本地部署 vLLM，测量 batch size 对吞吐和延迟的影响。',r:['vLLM 论文（SOSP 2023）']},
+ {id:'agentic',c:'front',n:'Agentic 工作方式',jd:'B JP CU',d:'百度要求生产级深度使用 Claude Code、Codex 等工具，并在团队推广。',k:['深度使用 coding agent','把流程沉淀为 Skill','Agent 驱动的开发流程','团队推广'],p:'一周内所有编码任务都先交给 coding agent，记录成功和失败的模式。',r:['Claude Code 文档','Codex 文档']},
+ {id:'research',c:'front',n:'研究品位',jd:'X',d:'小红书要求提出可验证假设，用实验和 benchmark 判断方案。',k:['提出可验证假设','设计实验与 benchmark','阅读论文','沉淀为开源或文章'],p:'每周精读一篇 Agent 系统论文，写一段「能否复现、值不值得做」的判断。',r:['arXiv cs.AI / cs.SE','各家工程博客']},
+ // 新增：来自扩展 JD
+ {id:'virt',c:'sec',n:'虚拟化与 eBPF',jd:'AN O CG',d:'Anthropic 沙箱岗要求 KVM、QEMU、eBPF；OpenAI Codex 和 Cognition 要求虚拟化与 VM 编排。比容器更底层的一层。',k:['KVM 与 QEMU','VM 编排与资源调度','eBPF 观测与网络控制','内核调优'],p:'用 Firecracker 启动 microVM，再用 eBPF 统计沙箱内的 syscall 与网络流量。',r:['Brendan Gregg《BPF Performance Tools》','KVM 与 Firecracker 官方文档']},
+ {id:'guard',c:'sec',n:'Guardrails 与合规',jd:'JP CU',d:'日本企业 JD 普遍要求个人信息政策、使用限制和审计；Cursor 把 guardrails 列为 Harness 的一部分。',k:['输入输出过滤','个人信息与数据驻留','使用策略与配额','审计日志'],p:'为一个内部 Agent 设计 guardrail 层：PII 脱敏、危险操作拦截、审计留痕。',r:['OWASP Top 10 for LLM Applications','NIST AI RMF']},
+ {id:'hitl',c:'core',n:'人机协作边界',jd:'JP K',d:'Arent 要求设计「人确认的判断」与「交给 Agent 的判断」的边界；月之暗面在定义人与 Agent 协作的产品形态。',k:['审批点设计','可逆与不可逆操作','置信度与升级','协作界面'],p:'把一个业务流程拆成步骤，按风险和可逆性标出哪些需要人工审批。',r:['Anthropic「Building Effective Agents」中关于人类检查点的部分']},
+ {id:'a2a',c:'core',n:'Agent 间协作协议',jd:'K',d:'月之暗面把 Agent 之间的协作视为新的 harness，需要设计交互协议。',k:['消息与任务协议','能力发现','共享状态与交接','A2A 等开放协议'],p:'定义两个 Agent 交接任务的消息格式，包含目标、上下文摘要、产出物。',r:['Google A2A 协议规范','MCP 规范（对比阅读）']},
+ {id:'async',c:'rt',n:'异步执行与进度可见',jd:'O AN',d:'OpenAI Agent Runtime 强调异步执行和进度上报；Anthropic Managed Agents 要求会话断线后能持续运行并干净恢复。',k:['后台任务与断线重连','进度上报与事件流','通知与结果交付','取消与暂停'],p:'让 Agent 在后台跑 30 分钟任务，客户端可断开、重连并看到实时进度。',r:['OpenAI background mode 文档','Server-Sent Events 规范']},
+ {id:'hybrid',c:'rt',n:'混合部署与自托管',jd:'AN X',d:'Anthropic Managed Agents 同时跑在托管沙箱和客户自有环境；小红书要统一纳管 Managed 与 BYO Agent。',k:['托管与自托管环境','统一控制面多数据面','环境抽象接口','跨环境安全边界'],p:'设计一个环境接口，让同一个 Agent 既能跑在你的沙箱，也能跑在客户 VPC。',r:['Kubernetes 多集群管理资料','Anthropic Managed Agents 文档']},
+ {id:'gateway',c:'plat',n:'LLM Gateway 与模型路由',jd:'JP CU',d:'日本企业几乎都要求 LLM Gateway：模型切换、权限、预算一元管理。Cursor 的 Auto 要根据需求、能力和成本自动选模型。',k:['统一模型接入','路由与 fallback','预算与配额','缓存与成本可视化'],p:'实现一个按任务难度和预算路由到不同模型的网关，带失败降级。',r:['LiteLLM 源码','OpenRouter 文档']},
+ {id:'rollout',c:'eval',n:'新模型接入与上线',jd:'O CU JP',d:'OpenAI Codex 和 Cursor 都把新模型的接入、评测、灰度作为核心职责；日本 JD 要求版本管理与回滚。',k:['模型适配与评测','灰度与 A/B','Prompt 与模型版本管理','回滚'],p:'模拟一次模型切换：跑 eval、5% 灰度、监控指标、一键回滚。',r:['Google SRE Book 的灰度发布章节']},
+ {id:'sre',c:'eval',n:'SRE 与故障演练',jd:'T JP K',d:'腾讯有专门的 Agent 沙箱 SRE 岗，要求混沌工程；日本 JD 要求 fallback、告警和 Runbook。',k:['SLO 与错误预算','混沌工程','Oncall 与 Runbook','自愈体系'],p:'对你的沙箱服务做一次故障注入，写出对应的 Runbook。',r:['Google《Site Reliability Engineering》','Chaos Engineering（O’Reilly）']}
+];
+
+const PRE = [
+ ['os','iso'],['iso','sandbox'],['os','sandbox'],['net','conc'],['dist','durable'],['dist','state'],['k8s','sched'],['k8s','cpdp'],
+ ['llm','loop'],['loop','patterns'],['patterns','multi'],['loop','harness'],['harness','ctxeng'],['sandbox','cua'],
+ ['durable','ckpt'],['state','ckpt'],['sandbox','ckpt'],['tenant','iso'],['identity','cred'],['inject','identity'],
+ ['tools','mcp'],['mcp','registry'],['identity','registry'],['ctxeng','memory'],['rag','memory'],['multi','ctxeng'],
+ ['trace','evals'],['evals','gate'],['llm','cost'],['serving','cost'],['abstraction','cpdp'],['cpdp','lifecycle'],
+ ['sandbox','rl'],['evals','rl'],['evals','research'],['agentic','harness'],['skills','tools'],['sched','sandbox'],
+ ['os','virt'],['virt','iso'],['inject','guard'],['loop','hitl'],['multi','a2a'],['durable','async'],['sandbox','hybrid'],['cpdp','hybrid'],
+ ['cost','gateway'],['conc','gateway'],['evals','rollout'],['gateway','rollout'],['trace','sre'],['identity','guard']
+];
+
+const PATH = [
+ {t:'Agent 核心',ids:['llm','loop','patterns','harness','hitl']},
+ {t:'上下文与工具',ids:['tools','ctxeng','mcp','skills']},
+ {t:'长任务运行时',ids:['durable','state','ckpt','async']},
+ {t:'沙箱与安全',ids:['iso','sandbox','virt','identity','inject']},
+ {t:'评测与可观测',ids:['trace','evals','cost','rollout']},
+ {t:'平台化',ids:['gateway','abstraction','cpdp','registry','hybrid']},
+ {t:'前沿',ids:['multi','a2a','cua','rl','research']}
+];
+
+const byId = Object.fromEntries(N.map(n=>[n.id,n]));
+const STATUS = ['未开始','学习中','已掌握'];
+let prog = {};
+try{ prog = JSON.parse(localStorage.getItem('agent-infra-progress')||'{}') }catch(e){ prog = {} }
+function saveProg(){ try{ localStorage.setItem('agent-infra-progress', JSON.stringify(prog)) }catch(e){} }
+
+let filter = null, selected = null;
+
+// filters
+const fEl = document.getElementById('filters');
+[['全部',null],...Object.entries(JD).map(([k,v])=>[v,k])].forEach(([label,key])=>{
+  const b = document.createElement('button');
+  b.className='chip'; b.textContent=label; b.setAttribute('aria-pressed', key===filter);
+  b.onclick=()=>{ filter=key; [...fEl.children].forEach(c=>c.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); applyDim(); };
+  fEl.appendChild(b);
+});
+document.getElementById('legend').innerHTML = Object.values(CLUSTERS).map(c=>`<span><b style="background:${c.color}"></b>${c.name}</span>`).join('');
+
+// graph data
+const nodes = [{id:'root',type:'root',label:'Agent Infra 工程师'}];
+const links = [];
+Object.entries(CLUSTERS).forEach(([k,c])=>{ nodes.push({id:'h_'+k,type:'hub',c:k,label:c.name}); links.push({source:'root',target:'h_'+k,kind:'tree'}); });
+N.forEach(n=>{ n.jd = n.jd.split(' '); });
+N.forEach(n=>{ nodes.push({id:n.id,type:'leaf',c:n.c,label:n.n}); links.push({source:'h_'+n.c,target:n.id,kind:'tree'}); });
+PRE.forEach(([a,b])=>links.push({source:a,target:b,kind:'pre'}));
+
+const svg = d3.select('#svg');
+const g = svg.append('g');
+svg.call(d3.zoom().scaleExtent([.3,3]).on('zoom',e=>g.attr('transform',e.transform)));
+
+const ckeys = Object.keys(CLUSTERS);
+function anchor(c){ const i=ckeys.indexOf(c); const a=i/ckeys.length*2*Math.PI - Math.PI/2; return [Math.cos(a)*380, Math.sin(a)*300]; }
+
+const linkSel = g.append('g').selectAll('line').data(links).join('line').attr('class',d=>'link'+(d.kind==='pre'?' pre':''));
+const nodeSel = g.append('g').selectAll('g').data(nodes).join('g')
+  .attr('class',d=>'node '+d.type).attr('tabindex',d=>d.type==='leaf'?0:null)
+  .attr('role',d=>d.type==='leaf'?'button':null).attr('aria-label',d=>d.label)
+  .on('click',(e,d)=>{ if(d.type==='leaf') select(d.id); else if(d.type==='root') select(null); })
+  .on('keydown',(e,d)=>{ if((e.key==='Enter'||e.key===' ')&&d.type==='leaf'){ e.preventDefault(); select(d.id);} })
+  .call(d3.drag().on('start',(e,d)=>{ if(!e.active) sim.alphaTarget(.2).restart(); d.fx=d.x; d.fy=d.y; })
+    .on('drag',(e,d)=>{ d.fx=e.x; d.fy=e.y; }).on('end',(e,d)=>{ if(!e.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+
+const R = d=> d.type==='root'?22 : d.type==='hub'?13 : 5 + (byId[d.id].jd.length)*1.25;
+const col = d=> d.type==='root'? 'var(--ink)' : CLUSTERS[d.c].color;
+
+nodeSel.append('circle').attr('class','ring').attr('r',d=>R(d)+3.5).attr('fill','none').attr('stroke-width',2);
+nodeSel.append('circle').attr('class','dot').attr('r',R).attr('stroke','var(--bg)').attr('stroke-width',1.5);
+nodeSel.append('text').attr('dy',d=>R(d)+14).attr('text-anchor','middle').text(d=>d.label);
+
+function paint(){
+  nodeSel.select('.dot').attr('fill',d=>{
+    if(d.type!=='leaf') return col(d);
+    const s = prog[d.id]||0; return s===0? 'var(--surface)' : col(d);
+  }).attr('stroke',d=> d.type==='leaf' ? col(d) : 'var(--bg)').attr('stroke-width',d=>d.type==='leaf'?2:1.5)
+    .attr('fill-opacity',d=> d.type==='leaf' && (prog[d.id]||0)===1 ? .45 : 1);
+  nodeSel.select('.ring').attr('stroke',d=> d.id===selected ? 'var(--ink)' : 'transparent');
+  const total=N.length, done=N.filter(n=>prog[n.id]===2).length, doing=N.filter(n=>prog[n.id]===1).length;
+  document.getElementById('barFill').style.width = (done/total*100)+'%';
+  document.getElementById('progText').textContent = `已掌握 ${done} / ${total}，学习中 ${doing}`;
+}
+
+function applyDim(){
+  const rel = new Set();
+  if(selected){ rel.add(selected); links.forEach(l=>{ if(l.kind==='pre'){ if(l.source.id===selected) rel.add(l.target.id); if(l.target.id===selected) rel.add(l.source.id);} }); }
+  nodeSel.classed('dim',d=>{
+    if(d.type!=='leaf') return false;
+    if(filter && !byId[d.id].jd.includes(filter)) return true;
+    return false;
+  });
+  linkSel.classed('hl',l=> selected && l.kind==='pre' && (l.source.id===selected||l.target.id===selected))
+    .classed('dim',l=> filter && ((l.source.type==='leaf'&&!byId[l.source.id].jd.includes(filter))||(l.target.type==='leaf'&&!byId[l.target.id].jd.includes(filter))));
+}
+
+const sim = d3.forceSimulation(nodes)
+  .force('link', d3.forceLink(links).id(d=>d.id).distance(l=> l.kind==='pre'?120 : l.source.id==='root'?200:60).strength(l=>l.kind==='pre'?.05:.6))
+  .force('charge', d3.forceManyBody().strength(d=>d.type==='root'?-600:d.type==='hub'?-300:-140))
+  .force('x', d3.forceX(d=> d.type==='root'?0 : anchor(d.c)[0]).strength(d=>d.type==='root'?.5:.12))
+  .force('y', d3.forceY(d=> d.type==='root'?0 : anchor(d.c)[1]).strength(d=>d.type==='root'?.5:.12))
+  .force('collide', d3.forceCollide(d=>R(d)+20))
+  .on('tick',()=>{
+    linkSel.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+    nodeSel.attr('transform',d=>`translate(${d.x},${d.y})`);
+  });
+
+function fit(){
+  const el=document.getElementById('graph'); const w=el.clientWidth, h=el.clientHeight;
+  const s=Math.min(w/1000,h/860,1.1);
+  svg.call(d3.zoom().scaleExtent([.3,3]).on('zoom',e=>g.attr('transform',e.transform)).transform, d3.zoomIdentity.translate(w/2,h/2).scale(s));
+}
+fit(); window.addEventListener('resize',fit);
+
+// panel
+const panel = document.getElementById('panel');
+function linkTo(id){ return `<a data-id="${id}">${byId[id].n}</a>`; }
+function select(id){
+  selected=id; paint(); applyDim();
+  if(!id){ renderHome(); return; }
+  const n=byId[id], c=CLUSTERS[n.c];
+  const pre = PRE.filter(p=>p[1]===id).map(p=>p[0]), next = PRE.filter(p=>p[0]===id).map(p=>p[1]);
+  const s = prog[id]||0;
+  panel.innerHTML = `
+    <button class="back" id="back">返回学习路线</button>
+    <div class="cl" style="color:${c.color};margin-top:14px">${c.name}</div>
+    <h2>${n.n}</h2>
+    <p>${n.d}</p>
+    <div class="jd">${Object.entries(JD).map(([k,v])=>`<span class="${n.jd.includes(k)?'on':''}">${v}</span>`).join('')}</div>
+    <div class="status" role="group" aria-label="学习状态">${STATUS.map((t,i)=>`<button data-s="${i}" aria-pressed="${i===s}">${t}</button>`).join('')}</div>
+    <h3>核心概念</h3><ul>${n.k.map(x=>`<li>${x}</li>`).join('')}</ul>
+    <h3>动手练习</h3><p>${n.p}</p>
+    <h3>学习资料</h3><ul>${n.r.map(x=>`<li>${x}</li>`).join('')}</ul>
+    ${pre.length?`<h3>先修</h3><p class="links">${pre.map(linkTo).join('、')}</p>`:''}
+    ${next.length?`<h3>学完可以进入</h3><p class="links">${next.map(linkTo).join('、')}</p>`:''}`;
+  panel.querySelector('#back').onclick=()=>select(null);
+  panel.querySelectorAll('.status button').forEach(b=>b.onclick=()=>{ prog[id]=+b.dataset.s; saveProg(); select(id); });
+  bindLinks(); panel.scrollTop=0;
+}
+function bindLinks(){ panel.querySelectorAll('a[data-id]').forEach(a=>a.onclick=()=>select(a.dataset.id)); }
+function renderHome(){
+  const counts = Object.fromEntries(Object.keys(JD).map(k=>[k,N.filter(n=>n.jd.includes(k)).length]));
+  const top = [...N].sort((a,b)=>b.jd.length-a.jd.length).slice(0,8);
+  panel.innerHTML = `
+    <h2>学习路线</h2>
+    <p>节点越大，被越多公司提到。空心是未开始，半透明是学习中，实心是已掌握。虚线表示先修关系。</p>
+    <h3>被最多公司提到</h3>
+    <ol>${top.map(n=>`<li>${linkTo(n.id)}（${n.jd.length} 家）</li>`).join('')}</ol>
+    <h3>建议顺序</h3>
+    <ol class="path">${PATH.map(p=>`<li><strong>${p.t}</strong><br>${p.ids.map(id=>`<a data-id="${id}" class="${prog[id]===2?'done':''}">${byId[id].n}</a>`).join('、')}</li>`).join('')}</ol>
+    <h3>扩展 JD 带来的新信号</h3>
+    <ul>
+      <li>沙箱向更底层走：KVM、eBPF、VM 编排成为硬要求。</li>
+      <li>模型接入与路由成了独立职责：新模型上线、自动选模型、LLM Gateway。</li>
+      <li>异步与混合部署：Agent 在后台跑数小时，并能跑在客户自有环境。</li>
+      <li>日本市场偏应用平台：Gateway、Guardrails、评测、成本管理。</li>
+    </ul>
+    <h3>JD 来源</h3>
+    ${SOURCES.map(s=>`<p style="margin-bottom:4px"><strong>${JD[s.k]}</strong>（覆盖 ${counts[s.k]} 个节点）</p><ul style="margin-bottom:10px">${s.jobs.map(([t,u])=>`<li>${u?`<a href="${u}" target="_blank" rel="noopener" style="color:var(--focus)">${t}</a>`:t}</li>`).join('')}</ul>`).join('')}`;
+  bindLinks();
+}
+paint(); applyDim(); renderHome();
+</script>
+</body>
+</html>
