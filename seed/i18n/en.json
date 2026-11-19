@@ -1,0 +1,2480 @@
+{
+  "roles": {
+    "agent-infra": {
+      "name": "Agent Infra Engineer",
+      "root_label": "Agent Infra Engineer"
+    },
+    "ai-app": {
+      "name": "AI Application Engineer",
+      "root_label": "AI Application Engineer"
+    },
+    "backend": {
+      "name": "Backend Engineer",
+      "root_label": "Backend Engineer"
+    },
+    "sre-platform": {
+      "name": "SRE / Platform Engineer",
+      "root_label": "SRE / Platform Engineer"
+    },
+    "frontend": {
+      "name": "Frontend Engineer",
+      "root_label": "Frontend Engineer"
+    },
+    "data-eng": {
+      "name": "Data Engineer",
+      "root_label": "Data Engineer"
+    }
+  },
+  "clusters": {
+    "found": "Engineering Foundations",
+    "core": "Agent Core",
+    "rt": "Runtime",
+    "sec": "Sandboxing and Security",
+    "ctx": "Context and Tools",
+    "eval": "Evaluation and Observability",
+    "plat": "Platform and Control Plane",
+    "front": "Frontier and Ways of Working",
+    "ai-app-found": "Engineering Foundations",
+    "ai-app-llm": "Calling Models",
+    "ai-app-rag": "Knowledge and Retrieval",
+    "ai-app-agent": "Agents and Workflows",
+    "ai-app-ux": "AI Interaction Design",
+    "ai-app-quality": "Quality and Operations",
+    "ai-app-product": "Productization and Delivery",
+    "backend-found": "Programming and CS Fundamentals",
+    "backend-service": "Services and APIs",
+    "backend-data": "Data Storage",
+    "backend-arch": "Distributed Systems and Architecture",
+    "backend-ops": "Delivery and Operations",
+    "backend-eng": "Engineering Practice and Business Domains",
+    "sre-platform-found": "Systems Fundamentals",
+    "sre-platform-obs": "Observability",
+    "sre-platform-reliability": "Reliability Engineering",
+    "sre-platform-cloud": "Cloud and Infrastructure",
+    "sre-platform-k8s": "Container Orchestration",
+    "sre-platform-delivery": "Delivery and Developer Platform",
+    "sre-platform-data": "Stateful Services",
+    "frontend-found": "Web Fundamentals",
+    "frontend-framework": "Frameworks and App Architecture",
+    "frontend-ui": "UI and UX",
+    "frontend-quality": "Performance, Quality and Production",
+    "frontend-eng": "Frontend Tooling and Engineering",
+    "frontend-fullstack": "Cross-Platform and Full Stack",
+    "frontend-ai": "AI Collaboration and AI Interfaces",
+    "data-eng-found": "Engineering Foundations",
+    "data-eng-model": "Data Warehouse and Modeling",
+    "data-eng-batch": "Batch Processing and Orchestration",
+    "data-eng-stream": "Real-Time and Stream Processing",
+    "data-eng-storage": "Storage and Query Engines",
+    "data-eng-gov": "Data Quality and Governance",
+    "data-eng-ops": "Platform and Production Operations",
+    "data-eng-ai": "Data × AI"
+  },
+  "companies": {
+    "O": "OpenAI",
+    "AN": "Anthropic",
+    "CU": "Cursor",
+    "CG": "Cognition",
+    "A": "Alibaba",
+    "B": "Baidu",
+    "X": "Xiaohongshu (RED)",
+    "K": "Moonshot AI",
+    "T": "Tencent",
+    "JP": "Japanese companies",
+    "RAMP": "Ramp",
+    "LINEAR": "Linear",
+    "FIGMA": "Figma",
+    "NOTION": "Notion",
+    "PERPLEXITY": "Perplexity",
+    "BYTEDANCE": "ByteDance",
+    "LAYERX": "LayerX",
+    "UBIE": "Ubie",
+    "PAYPAY": "PayPay",
+    "STRIPE": "Stripe",
+    "COINBASE": "Coinbase",
+    "ROBINHOOD": "Robinhood",
+    "REDDIT": "Reddit",
+    "DATADOG": "Datadog",
+    "MEITUAN": "Meituan",
+    "NETEASE": "NetEase",
+    "MONEYFORWARD": "Money Forward",
+    "GITLAB": "GitLab",
+    "AIRBNB": "Airbnb",
+    "CLOUDFLARE": "Cloudflare",
+    "MERCARI": "Mercari",
+    "LINEYAHOO": "LY Corporation",
+    "VERCEL": "Vercel",
+    "MIRAI": "Mirai Translate",
+    "MIIVE": "miive",
+    "DISCORD": "Discord",
+    "BREX": "Brex",
+    "CHIME": "Chime",
+    "WOVEN": "Woven by Toyota"
+  },
+  "phases": {
+    "agent-infra": [
+      "Agent Core",
+      "Context and Tools",
+      "Long-Running Task Runtime",
+      "Sandboxing and Security",
+      "Evaluation and Observability",
+      "Platform Engineering",
+      "Frontier"
+    ],
+    "ai-app": [
+      "Engineering Foundations",
+      "Calling Models",
+      "Knowledge and Retrieval",
+      "Agents and Workflows",
+      "Quality Loop",
+      "Productization and Delivery"
+    ],
+    "backend": [
+      "Programming and CS Fundamentals",
+      "Your First Service",
+      "Storage and Distributed Basics",
+      "Messaging and Architecture",
+      "Shipping and Operations",
+      "Advanced Topics and Business Domains"
+    ],
+    "sre-platform": [
+      "Systems Fundamentals",
+      "Getting Started with Cloud and Delivery",
+      "Observability and Troubleshooting",
+      "Reliability Engineering",
+      "Building the Platform",
+      "Advanced Topics and Scale"
+    ],
+    "frontend": [
+      "Web Fundamentals",
+      "Frameworks and Data",
+      "Tooling and Server Side",
+      "UX, Performance and Production Quality",
+      "Architecture and Advanced Paths"
+    ],
+    "data-eng": [
+      "Engineering Foundations",
+      "Warehouse Modeling and Batch Processing",
+      "Storage and Query Engines",
+      "Real-Time Data",
+      "Quality, Governance and Metrics",
+      "Production and Data × AI"
+    ]
+  },
+  "resources": {
+    "A Survey of AIOps Methods for Failure Management（Notaro 等，ACM TIST 2021）": "A Survey of AIOps Methods for Failure Management (Notaro et al., ACM TIST 2021)",
+    "API Gateway 设计资料（Envoy 文档）": "API gateway design (Envoy documentation)",
+    "AWS Lambda 与 Firecracker 的设计资料": "AWS Lambda and Firecracker design materials",
+    "AWS Organizations 最佳实践": "AWS Organizations best practices",
+    "Airbnb Minerva 指标平台博客": "Airbnb Minerva metrics platform blog",
+    "Airbyte 文档": "Airbyte documentation",
+    "Akidau 等《Streaming Systems》": "Akidau et al., Streaming Systems",
+    "Ansible 文档": "Ansible documentation",
+    "Anthropic API 文档": "Anthropic API documentation",
+    "Anthropic Agent Skills 文档": "Anthropic Agent Skills documentation",
+    "Anthropic Managed Agents 文档": "Anthropic Managed Agents documentation",
+    "Anthropic Messages API 设计": "Anthropic Messages API design",
+    "Anthropic Prompt Engineering 指南": "Anthropic prompt engineering guide",
+    "Anthropic Vision 文档": "Anthropic Vision documentation",
+    "Anthropic memory tool 文档": "Anthropic memory tool documentation",
+    "Anthropic 与 OpenAI 的 API 文档": "Anthropic and OpenAI API documentation",
+    "Anthropic 与 OpenAI 的 prompt caching 文档": "Anthropic and OpenAI prompt caching documentation",
+    "Anthropic「Building Effective Agents」": "Anthropic, \"Building Effective Agents\"",
+    "Anthropic「Building Effective Agents」中关于人类检查点的部分": "Anthropic, Building Effective Agents: section on human checkpoints",
+    "Anthropic「Contextual Retrieval」": "Anthropic, \"Contextual Retrieval\"",
+    "Anthropic「Demystifying evals for AI agents」": "Anthropic, \"Demystifying evals for AI agents\"",
+    "Anthropic「Effective context engineering for AI agents」": "Anthropic, \"Effective context engineering for AI agents\"",
+    "Anthropic「How we built our multi-agent research system」": "Anthropic, \"How we built our multi-agent research system\"",
+    "Anthropic「Writing effective tools for agents」": "Anthropic, \"Writing effective tools for agents\"",
+    "Apache Airflow 文档": "Apache Airflow documentation",
+    "Apache Cassandra 文档": "Apache Cassandra documentation",
+    "Apache Doris 文档": "Apache Doris documentation",
+    "Apache Flink 文档": "Apache Flink documentation",
+    "Apache Hive 文档": "Apache Hive documentation",
+    "Apache Iceberg 文档": "Apache Iceberg documentation",
+    "Apache Kafka 文档": "Apache Kafka documentation",
+    "Apache Paimon 文档": "Apache Paimon documentation",
+    "Apache Spark 官方文档": "Apache Spark official documentation",
+    "Apache Superset 文档": "Apache Superset documentation",
+    "Argo CD 文档": "Argo CD documentation",
+    "Argo Rollouts 文档": "Argo Rollouts documentation",
+    "BEIR 基准": "BEIR benchmark",
+    "BIRD-SQL 基准": "BIRD-SQL benchmark",
+    "Backstage 文档": "Backstage documentation",
+    "Basecamp《Shape Up》": "Basecamp, Shape Up",
+    "BigQuery 文档": "BigQuery documentation",
+    "Borg 论文": "Borg paper",
+    "Brendan Gregg《BPF Performance Tools》": "Brendan Gregg, BPF Performance Tools",
+    "Brendan Gregg《Systems Performance》": "Brendan Gregg, Systems Performance",
+    "Brian Goetz《Java Concurrency in Practice》": "Brian Goetz, Java Concurrency in Practice",
+    "CMU 15-445 数据库系统": "CMU 15-445 Database Systems",
+    "Ceph 文档": "Ceph documentation",
+    "Chad Sanderson《Data Contracts》": "Chad Sanderson, Data Contracts",
+    "Chambers & Zaharia《Spark: The Definitive Guide》": "Chambers & Zaharia, Spark: The Definitive Guide",
+    "Chaos Engineering（O’Reilly）": "Chaos Engineering (O'Reilly)",
+    "Chaos Mesh 文档": "Chaos Mesh documentation",
+    "Chip Huyen《AI Engineering》": "Chip Huyen, AI Engineering",
+    "Chip Huyen《Designing Machine Learning Systems》": "Chip Huyen, Designing Machine Learning Systems",
+    "Chrome DevTools 文档": "Chrome DevTools documentation",
+    "Cilium 文档": "Cilium documentation",
+    "Claude Code 文档": "Claude Code documentation",
+    "ClickHouse 文档": "ClickHouse documentation",
+    "Codex CLI 源码（GitHub）": "Codex CLI source code (GitHub)",
+    "Codex 文档": "Codex documentation",
+    "DAMA《DMBOK 数据管理知识体系》": "DAMA, DMBOK: Data Management Body of Knowledge",
+    "DDIA 的事件溯源章节": "DDIA, event sourcing section",
+    "DPO 论文": "DPO paper",
+    "Dagster 文档": "Dagster documentation",
+    "DataHub 文档": "DataHub documentation",
+    "Debezium 文档": "Debezium documentation",
+    "DeepSeek-R1 论文（GRPO）": "DeepSeek-R1 paper (GRPO)",
+    "Dify 文档": "Dify documentation",
+    "Docker 官方文档": "Docker official documentation",
+    "E2B 开源代码": "E2B open-source code",
+    "ESLint 文档": "ESLint documentation",
+    "Electron 文档": "Electron documentation",
+    "Envoy 与 xDS": "Envoy and xDS",
+    "Envoy 官方文档": "Envoy official documentation",
+    "Envoy 文档": "Envoy documentation",
+    "Eric Evans《Domain-Driven Design》": "Eric Evans, Domain-Driven Design",
+    "Eugene Yan：Patterns for Building LLM-based Systems & Products": "Eugene Yan: Patterns for Building LLM-based Systems & Products",
+    "Feast 文档": "Feast documentation",
+    "Figma Dev Mode 文档": "Figma Dev Mode documentation",
+    "Firecracker snapshot 文档": "Firecracker snapshot documentation",
+    "Firecracker 入门文档": "Firecracker getting started guide",
+    "Firecracker 论文（NSDI 2020）": "Firecracker paper (NSDI 2020)",
+    "Fluent Bit 文档": "Fluent Bit documentation",
+    "FormatJS 文档": "FormatJS documentation",
+    "GSAP 文档": "GSAP documentation",
+    "GitHub Actions 文档": "GitHub Actions documentation",
+    "Google A2A 协议规范": "Google A2A protocol specification",
+    "Google AI Edge：LLM Inference": "Google AI Edge: LLM Inference",
+    "Google MapReduce 论文": "Google MapReduce paper",
+    "Google SRE Book 的发布工程章节": "Google SRE Book: Release Engineering",
+    "Google SRE Book 的灰度发布章节": "Google SRE Book, chapter on canary releases",
+    "Google SRE Book 的过载处理章节": "Google SRE Book, chapter on handling overload",
+    "Google 搜索中心文档": "Google Search Central documentation",
+    "Google《Site Reliability Engineering》": "Google, Site Reliability Engineering",
+    "Grafana Loki 文档": "Grafana Loki documentation",
+    "Grafana k6 文档": "Grafana k6 documentation",
+    "GraphQL 官方文档": "GraphQL official documentation",
+    "Great Expectations 文档": "Great Expectations documentation",
+    "Hamel Husain：Your AI Product Needs Evals": "Hamel Husain: Your AI Product Needs Evals",
+    "HashiCorp Vault 文档": "HashiCorp Vault documentation",
+    "Hugging Face PEFT 文档": "Hugging Face PEFT documentation",
+    "Istio 文档": "Istio documentation",
+    "Jay Kreps《The Log》": "Jay Kreps, The Log",
+    "Jez Humble & David Farley《Continuous Delivery》": "Jez Humble & David Farley, Continuous Delivery",
+    "Joe Reis & Matt Housley《Fundamentals of Data Engineering》": "Joe Reis & Matt Housley, Fundamentals of Data Engineering",
+    "John Ousterhout《A Philosophy of Software Design》": "John Ousterhout, A Philosophy of Software Design",
+    "Joshua Bloch《Effective Java》": "Joshua Bloch, Effective Java",
+    "KVM 与 Firecracker 官方文档": "KVM and Firecracker official documentation",
+    "Karpathy「Let’s build GPT」视频": "Karpathy, Let's build GPT (video)",
+    "Karpenter 文档": "Karpenter documentation",
+    "Kata Containers 文档": "Kata Containers documentation",
+    "Kimball Group 维度建模技术": "Kimball Group Dimensional Modeling Techniques",
+    "Kimball《The Data Warehouse Toolkit》": "Kimball, The Data Warehouse Toolkit",
+    "Kleppmann《Designing Data-Intensive Applications》": "Kleppmann, Designing Data-Intensive Applications",
+    "Kohavi 等《Trustworthy Online Controlled Experiments》": "Kohavi et al., Trustworthy Online Controlled Experiments",
+    "Kubernetes 多集群管理资料": "Kubernetes multi-cluster management resources",
+    "Kubernetes 官方文档": "Kubernetes official documentation",
+    "Kubernetes 架构文档": "Kubernetes architecture documentation",
+    "Lakehouse 论文（CIDR 2021）": "Lakehouse paper (CIDR 2021)",
+    "LangFuse 文档": "LangFuse documentation",
+    "LangGraph checkpointer 文档": "LangGraph checkpointer documentation",
+    "LangGraph 官方文档": "LangGraph official documentation",
+    "LangGraph 文档": "LangGraph documentation",
+    "Lighthouse 文档": "Lighthouse documentation",
+    "LiteLLM 源码": "LiteLLM source code",
+    "Liz Rice《Container Security》": "Liz Rice, Container Security",
+    "LoRA 论文": "LoRA paper",
+    "Looker 文档": "Looker documentation",
+    "Luciano Ramalho《Fluent Python》": "Luciano Ramalho, Fluent Python",
+    "MCP 官方规范（modelcontextprotocol.io）": "MCP specification (modelcontextprotocol.io)",
+    "MCP 授权规范": "MCP authorization specification",
+    "MCP 规范（对比阅读）": "MCP specification (for comparison)",
+    "MDN CSS 教程": "MDN CSS tutorials",
+    "MDN HTTP 缓存": "MDN HTTP caching",
+    "MDN Web 安全": "MDN Web Security",
+    "MIT 6.5840 课程": "MIT 6.5840 course",
+    "Martin Fowler《重构》": "Martin Fowler, Refactoring",
+    "Maxime Beauchemin《Functional Data Engineering》": "Maxime Beauchemin, Functional Data Engineering",
+    "MemGPT 论文": "MemGPT paper",
+    "Michael Nygard《Release It!》": "Michael Nygard, Release It!",
+    "Moses 等《Data Quality Fundamentals》": "Moses et al., Data Quality Fundamentals",
+    "Motion 文档": "Motion documentation",
+    "NGINX 官方文档": "NGINX official documentation",
+    "NestJS 文档": "NestJS documentation",
+    "Next.js 文档": "Next.js documentation",
+    "Node.js 文档": "Node.js documentation",
+    "OCI Image 规范（作为类比）": "OCI Image Specification (as an analogy)",
+    "OSWorld 基准": "OSWorld benchmark",
+    "OpenAI API 文档": "OpenAI API documentation",
+    "OpenAI Prompt Engineering 指南": "OpenAI prompt engineering guide",
+    "OpenAI Realtime API 文档": "OpenAI Realtime API documentation",
+    "OpenAI Responses API 与 Conversations 设计": "OpenAI Responses API and Conversations design",
+    "OpenAI Structured Outputs 指南": "OpenAI Structured Outputs guide",
+    "OpenAI background mode 文档": "OpenAI background mode documentation",
+    "OpenCode 源码（GitHub）": "OpenCode source code (GitHub)",
+    "OpenCost 文档": "OpenCost documentation",
+    "OpenLineage 文档": "OpenLineage documentation",
+    "OpenRouter 文档": "OpenRouter documentation",
+    "OpenTelemetry 文档": "OpenTelemetry documentation",
+    "PagerDuty Incident Response 文档": "PagerDuty Incident Response documentation",
+    "Playwright 文档": "Playwright documentation",
+    "PostgreSQL 官方文档": "PostgreSQL official documentation",
+    "Prometheus 官方文档": "Prometheus official documentation",
+    "Python 官方教程": "The Python Tutorial",
+    "Raft 论文": "Raft paper",
+    "ReAct 论文（Yao et al., 2022）": "ReAct paper (Yao et al., 2022)",
+    "React Native 文档": "React Native documentation",
+    "React Profiler 文档": "React Profiler documentation",
+    "React 官方文档": "React official documentation",
+    "Redis 官方文档": "Redis official documentation",
+    "Redux 官方文档": "Redux official documentation",
+    "Refactoring.Guru 设计模式": "Refactoring.Guru Design Patterns",
+    "Resilience4j 文档": "Resilience4j documentation",
+    "Saga 模式": "Saga pattern",
+    "Sam Newman《Building Microservices》": "Sam Newman, Building Microservices",
+    "Scott Meyers《Effective Modern C++》": "Scott Meyers, Effective Modern C++",
+    "Sentence-BERT 论文": "Sentence-BERT paper",
+    "Server-Sent Events 规范": "Server-Sent Events specification",
+    "Simon Willison 关于 prompt injection 的系列博客": "Simon Willison's blog series on prompt injection",
+    "Snowflake 文档": "Snowflake documentation",
+    "Snowplow 文档": "Snowplow documentation",
+    "Spider NL2SQL 基准": "Spider NL2SQL benchmark",
+    "Spring Boot 官方文档": "Spring Boot official documentation",
+    "Storybook 文档": "Storybook documentation",
+    "Stripe API 设计相关文章": "Stripe articles on API design",
+    "Stripe Radar 文档": "Stripe Radar documentation",
+    "TanStack Query 文档": "TanStack Query documentation",
+    "Tanya Reilly《The Staff Engineer's Path》": "Tanya Reilly, The Staff Engineer's Path",
+    "Temporal 官方文档": "Temporal official documentation",
+    "Terraform 官方文档": "Terraform official documentation",
+    "TiDB 文档": "TiDB documentation",
+    "Turborepo 文档": "Turborepo documentation",
+    "Unity Catalog 文档": "Unity Catalog documentation",
+    "Unstructured 文档": "Unstructured documentation",
+    "Vercel AI SDK 文档": "Vercel AI SDK documentation",
+    "Vercel AI SDK：Generative User Interfaces": "Vercel AI SDK: Generative User Interfaces",
+    "Vite 文档": "Vite documentation",
+    "Vitess 文档": "Vitess documentation",
+    "Vue.js 官方文档": "Vue.js official documentation",
+    "W. Richard Stevens《UNIX 网络编程 卷 1》": "W. Richard Stevens, UNIX Network Programming, Volume 1",
+    "Yevgeniy Brikman《Terraform: Up & Running》": "Yevgeniy Brikman, Terraform: Up & Running",
+    "Yjs 文档": "Yjs documentation",
+    "Zustand 文档": "Zustand documentation",
+    "dbt Semantic Layer 文档": "dbt Semantic Layer documentation",
+    "dbt 数据测试文档": "dbt data tests documentation",
+    "dbt 文档": "dbt documentation",
+    "gRPC 官方文档": "gRPC official documentation",
+    "gVisor 官方文档": "gVisor official documentation",
+    "javascript.info 现代 JavaScript 教程": "javascript.info, The Modern JavaScript Tutorial",
+    "man7.org 的 namespaces(7) 手册": "man7.org namespaces(7) man page",
+    "microservices.io 模式目录": "microservices.io pattern catalog",
+    "n8n 文档": "n8n documentation",
+    "pnpm 文档": "pnpm documentation",
+    "single-spa 文档": "single-spa documentation",
+    "vLLM 论文（SOSP 2023）": "vLLM paper (SOSP 2023)",
+    "web.dev 渲染性能": "web.dev Rendering Performance",
+    "webpack 文档": "webpack documentation",
+    "《CSS 权威指南》": "Eric Meyer, CSS: The Definitive Guide",
+    "《Computer Networking: A Top-Down Approach》": "Computer Networking: A Top-Down Approach",
+    "《HTTP 权威指南》": "HTTP: The Definitive Guide",
+    "《Prometheus: Up & Running》": "Prometheus: Up & Running",
+    "《Refactoring UI》": "Refactoring UI",
+    "《Rust for Rustaceans》": "Rust for Rustaceans",
+    "《The Go Programming Language》": "The Go Programming Language",
+    "《Vue.js 设计与实现》": "Huo Chunyang, Vue.js Design and Implementation (Chinese)",
+    "《You Don't Know JS》": "You Don't Know JS",
+    "《算法》第 4 版": "Sedgewick & Wayne, Algorithms, 4th Edition",
+    "各家工程博客": "Company engineering blogs",
+    "周志明《深入理解 Java 虚拟机》": "Zhou Zhiming, Understanding the Java Virtual Machine (Chinese)",
+    "微信小程序开发文档": "WeChat Mini Program developer documentation (Chinese)",
+    "阿里巴巴数据技术及产品部《大数据之路：阿里巴巴大数据实践》": "Alibaba Data Technology and Products Dept., The Road to Big Data: Alibaba's Big Data Practice (Chinese)"
+  },
+  "skills": {
+    "a11y": {
+      "name": "Accessibility",
+      "description": "Make interfaces usable with a keyboard and a screen reader. Stripe, Vercel, OpenAI and Notion all list accessibility among the responsibilities.",
+      "concepts": [
+        "WCAG 2.2 guidelines",
+        "Semantics and ARIA",
+        "Focus management and keyboard navigation",
+        "Color contrast and motion preferences"
+      ],
+      "practice": "Go through a dropdown menu and a modal component using only the keyboard and VoiceOver, fix every issue, then re-check with axe."
+    },
+    "a2a": {
+      "name": "Agent-to-Agent Protocols",
+      "description": "Moonshot AI treats collaboration between agents as a new harness that needs a designed interaction protocol.",
+      "concepts": [
+        "Message and task protocols",
+        "Capability discovery",
+        "Shared state and handoff",
+        "Open protocols such as A2A"
+      ],
+      "practice": "Define a message format for handing a task from one agent to another, including the goal, a context summary and deliverables."
+    },
+    "ab-test": {
+      "name": "A/B Testing & Experiments",
+      "description": "Use online experiments to verify how a change affects real users: traffic splitting, metrics, significance and guardrails. Good offline evals do not guarantee online impact.",
+      "concepts": [
+        "Experiment design and traffic splitting",
+        "Metric selection and guardrail metrics",
+        "Statistical significance and sample size",
+        "Aligning offline evals with online metrics"
+      ],
+      "practice": "Design an A/B experiment for two prompt versions: define primary and guardrail metrics, estimate the sample size, and write a results template."
+    },
+    "abstraction": {
+      "name": "Platform Abstractions",
+      "description": "OpenAI asks for complex systems to be abstracted into simple, durable primitives.",
+      "concepts": [
+        "Choosing primitives",
+        "Stable API boundaries",
+        "Composability",
+        "Leaving room for future models"
+      ],
+      "practice": "Pick an existing agent framework and write a one-page critique of which abstractions will become obsolete as models get stronger."
+    },
+    "agentic": {
+      "name": "Agentic Ways of Working",
+      "description": "Baidu requires production-level, in-depth use of tools like Claude Code and Codex, and driving their adoption across the team.",
+      "concepts": [
+        "Deep use of coding agents",
+        "Capturing workflows as Skills",
+        "Agent-driven development process",
+        "Team adoption"
+      ],
+      "practice": "For one week, hand every coding task to a coding agent first and record the patterns of success and failure."
+    },
+    "ai-ux": {
+      "name": "AI Product UX",
+      "description": "Make uncertain model output trustworthy, controllable and easy to use: citations and sourcing, visible progress and reasoning, human confirmation and correction.",
+      "concepts": [
+        "Citations and sourcing",
+        "Presenting uncertainty and errors",
+        "Task timelines and human confirmation",
+        "User corrections and undo",
+        "Perceived latency and progressive disclosure"
+      ],
+      "practice": "Add citation markers, click-through to the source and a \"wrong answer\" feedback button to a RAG Q&A, and observe whether users trust the results more."
+    },
+    "aiops": {
+      "name": "AI-Assisted Operations",
+      "description": "Use LLMs and agents for alert summarization, log analysis, root cause inference and auto-remediation, with evaluation, permissions and human confirmation around them. Several 2026 SRE JDs added this requirement.",
+      "concepts": [
+        "Alert noise reduction and summarization",
+        "Diagnostic agents grounded in knowledge bases and runbooks",
+        "Permissions and human confirmation for auto-remediation",
+        "Evaluating accuracy and safety"
+      ],
+      "practice": "Build a diagnostic assistant: given an alert, it pulls the related metrics and logs and outputs likely causes and suggested runbook steps; evaluate its hit rate on 10 past incidents."
+    },
+    "api-design": {
+      "name": "API Design",
+      "description": "The contract between services and between frontend and backend: resource modeling, protocol choice (REST / gRPC / GraphQL), version compatibility and error models. Once an API ships, it is hard to change.",
+      "concepts": [
+        "Resource modeling and HTTP semantics",
+        "gRPC / Protobuf and IDL",
+        "GraphQL schema design",
+        "Versioning and backward compatibility",
+        "Pagination, idempotency keys and error models"
+      ],
+      "practice": "Design both REST and gRPC APIs for an order service, and write the rules for version evolution and idempotency keys."
+    },
+    "api-gateway": {
+      "name": "Gateways & Traffic Control",
+      "description": "Tencent WeChat's access platform builds L7 gateways, Meituan hires for L7 traffic gateways and long-connection gateways, and NetEase owns routing, canary, rate limiting and circuit breaking in its traffic gateway. The gateway is the entry point for all traffic.",
+      "concepts": [
+        "L7 routing and load balancing",
+        "Auth, rate limiting and circuit breaking plugins",
+        "Control plane and data plane",
+        "Traffic mirroring, replay and canary"
+      ],
+      "practice": "Set up a gateway with Envoy or Nginx, configure header-based canary routing, token-bucket rate limiting and circuit breaking, and verify with a load test."
+    },
+    "async": {
+      "name": "Async Execution",
+      "description": "OpenAI's Agent Runtime emphasizes async execution and progress reporting; Anthropic Managed Agents must keep running after a session disconnects and recover cleanly.",
+      "concepts": [
+        "Background tasks and reconnection",
+        "Progress reporting and event streams",
+        "Notifications and result delivery",
+        "Cancel and pause"
+      ],
+      "practice": "Run a 30-minute agent task in the background where the client can disconnect, reconnect and see live progress."
+    },
+    "auth": {
+      "name": "Authentication (OAuth/OIDC)",
+      "description": "Authentication answers \"who are you\" and authorization answers \"what can you do\": sessions and tokens, OAuth2 / OIDC sign-in, and RBAC / ReBAC permission models.",
+      "concepts": [
+        "OAuth 2.0 and OIDC flows",
+        "Sessions, JWT and token revocation",
+        "RBAC, ABAC and ReBAC",
+        "API keys and service-to-service auth"
+      ],
+      "practice": "Add OIDC sign-in to a multi-service app, then implement document-level permissions with a ReBAC model (such as OpenFGA)."
+    },
+    "autoscaling": {
+      "name": "Autoscaling",
+      "description": "Pod-level and node-level autoscaling that keeps latency in check during traffic spikes and cuts cost during troughs.",
+      "concepts": [
+        "HPA / VPA",
+        "Cluster Autoscaler and Karpenter",
+        "Event-driven scaling (KEDA)",
+        "Scaling latency and warm-up"
+      ],
+      "practice": "Configure HPA and Karpenter for a service, watch the Pod and node scale-out timeline under load testing, and find the slowest step."
+    },
+    "backfill": {
+      "name": "Migrations & Backfills",
+      "description": "Changing a model means backfilling history, and changing engines means migrating. Airbnb asks you to do this safely through dependency analysis, validation and controlled cutover.",
+      "concepts": [
+        "Backfill strategy and resource control",
+        "Old-vs-new table reconciliation and dual runs",
+        "Controlled cutover and rollback plans",
+        "Historical restatement and definition traceability"
+      ],
+      "practice": "Add a new column to a table with a year of data, design a backfill plan (batches, validation, cutover, rollback), and run a small-scale drill."
+    },
+    "bi-dashboard": {
+      "name": "BI & Data Visualization",
+      "description": "The last mile of data products: reports, dashboards and self-service analytics. Discord and Brex list Looker / Tableau as a plus.",
+      "concepts": [
+        "BI semantic models (LookML, etc.)",
+        "Dashboard design and metric presentation",
+        "Self-service analytics and permissions",
+        "Report performance and caching"
+      ],
+      "practice": "Build a dashboard with 5 core metrics on top of your own mart tables using Superset or Looker Studio."
+    },
+    "biz-automation": {
+      "name": "Business Process Automation",
+      "description": "Embed LLMs into a company's existing systems and processes, connect data and services, and automate end to end. PayPay asks for end-to-end business automation combining SaaS, AI and data platforms, Tencent WeCom connects companies' own data, and ByteDance Lark Base and Baidu build no-code/low-code AI app builders.",
+      "concepts": [
+        "Process breakdown and To-Be design",
+        "Integrating SaaS and internal system APIs",
+        "Permissions and data boundaries",
+        "Low-code / no-code orchestration"
+      ],
+      "practice": "Pick an expense or approval process, automate it end to end with an LLM and two internal APIs, and mark the steps that need human confirmation."
+    },
+    "browser-render": {
+      "name": "Browser Rendering",
+      "description": "The pipeline from HTML to pixels. Baidu and Alibaba Qwen ask for familiarity with browser rendering, and Notion cares about how code affects rendering.",
+      "concepts": [
+        "Parse, style, layout, paint, composite",
+        "Reflow and repaint",
+        "Main thread, compositor thread and GPU acceleration",
+        "Multi-process architecture and the renderer process"
+      ],
+      "practice": "Record a janky scroll in the Performance panel, find the code that forces synchronous layout, and fix it."
+    },
+    "build-tools": {
+      "name": "Build Tools & Bundling",
+      "description": "Build toolchains such as Webpack, Vite and Babel. Alibaba asks for mastery of Webpack/Vite/Babel, Ramp uses Vite, and Notion mentions bundlers and code splitting.",
+      "concepts": [
+        "Module bundling and the dependency graph",
+        "Webpack loaders/plugins",
+        "Vite and esbuild/Rollup",
+        "Tree shaking and code splitting"
+      ],
+      "practice": "Write a Webpack plugin and a Vite plugin, then analyze a project's bundle and cut its size by 30%."
+    },
+    "cache": {
+      "name": "Caching",
+      "description": "Use caching to cut latency, absorb read traffic and reduce downstream load, while handling consistency, cache penetration, hot-key stampedes and mass expiry (avalanche). Redis is the most common implementation.",
+      "concepts": [
+        "Redis data structures, persistence and clustering",
+        "Cache-Aside and write strategies",
+        "Cache penetration, stampede and avalanche",
+        "Cache consistency and invalidation",
+        "Multi-level caching"
+      ],
+      "practice": "Add a Redis cache to a read-heavy endpoint, simulate a hot key expiring, and prevent a cache stampede with a mutex or logical expiration."
+    },
+    "capacity": {
+      "name": "Capacity Planning",
+      "description": "Forecast demand, assess capacity headroom, and use single-node and full-chain load tests to verify that the system can handle peaks and big sales events.",
+      "concepts": [
+        "Capacity models and utilization levels",
+        "Single-node and full-chain load testing",
+        "Preparing for big sales events and peaks",
+        "Resource utilization and right-sizing"
+      ],
+      "practice": "Run a step load test against a service with k6, find the inflection point, and estimate how many instances are needed to handle 3x traffic."
+    },
+    "chaos": {
+      "name": "Chaos Engineering",
+      "description": "Inject failures on purpose to test how the system and the team respond, and find weaknesses before real incidents do.",
+      "concepts": [
+        "Steady-state hypotheses and experiment design",
+        "Controlling blast radius",
+        "Fault injection tools (such as Chaos Mesh)",
+        "Running failure drills (Game Days)"
+      ],
+      "practice": "Inject pod failures and network latency into a test cluster with Chaos Mesh, check whether the service holds its SLO, and write a drill report."
+    },
+    "ci-cd": {
+      "name": "CI/CD",
+      "description": "The automated pipeline from commit to production: build, test, artifacts, deploy and rollback, plus the speed and reliability of the pipeline itself.",
+      "concepts": [
+        "Pipeline stages and caching",
+        "Artifact versioning and environment promotion",
+        "Quality gates and preview environments",
+        "Pipeline as code",
+        "Rollback strategies"
+      ],
+      "practice": "Build a full pipeline for a service with GitHub Actions or GitLab CI: test, build the image, push it to a registry, and deploy to staging."
+    },
+    "ckpt": {
+      "name": "Checkpoint Recovery",
+      "description": "Alibaba requires checkpoint recovery to keep long-running tasks reliable; Xiaohongshu (RED) requires resume-from-checkpoint and failover.",
+      "concepts": [
+        "Checkpoint granularity",
+        "Idempotency keys for tool calls",
+        "Compensating side effects (Saga)",
+        "Sandbox file system snapshots"
+      ],
+      "practice": "Kill the process at an arbitrary step and verify the agent resumes from the checkpoint without repeating side effects."
+    },
+    "cloud": {
+      "name": "Public Cloud (AWS/GCP)",
+      "description": "The four basics of compute, networking, storage and identity/permissions, plus choosing managed services and architecture best practices. Most roles require production experience with AWS or GCP.",
+      "concepts": [
+        "VPCs, subnets and security groups",
+        "Compute options: VMs, containers, Serverless, managed K8s",
+        "Object storage and managed databases",
+        "IAM and least privilege",
+        "Well-Architected Framework and cost"
+      ],
+      "practice": "Deploy a three-tier app on AWS or GCP with a VPC, load balancer, container runtime, managed database and object storage; configure IAM with least privilege, draw the network topology and estimate the monthly cost."
+    },
+    "cloud-dw": {
+      "name": "Cloud Data Warehouses",
+      "description": "Managed data warehouses such as Snowflake, BigQuery, Redshift and MaxCompute. Almost every US JD asks for at least one.",
+      "concepts": [
+        "Separation of storage and compute",
+        "Virtual warehouses and elastic compute",
+        "Pay-per-scan pricing and partitioning / clustering",
+        "Permissions and data sharing"
+      ],
+      "practice": "Within the BigQuery or Snowflake free tier, create a partitioned and clustered table, and compare the data scanned and cost of the same query before and after optimization."
+    },
+    "cloud-governance": {
+      "name": "Cloud Account Governance",
+      "description": "Organization structure across many accounts and projects, least-privilege IAM and centralized controls. Platform roles in finance explicitly ask for managing dozens of AWS accounts.",
+      "concepts": [
+        "Landing zones and multi-account structure",
+        "IAM and least privilege",
+        "Workload Identity",
+        "SCPs / organization policies"
+      ],
+      "practice": "Design a dev/staging/prod account structure with AWS Organizations or the GCP resource hierarchy, and write the SCPs or organization policies."
+    },
+    "collab-editor": {
+      "name": "Rich Text & Collaboration",
+      "description": "Documents, editors and real-time multi-user interfaces. OpenAI ChatGPT Space lists rich-text editors and real-time interfaces as a plus.",
+      "concepts": [
+        "contenteditable and editor models",
+        "ProseMirror / Lexical architecture",
+        "OT and CRDT",
+        "WebSocket and presence"
+      ],
+      "practice": "Build a document two people can edit at the same time with Yjs and ProseMirror, and handle reconnecting after a disconnect."
+    },
+    "conc": {
+      "name": "Concurrency & Quotas",
+      "description": "Model calls are rate limited, sandboxes have resource caps, and multi-tenancy requires fairness.",
+      "concepts": [
+        "Quotas and token buckets",
+        "Handling upstream model rate limits",
+        "Per-tenant fairness",
+        "Cost attribution"
+      ],
+      "practice": "Implement a model-call proxy with per-tenant rate limiting."
+    },
+    "concurrency": {
+      "name": "Concurrent Programming",
+      "description": "PayPay asks for a deep understanding of concurrency, Robinhood for designing high-concurrency systems, and Meituan for understanding multithreading. Threads, locks and memory models underpin backend correctness and performance.",
+      "concepts": [
+        "Threads, coroutines and thread pools",
+        "Locks, CAS and lock-free structures",
+        "Memory models and visibility",
+        "Deadlocks, race conditions and debugging"
+      ],
+      "practice": "Implement a bounded blocking queue and a fixed-size thread pool, and verify them with a race detector (Go -race or jcstress)."
+    },
+    "config-mgmt": {
+      "name": "Configuration Management",
+      "description": "Declarative configuration and consistency management for large server fleets; bare-metal and VM fleets still rely on it heavily.",
+      "concepts": [
+        "Idempotent configuration declarations",
+        "Push vs. pull models in Ansible / Salt",
+        "Configuration drift",
+        "Trade-offs with immutable infrastructure"
+      ],
+      "practice": "Write an Ansible role that brings a batch of new machines to a common baseline (users, kernel parameters, monitoring agent), and rerun it to verify idempotency."
+    },
+    "cost": {
+      "name": "Cost & Latency",
+      "description": "OpenAI expects measurable gains in task completion, cost and latency.",
+      "concepts": [
+        "Prompt caching",
+        "Model routing",
+        "Parallel tool calls",
+        "Token budgets"
+      ],
+      "practice": "Measure a task's token distribution and halve its cost with caching and routing."
+    },
+    "cpdp": {
+      "name": "Control & Data Plane",
+      "description": "Xiaohongshu (RED) explicitly requires being able to tell the two apart. A classic platform architecture idea.",
+      "concepts": [
+        "Control plane: config, policy, lifecycle",
+        "Data plane: execution and traffic",
+        "Fault isolation between the two",
+        "Declarative design and reconciliation loops"
+      ],
+      "practice": "Split your agent platform into a control plane and a data plane and draw the architecture diagram."
+    },
+    "cpp": {
+      "name": "C++ Backend Development",
+      "description": "Nearly every Tencent WeChat backend role requires strong C++, and Meituan's access gateway and Datadog list C/C++ too. High-performance backends and middleware are still largely written in C++.",
+      "concepts": [
+        "RAII and smart pointers",
+        "Move semantics and object lifetimes",
+        "Performance characteristics of STL containers",
+        "Memory layout, allocators and ASan"
+      ],
+      "practice": "Write a thread-safe in-memory KV store in modern C++, and use ASan and perf to find leaks and hot spots."
+    },
+    "cred": {
+      "name": "Credential Management",
+      "description": "Secrets must never enter the model's context.",
+      "concepts": [
+        "Keeping secrets out of context",
+        "Credential injection at the egress proxy",
+        "Short-lived credentials",
+        "Audit logs"
+      ],
+      "practice": "Implement a proxy that injects API keys at the network layer so code inside the sandbox never sees them."
+    },
+    "cross-platform": {
+      "name": "H5, Mini Programs & RN",
+      "description": "One tech stack across many platforms. Tencent and Baidu ask for mini program/hybrid development, Alibaba Yuchi asks for React Native or Flutter, and miive uses React Native (Expo).",
+      "concepts": [
+        "Hybrid apps and JSBridge",
+        "Mini program dual-thread architecture",
+        "React Native architecture",
+        "Flutter and cross-platform trade-offs"
+      ],
+      "practice": "Build a small React Native (Expo) app that shares business logic with the web, and write a JSBridge that calls a native capability."
+    },
+    "ctxeng": {
+      "name": "Context Engineering",
+      "description": "Deciding what the model sees under a limited window and cost budget.",
+      "concepts": [
+        "Context assembly and ordering",
+        "Compression and summarization (compaction)",
+        "Context rot",
+        "Cache-friendly structure"
+      ],
+      "practice": "Add automatic compaction to a long-running-task agent and compare success rates before and after."
+    },
+    "cua": {
+      "name": "Computer / Browser Use",
+      "description": "A loop of screenshots, actions and observations, with VMs or browser environments as the underlying infrastructure.",
+      "concepts": [
+        "Screenshots and coordinate actions",
+        "DOM and the accessibility tree",
+        "Playwright automation",
+        "Environment snapshots and reuse"
+      ],
+      "practice": "Combine Playwright with a model to build a browser agent that can complete a form-filling task."
+    },
+    "data-agent": {
+      "name": "Data Agents & NL2SQL",
+      "description": "Let agents find tables, write SQL and run analyses. Almost every Chinese JD is hiring for this: smart table discovery, natural-language data Q&A, smart ETL and quality inspection.",
+      "concepts": [
+        "NL2SQL and schema linking",
+        "Metadata and semantic layers for agents",
+        "Evaluating Q&A accuracy",
+        "Smart ETL and quality inspection"
+      ],
+      "practice": "Build an NL2SQL prototype on a small data warehouse, evaluate its accuracy with 20 questions, and analyze whether errors come from finding tables or from writing SQL."
+    },
+    "data-contracts": {
+      "name": "Data Contracts",
+      "description": "Upstream produces the data and downstream consumes it, so both sides need to agree on schema, semantics and SLAs. Airbnb and Discord both ask for contracts defined at the source.",
+      "concepts": [
+        "Schema and semantic agreements",
+        "Change notification and compatibility",
+        "Contract testing",
+        "Producer ownership"
+      ],
+      "practice": "Write a data contract for an upstream event (fields, types, constraints, SLA), and add a breaking-change check to CI."
+    },
+    "data-cost": {
+      "name": "Data Cost Optimization",
+      "description": "Compute and storage bills grow linearly with data volume. Airbnb asks for lower compute costs, Tencent asks for lower data processing costs, and Meituan lists cost as a governance focus.",
+      "concepts": [
+        "Compute resources and job cost attribution",
+        "Storage tiering and lifecycle",
+        "Cost optimization for queries and jobs",
+        "FinOps practices"
+      ],
+      "practice": "Find the 10 most expensive jobs in a data warehouse over one week, optimize one of them, and quantify the compute saved."
+    },
+    "data-fetch": {
+      "name": "Data Fetching",
+      "description": "Loading, errors, retries, deduplication and caching for requests. Vercel asks you to handle validation, retries and duplicate requests, and OpenAI asks you to design UX for loading, errors and concurrent edits.",
+      "concepts": [
+        "Loading, error and empty states",
+        "Request deduplication, cancellation and race conditions",
+        "Retries and optimistic updates",
+        "TanStack Query / SWR cache invalidation"
+      ],
+      "practice": "Build list editing with optimistic updates and rollback on failure using TanStack Query, and handle request races when switching quickly."
+    },
+    "data-flywheel": {
+      "name": "Feedback & Error Analysis",
+      "description": "Keep improving from production failures: collect feedback, categorize bad cases, add them to the eval set, and run regressions after fixes. LayerX asks for analyzing failure cases and edge cases to improve the product, and Perplexity for continuous monitoring and iteration.",
+      "concepts": [
+        "Collecting user feedback (explicit and implicit)",
+        "Error categorization and root cause analysis",
+        "Feeding bad cases back into eval sets",
+        "Data labeling and quality control"
+      ],
+      "practice": "Pull 100 production conversation logs, categorize the failure reasons by hand, build an error distribution table, and add the top three categories to the eval set."
+    },
+    "data-governance": {
+      "name": "Data Governance & Access",
+      "description": "Data standards, permissions, sensitive data and compliance. Coinbase asks for access control across storage layers, and PayPay asks for governance and security controls that meet compliance requirements.",
+      "concepts": [
+        "Data standards and asset management",
+        "Fine-grained permissions (row/column level, tags)",
+        "Sensitive data classification and masking",
+        "Auditing and compliance"
+      ],
+      "practice": "Design row- and column-level permissions and a masking policy for a dataset, and implement part of it with Unity Catalog or Ranger."
+    },
+    "data-integration": {
+      "name": "Data Integration",
+      "description": "Bring business databases, third-party APIs, SaaS and event streams into the data warehouse. Airbnb asks you to manage schema changes across many sources, and PayPay mentions CDC.",
+      "concepts": [
+        "CDC and binlog sync (Debezium)",
+        "Third-party API and SaaS ingestion",
+        "Handling schema drift",
+        "Batch vs. streaming ingestion trade-offs"
+      ],
+      "practice": "Sync changes from a MySQL table to Kafka with Debezium, then land them as a queryable snapshot table."
+    },
+    "data-modeling": {
+      "name": "Data Modeling",
+      "description": "Abstract business objects, events and relationships into data structures that can evolve over time. Models are hard to change once they ship, and transactional and analytical databases call for different trade-offs.",
+      "concepts": [
+        "Conceptual, logical and physical models",
+        "Normalization and denormalization",
+        "Modeling for access patterns",
+        "Primary keys, constraints and soft deletes",
+        "Schema evolution and online migrations"
+      ],
+      "practice": "Draw a conceptual model and a 3NF logical model for a food delivery business, then explain which tables should be denormalized for analytics."
+    },
+    "data-observability": {
+      "name": "Data Observability & SLA",
+      "description": "Monitor the data itself: freshness, volume, distribution anomalies and SLAs. Discord asks for automated anomaly detection and SLA infrastructure.",
+      "concepts": [
+        "Freshness, volume and distribution monitoring",
+        "Anomaly detection",
+        "Defining data SLAs / SLOs",
+        "Alert severity and on-call"
+      ],
+      "practice": "Set up freshness and row-count monitoring for three core tables, detect anomalies with simple statistics, and hook them up to alerts."
+    },
+    "data-platform": {
+      "name": "Self-Service Data Platform",
+      "description": "Turn pipelines, ingestion, quality and permissions into SDKs and self-service tools, so thousands of pipelines don't need to understand the internals. Coinbase has an entire role doing just this.",
+      "concepts": [
+        "Pipeline SDKs and templated ingestion",
+        "Self-service pipeline creation and troubleshooting",
+        "Paved paths and capturing best practices",
+        "Platform multi-tenancy and quotas"
+      ],
+      "practice": "Build a config-driven ingestion framework where one YAML file generates a three-step pipeline: extract, validate and load into the warehouse."
+    },
+    "data-quality": {
+      "name": "Data Quality & Testing",
+      "description": "Accurate, complete, consistent and timely. Every JD asks for it: Airbnb asks for automated tests and reconciliation, and Discord asks for a quality framework for ML inputs.",
+      "concepts": [
+        "Quality dimensions: completeness, accuracy, consistency, timeliness",
+        "Assertion-based data tests (dbt tests, Great Expectations)",
+        "Reconciliation and investigating differences",
+        "Rule severity levels and blocking"
+      ],
+      "practice": "Add 5 data tests to a pipeline (unique, not null, value range, referential integrity, row-count fluctuation), and block downstream jobs when they fail."
+    },
+    "db-scaling": {
+      "name": "Database Scaling",
+      "description": "The path once a single database can't keep up: replication, sharding and distributed SQL. PayPay's stack includes TiDB, NetEase asks for distributed database knowledge, Coinbase for distributed data storage experience, and Tencent works on HTAP queries.",
+      "concepts": [
+        "Primary-replica replication and read/write splitting",
+        "Sharding and global IDs",
+        "Distributed SQL (TiDB, Spanner)",
+        "Where OLTP ends and HTAP/OLAP begins"
+      ],
+      "practice": "Shard an orders table by user with Vitess or ShardingSphere, and handle cross-shard queries and globally unique IDs."
+    },
+    "ddd": {
+      "name": "Domain Modeling",
+      "description": "Meituan asks for abstracting complex business into clear domain models, and Money Forward for abstracting and modeling business domains. The extensibility of complex business systems comes from the model, not the amount of code.",
+      "concepts": [
+        "Bounded contexts and context mapping",
+        "Aggregates, entities and value objects",
+        "Domain events",
+        "Anti-corruption layers"
+      ],
+      "practice": "Draw a bounded context map for food delivery fulfillment (couriers, stations, delivery orders), and implement a dispatch use case with aggregates."
+    },
+    "design-collab": {
+      "name": "Design to Code",
+      "description": "Work with designers to turn prototypes into products. OpenAI asks you to turn prototypes into production-quality work, Ramp asks for design-to-code, and Mirai Translate asks you to start development from UI/UX design.",
+      "concepts": [
+        "Reading Figma: spacing, grids and variables",
+        "Design reviews and fidelity",
+        "Prototype iteration and trade-offs",
+        "Putting design guidelines into practice"
+      ],
+      "practice": "Take a Figma Community design, rebuild one page pixel-perfect, and list 5 decisions you would need to align on with the designer."
+    },
+    "design-system": {
+      "name": "Design Systems",
+      "description": "Reusable components, design tokens and theming. Stripe's Sail and Ramp's Ryu are both design system teams, and Chinese JDs commonly ask you to build up a component library.",
+      "concepts": [
+        "Design tokens and theming",
+        "Component API design",
+        "Headless components and composition",
+        "Storybook docs and visual regression"
+      ],
+      "practice": "Build Button, Input and Dialog from scratch: token-driven theming, dark mode support, accessible, with docs published via Storybook."
+    },
+    "devtools-debug": {
+      "name": "Browser Debugging",
+      "description": "Find problems with DevTools and evidence. Notion asks you to investigate bottlenecks with browser tools, Amap asks for fluency with Chrome DevTools, and PayPay asks you to triage and debug production issues.",
+      "concepts": [
+        "DevTools breakpoints and the Network panel",
+        "Performance and Memory panels",
+        "Source maps and reproducing production bugs",
+        "Bisecting and minimal reproductions"
+      ],
+      "practice": "Take a real error from Sentry, map it back with source maps, reproduce it locally, and write the fix plus a regression test."
+    },
+    "devx": {
+      "name": "Developer Experience",
+      "description": "OpenAI emphasizes empathy for developers and working with research and product teams.",
+      "concepts": [
+        "Docs as a product",
+        "Interviewing internal users",
+        "SDK ergonomics",
+        "Turning research progress into platform capabilities"
+      ],
+      "practice": "Have 3 colleagues try your platform and record where they get stuck."
+    },
+    "dim-modeling": {
+      "name": "Dimensional Modeling",
+      "description": "The Kimball method: fact tables, dimension tables and slowly changing dimensions. Airbnb, Discord, Tencent and Meituan all list it as a hard requirement.",
+      "concepts": [
+        "Fact table types (transaction, periodic snapshot, accumulating snapshot)",
+        "Star and snowflake schemas",
+        "Slowly changing dimensions (SCD Type 1/2)",
+        "Conformed dimensions and the bus matrix"
+      ],
+      "practice": "Design a star schema for a subscription business: an order fact table plus user and product dimensions, using SCD2 to record user tier changes."
+    },
+    "dist": {
+      "name": "Distributed Systems",
+      "description": "Long-running tasks, state recovery and scheduling are distributed-systems problems at heart. All four companies list it as core.",
+      "concepts": [
+        "Consistency models and consensus (Raft)",
+        "Idempotency and the limits of exactly-once",
+        "Message queues and event-driven design",
+        "Failure detection and retry semantics"
+      ],
+      "practice": "Revisit the Raft lab from MIT 6.5840, focusing on idempotency and retry design."
+    },
+    "dist-txn": {
+      "name": "Distributed Transactions",
+      "description": "How to make writes across services and databases neither lost nor duplicated: idempotency, compensation and eventual consistency. The core problem in payment, order and inventory systems.",
+      "concepts": [
+        "Idempotency keys and deduplication",
+        "Sagas and compensation",
+        "Outbox and CDC",
+        "Two-phase commit and its costs"
+      ],
+      "practice": "Implement a cross-account transfer as a saga, inject a failure at every step, and prove that the final balances are conserved."
+    },
+    "doc-parsing": {
+      "name": "Doc Parsing & Chunking",
+      "description": "Knowledge base quality depends on what happens before ingestion: PDFs, Office files and spreadsheets must be parsed and chunked first. LayerX's agents have to read receipts and invoices on their own, and ByteDance Douyin asks for organizing business information into a knowledge base.",
+      "concepts": [
+        "Parsing PDF / Office / spreadsheets",
+        "OCR and layout analysis",
+        "Chunking strategies (fixed length, structural, semantic)",
+        "Metadata and incremental updates"
+      ],
+      "practice": "Parse and ingest a batch of PDFs that contain tables, and compare the retrieval hit rate of three chunking strategies on 20 questions."
+    },
+    "docker": {
+      "name": "Containers & Images",
+      "description": "Package an app and its runtime into an image so local, CI and production stay consistent. The smallest unit of cloud-native deployment.",
+      "concepts": [
+        "Dockerfiles and multi-stage builds",
+        "Image layers and build cache",
+        "OCI spec and container runtimes",
+        "Image slimming and security scanning",
+        "Local orchestration with docker compose"
+      ],
+      "practice": "Shrink a service image from 1GB to under 100MB, run it as non-root with a health check, then use compose to start the database and cache it depends on."
+    },
+    "dr": {
+      "name": "Disaster Recovery",
+      "description": "Keep the business running or recover quickly during zone- or region-level failures: backup and restore, primary-standby failover, and cell-based active-active.",
+      "concepts": [
+        "RPO and RTO",
+        "Backups and restore drills",
+        "Multi-AZ and multi-region architecture",
+        "Cell-based (SET) active-active"
+      ],
+      "practice": "Design a cross-AZ disaster recovery plan for a service with a database, write the failover steps, run an actual restore drill, and record the RTO."
+    },
+    "dsa": {
+      "name": "Data Structures & Algorithms",
+      "description": "Hashing, trees, heaps, graphs and complexity analysis. Indexes, cache eviction, rate limiting and scheduling are all built on classic structures, and they are a standard part of interviews everywhere.",
+      "concepts": [
+        "Hash tables, skip lists and B+ trees",
+        "Heaps, priority queues and LRU",
+        "Tree and graph traversal, topological sort",
+        "Sorting, binary search and two pointers",
+        "Complexity analysis and amortization"
+      ],
+      "practice": "Hand-write an LRU cache with TTL and a skip-list-based sorted set, and benchmark them against the standard library."
+    },
+    "durable": {
+      "name": "Durable Execution",
+      "description": "The core of long-running tasks: processes will crash, but task state and results must not be lost.",
+      "concepts": [
+        "Workflow engines and event sourcing",
+        "Deterministic replay",
+        "Activity retries and timeouts",
+        "Long waits (human approval)"
+      ],
+      "practice": "Use Temporal to rewrite an agent loop as a recoverable workflow."
+    },
+    "dw-layering": {
+      "name": "Warehouse Layers & Domains",
+      "description": "ODS / DWD / DWS / ADS layering and subject areas are the common language of data warehouse roles in China. A Tencent e-commerce JD lists all five layers outright.",
+      "concepts": [
+        "Responsibilities of the ODS / DWD / DWM / DWS / ADS layers",
+        "Subject areas and data domains",
+        "Building shared dimensions",
+        "Data lifecycle and hot/cold tiering"
+      ],
+      "practice": "Plan 20 source tables of an e-commerce business into a layered data warehouse, and write out the table list for each layer and a dependency graph."
+    },
+    "electron": {
+      "name": "Electron Desktop Apps",
+      "description": "Build desktop apps with web technology. OpenAI's Codex App asks for an Electron-grade desktop experience, and Tencent asks for familiarity with main-renderer process communication.",
+      "concepts": [
+        "Main process and renderer process",
+        "IPC and contextBridge",
+        "Packaging, signing and auto-update",
+        "Cross-platform differences and native capabilities"
+      ],
+      "practice": "Build a small Electron tool: expose file read/write over IPC safely, package it as macOS and Windows installers, and support auto-update."
+    },
+    "embedding-search": {
+      "name": "Embeddings & Vector Search",
+      "description": "Turning text into vectors for semantic retrieval is the foundation of RAG, recommendations and semantic search.",
+      "concepts": [
+        "Choosing an embedding model",
+        "Vector similarity (cosine / dot)",
+        "ANN indexes (HNSW / IVF)",
+        "Vector databases and pgvector"
+      ],
+      "practice": "Index 10,000 documents with pgvector and compare recall and latency of exact search vs. HNSW."
+    },
+    "etl-elt": {
+      "name": "ETL / ELT Pipelines",
+      "description": "The core work of turning source data into trusted datasets: extract, transform and load, plus incremental loads, idempotency and reruns.",
+      "concepts": [
+        "ETL vs. ELT trade-offs",
+        "Full loads, incremental loads and partition overwrite",
+        "Idempotent writes and rerunnability",
+        "Handling schema changes"
+      ],
+      "practice": "Implement an incremental ETL partitioned by day that can rerun any single day without producing duplicate data."
+    },
+    "evals": {
+      "name": "Evals",
+      "description": "Turning a non-deterministic system into one that can be measured and compared.",
+      "concepts": [
+        "Building datasets",
+        "Code-based, model-based and human grading",
+        "pass@k and non-determinism",
+        "Environment-based evaluation"
+      ],
+      "practice": "Build 50 eval cases for your agent and establish a baseline score."
+    },
+    "fe-arch": {
+      "name": "Frontend Architecture",
+      "description": "Break a complex product into clear layers and module boundaries. Tencent WorkBuddy asks for frontend domain modeling and layering, and OpenAI asks you to own architectural decisions such as component systems and navigation.",
+      "concepts": [
+        "SPA structure and routing design",
+        "Layers, module boundaries and dependency direction",
+        "Domain modeling and component decomposition",
+        "Technology choices and evolution strategy"
+      ],
+      "practice": "Draw the module dependency graph of a mid-sized SPA, add a lint rule that forbids cross-layer imports, and refactor out a standalone domain module."
+    },
+    "fe-state": {
+      "name": "Frontend State Management",
+      "description": "Separating and syncing UI state, server state and URL state. OpenAI asks you to own the state management architecture, and Baidu asks for mastery of one of Redux/Mobx/Zustand.",
+      "concepts": [
+        "Local, global and server state",
+        "Trade-offs among Redux / Zustand / MobX",
+        "Immutable data and selectors",
+        "Routing and URL state"
+      ],
+      "practice": "Refactor an admin page that relies on prop drilling to Zustand plus URL state, and compare the number of re-renders."
+    },
+    "fine-tune": {
+      "name": "Fine-Tuning & Alignment",
+      "description": "When prompting and RAG are not enough, fine-tune a model on domain data. Ramp and Linear mention fine-tuning, ByteDance Douyin asks for LoRA/QLoRA and DPO, and Tencent WeChat mentions model fine-tuning. Application engineers need to judge when fine-tuning is worth it and how to prepare the data.",
+      "concepts": [
+        "Building SFT datasets",
+        "LoRA / QLoRA",
+        "Preference alignment such as DPO",
+        "Fine-tuning vs. prompting / RAG trade-offs"
+      ],
+      "practice": "Fine-tune a small open-source model with LoRA on a classification task, and compare quality and cost against a few-shot prompt."
+    },
+    "finops": {
+      "name": "Cloud Cost (FinOps)",
+      "description": "Make cloud spend visible, attributable and optimizable: tagging and allocation, right-sizing, spot instances and commitment discounts.",
+      "concepts": [
+        "Cost visibility and allocation",
+        "Right-sizing and reclaiming idle resources",
+        "Spot and commitment discounts",
+        "Usage metering and cost attribution"
+      ],
+      "practice": "Deploy OpenCost on a K8s cluster, produce a per-namespace cost report, and find the 3 biggest sources of waste."
+    },
+    "gate": {
+      "name": "Regression Gates",
+      "description": "Every change to models, prompts and tools must be evaluated, compared and released safely.",
+      "concepts": [
+        "Regression suites",
+        "Release gates",
+        "Production sampling",
+        "Feeding bad cases back"
+      ],
+      "practice": "Add an eval gate to CI that blocks merges when the score drops past a threshold."
+    },
+    "gateway": {
+      "name": "LLM Gateway & Routing",
+      "description": "Nearly all Japanese companies require an LLM gateway for centralized model switching, permissions and budgets. Cursor's Auto picks a model automatically based on need, capability and cost.",
+      "concepts": [
+        "Unified model access",
+        "Routing and fallback",
+        "Budgets and quotas",
+        "Caching and cost visibility"
+      ],
+      "practice": "Implement a gateway that routes to different models by task difficulty and budget, with fallback on failure."
+    },
+    "gen-ui": {
+      "name": "Generative & Agentic UI",
+      "description": "Interfaces generated dynamically from model output: cards, forms and artifact previews. ByteDance Lark is exploring Generative UI / Agentic UI, and Ramp lets agents produce interactive analyses on top of its data layer.",
+      "concepts": [
+        "Mapping tool calls to components",
+        "Dynamic cards and forms",
+        "Artifact preview and editing",
+        "Component allowlists and safe rendering"
+      ],
+      "practice": "Have the model return three component types via tool calls (weather card, table, chart), render them by type on the frontend, and send user edits back to the model."
+    },
+    "git-collab": {
+      "name": "Git & Collaboration",
+      "description": "Branches, commits, pull requests and code review. Application code, infrastructure code and SQL models all follow the same collaboration workflow.",
+      "concepts": [
+        "Branching models and rebase/merge",
+        "Commit granularity and commit messages",
+        "Pull requests and code review",
+        "Conflict resolution and bisect"
+      ],
+      "practice": "Open a PR on an open-source project, see it through review and revisions, then use git bisect to locate a regression."
+    },
+    "gitops": {
+      "name": "GitOps",
+      "description": "Git is the single source of truth, and controllers continuously reconcile the cluster to the declared state.",
+      "concepts": [
+        "Declarative, pull-based deployment",
+        "Argo CD / Flux",
+        "Multi-environment and multi-cluster management",
+        "PR workflows for IaC such as Atlantis"
+      ],
+      "practice": "Manage the same app across two environments with Argo CD, promote versions through PRs, and demonstrate a rollback."
+    },
+    "guard": {
+      "name": "Guardrails & Compliance",
+      "description": "JDs from Japanese companies commonly require personal data policies, usage restrictions and auditing; Cursor lists guardrails as part of the harness.",
+      "concepts": [
+        "Input and output filtering",
+        "Personal data and data residency",
+        "Usage policies and quotas",
+        "Audit logs"
+      ],
+      "practice": "Design a guardrail layer for an internal agent: PII masking, blocking dangerous actions and an audit trail."
+    },
+    "hadoop-hive": {
+      "name": "Hadoop & Hive",
+      "description": "HDFS, YARN and Hive are still the foundation of offline data warehouses in China. Understanding MapReduce is the starting point for understanding later engines.",
+      "concepts": [
+        "HDFS and block storage",
+        "YARN resource scheduling",
+        "Hive tables, partitions and buckets",
+        "MapReduce execution model"
+      ],
+      "practice": "Run a single-node Hadoop + Hive in Docker, create a partitioned table, and compare the data scanned with and without partition pruning."
+    },
+    "harness": {
+      "name": "Harness Engineering",
+      "description": "Everything outside the model: context assembly, tools, the loop, approvals and telemetry. Xiaohongshu (RED) calls it the Harness Kernel; Baidu calls it harness engineering.",
+      "concepts": [
+        "Decoupled model adapter layer",
+        "Context assembly pipeline",
+        "Tool calls and approval hooks",
+        "Telemetry instrumentation"
+      ],
+      "practice": "Read the open-source code of Codex CLI or OpenCode and draw its module diagram."
+    },
+    "hitl": {
+      "name": "Human-in-the-Loop Design",
+      "description": "Arent asks for a clear boundary between decisions humans confirm and decisions left to the agent; Moonshot AI is defining product forms for human-agent collaboration.",
+      "concepts": [
+        "Designing approval points",
+        "Reversible vs. irreversible actions",
+        "Confidence and escalation",
+        "Collaboration interfaces"
+      ],
+      "practice": "Break a business process into steps and mark which ones need human approval based on risk and reversibility."
+    },
+    "html-css": {
+      "name": "HTML & CSS",
+      "description": "Semantic HTML and solid CSS are the foundation of every interface. Tencent asks for mastery of HTML5/CSS3, and Alibaba Chengyun asks for solid CSS fundamentals and handling of browser compatibility.",
+      "concepts": [
+        "Semantic elements and forms",
+        "Box model, cascade and specificity",
+        "Flexbox and Grid layout",
+        "CSS variables, cascade layers and container queries"
+      ],
+      "practice": "Rebuild a complex admin page (sidebar, table, modal) with HTML/CSS only, without a single line of JS, and make it match in three browsers."
+    },
+    "http-cache": {
+      "name": "Browser & CDN Caching",
+      "description": "HTTP caching, CDNs and Service Workers. Vercel asks for an understanding of server rendering and caching, Notion mentions service workers and asset caching, and PayPay lists CDN as a plus.",
+      "concepts": [
+        "Cache-Control and revalidation",
+        "CDN and edge caching",
+        "Content hashing and cache invalidation",
+        "Service Workers and offline"
+      ],
+      "practice": "Design a caching strategy for an SPA: no caching for HTML, long-lived caching for static assets, then add a Service Worker for offline access."
+    },
+    "hybrid": {
+      "name": "Hybrid & Self-Hosted",
+      "description": "Anthropic Managed Agents run both in hosted sandboxes and in customer-owned environments; Xiaohongshu (RED) wants unified management of Managed and BYO agents.",
+      "concepts": [
+        "Hosted vs. self-hosted environments",
+        "One control plane, many data planes",
+        "Environment abstraction interface",
+        "Cross-environment security boundaries"
+      ],
+      "practice": "Design an environment interface so the same agent can run in your sandbox or in a customer VPC."
+    },
+    "i18n": {
+      "name": "Internationalization",
+      "description": "Copy, formatting and layout for multiple languages and regions. Stripe asks for improving the design system's internationalization, and PayPay's stack includes i18n.",
+      "concepts": [
+        "String extraction and ICU message format",
+        "Date, number and currency formatting (Intl)",
+        "RTL layout",
+        "Loading language packs on demand"
+      ],
+      "practice": "Integrate FormatJS into an app, support Chinese, Japanese and English plus currency formatting, and load language packs on demand."
+    },
+    "iac": {
+      "name": "Infrastructure as Code",
+      "description": "Declare and change infrastructure in code, and make changes reviewable, reversible and checked for drift.",
+      "concepts": [
+        "Terraform state and plan/apply",
+        "Modularity and reuse",
+        "Drift detection",
+        "Phased migration of large-blast-radius changes"
+      ],
+      "practice": "Write a reusable Terraform module (VPC + cluster) and deploy two environments through a PR + plan review process."
+    },
+    "identity": {
+      "name": "Agent Identity & Auth",
+      "description": "On whose behalf is the agent acting? It needs identity, delegated authorization and least privilege.",
+      "concepts": [
+        "OAuth 2.0 and on-behalf-of",
+        "Token Exchange (RFC 8693)",
+        "Least privilege and scope narrowing",
+        "Human approval as authorization"
+      ],
+      "practice": "Design the authorization flow for an agent accessing GitHub on a user's behalf, with revocable and auditable permissions."
+    },
+    "idp": {
+      "name": "Internal Developer Platform",
+      "description": "Package infrastructure as self-service tools and golden paths so product engineers can stand up a new service in minutes. The core output of platform engineering.",
+      "concepts": [
+        "Golden paths",
+        "Self-service templates and CLIs",
+        "Service catalog (Backstage)",
+        "Developer experience as an SLI"
+      ],
+      "practice": "Build a 'New Service' wizard with Backstage software templates that generates the repo, CI, deployment config and alerts in one go."
+    },
+    "incident": {
+      "name": "Incident Response",
+      "description": "Command, communication and mitigation during major incidents, followed by blameless postmortems and tracking of action items.",
+      "concepts": [
+        "Severity levels and escalation",
+        "Incident Commander and role assignment",
+        "Mitigate first, root-cause later",
+        "Runbook",
+        "Blameless postmortems and closing action items"
+      ],
+      "practice": "Pick a public incident report from a large tech company and rewrite it with a postmortem template: timeline, impact, root cause, what went well and action items."
+    },
+    "infra-security": {
+      "name": "Infra Security & Compliance",
+      "description": "Secret management, policy as code, cluster hardening and compliance auditing, so the platform is secure by default.",
+      "concepts": [
+        "Secret management (Vault, KMS)",
+        "Policy as code (OPA, Kyverno)",
+        "Cluster hardening and CIS benchmarks",
+        "Automated compliance auditing (PCI DSS, etc.)"
+      ],
+      "practice": "Deploy Kyverno on a K8s cluster, write 3 policies (block privileged, require resource limits, allow only the internal image registry), and verify they block violations."
+    },
+    "inject": {
+      "name": "Prompt Injection & Tools",
+      "description": "Indirect injection and data exfiltration are the most realistic security risks for agents in production.",
+      "concepts": [
+        "Direct and indirect injection",
+        "The combined risk of private data, untrusted content and external communication",
+        "Tiered tool permissions",
+        "Output filtering and approval"
+      ],
+      "practice": "Red-team your own agent: use web page content to trick it into leaking data."
+    },
+    "iso": {
+      "name": "Isolation Technologies",
+      "description": "Mentioned by all four companies. The security and performance trade-offs among containers, gVisor, Firecracker and Kata are a frequent interview topic.",
+      "concepts": [
+        "Shared kernel vs. dedicated kernel",
+        "gVisor user-space kernel",
+        "Firecracker microVM",
+        "Kata and RuntimeClass"
+      ],
+      "practice": "On the same machine, compare startup latency and syscall overhead across three runtimes."
+    },
+    "js-core": {
+      "name": "JavaScript Fundamentals",
+      "description": "Closures, prototypes, async code and the event loop. Ramp lists a deep understanding of JavaScript first, and almost every Chinese JD requires fluency in ES6+.",
+      "concepts": [
+        "Scope, closures and this",
+        "Prototype chain and class",
+        "Event loop, Promise and async/await",
+        "ES modules and modularity"
+      ],
+      "practice": "Implement Promise.all, debounce, throttle and a minimal event emitter by hand, and cover the edge cases with tests."
+    },
+    "jvm": {
+      "name": "Java & the JVM",
+      "description": "Java / Kotlin services and big data engines such as Spark, Flink and Hive all run on the JVM. Understanding the memory model, GC and diagnostic tools is a prerequisite for tuning and troubleshooting.",
+      "concepts": [
+        "JVM memory areas and class loading",
+        "GC algorithms (G1, ZGC) and tuning",
+        "JIT and bytecode",
+        "JVM languages such as Kotlin / Scala",
+        "Diagnostic tools such as Arthas and JFR"
+      ],
+      "practice": "Introduce a memory leak and full GCs into a Spring Boot service, then locate and fix them with JFR and MAT."
+    },
+    "k8s": {
+      "name": "Cloud Native & K8s",
+      "description": "Baidu explicitly requires Operator experience, and Alibaba requires K8s/Serverless. Most sandbox instance orchestration is built on K8s.",
+      "concepts": [
+        "Pods, scheduler, resource quotas",
+        "CRDs and the Operator pattern",
+        "RuntimeClass (plugging in gVisor/Kata)",
+        "HPA and autoscaling"
+      ],
+      "practice": "Write an Operator with kubebuilder that manages a Sandbox CRD."
+    },
+    "k8s-cluster-ops": {
+      "name": "K8s Cluster Operations",
+      "description": "Upgrades, node pool strategy, add-on management, etcd operations and troubleshooting for production clusters. Everyday work for platform teams.",
+      "concepts": [
+        "Zero-downtime control plane and node upgrades",
+        "Node pools and spot strategy",
+        "Managing add-ons (CNI, cert-manager, etc.)",
+        "etcd backups and cluster troubleshooting"
+      ],
+      "practice": "Build a multi-node cluster with kind or kubeadm, perform a minor version upgrade, and keep a service available throughout."
+    },
+    "k8s-controller": {
+      "name": "K8s Controllers & Operators",
+      "description": "Write custom controllers, CRDs and admission webhooks with controller-runtime, turning operational knowledge into reconcile loops.",
+      "concepts": [
+        "Reconcile loops and idempotency",
+        "CRD design and versioning",
+        "Admission webhooks",
+        "controller-runtime and testing"
+      ],
+      "practice": "Write an Operator with kubebuilder: declaring one CR automatically creates a Deployment, a Service and alerting rules. Cover it with envtest tests."
+    },
+    "k8s-net": {
+      "name": "K8s Networking",
+      "description": "How Pod networking, Services, Ingress and network policies are implemented, and how to debug failures that cross network boundaries.",
+      "concepts": [
+        "CNI plugins and Pod networking",
+        "Services and the kube-proxy / eBPF data plane",
+        "Ingress and Gateway API",
+        "NetworkPolicy"
+      ],
+      "practice": "Capture packets in a cluster to trace a Pod-to-Service request and explain the NAT and routing at every hop. Then add a NetworkPolicy and verify the isolation."
+    },
+    "lakehouse": {
+      "name": "Lakehouse & Table Formats",
+      "description": "Iceberg, Hudi and Delta bring transactions and schema evolution to data on object storage. Airbnb, Tencent, Alibaba and PayPay all use lakehouses.",
+      "concepts": [
+        "Parquet / ORC columnar formats",
+        "Snapshots and transactions in Iceberg / Hudi / Delta",
+        "Partition evolution and small-file management",
+        "Lakehouse architecture"
+      ],
+      "practice": "Create an Iceberg table with Spark, make a schema change and run a time-travel query, then compact the small files."
+    },
+    "lang": {
+      "name": "Go / Rust / Python",
+      "description": "Go for the platform and control plane, Rust for sandboxes and high-performance components, Python for the agent and evals ecosystem.",
+      "concepts": [
+        "Go concurrency and context cancellation",
+        "Rust async and memory safety",
+        "Python asyncio",
+        "TypeScript (SDKs and MCP)"
+      ],
+      "practice": "Implement a tool executor in Go that propagates cancellation and timeouts."
+    },
+    "ledger": {
+      "name": "Ledger & Fund Correctness",
+      "description": "Stripe handles billions of money movement requests, Coinbase detects money-flow invariants in real time instead of quarterly reconciliation, PayPay is rebuilding its core banking system, and Tencent runs WeChat Pay. A capability specific to financial backends.",
+      "concepts": [
+        "Double-entry bookkeeping and immutable ledgers",
+        "Reconciliation and discrepancy handling",
+        "Monetary precision and currencies",
+        "Money-flow invariants"
+      ],
+      "practice": "Implement a double-entry ledger service that supports transfers, reversals and end-of-day reconciliation, and use randomized tests to verify that debits and credits always balance."
+    },
+    "lifecycle": {
+      "name": "Agent Assets & Lifecycle",
+      "description": "A unified model for agent artifacts, owners, versions, permissions, policies and releases.",
+      "concepts": [
+        "Agent definitions as assets",
+        "Versioning and release",
+        "Policies and permissions",
+        "Unified management of BYO agents"
+      ],
+      "practice": "Design a schema for an agent artifact that covers identity, versions and policies."
+    },
+    "lint-quality": {
+      "name": "Linting & Static Analysis",
+      "description": "Linting, formatting and large-scale code changes. Stripe mentions codemods and lint rules, and Baidu asks for mastery of toolchain tools such as ESLint.",
+      "concepts": [
+        "ESLint rules and custom rules",
+        "Prettier and consistent formatting",
+        "AST and codemods",
+        "Type checking and pre-commit checks"
+      ],
+      "practice": "Write a custom ESLint rule, then write a codemod with jscodeshift to migrate a deprecated API across the codebase."
+    },
+    "linux-shell": {
+      "name": "Linux & Shell",
+      "description": "Big data jobs run on Linux clusters, and debugging jobs, reading logs and writing ops scripts all depend on the shell.",
+      "concepts": [
+        "Common text processing (grep / awk / sed)",
+        "Process, memory and disk troubleshooting",
+        "Shell scripts and cron",
+        "SSH and permissions"
+      ],
+      "practice": "Write a shell script that counts errors in the logs under a directory and aggregates them by hour, then schedule it with cron."
+    },
+    "llm": {
+      "name": "LLM Fundamentals",
+      "description": "Building an agent platform requires understanding the model's input and output constraints.",
+      "concepts": [
+        "Tokens, context window, sampling parameters",
+        "Function calling and structured output",
+        "KV cache and prompt caching",
+        "Model capability limits and hallucination"
+      ],
+      "practice": "Without a framework, call the API directly to implement a multi-turn tool-calling exchange."
+    },
+    "llm-api": {
+      "name": "LLM API Integration",
+      "description": "The basics of wiring a model into a product: auth, streaming, retries, timeouts and multi-turn message assembly. Ubie requires building and operating systems on LLM APIs, and Notion and Ramp require using LLMs in real production scenarios.",
+      "concepts": [
+        "Messages / Chat Completions structure",
+        "Streaming responses and mid-stream cancellation",
+        "Rate limits, retries and timeouts",
+        "Token counting and context limits"
+      ],
+      "practice": "Wrap a unified model client that supports two vendors, streaming output and exponential backoff retries, and logs tokens and latency for every call."
+    },
+    "llm-workflow": {
+      "name": "LLM Workflow Orchestration",
+      "description": "Chain multiple model calls, retrieval steps and tools into reliable business processes. ByteDance Lark Base asks for workflow orchestration, Tencent for production experience with LangChain / dify, and Linear wants to turn models into structured, reliable workflows.",
+      "concepts": [
+        "Sequential, branching and parallel steps",
+        "Frameworks such as LangGraph / dify",
+        "State and intermediate results",
+        "Workflows vs. autonomous agents"
+      ],
+      "practice": "Implement a \"retrieve -> draft -> self-check -> revise\" workflow in LangGraph that can be rerun after a failure at any step."
+    },
+    "log-pipeline": {
+      "name": "Log Pipelines",
+      "description": "Collecting, parsing, storing and searching logs at scale, and keeping the cost under control. Both troubleshooting and auditing depend on it.",
+      "concepts": [
+        "Structured logging",
+        "Collection agents (Fluent Bit, Vector)",
+        "Storage and search (Elasticsearch, Loki)",
+        "Sampling, retention and cost"
+      ],
+      "practice": "Ship K8s container logs to Loki with Fluent Bit, and query all logs for a single request by trace_id in Grafana."
+    },
+    "loop": {
+      "name": "Agent Loop",
+      "description": "The loop of model, tools and observations: the minimal kernel of every agent.",
+      "concepts": [
+        "Stop conditions and max steps",
+        "Returning tool errors to the model",
+        "Human approval interrupts",
+        "Streaming and interruptibility"
+      ],
+      "practice": "Implement a complete agent loop in under 200 lines, with approvals and interrupts."
+    },
+    "mcp": {
+      "name": "MCP",
+      "description": "The de facto standard protocol for connecting tools and data.",
+      "concepts": [
+        "tools, resources, prompts",
+        "stdio and Streamable HTTP",
+        "Authorization flow",
+        "Server development"
+      ],
+      "practice": "Write an MCP server for an internal system you know well and connect it to Claude or Codex."
+    },
+    "memory": {
+      "name": "Layered Memory",
+      "description": "Short-term, working and long-term memory, plus write and retrieval strategies.",
+      "concepts": [
+        "Working memory vs. long-term memory",
+        "When to write and handling conflicts",
+        "File-based memory",
+        "Personalization"
+      ],
+      "practice": "Implement a file-based memory tool for an agent and test cross-session recall."
+    },
+    "metadata-lineage": {
+      "name": "Metadata & Lineage",
+      "description": "Help people and agents find tables, understand columns and trace upstream and downstream. Coinbase, Alibaba and Tencent all mention lineage and catalogs.",
+      "concepts": [
+        "Technical and business metadata",
+        "Table-level and column-level lineage",
+        "Data catalog and search",
+        "The OpenLineage standard"
+      ],
+      "practice": "Collect the lineage of an Airflow pipeline with OpenLineage or DataHub, and trace a column's upstream in the UI."
+    },
+    "metrics-layer": {
+      "name": "Metrics & Semantic Layer",
+      "description": "Unify metric definitions so that reports, experiments and AI queries all use the same definitions. Airbnb uses Minerva, Discord maintains a semantic layer, and Tencent and Meituan ask for consistent definitions.",
+      "concepts": [
+        "Atomic, derived and composite metrics",
+        "Metric definitions and dimension management",
+        "Semantic layer (dbt Semantic Layer, Minerva)",
+        "Metrics and metadata for AI"
+      ],
+      "practice": "Define 5 core metrics for a subscription product (with definitions, dimensions and SQL), and implement two of them with the dbt semantic layer."
+    },
+    "metrics-monitoring": {
+      "name": "Metrics & Time Series",
+      "description": "Metrics systems typified by Prometheus: collection, storage, querying and visualization, plus the engineering problems of high cardinality and long-term storage.",
+      "concepts": [
+        "Prometheus data model and PromQL",
+        "Exporters and service discovery",
+        "High cardinality and long-term storage (Thanos / Mimir)",
+        "Grafana dashboard design"
+      ],
+      "practice": "Deploy Prometheus + Grafana on a local K8s cluster, add RED metrics to a service, and write 3 PromQL-based alerting rules."
+    },
+    "micro-fe": {
+      "name": "Micro-Frontends",
+      "description": "A way to split large apps where multiple teams and tech stacks coexist. PayPay's stack includes single-spa, and both Baidu and Alibaba list micro-frontend experience as a plus.",
+      "concepts": [
+        "App splitting and route dispatching",
+        "JS sandbox and style isolation",
+        "Module Federation",
+        "Shared dependencies and version conflicts"
+      ],
+      "practice": "Mount a Vue sub-app and a React sub-app into the same host app with single-spa or qiankun."
+    },
+    "microservices": {
+      "name": "Microservices & Governance",
+      "description": "Coinbase, PayPay, Money Forward and NetEase all ask for microservices experience, and Meituan calls it SOA. Service boundaries, service discovery, RPC and governance are everyday work.",
+      "concepts": [
+        "Service decomposition and boundaries",
+        "Service registry, discovery and RPC frameworks",
+        "Config centers and service meshes",
+        "Contract testing and dependency governance"
+      ],
+      "practice": "Split a monolith into three services, add a service registry and distributed tracing, and record how latency and failure surface change before and after."
+    },
+    "ml-data": {
+      "name": "Feature & Training Data",
+      "description": "Feed models: features, labels, samples and training data quality. Discord Ads asks for feature and label generation, and Fliggy asks for real-time/offline user features.",
+      "concepts": [
+        "Offline and real-time features",
+        "Label generation and sample joining",
+        "Feature consistency and leakage (point-in-time correctness)",
+        "Feature Store"
+      ],
+      "practice": "Define a set of user features with Feast, export an offline training set and read them online, and verify the two sides match."
+    },
+    "mobile-llm": {
+      "name": "Mobile & On-Device LLMs",
+      "description": "Integrating models into apps: streaming, sessions, poor networks and on-device inference. Tencent Hunyuan hires for iOS/Android LLM app development, including running quantized models on-device and optimizing time to first token.",
+      "concepts": [
+        "Mobile streaming and poor-network handling",
+        "On-device inference and quantized models",
+        "Model file download and management",
+        "Memory, power and privacy"
+      ],
+      "practice": "Run a small quantized model on a phone for offline summarization, switch to a cloud model when online, and compare time to first token and battery drain."
+    },
+    "motion": {
+      "name": "Motion & Interaction",
+      "description": "The details that make a UI feel right: layout, motion and typography. OpenAI asks you to polish motion and interaction details, and Ramp lists GSAP and Motion as a plus.",
+      "concepts": [
+        "CSS transition and animation",
+        "FLIP and layout animation",
+        "Motion / GSAP",
+        "prefers-reduced-motion"
+      ],
+      "practice": "Add add, remove and reorder animations (FLIP) to a list, keep it at 60fps, and respect the reduced-motion setting."
+    },
+    "mq": {
+      "name": "Messaging & Streams",
+      "description": "Message queues provide async decoupling, peak shaving and event-driven design; log-based systems like Kafka are also the entry point for real-time data pipelines. The core is partitions, consumer groups and delivery semantics.",
+      "concepts": [
+        "Partitions, replicas and consumer groups",
+        "Delivery semantics and idempotent consumers",
+        "Ordering, retries and dead-letter queues",
+        "Offset management and replay",
+        "Event-driven design and the Outbox pattern"
+      ],
+      "practice": "Set up a Kafka order-event stream, deliberately restart consumers and reprocess messages, and use an idempotency table to keep results correct."
+    },
+    "multi": {
+      "name": "Multi-Agent Delegation",
+      "description": "Subagents, delegation and parallel execution. The hard parts are context isolation and merging results.",
+      "concepts": [
+        "Subagents and context isolation",
+        "Parallel fan-out and aggregation",
+        "Permission boundaries for delegation",
+        "Token cost amplification"
+      ],
+      "practice": "Implement a research task where a lead agent dispatches 3 subagents in parallel."
+    },
+    "multimodal": {
+      "name": "Multimodal Applications",
+      "description": "Mixed input and output across images, speech and documents. Tencent WeChat asks for multimodal interaction pipelines, ByteDance Lark for rendering multimodal messages, and Tencent Hunyuan covers voice input and text-to-speech playback.",
+      "concepts": [
+        "Image understanding input",
+        "Speech recognition and synthesis",
+        "Real-time voice conversation",
+        "Storing and rendering multimodal messages"
+      ],
+      "practice": "Build a screenshot Q&A feature: the user uploads a screenshot and asks a question, and the model answers with descriptions of the relevant regions."
+    },
+    "net": {
+      "name": "Computer Networking",
+      "description": "Agent platforms rely heavily on streaming and long-lived connections, and egress control is also a security boundary.",
+      "concepts": [
+        "HTTP/2, gRPC",
+        "Streaming with SSE and WebSocket",
+        "Egress proxy and domain allowlist",
+        "TLS and mTLS"
+      ],
+      "practice": "Write an LLM gateway that forwards SSE streams, with timeouts and retries."
+    },
+    "net-programming": {
+      "name": "Network Programming & I/O",
+      "description": "Tencent asks for Linux network programming, and NetEase for deep knowledge of Netty/Reactor and long-lived SSE connections. The I/O model sets the throughput ceiling of high-concurrency services and gateways.",
+      "concepts": [
+        "Blocking, non-blocking and I/O multiplexing (epoll)",
+        "The Reactor pattern and event loops",
+        "Long-lived connections, heartbeats and push",
+        "TCP message framing, backpressure and connection management"
+      ],
+      "practice": "Write an echo/push server with epoll or Netty that handles tens of thousands of long-lived connections, load test it, and watch the CPU and connection-count curves."
+    },
+    "node-bff": {
+      "name": "Node.js & BFF",
+      "description": "Server-side skills for frontend engineers. Alibaba asks for Node.js with express/koa experience, PayPay uses NestJS and Express, and Vercel asks you to write server-side code.",
+      "concepts": [
+        "Node.js event loop and streams",
+        "Express / Koa / NestJS",
+        "BFF aggregation and shaping",
+        "Server-side error handling and logging"
+      ],
+      "practice": "Write a BFF in NestJS that aggregates two backend APIs, with timeouts, retries and structured logging."
+    },
+    "nosql": {
+      "name": "NoSQL & KV Stores",
+      "description": "KV, wide-column and document stores model data around access patterns rather than normal forms, gaining horizontal scale and high availability at the cost of consistency and query flexibility.",
+      "concepts": [
+        "KV, wide-column and document models",
+        "Partition keys and hot spots",
+        "LSM trees and compaction",
+        "Tunable consistency (quorum)"
+      ],
+      "practice": "Model an access-log table in both DynamoDB and Cassandra, and compare how partition key choice affects hot spots."
+    },
+    "observability": {
+      "name": "Monitoring, Logs & Alerts",
+      "description": "Designing metrics, logs and traces as a whole, so you find problems before users do and can quickly answer \"what broke and why\".",
+      "concepts": [
+        "Metrics, logs and traces",
+        "Four golden signals and the RED / USE methods",
+        "Black-box and white-box monitoring",
+        "Symptom-based alerting and alert noise reduction",
+        "OpenTelemetry instrumentation"
+      ],
+      "practice": "Instrument a service with OpenTelemetry, build a RED dashboard in Grafana, and write three alerts that fire only when a human needs to act."
+    },
+    "olap": {
+      "name": "OLAP Engines",
+      "description": "MPP engines for ad hoc queries and reports. Chinese JDs often name Doris, ClickHouse and StarRocks, and Chime asks for experience with MPP databases.",
+      "concepts": [
+        "MPP architecture and columnar execution",
+        "Partitioning, bucketing and sort keys",
+        "Materialized views and pre-aggregation",
+        "Presto / Trino federated queries"
+      ],
+      "practice": "Load tens of millions of rows into Doris or ClickHouse and compare query times under different partitioning, bucketing and materialized view setups."
+    },
+    "oncall": {
+      "name": "On-Call & Runbooks",
+      "description": "Sustainable on-call: alerts fire only when a human needs to act, every alert has a runbook, and on-call load is measurable and trending down.",
+      "concepts": [
+        "Actionable alerts and alert fatigue",
+        "On-call rotations and escalation policies",
+        "Writing runbooks",
+        "Measuring on-call load"
+      ],
+      "practice": "Audit all alerts for a service, delete or merge the non-actionable ones, and write a runbook for each one that remains."
+    },
+    "oop-design": {
+      "name": "OOP & Design Patterns",
+      "description": "Meituan and NetEase ask for familiarity with design patterns, and PayPay for OOP fundamentals. Maintainable business code depends on clear abstractions and separation of responsibilities.",
+      "concepts": [
+        "SOLID principles",
+        "Common creational, structural and behavioral patterns",
+        "Dependency injection and inversion of control",
+        "Refactoring and code smells"
+      ],
+      "practice": "Take a piece of business code full of if-else chains, refactor it with the strategy pattern and dependency injection, and add unit tests."
+    },
+    "orchestration": {
+      "name": "Workflow Orchestration",
+      "description": "Manage dependencies, retries and SLAs for hundreds or thousands of tasks with DAGs. Airflow is the most common, Discord uses Dagster, and Chinese companies mostly use in-house schedulers.",
+      "concepts": [
+        "DAGs, dependencies and schedule intervals",
+        "Retries, timeouts and alerts",
+        "Parameterization and dynamic tasks",
+        "Asset-oriented orchestration"
+      ],
+      "practice": "Orchestrate a three-step pipeline (extract, transform, validate) with Airflow or Dagster, with retries on failure and SLA alerts."
+    },
+    "os": {
+      "name": "Linux & OS",
+      "description": "Namespaces, cgroups, seccomp, file systems and the process model. The foundation of every isolation technology and sandbox.",
+      "concepts": [
+        "namespace / cgroups v2",
+        "seccomp and capabilities",
+        "overlayfs and copy-on-write",
+        "Process signals and lifecycle"
+      ],
+      "practice": "Build a minimal container by hand with unshare and cgroups, limiting CPU, memory and network."
+    },
+    "otel-tracing": {
+      "name": "Distributed Tracing (OTel)",
+      "description": "Propagate context across microservices to reconstruct the full call chain of a request and pinpoint where it is slow or failing.",
+      "concepts": [
+        "Traces, spans and context propagation",
+        "OpenTelemetry SDK and Collector",
+        "Sampling strategies (head, tail)",
+        "Correlating logs, metrics and traces"
+      ],
+      "practice": "Instrument two services that call each other with OpenTelemetry, send the data through the Collector to Jaeger or Tempo, create a slow call and locate it with a trace."
+    },
+    "patterns": {
+      "name": "Execution Patterns",
+      "description": "Xiaohongshu (RED) requires support for different execution architectures such as ReAct, Workflow, Planner-Executor and Multi-Agent.",
+      "concepts": [
+        "Workflow vs. agent trade-offs",
+        "Planner-Executor",
+        "Orchestrator-Workers",
+        "Evaluator-Optimizer"
+      ],
+      "practice": "Implement the same task both as a workflow and as an autonomous agent, and compare success rate and cost."
+    },
+    "perf": {
+      "name": "Performance Optimization",
+      "description": "Measure, locate, optimize, then guard against regressions: find bottlenecks across CPU, memory, I/O, network and runtime, and quantify the gains.",
+      "concepts": [
+        "Performance metrics, baselines and budgets",
+        "Flame graphs and sampling profilers",
+        "Latency distributions and tail latency (P99)",
+        "Runtime tuning (GC, thread pools, connection pools)",
+        "Regression protection"
+      ],
+      "practice": "Load test an HTTP service, generate flame graphs with perf / pprof, find and optimize the hottest path, and compare P99 before and after."
+    },
+    "pkg-monorepo": {
+      "name": "Package Mgmt & Monorepos",
+      "description": "Dependencies, versions and multi-package repos. Stripe lists package managers and large monorepos as a plus, and Alibaba Qwen mentions pnpm.",
+      "concepts": [
+        "npm / yarn / pnpm and lockfiles",
+        "Semantic versioning and dependency conflicts",
+        "Monorepos and workspaces",
+        "Turborepo / Nx task orchestration"
+      ],
+      "practice": "Set up a monorepo with a component library, a utility library and an app using pnpm workspaces and Turborepo, with incremental builds."
+    },
+    "product-sense": {
+      "name": "AI Product Sense",
+      "description": "Judge which problems suit AI and how good is good enough. Linear asks for product sense, Figma for connecting modeling work to business value, LayerX for discovering and defining problems in customers' businesses, and Tencent for strong product awareness.",
+      "concepts": [
+        "Matching user problems to AI capabilities",
+        "Acceptable error rates and fallbacks",
+        "Defining success metrics",
+        "Working with product, design and ML teams"
+      ],
+      "practice": "Pick an existing product feature and write a one-page \"should we add AI\" analysis: user problem, cost of failure, success metrics and a minimum viable approach."
+    },
+    "prompt-eng": {
+      "name": "Prompt Engineering",
+      "description": "Use instructions, examples and structure to get consistent, intended output from a model, and version and evaluate prompts the way you would code.",
+      "concepts": [
+        "System prompts and roles",
+        "Few-shot examples",
+        "Step-by-step instructions and structured output",
+        "Prompt templating and versioning",
+        "Prompt injection risks"
+      ],
+      "practice": "Write three prompt versions for a customer-support reply scenario, compare them on 30 fixed test cases, and record each version's changes and score."
+    },
+    "proto": {
+      "name": "Rapid Prototyping (0 to 1)",
+      "description": "AI features are highly uncertain, so validate with a prototype before investing. Figma asks for 0-to-1 prototyping experience, Linear for prototyping and iterating on intelligent workflows, Notion for taking prototypes to shipped features, and PayPay for moving from PoC to full development.",
+      "concepts": [
+        "Minimum viable prototypes",
+        "Fast validation with real data",
+        "Prototype-to-production gap list",
+        "Knowing when to stop and walk away"
+      ],
+      "practice": "Build an AI feature prototype in two days, validate it on 10 real user cases, and list what must be added before it goes to production."
+    },
+    "python": {
+      "name": "Python Engineering",
+      "description": "The main language of AI applications and data engineering: model SDKs, data pipelines, scheduling DAGs and eval scripts usually ship a Python version first.",
+      "concepts": [
+        "Type hints and project layout (pyproject, uv)",
+        "asyncio concurrency",
+        "Generators and memory-friendly batching",
+        "pandas / Polars / PyArrow",
+        "Pydantic validation and testable module design"
+      ],
+      "practice": "Write a Python CLI that reads CSV, cleans it and writes Parquet, with unit tests and type checking."
+    },
+    "query-opt": {
+      "name": "Query Optimization",
+      "description": "At massive scale, a SQL query that is an order of magnitude slower means missed SLAs and doubled costs. Tencent, Meituan and Alibaba all ask for large-scale SQL tuning experience.",
+      "concepts": [
+        "Reading execution plans",
+        "Join strategies (broadcast / shuffle)",
+        "Predicate pushdown and partition pruning",
+        "Diagnosing data skew"
+      ],
+      "practice": "Pick a slow query, read its execution plan to find the bottleneck, and halve the run time by rewriting it or changing the join strategy."
+    },
+    "rag": {
+      "name": "Retrieval & RAG",
+      "description": "OpenAI mentions search and connected context; Alibaba mentions knowledge retrieval.",
+      "concepts": [
+        "Vector, BM25 and hybrid retrieval",
+        "Reranking",
+        "Agentic search vs. prebuilt indexes",
+        "Grounding and citations"
+      ],
+      "practice": "On the same corpus, compare hybrid retrieval with an agent searching on its own via grep."
+    },
+    "react": {
+      "name": "React",
+      "description": "The most common frontend framework, mentioned by 10 companies. Baidu asks for an understanding of the virtual DOM, diffing and Fiber.",
+      "concepts": [
+        "Components, props and Hooks",
+        "Virtual DOM, diffing and Fiber",
+        "Concurrent rendering and Suspense",
+        "Server Components"
+      ],
+      "practice": "Without reading the source, write a mini React (createElement, render, useState), then compare it with Fiber scheduling in the React source."
+    },
+    "realtime-dw": {
+      "name": "Real-Time Data Warehouse",
+      "description": "Move the layered data warehouse onto a real-time pipeline: real-time detail, real-time aggregates and live dashboards. Tencent e-commerce asks for a real-time data warehouse built on Flink SQL.",
+      "concepts": [
+        "Lambda and Kappa architectures",
+        "Real-time layering and dimension table joins",
+        "Unified batch and streaming and data lakes (Paimon / Hudi)",
+        "Reconciling real-time and offline results"
+      ],
+      "practice": "Build a Kafka to Flink SQL to Doris real-time pipeline, produce a live GMV dashboard, and reconcile it with offline results."
+    },
+    "registry": {
+      "name": "Tool Registry & Gateway",
+      "description": "Registration, versioning, discovery and call governance for tools, Skills and MCP servers.",
+      "concepts": [
+        "Registration and versioning",
+        "Discovery and search",
+        "Call gateway and auditing",
+        "Gradual rollout and retirement"
+      ],
+      "practice": "Design an MCP gateway that unifies auth, rate limiting and auditing across multiple MCP servers."
+    },
+    "render-perf": {
+      "name": "Runtime Perf & Memory",
+      "description": "Smooth interactions without jank or leaks. Tencent WorkBuddy asks you to optimize frame rate and memory usage and track down memory leaks, and OpenAI asks for rendering performance.",
+      "concepts": [
+        "Long tasks and main-thread scheduling",
+        "React re-renders and memo",
+        "Virtualized lists",
+        "Memory leaks and heap snapshots"
+      ],
+      "practice": "Build a virtualized list with 100,000 rows, then use React Profiler and heap snapshots to find and fix a re-render storm and a leak."
+    },
+    "research": {
+      "name": "Research Taste",
+      "description": "Xiaohongshu (RED) asks for testable hypotheses and judging approaches with experiments and benchmarks.",
+      "concepts": [
+        "Forming testable hypotheses",
+        "Designing experiments and benchmarks",
+        "Reading papers",
+        "Publishing as open source or articles"
+      ],
+      "practice": "Each week, read one agent systems paper closely and write a short verdict on whether it is reproducible and worth pursuing."
+    },
+    "resilience": {
+      "name": "Resilience Patterns",
+      "description": "Keep a system partially available under overload and dependency failures instead of letting it cascade into collapse.",
+      "concepts": [
+        "Timeouts, retries and backoff",
+        "Rate limiting algorithms (token bucket, sliding window)",
+        "Circuit breakers and bulkheads",
+        "Graceful degradation and load shedding"
+      ],
+      "practice": "Add timeouts, jittered retries, circuit breaking and rate limiting to a service that calls a downstream, and use fault injection to show that a slow downstream does not take down the upstream."
+    },
+    "responsive": {
+      "name": "Responsive & Multi-Device",
+      "description": "One interface that works on desktop, mobile and mini programs. Stripe and Ramp ask for responsive design, and Tencent asks for cross-device consistency and mobile adaptation.",
+      "concepts": [
+        "Media queries and container queries",
+        "Mobile viewport and rem/vw",
+        "Touch events and gestures",
+        "Browser compatibility and progressive enhancement"
+      ],
+      "practice": "Turn a desktop table page into a mobile card layout, and test portrait, landscape and safe areas on a real device."
+    },
+    "risk-systems": {
+      "name": "Risk Control & Compliance",
+      "description": "Tencent WeChat Pay builds a financial-grade risk control platform, Coinbase makes real-time risk decisions, Money Forward builds the AML/eKYC foundation, Reddit does compliance engineering, and Meituan identifies and handles trust and integrity risks.",
+      "concepts": [
+        "Rule engines and real-time decisions",
+        "Feature and list services",
+        "Review, appeal and manual review flows",
+        "Implementing compliance requirements (AML, KYC, privacy)"
+      ],
+      "practice": "Build a transaction risk control service with a rule engine, sliding-window features and a manual review queue, keeping P99 under 50ms."
+    },
+    "rl": {
+      "name": "Agentic RL Infrastructure",
+      "description": "Training agents needs huge numbers of sandbox environments, rollouts and rewards. Both Baidu and Alibaba mention it.",
+      "concepts": [
+        "Environments as sandboxes",
+        "Large-scale rollouts",
+        "Reward design",
+        "Coordinating training and inference"
+      ],
+      "practice": "Read an Agentic RL paper and draw its rollout infrastructure."
+    },
+    "rollout": {
+      "name": "Model Onboarding",
+      "description": "OpenAI Codex and Cursor both treat onboarding, evaluating and gradually rolling out new models as a core duty; Japanese JDs require version management and rollback.",
+      "concepts": [
+        "Model adaptation and evaluation",
+        "Canary and A/B testing",
+        "Prompt and model versioning",
+        "Rollback"
+      ],
+      "practice": "Simulate a model switch: run evals, canary to 5%, monitor metrics and roll back in one click."
+    },
+    "safe-release": {
+      "name": "Change Management",
+      "description": "Most incidents are caused by changes. Feature flags, gradual rollouts, canary analysis and automatic rollback lower the risk of every release.",
+      "concepts": [
+        "Feature flags and their lifecycle",
+        "Gradual rollouts and canary releases",
+        "Metric-based automatic rollback",
+        "Change reviews and change windows",
+        "Zero-downtime releases and database migrations"
+      ],
+      "practice": "Configure canary releases for a service with Argo Rollouts and Prometheus analysis, then deliberately ship a bad version to verify automatic rollback."
+    },
+    "sandbox": {
+      "name": "Code Execution Sandbox",
+      "description": "The environment where agents write and run code, and the core product of agent infrastructure.",
+      "concepts": [
+        "File system and Workspace",
+        "Network egress control",
+        "CPU, memory and time limits",
+        "Lifecycle and reclamation"
+      ],
+      "practice": "Build a code execution service with an API on top of Firecracker or gVisor."
+    },
+    "sched": {
+      "name": "Scheduling & Elasticity",
+      "description": "Scheduling, cold starts and scaling for huge numbers of agents and sandbox instances.",
+      "concepts": [
+        "Task queues and priorities",
+        "Backpressure and fair scheduling",
+        "Cold starts and warm pools",
+        "Faster startup via snapshot restore"
+      ],
+      "practice": "Design a warm pool for sandboxes and measure cold-start P50 and P99."
+    },
+    "search-engine": {
+      "name": "Full-Text Search",
+      "description": "Tencent WeChat e-commerce roles ask for Elasticsearch, inverted indexes, tokenization and relevance ranking; Datadog uses Elasticsearch; PayPay's stack includes ELK.",
+      "concepts": [
+        "Inverted indexes and tokenization",
+        "BM25 and relevance ranking",
+        "Shards, replicas and refresh",
+        "Syncing from database to index"
+      ],
+      "practice": "Sync a product table to Elasticsearch via CDC, build a search API with filters and highlighting, and tune relevance."
+    },
+    "security-basics": {
+      "name": "AppSec Basics (OWASP)",
+      "description": "Causes of and defenses against common web vulnerabilities: injection, XSS, CSRF, broken access control, leaked secrets and the dependency supply chain. Security has to be considered while writing the code.",
+      "concepts": [
+        "OWASP Top 10",
+        "Injection and input validation",
+        "XSS, CSRF and CSP",
+        "Secret management and encryption",
+        "Dependency and supply chain security"
+      ],
+      "practice": "Scan your own service with OWASP ZAP, fix the injection and broken access control issues it finds, and add dependency scanning to CI."
+    },
+    "seo": {
+      "name": "SEO & Site Content",
+      "description": "Make sure search engines crawl and display pages correctly. Vercel lists technical SEO and CMS as a plus, and Ramp's growth role asks for SEO principles and a CMS (Sanity).",
+      "concepts": [
+        "Crawling, rendering and indexing",
+        "Metadata, structured data and sitemaps",
+        "How SSR/SSG affect SEO",
+        "Headless CMS"
+      ],
+      "practice": "Add a sitemap, structured data and OG images to a Next.js site, and check indexing in Search Console."
+    },
+    "service-mesh": {
+      "name": "Service Mesh & Governance",
+      "description": "Use a sidecar or ambient mesh to handle service-to-service traffic management, mTLS and observability in one place, along with governance such as service registration and discovery.",
+      "concepts": [
+        "Envoy and xDS",
+        "Istio traffic management (routing, retries, circuit breaking)",
+        "mTLS and zero trust",
+        "Mesh performance overhead and operations"
+      ],
+      "practice": "Install Istio in a cluster, set up 10% canary routing and fault injection for a service, and watch the Envoy metrics."
+    },
+    "serving": {
+      "name": "Model Serving",
+      "description": "Understanding the inference side is what makes cost and latency optimization work.",
+      "concepts": [
+        "Continuous batching",
+        "PagedAttention",
+        "KV cache reuse",
+        "Speculative decoding"
+      ],
+      "practice": "Deploy vLLM locally and measure how batch size affects throughput and latency."
+    },
+    "skills": {
+      "name": "Skills / CLI / SDK",
+      "description": "Product interfaces built for agents. Baidu calls this an Agent-Ready product experience.",
+      "concepts": [
+        "Progressive disclosure",
+        "CLI as an agent interface",
+        "SDK design",
+        "Composability for agents"
+      ],
+      "practice": "Write a Skill for an internal workflow and observe when the agent loads it and when it misuses it."
+    },
+    "slo": {
+      "name": "SLOs & Error Budgets",
+      "description": "Define reliability targets with user-centric SLIs and use error budgets to balance release velocity against stability. The core methodology of SRE.",
+      "concepts": [
+        "Choosing SLIs (availability, latency, correctness)",
+        "Critical user journeys (CUJ)",
+        "Error budgets and release policy",
+        "Burn-rate alerting"
+      ],
+      "practice": "Define 2 SLIs and matching SLOs for a service, implement multi-window burn-rate alerts in Prometheus, and write an error budget policy."
+    },
+    "spark-batch": {
+      "name": "Spark Batch Processing",
+      "description": "The de facto standard for large-scale offline computing. Airbnb, Chime, Tencent, Meituan and Alibaba all ask for Spark, often including internals and tuning.",
+      "concepts": [
+        "RDD / DataFrame and lazy evaluation",
+        "Shuffle, partitioning and data skew",
+        "Catalyst optimizer and AQE",
+        "Memory management and resource tuning"
+      ],
+      "practice": "Process a public dataset of 10GB or more with Spark, deliberately create data skew, then fix it with salting or AQE and compare run times."
+    },
+    "sql-db": {
+      "name": "SQL & Databases",
+      "description": "MySQL and PostgreSQL appear in almost every JD: you need to write complex SQL correctly and understand indexes, transactions and query plans.",
+      "concepts": [
+        "Joins, CTEs and window functions",
+        "Index structures and query plans",
+        "Transaction isolation levels and MVCC",
+        "Locks, deadlocks and slow query tuning",
+        "Replication and schema migrations"
+      ],
+      "practice": "Reproduce a slow query on a million-row table, read EXPLAIN to design a composite index, then reproduce phantom reads under two isolation levels."
+    },
+    "sql-transform": {
+      "name": "SQL Transformation (dbt)",
+      "description": "Manage SQL models the engineering way: modularity, tests, docs and dependencies. Discord and Brex explicitly ask for dbt.",
+      "concepts": [
+        "Models, ref and the dependency graph",
+        "Incremental models and materializations",
+        "Tests, docs and exposures",
+        "Macros and Jinja templating"
+      ],
+      "practice": "Use dbt to build a set of raw tables into two layers of models (staging, then mart), add uniqueness and not-null tests, and generate the docs site."
+    },
+    "sre": {
+      "name": "SRE & Failure Drills",
+      "description": "Tencent has a dedicated SRE role for agent sandboxes that requires chaos engineering; Japanese JDs require fallbacks, alerting and runbooks.",
+      "concepts": [
+        "SLOs and error budgets",
+        "Chaos engineering",
+        "On-call and runbooks",
+        "Self-healing systems"
+      ],
+      "practice": "Run a fault injection against your sandbox service and write the matching runbook."
+    },
+    "ssr-next": {
+      "name": "SSR & Next.js",
+      "description": "Server-side rendering, static generation and streaming. Vercel, Ramp and miive use Next.js, and Alibaba ATH asks for work on the BFF layer and server-side rendering.",
+      "concepts": [
+        "Trade-offs among CSR, SSR, SSG and ISR",
+        "Hydration and streaming",
+        "App Router and Server Components",
+        "Edge rendering and caching"
+      ],
+      "practice": "Build a blog with ISR on the Next.js App Router and compare first paint and LCP with a CSR version."
+    },
+    "state": {
+      "name": "State Model",
+      "description": "Xiaohongshu (RED) specifically calls for research into state models such as Session, Event, Turn, Deployment and Workspace.",
+      "concepts": [
+        "Boundary between Session and Turn",
+        "Event log as the source of truth",
+        "Workspace (file system state)",
+        "Replaceable running instances"
+      ],
+      "practice": "Design an event schema for your agent that can fully rebuild state from the log."
+    },
+    "stateful-ops": {
+      "name": "Stateful Middleware Ops",
+      "description": "Deploying, scaling, backing up and handling failures of databases, messaging, coordination services and distributed storage in production. Platform teams such as Cloudflare's run Postgres, Kafka and Ceph themselves.",
+      "concepts": [
+        "StatefulSets and persistent volumes",
+        "Backup, restore and data verification",
+        "Cluster scaling and rebalancing",
+        "etcd / ZooKeeper / Ceph operations"
+      ],
+      "practice": "Deploy a PostgreSQL cluster on K8s with an Operator, then drill primary failover and restoring from backup."
+    },
+    "stream-processing": {
+      "name": "Stream Processing",
+      "description": "Processing unbounded data streams: event time, windows, state and fault tolerance. Flink is the most common engine, with Kafka Streams and Spark Structured Streaming also widely used.",
+      "concepts": [
+        "Event time, watermarks and out-of-order data",
+        "Window types and state management",
+        "Checkpoints and the limits of exactly-once",
+        "Unified batch and streaming",
+        "Flink SQL"
+      ],
+      "practice": "Read a click stream from Kafka with Flink, compute PV/UV in 5-minute tumbling windows, and verify that results are not duplicated after a job restart."
+    },
+    "streaming-ui": {
+      "name": "Streaming UI",
+      "description": "Token-by-token output, reasoning and tool progress all have to render in real time. ByteDance Lark asks for SSE/WebSocket streaming rendering, Tencent Hunyuan for streaming output and poor-network handling, and Ramp builds real-time, agent-driven interfaces.",
+      "concepts": [
+        "SSE and WebSocket",
+        "Incremental Markdown rendering",
+        "Displaying tool calls and task progress",
+        "Interrupts, retries and resuming after disconnects",
+        "Keeping frontend state in sync with stream events"
+      ],
+      "practice": "Build a chat UI that streams Markdown and code blocks, supports stopping generation, and resumes from the last event after a disconnect."
+    },
+    "structured-output": {
+      "name": "Structured Output",
+      "description": "Make models emit JSON that programs can consume. Ramp lists structured extraction as a core project (it open-sourced jsonformer), and Baidu asks for experience extracting parameters across multi-step tool calls.",
+      "concepts": [
+        "JSON Schema constraints",
+        "Constrained decoding and Structured Outputs",
+        "Retry and repair on validation failure",
+        "Field-level confidence"
+      ],
+      "practice": "Extract amount, date and vendor from 50 invoice texts, constrain the output with a schema, and measure per-field accuracy."
+    },
+    "sys-design": {
+      "name": "System Design",
+      "description": "Making trade-offs among availability, consistency, latency and cost to design service architectures that scale. Also a standard part of most interviews.",
+      "concepts": [
+        "Capacity estimation and bottleneck analysis",
+        "Read/write paths and data flow",
+        "Horizontal scaling and partitioning",
+        "Failure domains and blast radius",
+        "Trade-offs: consistency, latency, cost"
+      ],
+      "practice": "In interview format, fully design a URL shortener and a news feed, including capacity estimates and three key trade-offs."
+    },
+    "sys-troubleshoot": {
+      "name": "Production Troubleshooting",
+      "description": "Narrow the scope layer by layer across application, kernel, network and dependencies, and find root causes by measuring rather than guessing. Almost every SRE JD lists it as a hard requirement.",
+      "concepts": [
+        "USE / RED methods",
+        "Hypothesize-and-verify troubleshooting loop",
+        "Live tools such as strace, tcpdump and perf",
+        "From mitigation to root-cause fix"
+      ],
+      "practice": "On a Linux machine under load, create CPU, memory, disk and network bottlenecks, and write a one-page troubleshooting log for each: which metrics you checked, which commands you ran, and how you confirmed the root cause."
+    },
+    "tech-lead": {
+      "name": "Technical Leadership",
+      "description": "Coinbase asks for writing design docs for complex systems and mentoring, Robinhood for leading large projects, Reddit for tech lead experience, and Meituan for solution design and review. This is what separates senior backend engineers.",
+      "concepts": [
+        "Design docs and reviews",
+        "Turning vague requirements into plans",
+        "Cross-team alignment and execution",
+        "Mentoring and teaching through code review"
+      ],
+      "practice": "Write a design doc for a real requirement (background, goals, options compared, risks, rollout plan) and take it through review."
+    },
+    "tenant": {
+      "name": "Multi-Tenant Isolation",
+      "description": "Baidu requires a high-security multi-tenant isolation design, and Alibaba requires multi-tenant isolation experience.",
+      "concepts": [
+        "Compute, network and data isolation",
+        "Noisy neighbors",
+        "Per-tenant encryption",
+        "Isolation level vs. cost"
+      ],
+      "practice": "Write a multi-tenancy threat model document for a sandbox platform."
+    },
+    "testing": {
+      "name": "Automated Testing",
+      "description": "A layered strategy of unit, integration and end-to-end tests so changes can be merged with confidence.",
+      "concepts": [
+        "Test pyramid",
+        "Unit tests and mocking boundaries",
+        "Integration tests with Testcontainers",
+        "End-to-end tests (Playwright)",
+        "TDD and regression tests"
+      ],
+      "practice": "Fill in unit, integration (a real DB via Testcontainers) and contract tests for an order service and wire them into CI."
+    },
+    "toil-automation": {
+      "name": "Toil Reduction",
+      "description": "Turn repetitive manual operations into code and self-healing systems. The SRE's job is to write software that solves operations problems, not to handle them by hand.",
+      "concepts": [
+        "Identifying and measuring toil",
+        "Building ops tools and CLIs",
+        "Self-healing and auto-remediation",
+        "Automating health checks and changes"
+      ],
+      "practice": "Log your manual ops work for a week, turn the most time-consuming task into a tool or self-healing script, and measure the time saved."
+    },
+    "tools": {
+      "name": "Tool Design",
+      "description": "Tools are the agent's API, and their design quality directly affects success rate.",
+      "concepts": [
+        "Schema and naming",
+        "Model-friendly error messages",
+        "Granularity and token efficiency",
+        "Pagination and truncation"
+      ],
+      "practice": "Turn an existing REST API into an agent-friendly tool set and compare the two with evals."
+    },
+    "trace": {
+      "name": "Tracing & Observability",
+      "description": "Agent execution paths are long and non-deterministic, so every step must be visible.",
+      "concepts": [
+        "OpenTelemetry GenAI semantic conventions",
+        "Span design (turn, tool, model)",
+        "LangFuse",
+        "Correlating logs, metrics and traces"
+      ],
+      "practice": "Instrument an agent with OpenTelemetry and view a complete trace in Grafana."
+    },
+    "tracking": {
+      "name": "Event Tracking & Models",
+      "description": "Designing the data source from client and server event tracking to event tables: event models, naming conventions, versioning and acceptance checks.",
+      "concepts": [
+        "Events, properties and user / session models",
+        "Tracking naming conventions and versioning",
+        "Codeless / auto-tracking vs. client-side and server-side tracking",
+        "Tracking acceptance and quality checks",
+        "Privacy and consent management"
+      ],
+      "practice": "Write an event tracking spec (10 events) for a chat product, and design the validation SQL used for acceptance."
+    },
+    "traffic-edge": {
+      "name": "Edge & Load Balancing",
+      "description": "The full ingress path from DNS, CDN and WAF to L4/L7 load balancing, plus global traffic steering.",
+      "concepts": [
+        "DNS and Anycast / BGP",
+        "L4 and L7 load balancing",
+        "CDN and edge caching",
+        "WAF and ingress security"
+      ],
+      "practice": "Draw the full path of a user request from DNS resolution to a pod, and mark the possible failures and troubleshooting commands at each hop."
+    },
+    "ts": {
+      "name": "TypeScript",
+      "description": "The default language for frontend and Node services. Large projects need real type design, not just annotations.",
+      "concepts": [
+        "Structural typing and type narrowing",
+        "Generics and conditional types",
+        "Declaration files and module resolution",
+        "Strict mode and incremental migration",
+        "Runtime validation (Zod)"
+      ],
+      "practice": "Migrate a small JS project to strict TypeScript and write complete request/response types for its API layer."
+    },
+    "virt": {
+      "name": "Virtualization & eBPF",
+      "description": "Anthropic's sandbox roles require KVM, QEMU and eBPF; OpenAI Codex and Cognition require virtualization and VM orchestration. A layer below containers.",
+      "concepts": [
+        "KVM and QEMU",
+        "VM orchestration and resource scheduling",
+        "eBPF for observability and network control",
+        "Kernel tuning"
+      ],
+      "practice": "Boot a microVM with Firecracker, then use eBPF to count syscalls and network traffic inside the sandbox."
+    },
+    "vue": {
+      "name": "Vue",
+      "description": "Still widely used in China and Japan. PayPay prefers VueJS, and Baidu Netdisk asks for deep knowledge of the Vue ecosystem and experience upgrading from Vue 2 to Vue 3.",
+      "concepts": [
+        "Reactivity system (Proxy and dependency tracking)",
+        "Composition API",
+        "Template compilation and render functions",
+        "Migrating from Vue 2 to Vue 3"
+      ],
+      "practice": "Implement a minimal reactive/effect, then migrate a Vue 2 Options API component to the Composition API."
+    },
+    "web-basics": {
+      "name": "Web & Browser Basics",
+      "description": "HTTP, URLs, the same-origin policy, the DOM and the event model: the foundation of all browser-side work.",
+      "concepts": [
+        "HTTP/1.1, HTTP/2 and HTTPS",
+        "Same-origin policy and CORS",
+        "DOM, event bubbling and capturing",
+        "Cookies, Storage and sessions",
+        "Fetch, streaming reads and SSE / WebSocket"
+      ],
+      "practice": "Write a page without a framework: fetch a cross-origin API, handle the CORS preflight, then explain each request header in the DevTools Network panel."
+    },
+    "web-framework": {
+      "name": "Server-Side Frameworks",
+      "description": "Meituan asks for proficiency with Spring and MyBatis, and NetEase and PayPay for Spring Boot. The framework defines the request lifecycle, dependency management and data access.",
+      "concepts": [
+        "Request lifecycle and middleware",
+        "Dependency injection containers",
+        "ORMs and the data access layer",
+        "Configuration, profiles and startup optimization"
+      ],
+      "practice": "Build a CRUD service from scratch with Spring Boot (or Gin in Go), including auth middleware, an ORM and integration tests."
+    },
+    "web-graphics": {
+      "name": "Canvas, WebGL & Wasm",
+      "description": "Graphics, audio/video and high-performance computing. Alibaba Qwen's video editor asks for WebAssembly, canvas rendering and OpenGL, and Ramp lists 3D libraries as a plus.",
+      "concepts": [
+        "Canvas 2D and offscreen rendering",
+        "WebGL / Three.js",
+        "WebCodecs and audio/video",
+        "WebAssembly engineering"
+      ],
+      "practice": "Build a canvas editor with zoom and drag on Canvas, compile a filter algorithm to WebAssembly, and compare the speed."
+    },
+    "web-vitals": {
+      "name": "Load Performance & CWV",
+      "description": "LCP, INP, CLS and resource loading. Amap asks for familiarity with Core Web Vitals and Lighthouse, and Notion wants to optimize page load.",
+      "concepts": [
+        "LCP, INP, CLS",
+        "Critical rendering path and resource priority",
+        "Code splitting and lazy loading",
+        "Preloading, compression and image optimization"
+      ],
+      "practice": "Measure a site with Lighthouse and the web-vitals library, get LCP under 2.5s, and add a Lighthouse budget to CI."
+    }
+  }
+}
