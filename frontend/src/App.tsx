@@ -57,8 +57,10 @@ export default function App() {
   }, [role])
 
   const cached = role ? roleData[role.slug] : undefined
+  const failed = role ? roleError[role.slug] : undefined
   useEffect(() => {
-    if (!index || !role || cached) return
+    // A failed role stays failed until the user retries, which clears its error and re-runs this effect.
+    if (!index || !role || cached || failed) return
     // Responses are stored per slug, so a slow response for an earlier role can never replace the current one.
     const ac = new AbortController()
     loadRole(index, role, ac.signal).then(
@@ -68,7 +70,15 @@ export default function App() {
       },
     )
     return () => ac.abort()
-  }, [index, role, cached])
+  }, [index, role, cached, failed])
+
+  const retryRole = useCallback((slug: string) => {
+    setRoleError((prev) => {
+      const next = { ...prev }
+      delete next[slug]
+      return next
+    })
+  }, [])
 
   const selectRole = useCallback((slug: string) => {
     window.history.pushState(null, '', urlWithRole(slug))
@@ -83,7 +93,8 @@ export default function App() {
   return (
     <RoleView
       data={cached}
-      loadError={roleError[role.slug]}
+      loadError={failed}
+      onRetry={() => retryRole(role.slug)}
       switcher={<RoleSwitcher roles={index.roles} current={role} onChange={selectRole} />}
       sub={subtitle(index, role)}
       roleSlug={role.slug}
@@ -94,13 +105,14 @@ export default function App() {
 interface RoleViewProps {
   data: SkillMapData | undefined
   loadError: string | undefined
+  onRetry: () => void
   switcher: ReactNode
   sub: string
   roleSlug: string
 }
 
 // Not keyed by role: the switcher must keep its DOM node (and focus) across a switch.
-function RoleView({ data, loadError, switcher, sub, roleSlug }: RoleViewProps) {
+function RoleView({ data, loadError, onRetry, switcher, sub, roleSlug }: RoleViewProps) {
   const [filter, setFilter] = useState<string | null>(null)
   const [selected, setSelected] = useState<string | null>(null)
   const [shownRole, setShownRole] = useState(roleSlug)
@@ -127,7 +139,18 @@ function RoleView({ data, loadError, switcher, sub, roleSlug }: RoleViewProps) {
             <div className="sub">{sub}</div>
           </div>
         </header>
-        <div className="loading">{loadError ? `数据加载失败：${loadError}` : '加载中…'}</div>
+        <div className="loading">
+          {loadError ? (
+            <>
+              数据加载失败：{loadError}
+              <button type="button" className="chip retry" onClick={onRetry}>
+                重试
+              </button>
+            </>
+          ) : (
+            '加载中…'
+          )}
+        </div>
       </div>
     )
   }
