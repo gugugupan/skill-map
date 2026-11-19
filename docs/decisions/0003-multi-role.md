@@ -14,7 +14,7 @@ M0 只有 Agent Infra 一个岗位：类别、公司热度、排列顺序都直�
 
 ### import_roles 报错规则
 
-未知 role；role 是 agent-infra 或两个文件同一 role；完整定义的 slug 撞已有 skill（上次由 import_roles 写入的除外，保证可重复导入）；两个文件都完整定义同一 slug；复用写了 slug/cluster/companies 以外的字段；完整定义缺 name/description/concepts/practice；引用不存在的 skill（复用、prereqs、path 里不属于本岗位的）、company（posting 或 skill.companies 不在本岗位 companies 里）、cluster；cluster 不带岗位前缀或属于别的岗位；同岗位颜色重复；公司没有 posting；posting 没有 url；新先修边两端都是 agent-infra 的 skill；全局先修成环。资源同标题时保留先到的 url，打印警告。
+未知 role；role 是 agent-infra 或两个文件同一 role；完整定义的 slug 撞已有 skill（上次由 import_roles 写入的除外，保证可重复导入）；两个文件都完整定义同一 slug；复用写了 slug/cluster/companies 以外的字段；完整定义缺 name/description/concepts/practice；引用不存在的 skill（复用、prereqs、path 里不属于本岗位的）、company（posting 或 skill.companies 不在本岗位 companies 里）、cluster；cluster 不带岗位前缀或属于别的岗位；同岗位颜色重复；公司没有 posting；posting 没有 url；新先修边两端都是 agent-infra 的 skill；全局先修成环。资源同标题时保留先到的 url，打印警告；先到的 url 为空而新记录有 url 时直接补上，不警告。
 
 ---
 
@@ -54,7 +54,7 @@ M0 只有 Agent Infra 一个岗位：类别、公司热度、排列顺序都直�
 4. **先修**：禁止添加两端都在现有 50 个 slug 里的边（会改动 agent-infra 的图）。其他边全局共享。
 5. **岗位的公司** = 该岗位种子 `companies` 数组（顺序即 chip 顺序），每个公司至少 1 条 posting；每个 skill 的 `companies` 必须是它的子集。
 6. **JD 唯一性按岗位**：同一公司同名职位可以出现在不同岗位，互不覆盖。
-7. **资源**：`resource.title` 全局唯一，同标题先到先得（后来的 url 不覆盖，导入时打印警告）。种子里不写 type，导入时沿用 `resource_type(title)` 推断。
+7. **资源**：`resource.title` 全局唯一，同标题先到先得（后来的 url 不覆盖，导入时打印警告；先到的 url 为空时用后来的补上）。种子里不写 type，导入时沿用 `resource_type(title)` 推断。
 8. **role 表 6 行**（slug、name_zh、root_label、sort）由 migration 按上方岗位表写死；种子里出现未知 role slug 直接报错。
 
 ## A. 种子格式：seed/roles/<role>.json（research 节点先写到 scratchpad `m1/research/<role>.json`，merge 节点再放进仓库）
