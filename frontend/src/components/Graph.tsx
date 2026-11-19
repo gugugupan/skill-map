@@ -100,10 +100,12 @@ export function Graph({ data, filter, selected, progress, onSelect }: Props) {
 
     const sim = d3.forceSimulation<GNode>(nodes)
 
+    // SVG has no z-index: leaves go first so their stroked labels never cover hubs or the root.
+    const drawOrder = { leaf: 0, hub: 1, root: 2 }
     const nodeSel = g
       .append('g')
       .selectAll<SVGGElement, GNode>('g')
-      .data(nodes)
+      .data(d3.sort(nodes, (d) => drawOrder[d.type]))
       .join('g')
       .attr('class', (d) => 'node ' + d.type)
       .attr('tabindex', (d) => (d.type === 'leaf' ? 0 : null))
