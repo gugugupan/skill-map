@@ -215,7 +215,9 @@ def _write(conn, files: list[tuple[str, dict]]) -> list[str]:
                     ).lastrowid
                 else:
                     rid = row["id"]
-                    if row["url"] != url:
+                    if row["url"] is None and url:
+                        conn.execute("UPDATE resource SET url = ? WHERE id = ?", (url, rid))
+                    elif row["url"] != url:
                         warnings.append(f"resource {r['title']!r}: keeping url {row['url']!r},"
                                         f" ignoring {url!r} from skill {s['slug']!r}")
                 conn.execute(

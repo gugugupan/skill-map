@@ -97,13 +97,28 @@ def test_import(imported):
 
 def test_resource_first_come(imported):
     path, warnings = imported
-    title = "Kleppmann《Designing Data-Intensive Applications》"
-    assert q(path, "SELECT url, type FROM resource WHERE title = ?", (title,)) == [(None, "doc")]
-    assert len(warnings) == 1 and title in warnings[0]
+    assert warnings == []
     assert q(path, "SELECT url, type FROM resource WHERE title = 'Redis 官方文档'") == [
         ("https://redis.io/docs/", "doc")]
     assert q(path, "SELECT COUNT(*) FROM skill_resource sr JOIN skill s ON s.id = sr.skill_id"
                    " WHERE s.slug = 'cache'") == [(2,)]
+
+
+def test_resource_missing_url_is_filled(imported):
+    path, _ = imported
+    title = "Kleppmann《Designing Data-Intensive Applications》"
+    # reference.html imports this title without a url; the backend fixture supplies one.
+    assert q(path, "SELECT url, type FROM resource WHERE title = ?", (title,)) == [
+        ("https://dataintensive.net/", "doc")]
+
+
+def test_resource_conflicting_url_keeps_first(ref_db, tmp_path):
+    data = fixtures()
+    title = "Kleppmann《Designing Data-Intensive Applications》"
+    _skill(data, "frontend", "web-basics")["resources"] = [{"title": title, "url": "https://example.com/ddia"}]
+    warnings = roles.import_roles(ref_db, write_roles(tmp_path / "r", data))
+    assert q(ref_db, "SELECT url FROM resource WHERE title = ?", (title,)) == [("https://dataintensive.net/",)]
+    assert len(warnings) == 1 and title in warnings[0]
 
 
 def test_idempotent(imported):
